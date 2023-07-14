@@ -1,0 +1,287 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/presentational",
+  "name": "presentational",
+  "bricks": [
+    {
+      "name": "eo-descriptions",
+      "alias": [
+        "presentational.general-descriptions"
+      ],
+      "properties": [
+        {
+          "name": "descriptionTitle",
+          "description": "描述标题",
+          "type": "string"
+        },
+        {
+          "name": "list",
+          "description": "描述列表",
+          "attribute": false,
+          "type": "DescriptionItem[]"
+        },
+        {
+          "name": "showCard",
+          "description": "是否展示卡片背景",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "column",
+          "description": "列数",
+          "attribute": true,
+          "type": "number"
+        },
+        {
+          "name": "layout",
+          "description": "布局模式",
+          "default": "\"horizontal\"",
+          "type": "Layout"
+        },
+        {
+          "name": "bordered",
+          "description": "是否展示边框",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "hideGroups",
+          "description": "隐藏的描述列表项",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "dataSource",
+          "description": "数据源",
+          "attribute": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": "通用描述列表构件"
+    },
+    {
+      "name": "eo-alert",
+      "alias": [
+        "presentational.general-alert"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "警告类型",
+          "attribute": false,
+          "type": "AlertType"
+        },
+        {
+          "name": "hasTitle",
+          "description": "是否显示标题。开启后，可以使用 `title` 插槽",
+          "type": "boolean"
+        },
+        {
+          "name": "closable",
+          "description": "是否显示关闭按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "localStorageKey",
+          "description": "以该值和页面 url 作为命名空间，决定是否显示该警告提示",
+          "type": "string"
+        },
+        {
+          "name": "disableUrlNamespace",
+          "description": "关闭后仅以 `localStorageKey` 作为命名空间",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        },
+        {
+          "name": "title",
+          "description": "标题"
+        }
+      ],
+      "methods": [],
+      "description": "告警提示"
+    },
+    {
+      "name": "eo-code-display",
+      "alias": [
+        "presentational.code-display"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "description": "代码内容",
+          "default": "\"\"",
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "description": "语言，具体查阅 [Supported languages](https://prismjs.com/#supported-languages)",
+          "type": "string"
+        },
+        {
+          "name": "hideLineNumber",
+          "description": "是否隐藏行号",
+          "type": "boolean"
+        },
+        {
+          "name": "maxLines",
+          "description": "最大行数",
+          "type": "number"
+        },
+        {
+          "name": "minLines",
+          "description": "最小行数",
+          "type": "number"
+        },
+        {
+          "name": "showCopyButton",
+          "description": "是否显示复制按钮",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "showExportButton",
+          "description": "是否显示导出按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "exportFileName",
+          "description": "导出的文件名",
+          "default": "download.txt",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": "代码展示"
+    },
+    {
+      "name": "eo-pagination",
+      "properties": [
+        {
+          "name": "total",
+          "description": "数据总数",
+          "default": "0",
+          "type": "number"
+        },
+        {
+          "name": "page",
+          "description": "当前页数",
+          "default": "1",
+          "type": "number"
+        },
+        {
+          "name": "pageSize",
+          "description": "每页条数",
+          "default": "20",
+          "type": "number"
+        },
+        {
+          "name": "pageSizeOptions",
+          "description": "指定每页可以显示多少条",
+          "default": "[10, 20, 50, 100]",
+          "attribute": false,
+          "type": "number[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "页码及每页条数改变事件",
+          "detail": {
+            "type": "{ page: number; pageSize: number }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": "分页"
+    },
+    {
+      "name": "eo-card-item",
+      "properties": [
+        {
+          "name": "hasHeader",
+          "description": "是否有顶部",
+          "type": "boolean"
+        },
+        {
+          "name": "cardTitle",
+          "description": "卡片标题",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "描述信息",
+          "type": "string"
+        },
+        {
+          "name": "auxiliaryText",
+          "description": "顶部辅助文字",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "description": "图标",
+          "attribute": false,
+          "type": "IconAvatar | ImgAvatar"
+        },
+        {
+          "name": "href",
+          "description": "设置 `href` 时将使用原生 `<a>` 标签，通常用于外链的跳转",
+          "type": "LinkProps[\"href\"]"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "attribute": false,
+          "type": "LinkProps[\"url\"]"
+        },
+        {
+          "name": "target",
+          "description": "链接跳转目标",
+          "type": "LinkProps[\"target\"]"
+        },
+        {
+          "name": "actions",
+          "description": "操作按钮组",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "hasExpandedArea1",
+          "description": "是否有扩展区域 1",
+          "type": "boolean"
+        },
+        {
+          "name": "hasExpandedArea2",
+          "description": "是否有扩展区域 2",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "expanded-area-1",
+          "description": "扩展区域 1，通常放置标签信息"
+        },
+        {
+          "name": "expanded-area-2",
+          "description": "扩展区域 2，通常放置操作和其他属性信息（图标/头像/小字描述/统计信息）"
+        }
+      ],
+      "methods": [],
+      "description": "信息类卡片 —— 通用卡片"
+    }
+  ],
+  "providers": []
+}

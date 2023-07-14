@@ -1,0 +1,2 @@
+(self.webpackChunk_next_bricks_presentational=self.webpackChunk_next_bricks_presentational||[]).push([[7030],{53882:()=>{var e;(e=Prism).languages.etlua={delimiter:{pattern:/^<%[-=]?|-?%>$/,alias:"punctuation"},"language-lua":{pattern:/[\s\S]+/,inside:e.languages.lua}},e.hooks.add("before-tokenize",(function(a){e.languages["markup-templating"].buildPlaceholders(a,"etlua",/<%[\s\S]+?%>/g)})),e.hooks.add("after-tokenize",(function(a){e.languages["markup-templating"].tokenizePlaceholders(a,"etlua")}))}}]);
+//# sourceMappingURL=prism-etlua-min-js.69362a8c.js.map

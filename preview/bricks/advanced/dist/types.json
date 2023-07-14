@@ -1,0 +1,1199 @@
+{
+  "eo-cascader": {
+    "properties": [
+      {
+        "name": "options",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "options"
+          }
+        }
+      },
+      {
+        "name": "fieldNames",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "fieldNames"
+          }
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "value"
+          }
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "multiple",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "disabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "allowClear",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showSearch",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "suffixIcon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      },
+      {
+        "name": "expandTrigger",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "expandTrigger"
+          }
+        }
+      },
+      {
+        "name": "popupPlacement",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "placement"
+          }
+        }
+      },
+      {
+        "name": "size",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AntdCascaderProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "size"
+          }
+        }
+      },
+      {
+        "name": "limit",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "maxTagCount",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "responsive"
+            }
+          ]
+        }
+      },
+      {
+        "name": "cascaderStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "cascader.change",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "value"
+                },
+                "annotation": {
+                  "type": "indexedAccess",
+                  "objectType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "AntdCascaderProps"
+                    }
+                  },
+                  "indexType": {
+                    "type": "jsLiteral",
+                    "value": "value"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "selectedOptions"
+                },
+                "annotation": {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "array",
+                      "elementType": {
+                        "type": "reference",
+                        "typeName": {
+                          "type": "identifier",
+                          "name": "DefaultOptionType"
+                        }
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "elementType": {
+                        "type": "array",
+                        "elementType": {
+                          "type": "reference",
+                          "typeName": {
+                            "type": "identifier",
+                            "name": "DefaultOptionType"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "eo-table": {
+    "properties": [
+      {
+        "name": "showCard",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "rowSelection",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": false
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TableRowSelection"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "any"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "rowKey",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "hiddenColumns",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Array"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "showSelectInfo",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "filters",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "array",
+                "elementType": {
+                  "type": "keyword",
+                  "value": "string"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "configProps",
+        "annotation": {
+          "type": "keyword",
+          "value": "any"
+        }
+      },
+      {
+        "name": "sort",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "keyword",
+              "value": "null"
+            }
+          ]
+        }
+      },
+      {
+        "name": "order",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "null"
+            }
+          ]
+        }
+      },
+      {
+        "name": "rowDisabledConfig",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "RowDisabledProps"
+              }
+            },
+            {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "RowDisabledProps"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "expandedRowBrick",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "useBrick"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UseSingleBrickConf"
+                }
+              },
+              "optional": true,
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "expandIcon",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "collapsedIcon"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "GeneralIconProps"
+                }
+              },
+              "computed": false
+            },
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "expandedIcon"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "GeneralIconProps"
+                }
+              },
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "expandIconAsCell",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "expandIconColumnIndex",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "expandRowByClick",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "optimizedColumns",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Array"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "stripEmptyExpandableChildren",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "defaultExpandAllRows",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "ellipsisInfo",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "expandedRowKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "selectAllChildren",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "defaultSelectAll",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "childrenColumnName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "sortable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "frontSearch",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "frontSearchQuery",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "exactSearch",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "frontSearchFilterKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "page",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "pageSize",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "scrollConfigs",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TableProps"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "keyword",
+                  "value": "unknown"
+                }
+              ]
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "scroll"
+          }
+        }
+      },
+      {
+        "name": "qField",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "tableDraggable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "zebraPattern",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "storeCheckedByUrl",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "extraRows",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Record"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "unknown"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "autoSelectParentWhenAllChildrenSelected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "thTransparent",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showHeader",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "pagination",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": false
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TablePaginationConfig"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "size",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SizeType"
+          }
+        }
+      },
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "RowSelectionType"
+          }
+        }
+      },
+      {
+        "name": "shouldUpdateUrlParams",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "shouldRenderWhenUrlParamsUpdate",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "selectedRowKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "Key"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "page.update",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Record"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "filter.update",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Record"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "number"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "select.update",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Record"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "any"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "select.row.keys.update",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "keyword",
+              "value": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "sort.update",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "sort"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "order"
+                },
+                "annotation": {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "keyword",
+                      "value": "string"
+                    },
+                    {
+                      "type": "keyword",
+                      "value": "number"
+                    }
+                  ]
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "row.expand",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "expanded"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "record"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "Record"
+                  },
+                  "typeParameters": {
+                    "type": "typeParameterInstantiation",
+                    "params": [
+                      {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      {
+                        "type": "keyword",
+                        "value": "any"
+                      }
+                    ]
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "expand.rows.change",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "expandedRows"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "qualifiedName",
+                      "left": {
+                        "type": "identifier",
+                        "name": "React"
+                      },
+                      "right": {
+                        "type": "identifier",
+                        "name": "Key"
+                      }
+                    }
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "row.drag",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "data"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "Record"
+                    },
+                    "typeParameters": {
+                      "type": "typeParameterInstantiation",
+                      "params": [
+                        {
+                          "type": "keyword",
+                          "value": "string"
+                        },
+                        {
+                          "type": "keyword",
+                          "value": "any"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "filterSourceData",
+        "params": [
+          {
+            "name": "event",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CustomEvent"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "expandAll",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "RowDisabledProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "field"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "operator"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "$eq"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$ne"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$lt"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$lte"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$gt"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$gte"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$isEqual"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$notEqual"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$in"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$nin"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "$exists"
+                }
+              ]
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

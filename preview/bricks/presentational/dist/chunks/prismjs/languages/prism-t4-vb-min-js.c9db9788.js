@@ -1,0 +1,2 @@
+(self.webpackChunk_next_bricks_presentational=self.webpackChunk_next_bricks_presentational||[]).push([[7316],{53376:()=>{Prism.languages["t4-vb"]=Prism.languages["t4-templating"].createT4("vbnet")}}]);
+//# sourceMappingURL=prism-t4-vb-min-js.c9db9788.js.map

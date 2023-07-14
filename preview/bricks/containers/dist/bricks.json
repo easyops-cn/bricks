@@ -1,0 +1,68 @@
+{
+  "id": "bricks/containers",
+  "bricks": [
+    "containers.micro-view",
+    "containers.general-category",
+    "containers.general-modal",
+    "containers.general-card",
+    "containers.general-drawer",
+    "containers.grid-layout",
+    "containers.flex-layout",
+    "containers.easy-view",
+    "containers.tab-group",
+    "containers.tab-item",
+    "containers.tab-list"
+  ],
+  "elements": [
+    "eo-micro-view",
+    "eo-category",
+    "eo-modal",
+    "eo-card",
+    "eo-drawer",
+    "eo-grid-layout",
+    "eo-flex-layout",
+    "eo-easy-view",
+    "eo-spin",
+    "eo-tab-group",
+    "eo-tab-item",
+    "eo-tab-list"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-modal": [
+      "eo-button",
+      "eo-icon"
+    ],
+    "containers.general-modal": [
+      "eo-button",
+      "eo-icon"
+    ],
+    "eo-card": [
+      "eo-button"
+    ],
+    "containers.general-card": [
+      "eo-button"
+    ],
+    "eo-drawer": [
+      "eo-icon"
+    ],
+    "containers.general-drawer": [
+      "eo-icon"
+    ],
+    "eo-tab-item": [
+      "eo-icon"
+    ],
+    "containers.tab-item": [
+      "eo-icon"
+    ],
+    "eo-tab-list": [
+      "eo-tab-group",
+      "eo-tab-item"
+    ],
+    "containers.tab-list": [
+      "eo-tab-group",
+      "eo-tab-item"
+    ]
+  },
+  "filePath": "bricks/containers/dist/index.4ccccfe9.js"
+}

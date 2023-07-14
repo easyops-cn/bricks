@@ -1,0 +1,31 @@
+{
+  "id": "bricks/visual-builder",
+  "bricks": [
+    "visual-builder.workbench-pane",
+    "visual-builder.workbench-sidebar",
+    "visual-builder.workbench-action",
+    "visual-builder.workbench-tree",
+    "visual-builder.workbench-action-list"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {
+    "visual-builder.workbench-pane": [
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-action": [
+      "basic.general-link",
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-tree": [
+      "basic.general-link",
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-action-list": [
+      "visual-builder.workbench-action",
+      "basic.general-link",
+      "icons.general-icon"
+    ]
+  },
+  "filePath": "bricks/visual-builder/dist/index.df485e5d.js"
+}

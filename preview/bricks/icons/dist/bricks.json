@@ -1,0 +1,23 @@
+{
+  "id": "bricks/icons",
+  "bricks": [
+    "icons.get-easyops-icons",
+    "icons.get-fa-icons",
+    "icons.get-antd-icons",
+    "icons.get-libs",
+    "icons.search-icons",
+    "icons.antd-icon",
+    "icons.easyops-icon",
+    "icons.fa-icon",
+    "icons.general-icon"
+  ],
+  "elements": [
+    "eo-antd-icon",
+    "eo-easyops-icon",
+    "eo-fa-icon",
+    "eo-icon"
+  ],
+  "processors": [],
+  "dependencies": {},
+  "filePath": "bricks/icons/dist/index.3dddb121.js"
+}

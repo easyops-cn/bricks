@@ -1,0 +1,2 @@
+(self.webpackChunk_next_bricks_presentational=self.webpackChunk_next_bricks_presentational||[]).push([[1446],{4407:()=>{Prism.languages.csv={value:/[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,punctuation:/,/}}}]);
+//# sourceMappingURL=prism-csv-min-js.a140d27d.js.map

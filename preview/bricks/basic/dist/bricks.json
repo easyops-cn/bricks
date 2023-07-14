@@ -1,0 +1,134 @@
+{
+  "id": "bricks/basic",
+  "bricks": [
+    "basic.change-language",
+    "basic.copy-to-clipboard",
+    "basic.get-language",
+    "basic.http-request",
+    "basic.general-button",
+    "basic.general-link",
+    "basic.general-text",
+    "basic.general-image",
+    "basic.dropdown-button",
+    "basic.general-popover",
+    "basic.general-menu",
+    "basic.general-menu-item",
+    "basic.nav-menu",
+    "basic.general-tag",
+    "basic.general-tag-list",
+    "basic.launchpad-button",
+    "basic.show-dialog",
+    "basic.show-notification"
+  ],
+  "elements": [
+    "eo-button",
+    "eo-link",
+    "eo-text",
+    "eo-image",
+    "eo-dropdown-button",
+    "eo-popover",
+    "eo-menu",
+    "eo-menu-item",
+    "eo-nav-menu",
+    "eo-tag",
+    "eo-tag-list",
+    "eo-launchpad-button",
+    "eo-mini-actions"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-button": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "basic.general-button": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "eo-link": [
+      "eo-icon"
+    ],
+    "basic.general-link": [
+      "eo-icon"
+    ],
+    "eo-image": [
+      "eo-icon"
+    ],
+    "basic.general-image": [
+      "eo-icon"
+    ],
+    "eo-dropdown-button": [
+      "eo-button",
+      "eo-popover",
+      "eo-menu",
+      "eo-menu-item"
+    ],
+    "basic.dropdown-button": [
+      "eo-button",
+      "eo-popover",
+      "eo-menu",
+      "eo-menu-item"
+    ],
+    "eo-popover": [
+      "sl-popup"
+    ],
+    "basic.general-popover": [
+      "sl-popup"
+    ],
+    "eo-menu-item": [
+      "eo-icon"
+    ],
+    "basic.general-menu-item": [
+      "eo-icon"
+    ],
+    "eo-nav-menu": [
+      "eo-menu-item",
+      "eo-popover",
+      "eo-link"
+    ],
+    "basic.nav-menu": [
+      "eo-menu-item",
+      "eo-popover",
+      "eo-link"
+    ],
+    "eo-tag": [
+      "eo-icon"
+    ],
+    "basic.general-tag": [
+      "eo-icon"
+    ],
+    "eo-tag-list": [
+      "eo-tag",
+      "eo-icon"
+    ],
+    "basic.general-tag-list": [
+      "eo-tag",
+      "eo-icon"
+    ],
+    "eo-launchpad-button": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "basic.launchpad-button": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "eo-mini-actions": [
+      "eo-icon",
+      "eo-popover"
+    ],
+    "basic.show-dialog": [
+      "eo-button",
+      "eo-antd-icon",
+      "eo-input",
+      "sl-dialog",
+      "eo-link",
+      "eo-icon"
+    ],
+    "basic.show-notification": [
+      "sl-alert",
+      "eo-antd-icon"
+    ]
+  },
+  "filePath": "bricks/basic/dist/index.9c81b148.js"
+}

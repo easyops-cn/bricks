@@ -1,0 +1,1192 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/data-view",
+  "name": "data-view",
+  "bricks": [
+    {
+      "name": "data-view.gauge-chart",
+      "properties": [
+        {
+          "name": "radius",
+          "description": "",
+          "required": true,
+          "default": "-",
+          "type": "number"
+        },
+        {
+          "name": "strokeWidth",
+          "description": "",
+          "required": true,
+          "default": "20",
+          "type": "number"
+        },
+        {
+          "name": "description",
+          "description": "",
+          "required": true,
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "",
+          "required": true,
+          "default": "-",
+          "type": "number"
+        },
+        {
+          "name": "fontSize",
+          "description": "",
+          "required": true,
+          "default": "35",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.modern-style-component-title",
+      "properties": [
+        {
+          "name": "hideLeftComponent",
+          "description": "",
+          "default": "false"
+        },
+        {
+          "name": "hideRightComponent",
+          "description": "",
+          "default": "true"
+        },
+        {
+          "name": "componentTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "titleTextStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        },
+        {
+          "name": "squareColor",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties[\"color\"]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.modern-style-page-title",
+      "properties": [
+        {
+          "name": "pageTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "backgroundStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        },
+        {
+          "name": "leftRoundStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        },
+        {
+          "name": "rightRoundStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.tabs-drawer",
+      "properties": [
+        {
+          "name": "tabList",
+          "description": "",
+          "required": true,
+          "default": "-",
+          "attribute": false,
+          "type": "TabItem[]"
+        },
+        {
+          "name": "activeKey",
+          "description": "",
+          "required": true,
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "description": "",
+          "attribute": false,
+          "type": "number | string"
+        },
+        {
+          "name": "drawerStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "bodyStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "zIndex",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "visible",
+          "description": "",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "open",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        },
+        {
+          "name": "close",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        },
+        {
+          "name": "tab.change",
+          "description": "",
+          "detail": {
+            "description": "`string`",
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [],
+          "description": "",
+          "returns": {}
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "",
+          "returns": {}
+        }
+      ],
+      "description": ""
+    },
+    {
+      "name": "data-view.modern-style-treemap",
+      "properties": [
+        {
+          "name": "data",
+          "description": "",
+          "attribute": false,
+          "type": "TreemapData"
+        },
+        {
+          "name": "tail",
+          "description": "",
+          "default": "TailTypes[\"treemapSquarify\"]",
+          "attribute": false,
+          "type": "TailTypes"
+        },
+        {
+          "name": "leafUseBrick",
+          "description": "",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        },
+        {
+          "name": "leafContainerStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        },
+        {
+          "name": "tooltipUseBrick",
+          "description": "",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        },
+        {
+          "name": "tooltipStyle",
+          "description": "",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "treemap.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "TreemapData"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.battery-chart",
+      "properties": [
+        {
+          "name": "value",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "batteryWidth",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "batteryHeight",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "thresholdColors",
+          "description": "",
+          "attribute": false,
+          "type": "ThresholdColor[]"
+        },
+        {
+          "name": "thresholdValue",
+          "description": "",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.dropdown-menu",
+      "properties": [
+        {
+          "name": "options",
+          "description": "",
+          "attribute": false,
+          "type": "{ label: string, value: string }[]"
+        },
+        {
+          "name": "value",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "allowClear",
+          "description": "",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "value.change",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.complex-search",
+      "properties": [
+        {
+          "name": "value",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "description": "",
+          "attribute": false,
+          "type": "OptionItem[]"
+        },
+        {
+          "name": "tooltipUseBrick",
+          "description": "",
+          "attribute": false,
+          "type": "ReactUseMultipleBricksProps"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "string"
+          }
+        },
+        {
+          "name": "search",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "string"
+          }
+        },
+        {
+          "name": "select",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "OptionItem"
+          }
+        },
+        {
+          "name": "focus",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        },
+        {
+          "name": "blur",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.loading-panel",
+      "properties": [
+        {
+          "name": "customTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "loading",
+          "description": "",
+          "type": "boolean"
+        },
+        {
+          "name": "useRealTimeProgress",
+          "description": "",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "progress",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "intervalTime",
+          "description": "",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "end",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.particle-animation",
+      "properties": [
+        {
+          "name": "colors",
+          "description": "",
+          "attribute": false,
+          "type": "ColorType"
+        },
+        {
+          "name": "containerStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.app-wall-card-item",
+      "properties": [
+        {
+          "name": "status",
+          "description": "",
+          "default": "\"normal\"",
+          "type": "\"normal\" | \"warning\""
+        },
+        {
+          "name": "cardTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.app-wall-system-card",
+      "properties": [
+        {
+          "name": "status",
+          "description": "",
+          "default": "\"normal\"",
+          "attribute": false,
+          "type": "StatusType"
+        },
+        {
+          "name": "cardTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "itemList",
+          "description": "",
+          "attribute": false,
+          "type": "DescriptionItem[]"
+        },
+        {
+          "name": "buttonName",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "containerStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "button-click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.app-wall-relation-line",
+      "properties": [
+        {
+          "name": "lightColor",
+          "description": "",
+          "default": "\"blue\"",
+          "type": "\"blue\" | \"purple\""
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-button",
+      "properties": [
+        {
+          "name": "buttonStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-node",
+      "properties": [
+        {
+          "name": "type",
+          "description": "",
+          "type": "| \"container-group\"\n    | \"physical-machine\"\n    | \"virtual-machine\"\n    | \"pod\""
+        },
+        {
+          "name": "nodeTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "description": "",
+          "type": "\"active\" | \"faded\""
+        },
+        {
+          "name": "isAlert",
+          "description": "",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-app-layer",
+      "properties": [
+        {
+          "name": "appTitle",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "description": "",
+          "type": "\"active\" | \"faded\""
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-container",
+      "properties": [
+        {
+          "name": "type",
+          "description": "",
+          "default": "\"host\"",
+          "attribute": false,
+          "type": "ContainerType"
+        },
+        {
+          "name": "data",
+          "description": "",
+          "default": "[]",
+          "attribute": false,
+          "type": "CabinetNodeProps[]"
+        },
+        {
+          "name": "status",
+          "description": "",
+          "type": "\"active\" | \"faded\""
+        },
+        {
+          "name": "customTitle",
+          "description": "",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "container.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "ClickEventDataType"
+          }
+        },
+        {
+          "name": "container.dbclick",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "ClickEventDataType"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-thumbnail",
+      "properties": [
+        {
+          "name": "clusters",
+          "description": "",
+          "default": "[]",
+          "attribute": false,
+          "type": "Clusters[]"
+        },
+        {
+          "name": "columns",
+          "description": "",
+          "default": "4",
+          "type": "number"
+        },
+        {
+          "name": "appName",
+          "description": "",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.cabinet-graph",
+      "properties": [
+        {
+          "name": "dataSource",
+          "description": "",
+          "attribute": false,
+          "type": "AppData"
+        },
+        {
+          "name": "activeKey",
+          "description": "",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "hiddenCloseBtn",
+          "description": "",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "close.button.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "void"
+          }
+        },
+        {
+          "name": "cabinet.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "{\n    type: ChangeType;\n    data: Record<string, any>;\n  }"
+          }
+        },
+        {
+          "name": "cabinet.dbclick",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "{\n    type: ChangeType;\n    data: Record<string, any>;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.app-wall",
+      "properties": [
+        {
+          "name": "dataSource",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "AppData[]"
+        },
+        {
+          "name": "relations",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "Relation[]"
+        },
+        {
+          "name": "useDblclick",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "system.card.button.click",
+          "description": "",
+          "detail": {
+            "description": "AppData",
+            "type": "AppData"
+          }
+        },
+        {
+          "name": "left.btn.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "AppData"
+          }
+        },
+        {
+          "name": "right.btn.click",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "AppData"
+          }
+        },
+        {
+          "name": "on.card.dbclick",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "AppData"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.graph-text",
+      "properties": [
+        {
+          "name": "text",
+          "description": "",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "",
+          "type": "string | number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.graph-node",
+      "properties": [
+        {
+          "name": "url",
+          "description": "",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.graph-layout-grid",
+      "properties": [
+        {
+          "name": "columns",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "rows",
+          "description": "",
+          "type": "number"
+        },
+        {
+          "name": "isReverse",
+          "description": "",
+          "type": "boolean"
+        },
+        {
+          "name": "dataSource",
+          "description": "",
+          "attribute": false,
+          "type": "DataSourceType[]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.radar-chart",
+      "properties": [
+        {
+          "name": "dataSource",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "Data[]"
+        },
+        {
+          "name": "width",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "number"
+        },
+        {
+          "name": "radius",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "number"
+        },
+        {
+          "name": "scale",
+          "description": "",
+          "required": true,
+          "default": "0.25",
+          "attribute": false,
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "number"
+        },
+        {
+          "name": "value",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "number | string"
+        },
+        {
+          "name": "dataFill",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "DataFill"
+        },
+        {
+          "name": "dataCircle",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "DataCircle"
+        },
+        {
+          "name": "dataLine",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "DataLine"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.title-text",
+      "properties": [
+        {
+          "name": "type",
+          "description": "文本样式，`normal` 纯白， `stroke` 渐变加描边， `gradient` 渐变",
+          "default": "\"normal\"",
+          "attribute": false,
+          "type": "TitleType"
+        },
+        {
+          "name": "text",
+          "description": "标题文本",
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "fontSize",
+          "description": "字体大小",
+          "default": "42px",
+          "type": "CSSProperties[\"fontSize\"]"
+        },
+        {
+          "name": "fontWeight",
+          "description": "字体粗细",
+          "default": "500",
+          "type": "CSSProperties[\"fontWeight\"]"
+        },
+        {
+          "name": "letterSpacing",
+          "description": "字体间距",
+          "default": "17px",
+          "type": "CSSProperties[\"letterSpacing\"]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": "大屏标题文本构件"
+    },
+    {
+      "name": "data-view.brick-notification",
+      "properties": [
+        {
+          "name": "message",
+          "description": "提示内容",
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "default": "-",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": []
+    },
+    {
+      "name": "data-view.tabs-page-title",
+      "properties": [
+        {
+          "name": "tabList",
+          "description": "标签，如果没有就不展示标签",
+          "default": "-",
+          "attribute": false,
+          "type": "TabsItem[]"
+        },
+        {
+          "name": "activeKey",
+          "description": "标签高亮显示，默认第一个",
+          "default": "-",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "tab.change",
+          "description": "切换 `tab` 栏会触发的事件，`detail` 为目标 `tab` 对应的 `key`",
+          "detail": {
+            "description": "`string`",
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": []
+    },
+    {
+      "name": "data-view.lights-component-title",
+      "properties": [
+        {
+          "name": "componentTitle",
+          "description": "组件标题",
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "description": "",
+          "required": true,
+          "default": null,
+          "type": "\"light\"|\"dark\""
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": "构件 `data-view.lights-component-title`"
+    },
+    {
+      "name": "data-view.hi-tech-button",
+      "properties": [
+        {
+          "name": "type",
+          "description": "按钮类型",
+          "type": "buttonType"
+        },
+        {
+          "name": "buttonStyle",
+          "description": "按钮样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "default": "false",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "按钮内容"
+        }
+      ],
+      "methods": [],
+      "description": "大屏按钮"
+    },
+    {
+      "name": "data-view.tech-mesh-base-view",
+      "properties": [],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "页面内容"
+        }
+      ],
+      "methods": [],
+      "description": "大屏框架构件-网格纹"
+    },
+    {
+      "name": "data-view.grid-background",
+      "properties": [
+        {
+          "name": "color",
+          "description": "",
+          "default": "\"#235F90\"",
+          "attribute": false,
+          "type": "React.CSSProperties[\"color\"]"
+        },
+        {
+          "name": "maskStyle",
+          "description": "",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "particleColor",
+          "description": "",
+          "default": "{\n    startColor: \"#477AFFFF\",\n    endColor: \"#5F83FF00\",\n  }",
+          "attribute": false,
+          "type": "ParticleColor"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.gear-background",
+      "properties": [
+        {
+          "name": "color",
+          "description": "",
+          "default": "\"#3366FF\"",
+          "attribute": false,
+          "type": "React.CSSProperties[\"color\"]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": ""
+    },
+    {
+      "name": "data-view.top-title-bar",
+      "properties": [
+        {
+          "name": "text",
+          "description": "标题文本",
+          "default": "-",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "description": "标题类型",
+          "default": "normal",
+          "type": "TitleBarType"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "description": "大屏标题栏三种样式构件"
+    }
+  ],
+  "providers": []
+}
