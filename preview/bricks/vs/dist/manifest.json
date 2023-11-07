@@ -1,0 +1,115 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/vs",
+  "name": "vs",
+  "bricks": [
+    {
+      "name": "vs.code-editor",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "description": "",
+          "default": "\"plaintext\"",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "description": "主题，支持 `\"auto\" | \"vs\" | \"vs-dark\"`",
+          "default": "\"auto\"",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean"
+        },
+        {
+          "name": "automaticLayout",
+          "type": "\"fit-container\" | \"fit-content\" | \"none\""
+        },
+        {
+          "name": "minLines",
+          "description": "",
+          "default": "3",
+          "type": "number"
+        },
+        {
+          "name": "completers",
+          "attribute": false,
+          "type": "monaco.languages.CompletionItem[]"
+        },
+        {
+          "name": "advancedCompleters",
+          "attribute": false,
+          "type": "Record<\n        string,\n        {\n          triggerCharacter: string;\n          completers: monaco.languages.CompletionItem[];\n        }\n      >"
+        },
+        {
+          "name": "markers",
+          "attribute": false,
+          "type": "Marker[]"
+        },
+        {
+          "name": "links",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "maxLines",
+          "description": "",
+          "default": "Infinity",
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "code.change",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "user.input",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "token.click",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 code-editor"
+    }
+  ],
+  "providers": []
+}

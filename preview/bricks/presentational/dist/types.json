@@ -1,0 +1,1132 @@
+{
+  "eo-descriptions": {
+    "properties": [
+      {
+        "name": "descriptionTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "list",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DescriptionItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "showCard",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "column",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Layout"
+          }
+        }
+      },
+      {
+        "name": "bordered",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "hideGroups",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "unknown"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "DescriptionItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "field"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "group"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "number"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Layout",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "horizontal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "vertical"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-card-item": {
+    "properties": [
+      {
+        "name": "hasHeader",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "auxiliaryText",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "avatar",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "IconAvatar"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ImgAvatar"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "href",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "href"
+          }
+        }
+      },
+      {
+        "name": "url",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "url"
+          }
+        }
+      },
+      {
+        "name": "target",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "target"
+          }
+        }
+      },
+      {
+        "name": "actions",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ActionType"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "IconAvatar",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "color"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "size"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "shape"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "circle"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "square"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "round-square"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "bgColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ImgAvatar",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "imgSrc"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "imgStyle"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "shape"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "circle"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "square"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "round-square"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "bgColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-divider": {
+    "properties": [
+      {
+        "name": "orientation",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "OrientationType"
+          }
+        }
+      },
+      {
+        "name": "dashed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "dividerType"
+          }
+        }
+      },
+      {
+        "name": "proportion",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "number"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dividerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "OrientationType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "center"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "right"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "dividerType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "horizontal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "vertical"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "radiation"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-info-card-item": {
+    "properties": [
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "url",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "cardIcon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "IconAvatar"
+          }
+        }
+      },
+      {
+        "name": "detailList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "InfoCardDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "target",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "target"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "IconAvatar",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "color"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "size"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "shape"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "circle"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "square"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "round-square"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "bgColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "InfoCardDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "desc"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-alert": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "AlertType"
+          }
+        }
+      },
+      {
+        "name": "hasTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "closable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "localStorageKey",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "disableUrlNamespace",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "enum",
+        "name": "AlertType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "jsLiteral",
+              "value": "SUCCESS"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "success"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "jsLiteral",
+              "value": "INFO"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "info"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "jsLiteral",
+              "value": "WARNING"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "warning"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "jsLiteral",
+              "value": "ERROR"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "error"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "eo-code-display": {
+    "properties": [
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "language",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "hideLineNumber",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "maxLines",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "minLines",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "showCopyButton",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showExportButton",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "exportFileName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-pagination": {
+    "properties": [
+      {
+        "name": "total",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "page",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "pageSize",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "pageSizeOptions",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "number"
+          }
+        }
+      },
+      {
+        "name": "showSizeChanger",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "change",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "page"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "number"
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "pageSize"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "number"
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "eo-humanize-time": {
+    "properties": [
+      {
+        "name": "value",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "inputFormat",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "outputFormat",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "isCostTime",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "formatter",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "HumanizeTimeFormat"
+          }
+        }
+      },
+      {
+        "name": "isMicrosecond",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "link",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LinkInfo"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "LinkInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "url"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Target"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

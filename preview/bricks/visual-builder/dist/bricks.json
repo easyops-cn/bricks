@@ -1,0 +1,41 @@
+{
+  "id": "bricks/visual-builder",
+  "bricks": [
+    "visual-builder.workbench-pane",
+    "visual-builder.workbench-sidebar",
+    "visual-builder.workbench-action",
+    "visual-builder.workbench-action-list",
+    "visual-builder.workbench-tree",
+    "visual-builder.inject-preview-agent",
+    "visual-builder.workbench-history-action",
+    "visual-builder.collect-used-contracts"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {
+    "visual-builder.workbench-pane": [
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-action": [
+      "basic.general-link",
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-action-list": [
+      "visual-builder.workbench-action",
+      "basic.general-link",
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-tree": [
+      "basic.general-link",
+      "icons.general-icon"
+    ],
+    "visual-builder.workbench-history-action": [
+      "eo-button",
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-popover"
+    ]
+  },
+  "filePath": "bricks/visual-builder/dist/index.a8e4089d.js"
+}

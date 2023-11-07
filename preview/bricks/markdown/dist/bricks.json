@@ -1,0 +1,21 @@
+{
+  "id": "bricks/markdown",
+  "bricks": [
+    "markdown.markdown-editor"
+  ],
+  "elements": [
+    "eo-markdown-editor"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-markdown-editor": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "markdown.markdown-editor": [
+      "eo-form-item",
+      "eo-icon"
+    ]
+  },
+  "filePath": "bricks/markdown/dist/index.cef08480.js"
+}

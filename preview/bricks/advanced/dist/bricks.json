@@ -1,0 +1,31 @@
+{
+  "id": "bricks/advanced",
+  "bricks": [
+    "advanced.general-table",
+    "advanced.general-cascader"
+  ],
+  "elements": [
+    "eo-table",
+    "eo-cascader",
+    "eo-next-table"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-table": [
+      "eo-icon"
+    ],
+    "advanced.general-table": [
+      "eo-icon"
+    ],
+    "eo-cascader": [
+      "eo-icon"
+    ],
+    "advanced.general-cascader": [
+      "eo-icon"
+    ],
+    "eo-next-table": [
+      "eo-link"
+    ]
+  },
+  "filePath": "bricks/advanced/dist/index.48912224.js"
+}

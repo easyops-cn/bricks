@@ -1,0 +1,10 @@
+{
+  "id": "bricks/form-renderer",
+  "bricks": [],
+  "elements": [
+    "eo-form-renderer"
+  ],
+  "processors": [],
+  "dependencies": {},
+  "filePath": "bricks/form-renderer/dist/index.bee10236.js"
+}

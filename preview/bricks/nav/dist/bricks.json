@@ -1,0 +1,25 @@
+{
+  "id": "bricks/nav",
+  "bricks": [],
+  "elements": [
+    "eo-nav-menu",
+    "eo-launchpad-button"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-nav-menu": [
+      "eo-menu-item",
+      "eo-popover",
+      "eo-search",
+      "eo-icon",
+      "eo-link",
+      "eo-input",
+      "eo-tooltip"
+    ],
+    "eo-launchpad-button": [
+      "eo-icon",
+      "eo-link"
+    ]
+  },
+  "filePath": "bricks/nav/dist/index.4fa9185b.js"
+}

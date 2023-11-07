@@ -1,0 +1,30 @@
+{
+  "eo-nav-menu": {
+    "properties": [
+      {
+        "name": "menu",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SidebarMenu"
+          }
+        }
+      },
+      {
+        "name": "showTooltip",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-launchpad-button": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  }
+}

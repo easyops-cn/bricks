@@ -1,0 +1,24 @@
+{
+  "id": "bricks/ui-test",
+  "bricks": [
+    "ui-test.preview-container",
+    "ui-test.apply-snippet",
+    "ui-test.choose-directory",
+    "ui-test.clone-nodes",
+    "ui-test.delete-file",
+    "ui-test.export-as-file",
+    "ui-test.get-commands",
+    "ui-test.get-flat-nodes-in-tree",
+    "ui-test.inject-preview-agent",
+    "ui-test.insert-node",
+    "ui-test.rename-file",
+    "ui-test.save-recorded-commands",
+    "ui-test.sort-test-tree-node"
+  ],
+  "elements": [],
+  "processors": [
+    "uiTest.getTreeData"
+  ],
+  "dependencies": {},
+  "filePath": "bricks/ui-test/dist/index.fddfe5a3.js"
+}

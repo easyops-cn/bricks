@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_next_bricks_visual_builder=self.webpackChunk_next_bricks_visual_builder||[]).push([[6522],{6522:(t,o,e)=>{function n(t){return n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},n(t)}e.d(o,{Z:()=>n})}}]);
+//# sourceMappingURL=6522.d776b1f2.js.map

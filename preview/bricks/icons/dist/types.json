@@ -1,0 +1,743 @@
+{
+  "icons.get-easyops-icons": {
+    "type": "provider",
+    "params": [],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Record"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "array",
+                    "elementType": {
+                      "type": "keyword",
+                      "value": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "icons.get-fa-icons": {
+    "type": "provider",
+    "params": [],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Record"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "array",
+                    "elementType": {
+                      "type": "keyword",
+                      "value": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "icons.get-antd-icons": {
+    "type": "provider",
+    "params": [],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Record"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "array",
+                    "elementType": {
+                      "type": "keyword",
+                      "value": "string"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "icons.get-libs": {
+    "type": "provider",
+    "params": [],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "LibInfo"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "LibInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lib"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icons"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "IconInfo"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "IconInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LibIconProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "$searchTextPool"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "icons.search-icons": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "params",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SearchParams"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "SearchResult"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "SearchParams",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "q"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lib"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "page"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "pageSize"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SearchResult",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "list"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "IconInfo"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "page"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "pageSize"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "total"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-img-icon": {
+    "properties": [
+      {
+        "name": "imgSrc",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "imgStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "imgLoading",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "lazy"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "eager"
+            }
+          ]
+        }
+      },
+      {
+        "name": "noPublicRoot",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-easyops-icon": {
+    "properties": [
+      {
+        "name": "category",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-fa-icon": {
+    "properties": [
+      {
+        "name": "prefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "startColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "endColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "gradientDirection",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GradientDirection"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "GradientDirection",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left-to-right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "top-to-bottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-icon": {
+    "properties": [
+      {
+        "name": "lib",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "antd"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "easyops"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "fa"
+            }
+          ]
+        }
+      },
+      {
+        "name": "theme",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "category",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "prefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "startColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "endColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "gradientDirection",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GradientDirection"
+          }
+        }
+      },
+      {
+        "name": "spinning",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "imgSrc",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "imgStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "imgLoading",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "lazy"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "eager"
+            }
+          ]
+        }
+      },
+      {
+        "name": "noPublicRoot",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "GradientDirection",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left-to-right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "top-to-bottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-antd-icon": {
+    "properties": [
+      {
+        "name": "theme",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "startColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "endColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "gradientDirection",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GradientDirection"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "GradientDirection",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left-to-right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "top-to-bottom"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "visual-builder.workbench-history-action": {
+    "doc": "项目变更历史\n\n## Examples\n\n### Basic\n\n```yaml preview\nbrick: visual-builder.workbench-history-action\nproperties:\n  appId: project-a\n# -- YAML DELIMITER (1nbbm8) --\n# <visual-builder.workbench-history-action\n#   app-id=\"project-a\"\n# ></visual-builder.workbench-history-action>\n# \n```\n"
+  }
+}

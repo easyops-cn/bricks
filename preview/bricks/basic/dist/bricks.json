@@ -1,0 +1,203 @@
+{
+  "id": "bricks/basic",
+  "bricks": [
+    "basic.change-language",
+    "basic.copy-to-clipboard",
+    "basic.get-language",
+    "basic.http-request",
+    "basic.set-theme-by-apps",
+    "basic.general-button",
+    "basic.general-link",
+    "basic.general-text",
+    "basic.general-image",
+    "basic.dropdown-button",
+    "basic.general-popover",
+    "basic.general-menu",
+    "basic.general-menu-item",
+    "basic.general-tag",
+    "basic.general-tag-list",
+    "basic.app-bar-wrapper",
+    "basic.v3-widget-mate",
+    "basic.lock-body-scroll",
+    "basic.show-dialog",
+    "basic.show-notification"
+  ],
+  "elements": [
+    "eo-button",
+    "eo-link",
+    "eo-text",
+    "eo-image",
+    "eo-dropdown-button",
+    "eo-popover",
+    "eo-menu",
+    "eo-menu-item",
+    "eo-tag",
+    "eo-tag-list",
+    "eo-mini-actions",
+    "eo-tooltip",
+    "eo-dropdown-actions",
+    "eo-avatar",
+    "eo-sidebar-sub-menu",
+    "eo-menu-item-sub-menu",
+    "eo-menu-group",
+    "eo-breadcrumb-item",
+    "eo-breadcrumb",
+    "eo-frame-breadcrumb",
+    "eo-sidebar-menu-item",
+    "eo-sidebar-menu-group",
+    "eo-sidebar-menu-submenu",
+    "eo-sidebar-menu",
+    "eo-sidebar",
+    "eo-app-bar-wrapper",
+    "eo-page-title",
+    "eo-counter-badge",
+    "eo-easyops-avatar"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-button": [
+      "eo-link",
+      "eo-tooltip",
+      "eo-icon"
+    ],
+    "basic.general-button": [
+      "eo-link",
+      "eo-tooltip",
+      "eo-icon"
+    ],
+    "eo-link": [
+      "eo-icon"
+    ],
+    "basic.general-link": [
+      "eo-icon"
+    ],
+    "eo-image": [
+      "eo-icon"
+    ],
+    "basic.general-image": [
+      "eo-icon"
+    ],
+    "eo-dropdown-button": [
+      "eo-button",
+      "eo-dropdown-actions"
+    ],
+    "basic.dropdown-button": [
+      "eo-button",
+      "eo-dropdown-actions"
+    ],
+    "eo-popover": [
+      "sl-popup"
+    ],
+    "basic.general-popover": [
+      "sl-popup"
+    ],
+    "eo-menu-item": [
+      "eo-icon"
+    ],
+    "basic.general-menu-item": [
+      "eo-icon"
+    ],
+    "eo-tag": [
+      "eo-icon"
+    ],
+    "basic.general-tag": [
+      "eo-icon"
+    ],
+    "eo-tag-list": [
+      "eo-icon",
+      "eo-tag"
+    ],
+    "basic.general-tag-list": [
+      "eo-icon",
+      "eo-tag"
+    ],
+    "eo-mini-actions": [
+      "eo-icon",
+      "eo-popover"
+    ],
+    "eo-tooltip": [
+      "sl-tooltip"
+    ],
+    "eo-dropdown-actions": [
+      "eo-popover",
+      "eo-tooltip",
+      "eo-link",
+      "eo-menu",
+      "eo-menu-item"
+    ],
+    "eo-avatar": [
+      "eo-icon",
+      "sl-resize-observer"
+    ],
+    "eo-sidebar-sub-menu": [
+      "eo-icon",
+      "eo-menu",
+      "eo-menu-group",
+      "eo-menu-item-sub-menu",
+      "eo-menu-item",
+      "eo-link"
+    ],
+    "eo-menu-item-sub-menu": [
+      "eo-icon"
+    ],
+    "eo-breadcrumb-item": [
+      "eo-link"
+    ],
+    "eo-breadcrumb": [
+      "eo-link"
+    ],
+    "eo-frame-breadcrumb": [
+      "eo-breadcrumb",
+      "eo-breadcrumb-item",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-item": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-group": [
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar-menu-submenu": [
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group"
+    ],
+    "eo-sidebar-menu": [
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar": [
+      "eo-tooltip",
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-counter-badge": [
+      "eo-icon"
+    ],
+    "eo-easyops-avatar": [
+      "eo-avatar"
+    ],
+    "basic.show-dialog": [
+      "eo-button",
+      "eo-antd-icon",
+      "eo-input",
+      "sl-dialog",
+      "eo-link",
+      "eo-tooltip",
+      "eo-icon"
+    ],
+    "basic.show-notification": [
+      "sl-alert",
+      "eo-icon"
+    ]
+  },
+  "filePath": "bricks/basic/dist/index.2e4bc0a5.js"
+}

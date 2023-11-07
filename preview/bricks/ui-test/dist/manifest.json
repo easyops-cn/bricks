@@ -1,0 +1,118 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/ui-test",
+  "name": "ui-test",
+  "bricks": [
+    {
+      "name": "ui-test.preview-container",
+      "properties": [
+        {
+          "name": "src",
+          "type": "string"
+        },
+        {
+          "name": "recording",
+          "type": "boolean"
+        },
+        {
+          "name": "inspecting",
+          "type": "boolean"
+        },
+        {
+          "name": "hoverRelatedCommands",
+          "attribute": false,
+          "type": "NodeGraphData[]"
+        },
+        {
+          "name": "activeRelatedCommands",
+          "attribute": false,
+          "type": "NodeGraphData[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "url.change",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "inspect.select",
+          "detail": {
+            "type": "InspectSelector[]"
+          }
+        },
+        {
+          "name": "record.complete",
+          "detail": {
+            "type": "RecordStep[]"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "back",
+          "params": [],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "forward",
+          "params": [],
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "reload",
+          "params": [],
+          "returns": {
+            "type": "void"
+          }
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ui-test.preview-container`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "ui-test.get-flat-nodes-in-tree"
+    },
+    {
+      "name": "ui-test.insert-node"
+    },
+    {
+      "name": "ui-test.rename-file"
+    },
+    {
+      "name": "ui-test.save-recorded-commands"
+    },
+    {
+      "name": "ui-test.sort-test-tree-node"
+    },
+    {
+      "name": "ui-test.choose-directory"
+    },
+    {
+      "name": "ui-test.clone-nodes"
+    },
+    {
+      "name": "ui-test.apply-snippet"
+    },
+    {
+      "name": "ui-test.delete-file"
+    },
+    {
+      "name": "ui-test.export-as-file"
+    },
+    {
+      "name": "ui-test.inject-preview-agent"
+    },
+    {
+      "name": "ui-test.get-commands"
+    }
+  ]
+}

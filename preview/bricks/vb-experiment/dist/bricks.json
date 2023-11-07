@@ -1,0 +1,11 @@
+{
+  "id": "bricks/vb-experiment",
+  "bricks": [
+    "vb-experiment.export-as-source-files",
+    "vb-experiment.export-widgets"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {},
+  "filePath": "bricks/vb-experiment/dist/index.99a2f8eb.js"
+}

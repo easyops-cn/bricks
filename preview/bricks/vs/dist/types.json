@@ -1,0 +1,365 @@
+{
+  "vs.code-editor": {
+    "properties": [
+      {
+        "name": "name",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "label",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "language",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "theme",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "required",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "readOnly",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "automaticLayout",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "fit-container"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "fit-content"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            }
+          ]
+        }
+      },
+      {
+        "name": "minLines",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "completers",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "qualifiedName",
+                "left": {
+                  "type": "identifier",
+                  "name": "monaco"
+                },
+                "right": {
+                  "type": "identifier",
+                  "name": "languages"
+                }
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CompletionItem"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "advancedCompleters",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "typeLiteral",
+                "members": [
+                  {
+                    "type": "propertySignature",
+                    "key": {
+                      "type": "identifier",
+                      "name": "triggerCharacter"
+                    },
+                    "annotation": {
+                      "type": "keyword",
+                      "value": "string"
+                    },
+                    "computed": false
+                  },
+                  {
+                    "type": "propertySignature",
+                    "key": {
+                      "type": "identifier",
+                      "name": "completers"
+                    },
+                    "annotation": {
+                      "type": "array",
+                      "elementType": {
+                        "type": "reference",
+                        "typeName": {
+                          "type": "qualifiedName",
+                          "left": {
+                            "type": "qualifiedName",
+                            "left": {
+                              "type": "identifier",
+                              "name": "monaco"
+                            },
+                            "right": {
+                              "type": "identifier",
+                              "name": "languages"
+                            }
+                          },
+                          "right": {
+                            "type": "identifier",
+                            "name": "CompletionItem"
+                          }
+                        }
+                      }
+                    },
+                    "computed": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "markers",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Marker"
+            }
+          }
+        }
+      },
+      {
+        "name": "links",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "maxLines",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "height",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "keyword",
+              "value": "number"
+            }
+          ]
+        }
+      },
+      {
+        "name": "message",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "code.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "user.input",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "token.click",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Marker",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "token"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "level"
+            },
+            "annotation": {
+              "type": "typeOperator",
+              "operator": "keyof",
+              "annotation": {
+                "type": "typeQuery",
+                "exprName": {
+                  "type": "identifier",
+                  "name": "Level"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "message"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "code"
+            },
+            "annotation": {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "value"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "computed": false
+                },
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "target"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "computed": false
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

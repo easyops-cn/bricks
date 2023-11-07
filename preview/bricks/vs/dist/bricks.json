@@ -1,0 +1,14 @@
+{
+  "id": "bricks/vs",
+  "bricks": [
+    "vs.code-editor"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {
+    "vs.code-editor": [
+      "eo-form-item"
+    ]
+  },
+  "filePath": "bricks/vs/dist/index.8dc4c163.js"
+}

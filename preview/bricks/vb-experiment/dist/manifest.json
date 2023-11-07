@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/vb-experiment",
+  "name": "vb-experiment",
+  "bricks": [],
+  "providers": [
+    {
+      "name": "vb-experiment.export-widgets"
+    },
+    {
+      "name": "vb-experiment.export-as-source-files"
+    }
+  ]
+}

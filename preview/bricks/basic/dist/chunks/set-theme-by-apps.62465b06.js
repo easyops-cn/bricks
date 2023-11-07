@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_next_bricks_basic=self.webpackChunk_next_bricks_basic||[]).push([[1259],{8845:(e,s,c)=>{c.r(s),c.d(s,{setThemeByApps:()=>b});var t=c(628),a=c(5062);function b(e){(0,a.batchSetAppsLocalTheme)(e)}customElements.define("basic.set-theme-by-apps",(0,t.createProviderClass)(b))}}]);
+//# sourceMappingURL=set-theme-by-apps.62465b06.js.map

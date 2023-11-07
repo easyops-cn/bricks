@@ -1,0 +1,12 @@
+{
+  "id": "bricks/illustrations",
+  "bricks": [
+    "illustrations.get-illustration",
+    "illustrations.translate-illustration-config",
+    "illustrations.get-illustrations-by-category"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {},
+  "filePath": "bricks/illustrations/dist/index.6f9546f2.js"
+}

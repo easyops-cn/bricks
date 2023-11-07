@@ -1,0 +1,68 @@
+{
+  "id": "bricks/presentational",
+  "bricks": [
+    "presentational.general-descriptions",
+    "presentational.general-alert",
+    "presentational.code-display",
+    "presentational.humanize-time"
+  ],
+  "elements": [
+    "eo-descriptions",
+    "eo-alert",
+    "eo-code-display",
+    "eo-pagination",
+    "eo-card-item",
+    "eo-divider",
+    "eo-info-card-item",
+    "eo-humanize-time"
+  ],
+  "processors": [],
+  "dependencies": {
+    "eo-descriptions": [
+      "containers.general-card",
+      "containers.grid-layout"
+    ],
+    "presentational.general-descriptions": [
+      "containers.general-card",
+      "containers.grid-layout"
+    ],
+    "eo-alert": [
+      "eo-icon"
+    ],
+    "presentational.general-alert": [
+      "eo-icon"
+    ],
+    "eo-code-display": [
+      "eo-icon",
+      "basic.copy-to-clipboard",
+      "basic.show-notification"
+    ],
+    "presentational.code-display": [
+      "eo-icon",
+      "basic.copy-to-clipboard",
+      "basic.show-notification"
+    ],
+    "eo-pagination": [
+      "eo-icon",
+      "eo-popover",
+      "eo-menu",
+      "eo-menu-item"
+    ],
+    "eo-card-item": [
+      "eo-link",
+      "eo-icon",
+      "eo-mini-actions"
+    ],
+    "eo-info-card-item": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "eo-humanize-time": [
+      "eo-link"
+    ],
+    "presentational.humanize-time": [
+      "eo-link"
+    ]
+  },
+  "filePath": "bricks/presentational/dist/index.61f8ff0c.js"
+}

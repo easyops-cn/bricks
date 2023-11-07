@@ -1,0 +1,1673 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/form",
+  "name": "form",
+  "bricks": [
+    {
+      "name": "eo-input",
+      "alias": [
+        "form.general-input"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "标签文字",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "pattern",
+          "description": "正则校验规则",
+          "type": "string"
+        },
+        {
+          "name": "max",
+          "description": "表单校验最大长度",
+          "type": "number"
+        },
+        {
+          "name": "min",
+          "description": "表单校验最小长度",
+          "type": "number"
+        },
+        {
+          "name": "message",
+          "description": "错误时显示消息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "value",
+          "description": "输入框值",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "占位说明",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "readonly",
+          "description": "是否只读",
+          "type": "boolean"
+        },
+        {
+          "name": "clearable",
+          "description": "是否显示清除按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "autoFocus",
+          "description": "是否自动聚焦",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "description": "类型",
+          "default": "\"text\"",
+          "type": "InputType"
+        },
+        {
+          "name": "size",
+          "description": "大小",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "minLength",
+          "description": "最小长度",
+          "type": "number"
+        },
+        {
+          "name": "maxLength",
+          "description": "最大长度",
+          "type": "number"
+        },
+        {
+          "name": "inputStyle",
+          "description": "输入框样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "validator",
+          "description": "表单项校验方法",
+          "attribute": false,
+          "type": "((value: any) => MessageBody)"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值改变事件",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": "addonBefore",
+          "description": "输入框前置标签"
+        },
+        {
+          "name": "addonAfter",
+          "description": "输入框后置标签"
+        },
+        {
+          "name": "prefix",
+          "description": "输入框前缀图标"
+        },
+        {
+          "name": "suffix",
+          "description": "输入框后缀图标"
+        }
+      ],
+      "methods": [
+        {
+          "name": "focusInput",
+          "params": [],
+          "description": "focus",
+          "returns": {}
+        },
+        {
+          "name": "blurInput",
+          "params": [],
+          "description": "blur",
+          "returns": {}
+        }
+      ],
+      "parts": [
+        {
+          "name": "addon-wrapper",
+          "description": "包裹输入组件、前缀、后缀、前置和后置的容器"
+        },
+        {
+          "name": "affix-wrapper",
+          "description": "包裹输入组件、前缀和后缀的容器"
+        },
+        {
+          "name": "input",
+          "description": "输入组件"
+        },
+        {
+          "name": "clear-icon",
+          "description": "清除按钮"
+        },
+        {
+          "name": "prefix",
+          "description": "输入框前缀容器"
+        },
+        {
+          "name": "suffix",
+          "description": "输入框后缀容器"
+        },
+        {
+          "name": "before-addon",
+          "description": "输入框前置容器"
+        },
+        {
+          "name": "after-addon",
+          "description": "输入框后置容器"
+        }
+      ],
+      "description": "通用输入框构件"
+    },
+    {
+      "name": "eo-textarea",
+      "alias": [
+        "form.general-textarea"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "标签文字",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "占位说明",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "minLength",
+          "description": "最小长度",
+          "type": "number"
+        },
+        {
+          "name": "maxLength",
+          "description": "最大长度",
+          "type": "number"
+        },
+        {
+          "name": "autoSize",
+          "description": "大小自适应",
+          "attribute": false,
+          "type": "AutoSize"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "max",
+          "description": "表单校验最大长度",
+          "type": "number"
+        },
+        {
+          "name": "min",
+          "description": "表单校验最小长度",
+          "type": "number"
+        },
+        {
+          "name": "message",
+          "description": "校验信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "textareaStyle",
+          "description": "自定义样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用多行文本输入框构件"
+    },
+    {
+      "name": "eo-form",
+      "alias": [
+        "form.general-form"
+      ],
+      "properties": [
+        {
+          "name": "layout",
+          "description": "布局方式(默认 vertical 布局)",
+          "default": "vertical",
+          "type": "Layout"
+        },
+        {
+          "name": "size",
+          "description": "表单组件尺寸",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "labelCol",
+          "description": "标签列布局样式（仅当 layout=\"horizontal\" 时有效）",
+          "default": "{\n    sm: {\n      span: 24,\n    },\n    md: {\n      span: 24,\n    },\n    lg: {\n      span: 7,\n    },\n    xl: {\n      span: 5,\n    },\n    xxl: {\n      span: 4,\n    },\n  }",
+          "attribute": false,
+          "type": "ColProps"
+        },
+        {
+          "name": "wrapperCol",
+          "description": "输入控件列布局样式（仅当 layout=\"horizontal\" 时有效）",
+          "default": "{\n    sm: {\n      span: 18,\n    },\n    md: {\n      span: 18,\n    },\n    lg: {\n      span: 13,\n    },\n    xl: {\n      span: 16,\n    },\n    xxl: {\n      span: 18,\n    },\n  }",
+          "attribute": false,
+          "type": "ColProps"
+        },
+        {
+          "name": "formStyle",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "values.change",
+          "description": "表单值变更事件",
+          "detail": {
+            "description": null,
+            "type": "Record<string, unknown>"
+          }
+        },
+        {
+          "name": "validate.success",
+          "description": "表单验证成功时触发事件",
+          "detail": {
+            "type": "Record<string, unknown>"
+          }
+        },
+        {
+          "name": "validate.error",
+          "description": "表单验证报错时触发事件",
+          "detail": {
+            "type": "MessageBody[]"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": null,
+          "description": "表单内容"
+        }
+      ],
+      "methods": [
+        {
+          "name": "validate",
+          "params": [],
+          "description": "表单校验方法",
+          "returns": {
+            "type": "boolean | Record<string, unknown>"
+          }
+        },
+        {
+          "name": "setInitValue",
+          "params": [
+            {
+              "name": "values",
+              "type": "Record<string, unknown>"
+            }
+          ],
+          "description": "表单设置值方法",
+          "returns": {}
+        },
+        {
+          "name": "resetFields",
+          "params": [
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "description": "表单重置值方法",
+          "returns": {}
+        },
+        {
+          "name": "getFieldsValue",
+          "params": [
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "description": "获取表单值方法",
+          "returns": {}
+        },
+        {
+          "name": "validateField",
+          "params": [
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "description": "校验表单字段方法",
+          "returns": {}
+        },
+        {
+          "name": "resetValidateState",
+          "params": [],
+          "description": "重置表单校验状态方法",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "表单构件"
+    },
+    {
+      "name": "eo-form-item",
+      "alias": [
+        "form.general-form-item"
+      ],
+      "properties": [
+        {
+          "name": "formElement",
+          "attribute": false,
+          "type": "Form"
+        },
+        {
+          "name": "curElement",
+          "attribute": false,
+          "type": "HTMLElement"
+        },
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "pattern",
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "max",
+          "type": "number"
+        },
+        {
+          "name": "min",
+          "type": "number"
+        },
+        {
+          "name": "required",
+          "description": "表单项是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "description": "初始值",
+          "type": "string"
+        },
+        {
+          "name": "valuePropsName",
+          "type": "string"
+        },
+        {
+          "name": "layout",
+          "type": "Layout"
+        },
+        {
+          "name": "size",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "trim",
+          "description": "是否自动去除前后的空白字符",
+          "default": "true"
+        },
+        {
+          "name": "trigger",
+          "description": "事件触发方法名",
+          "type": "string"
+        },
+        {
+          "name": "validator",
+          "description": "表单项校验方法",
+          "attribute": false,
+          "type": "((value: any) => MessageBody)"
+        },
+        {
+          "name": "needValidate",
+          "description": "值变化时是否主动出发校验",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用输入框构件"
+    },
+    {
+      "name": "eo-radio",
+      "alias": [
+        "form.general-radio"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "下拉框字段名",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "单选框字段说明",
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "description": "单选框选项表",
+          "required": true,
+          "attribute": false,
+          "type": "GeneralOption[]"
+        },
+        {
+          "name": "value",
+          "description": "单选框当前选中始值",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "description": "单选框样式类型",
+          "default": "\"default\"",
+          "type": "RadioType"
+        },
+        {
+          "name": "ui",
+          "description": "UI样式",
+          "default": "\"default\"",
+          "type": "UIType"
+        },
+        {
+          "name": "size",
+          "description": "大小，只对按钮样式生效",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "customStyle",
+          "description": "自定义radio的外层样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "useBrick",
+          "description": "自定义radio的内容",
+          "attribute": false,
+          "type": "UseSingleBrickConf"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值变化事件",
+          "detail": {
+            "type": "{\n    label: string;\n    value: any;\n    [key: string]: any;\n  }"
+          }
+        },
+        {
+          "name": "options.change",
+          "description": "选项列表变化事件",
+          "detail": {
+            "type": "{\n    options: {\n      label: string;\n      value: any;\n      [key: string]: any;\n    };\n    name: string;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用单选构件"
+    },
+    {
+      "name": "eo-select",
+      "alias": [
+        "form.general-select"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "占位说明",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段文本",
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "description": "选项列表",
+          "required": true,
+          "attribute": false,
+          "type": "GeneralComplexOption[]"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "mode",
+          "description": "类型",
+          "type": "\"tags\" | \"multiple\""
+        },
+        {
+          "name": "tokenSeparators",
+          "description": "自动分词的分隔符，仅在 mode=\"tags\" 时生效",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "maxTagCount",
+          "description": "最多显示多少个 tag, 剩余的 tag 将被隐藏",
+          "type": "number"
+        },
+        {
+          "name": "groupBy",
+          "description": "分组字段",
+          "type": "string"
+        },
+        {
+          "name": "suffix",
+          "description": "",
+          "attribute": false,
+          "type": "UseSingleBrickConf"
+        },
+        {
+          "name": "clearable",
+          "description": "是否支持清除",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "fields",
+          "description": "列表指定字段作为 label 和 value",
+          "attribute": false,
+          "type": "{ label?: string; value?: string }"
+        },
+        {
+          "name": "useBackend",
+          "description": "后端搜索",
+          "attribute": false,
+          "type": "UseBackendConf"
+        },
+        {
+          "name": "debounceSearchDelay",
+          "type": "number"
+        },
+        {
+          "name": "inputStyle",
+          "description": "输入框样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "下拉选择事件",
+          "detail": {
+            "type": "{\n    value: string | string[];\n    options: GeneralComplexOption[];\n  }"
+          }
+        },
+        {
+          "name": "search",
+          "description": "下拉框search事件",
+          "detail": {
+            "type": "{\n    value: string;\n  }"
+          }
+        },
+        {
+          "name": "focus",
+          "description": "下拉框focus事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "options.change",
+          "description": "选项列表变化事件",
+          "detail": {
+            "type": "{\n    options: {\n      label: string;\n      value: any;\n      [key: string]: any;\n    };\n    name: string;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用下拉选择构件"
+    },
+    {
+      "name": "eo-submit-buttons",
+      "alias": [
+        "form.submit-buttons"
+      ],
+      "properties": [
+        {
+          "name": "submitText",
+          "description": "提交按钮的文字",
+          "default": "\"提交\"",
+          "type": "string"
+        },
+        {
+          "name": "cancelText",
+          "description": "取消按钮的文字，不设置则不显示取消按钮",
+          "type": "string"
+        },
+        {
+          "name": "disableAfterClick",
+          "description": "点击确定按钮后自动禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "submitDisabled",
+          "description": "禁用提交按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "submitType",
+          "description": "提交按钮类型",
+          "type": "ButtonType"
+        },
+        {
+          "name": "cancelType",
+          "description": "取消按钮类型",
+          "type": "ButtonType"
+        }
+      ],
+      "events": [
+        {
+          "name": "submit",
+          "description": "点击提交按钮触发的事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "cancel",
+          "description": "点击取消按钮触发的事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "用于general-forms的通用按钮"
+    },
+    {
+      "name": "eo-checkbox",
+      "alias": [
+        "form.general-checkbox"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "CheckboxValueType[]"
+        },
+        {
+          "name": "options",
+          "description": "多选框选项表",
+          "required": true,
+          "default": "[]",
+          "attribute": false,
+          "type": "CheckboxOptionType[]"
+        },
+        {
+          "name": "type",
+          "description": "类型",
+          "default": "\"default\"",
+          "type": "CheckboxType"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "isCustom",
+          "description": "是否为自定义",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "校验文本",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "isGroup",
+          "description": "是否为复选框，为true时，则可设置分组数据 optionGroups",
+          "type": "boolean"
+        },
+        {
+          "name": "optionGroups",
+          "description": "多选框选项分组数据，需要设置 isGroup 为 true 才生效",
+          "attribute": false,
+          "type": "OptionGroup[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "复选框变化事件",
+          "detail": {
+            "type": "CheckboxOptionType[]"
+          }
+        },
+        {
+          "name": "options.change",
+          "description": "复选框变化事件",
+          "detail": {
+            "type": "{\n    options: CheckboxOptionType[];\n    name: string;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "表单复选框构件"
+    },
+    {
+      "name": "eo-dynamic-form-item",
+      "alias": [
+        "form.dynamic-form-item"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "DynamicFormValuesItem[]"
+        },
+        {
+          "name": "message",
+          "description": "校验文本",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "hideRemoveButton",
+          "description": "是否隐藏每一行删除的按钮",
+          "attribute": false,
+          "type": "boolean | ((row: Record<string, any>, index: number) => boolean)"
+        },
+        {
+          "name": "disabledRemoveButton",
+          "description": "是否禁止每一行删除的按钮",
+          "attribute": false,
+          "type": "boolean | ((row: Record<string, any>, index: number) => boolean)"
+        },
+        {
+          "name": "hideAddButton",
+          "description": "是否隐藏添加的按钮",
+          "attribute": false,
+          "type": "boolean | ((value: Record<string, any>[]) => boolean)"
+        },
+        {
+          "name": "disabledAddButton",
+          "description": "是否禁止添加的按钮",
+          "attribute": false,
+          "type": "boolean | ((value: Record<string, any>[]) => boolean)"
+        },
+        {
+          "name": "useBrick",
+          "description": "动态表单子项构件列表",
+          "attribute": false,
+          "type": "UseBrickConf"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "DynamicFormValuesItem[]"
+          }
+        },
+        {
+          "name": "row.add",
+          "description": "增加一行时触发，detail为该行的默认值，index为该行的位置",
+          "detail": {
+            "type": "rowDataType"
+          }
+        },
+        {
+          "name": "row.remove",
+          "description": "移除一行时触发，detail为该行的值，index为该行的位置",
+          "detail": {
+            "type": "rowDataType"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "动态表单"
+    },
+    {
+      "name": "eo-search",
+      "alias": [
+        "form.general-search"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "description": "搜索框的值",
+          "default": "\"\"",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "提示语",
+          "type": "string"
+        },
+        {
+          "name": "autoFocus",
+          "description": "是否自动聚焦",
+          "type": "boolean"
+        },
+        {
+          "name": "clearable",
+          "description": "可以点击清除图标删除内容",
+          "type": "boolean"
+        },
+        {
+          "name": "trim",
+          "description": "是否剔除前后空格",
+          "type": "boolean"
+        },
+        {
+          "name": "debounceTime",
+          "description": "默认延迟时间",
+          "default": "0",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "输入的搜索字符，输入变化时触发",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "search",
+          "description": "搜索时触发",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "搜索框"
+    },
+    {
+      "name": "eo-icon-select",
+      "alias": [
+        "form.icon-select"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "Icon"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "是否必填",
+          "attribute": false,
+          "type": "Record<string, string>"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值变化时触发",
+          "detail": {
+            "type": "Icon | undefined"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "图标选择构件"
+    },
+    {
+      "name": "eo-upload-image",
+      "alias": [
+        "form.upload-image"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "ImageData[]"
+        },
+        {
+          "name": "bucketName",
+          "description": "对象存储桶名字",
+          "type": "string"
+        },
+        {
+          "name": "multiple",
+          "description": "是否支持选定的多张图片",
+          "type": "boolean"
+        },
+        {
+          "name": "limitSize",
+          "description": "上传大小限制(单位为 MB)",
+          "type": "number"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值变化时触发",
+          "detail": {
+            "type": "ImageData[]"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "上传图片构件"
+    },
+    {
+      "name": "eo-switch",
+      "alias": [
+        "form.general-switch"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段文本",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "初始值",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "size",
+          "description": "按钮大小，目前只支持small和非small两种大小。",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "checkedText",
+          "description": "选中时的文本",
+          "type": "string"
+        },
+        {
+          "name": "unCheckedText",
+          "description": "非选中时的文本",
+          "type": "string"
+        },
+        {
+          "name": "checkedIcon",
+          "description": "选中时的图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "unCheckedIcon",
+          "description": "非选中时的文本",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        }
+      ],
+      "events": [
+        {
+          "name": "switch",
+          "description": "开关改变时触发",
+          "detail": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 eo-switch"
+    },
+    {
+      "name": "eo-upload-file",
+      "properties": [
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "FileData[]"
+        },
+        {
+          "name": "multiple",
+          "description": "是否支持多选",
+          "type": "boolean"
+        },
+        {
+          "name": "accept",
+          "description": "接受上传的文件类型，多个之间用 `,` 连接",
+          "type": "string"
+        },
+        {
+          "name": "maxCount",
+          "description": "最大上传数量",
+          "type": "number"
+        },
+        {
+          "name": "limitSize",
+          "description": "上传大小限制(单位为 MB)",
+          "type": "number"
+        },
+        {
+          "name": "buttonText",
+          "description": "上传按钮文本",
+          "default": "上传",
+          "type": "string"
+        },
+        {
+          "name": "buttonType",
+          "description": "上传按钮类型",
+          "type": "ButtonProps[\"type\"]"
+        },
+        {
+          "name": "buttonIcon",
+          "description": "上传按钮类型",
+          "default": "{\n    lib: \"antd\",\n    icon: \"upload\",\n    theme: \"outlined\",\n  }",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "overMaxCountMode",
+          "description": "超出最大上传数量时文件的保留方式",
+          "default": "\"replace\"",
+          "type": "\"ignore\" | \"replace\""
+        },
+        {
+          "name": "uploadDraggable",
+          "description": "是否可以拖拽上传",
+          "type": "boolean"
+        },
+        {
+          "name": "draggableUploadTip",
+          "description": "拖拽上传的提示信息",
+          "type": "string"
+        },
+        {
+          "name": "autoUpload",
+          "description": "是否自动上传",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "url",
+          "description": "自动上传的地址",
+          "type": "string"
+        },
+        {
+          "name": "method",
+          "description": "自动上传的方法",
+          "default": "\"POST\"",
+          "type": "string"
+        },
+        {
+          "name": "uploadName",
+          "description": "自动上传的文件参数名",
+          "default": "\"file\"",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值变化时触发",
+          "detail": {
+            "type": "FileData[]"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "上传文件"
+    },
+    {
+      "name": "eo-auto-complete",
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "占位说明",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段文本",
+          "type": "string"
+        },
+        {
+          "name": "inputStyle",
+          "description": "输入框样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "description": "选项列表",
+          "required": true,
+          "attribute": false,
+          "type": "string[] | OptionType[]"
+        },
+        {
+          "name": "filterByCaption",
+          "description": "搜索时是否根据caption过滤options",
+          "type": "boolean"
+        },
+        {
+          "name": "validator",
+          "description": "表单项校验方法",
+          "attribute": false,
+          "type": "((value: any) => MessageBody)"
+        },
+        {
+          "name": "pattern",
+          "description": "正则校验规则",
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值改变事件",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-auto-complete`"
+    },
+    {
+      "name": "eo-time-picker",
+      "properties": [
+        {
+          "name": "name",
+          "description": "时间选择器字段名",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "时间选择器说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "时间选择器的初始值",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "时间选择器占位说明",
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "configProps",
+          "description": "透传 antd timePicker 属性 [timePickerProps](https://ant.design/components/time-picker-cn)",
+          "attribute": false,
+          "type": "Partial<TimePickerProps>"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "时间变化时触发",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "open",
+          "description": "面板打开时触发， 传出当前时间值",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "close",
+          "description": "面板关闭时触发，传出当前时间值",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-time-picker`"
+    },
+    {
+      "name": "eo-date-picker",
+      "properties": [
+        {
+          "name": "name",
+          "description": "日期选择器字段名",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "日期选择器说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "日期选择器的初始值",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "description": "日期选择器占位说明",
+          "type": "string"
+        },
+        {
+          "name": "message",
+          "description": "校验文本信息",
+          "attribute": false,
+          "type": "Record<string, string>"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "showTime",
+          "description": "是否显示时间, 当设为 `true` 时, 请同时设置 `format` 为 `YYYY-MM-DD HH:mm:ss` 使其也显示具体时，分，秒 的时间",
+          "type": "boolean"
+        },
+        {
+          "name": "format",
+          "description": "显示预览的格式，具体配置参考 [dayjs](https://day.js.org/docs/zh-CN/display/format#%E6%94%AF%E6%8C%81%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%8D%A0%E4%BD%8D%E7%AC%A6%E5%88%97%E8%A1%A8)，注意，这里并非是定义给后台的数据格式，给后台的数据格式定义请参考 `general-form` 构件的 [valueTypes](developers/brick-book/brick/forms.general-form) 属性",
+          "type": "string"
+        },
+        {
+          "name": "picker",
+          "description": "设置选择器类型",
+          "attribute": false,
+          "type": "PickerMode"
+        },
+        {
+          "name": "futureDateDisabled",
+          "description": "不可选择未来日期,优先级高于disabledDate",
+          "type": "boolean"
+        },
+        {
+          "name": "disabledDate",
+          "description": "不可选择的日期",
+          "attribute": false,
+          "type": "DisabledDateType"
+        },
+        {
+          "name": "useFastSelectBtn",
+          "description": "快速选项",
+          "type": "boolean"
+        },
+        {
+          "name": "inputBoxStyle",
+          "description": "输入框样式",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "日期变化时触发",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "ok",
+          "description": "点击确定按钮触发（showTime 为 true 使用）",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-date-picker`"
+    },
+    {
+      "name": "eo-time-range-picker",
+      "properties": [
+        {
+          "name": "name",
+          "description": "时间段选择器字段名",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "时间段选择器说明",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "时间段选择器的初始值",
+          "default": "{ \"startTime\": \"00:00:00\", \"endTime\": \"23:59:59\" }",
+          "attribute": false,
+          "type": "TimeRange"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "rangeType",
+          "description": "时间段类型",
+          "attribute": false,
+          "type": "RangeType"
+        },
+        {
+          "name": "selectNearDays",
+          "description": "只有rangeType在`date` 和 `dateTime`下， 才支持只选择最近n天(当前时间向前n天)",
+          "type": "number"
+        },
+        {
+          "name": "emitChangeOnInit",
+          "description": "",
+          "default": "true\n是否在初始化完成后额外触发一次`time.range.change`, 这里因为历史原因之前默认行为就是在初始化后会触发该事件，这里为了兼容之前的行为，默认值只能设置为 true。",
+          "type": "boolean"
+        },
+        {
+          "name": "presetRanges",
+          "description": "",
+          "default": "[]\n预设时间范围快捷选择；设置了属性selectNearDays时，属性presetRanges不生效；属性rangeType为week时，presetRanges的值只能为本周、本月、本季度、今年，属性rangeType为month、quarter、year时，以此类推",
+          "attribute": false,
+          "type": "presetRangeType[]"
+        },
+        {
+          "name": "validator",
+          "attribute": false,
+          "type": "((value: any) => MessageBody | string)"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "时间段变化时触发",
+          "detail": {
+            "type": "TimeRange"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-time-range-picker`"
+    }
+  ],
+  "providers": []
+}

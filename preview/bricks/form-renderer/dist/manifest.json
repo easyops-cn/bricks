@@ -1,0 +1,23 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/form-renderer",
+  "name": "form-renderer",
+  "bricks": [
+    {
+      "name": "eo-form-renderer",
+      "properties": [
+        {
+          "name": "formData",
+          "attribute": false,
+          "type": "unknown"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-form-renderer`"
+    }
+  ],
+  "providers": []
+}

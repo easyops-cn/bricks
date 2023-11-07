@@ -1,0 +1,308 @@
+{
+  "vb-experiment.export-widgets": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "param_1",
+        "isRestElement": false,
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ExportWidgetsParams"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "void"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "ExportWidgetsParams",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "files"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "FileInfo"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "FileInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "path"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "content"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "vb-experiment.export-as-source-files": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "param_1",
+        "isRestElement": false,
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "StoryboardAssemblyResult"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "void"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "StoryboardAssemblyResult",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "storyboard"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Storyboard"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "projectDetail"
+            },
+            "annotation": {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "appId"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "computed": false
+                },
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "name"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "computed": false
+                },
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "appSetting"
+                  },
+                  "annotation": {
+                    "type": "intersection",
+                    "types": [
+                      {
+                        "type": "reference",
+                        "typeName": {
+                          "type": "identifier",
+                          "name": "Pick"
+                        },
+                        "typeParameters": {
+                          "type": "typeParameterInstantiation",
+                          "params": [
+                            {
+                              "type": "reference",
+                              "typeName": {
+                                "type": "identifier",
+                                "name": "MicroApp"
+                              }
+                            },
+                            {
+                              "type": "union",
+                              "types": [
+                                {
+                                  "type": "jsLiteral",
+                                  "value": "homepage"
+                                },
+                                {
+                                  "type": "jsLiteral",
+                                  "value": "theme"
+                                },
+                                {
+                                  "type": "jsLiteral",
+                                  "value": "locales"
+                                },
+                                {
+                                  "type": "jsLiteral",
+                                  "value": "noAuthGuard"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "typeLiteral",
+                        "members": [
+                          {
+                            "type": "propertySignature",
+                            "key": {
+                              "type": "identifier",
+                              "name": "layoutType"
+                            },
+                            "annotation": {
+                              "type": "keyword",
+                              "value": "string"
+                            },
+                            "optional": true,
+                            "computed": false
+                          },
+                          {
+                            "type": "propertySignature",
+                            "key": {
+                              "type": "identifier",
+                              "name": "defaultConfig"
+                            },
+                            "annotation": {
+                              "type": "keyword",
+                              "value": "string"
+                            },
+                            "optional": true,
+                            "computed": false
+                          },
+                          {
+                            "type": "propertySignature",
+                            "key": {
+                              "type": "identifier",
+                              "name": "icon"
+                            },
+                            "annotation": {
+                              "type": "keyword",
+                              "value": "string"
+                            },
+                            "optional": true,
+                            "computed": false
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "computed": false
+                },
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "brickNextVersion"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "number"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

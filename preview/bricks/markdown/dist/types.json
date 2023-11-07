@@ -1,0 +1,114 @@
+{
+  "eo-markdown-editor": {
+    "properties": [
+      {
+        "name": "name",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "label",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "required",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "bucketName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "containerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "image.upload",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ImageInfo"
+            }
+          }
+        }
+      },
+      {
+        "name": "markdown.value.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ImageInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "src"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

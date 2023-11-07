@@ -1,0 +1,3 @@
+/**! @contract easyops.api.cmdb.instance.CreateInstance@1.1.0 */
+
+/**! @contract easyops.api.cmdb.instance.ImportInstance@1.1.0 */

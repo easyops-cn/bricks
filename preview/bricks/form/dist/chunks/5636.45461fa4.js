@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_next_bricks_form=self.webpackChunk_next_bricks_form||[]).push([[5636],{5636:(i,n,e)=>{e.r(n),e.d(n,{initializeReactI18n:()=>r,useTranslation:()=>a.useTranslation});var t=e(860),a=e(8120),s=!1;function r(i,n){(0,t.initializeI18n)(i,n),s||(s=!0,a.initReactI18next.init(t.i18n))}}}]);
+//# sourceMappingURL=5636.45461fa4.js.map

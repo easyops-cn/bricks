@@ -1,0 +1,68 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/markdown",
+  "name": "markdown",
+  "bricks": [
+    {
+      "name": "eo-markdown-editor",
+      "alias": [
+        "markdown.markdown-editor"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "标签文字",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "value",
+          "description": "初始值",
+          "type": "string"
+        },
+        {
+          "name": "bucketName",
+          "description": "对象存储桶名字，请在业务编排的时候与后台同学商量创建，一般一个业务需求对应一个存储桶名称。如不传则默认以base64格式转换图片",
+          "type": "string"
+        },
+        {
+          "name": "containerStyle",
+          "description": "外层容器样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "image.upload",
+          "description": "上传图片时触发的事件",
+          "detail": {
+            "description": null,
+            "type": "ImageInfo"
+          }
+        },
+        {
+          "name": "markdown.value.change",
+          "description": "编辑markdown触发的变化事件",
+          "detail": {
+            "description": null,
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": []
+    }
+  ],
+  "providers": []
+}

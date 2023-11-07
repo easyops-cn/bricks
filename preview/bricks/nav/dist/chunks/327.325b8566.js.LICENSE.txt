@@ -1,0 +1,3 @@
+/**! @contract easyops.api.user_service.my_collection.ListMyCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.my_collection.UpsertMyCollection@1.0.0 */

@@ -1,0 +1,262 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/visual-builder",
+  "name": "visual-builder",
+  "bricks": [
+    {
+      "name": "visual-builder.workbench-pane",
+      "properties": [
+        {
+          "name": "titleLabel",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "badge",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "active.change",
+          "detail": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "active.firstActivated",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": []
+    },
+    {
+      "name": "visual-builder.workbench-sidebar",
+      "properties": [
+        {
+          "name": "titleLabel",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": []
+    },
+    {
+      "name": "visual-builder.workbench-action",
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "to",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "href",
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": []
+    },
+    {
+      "name": "visual-builder.workbench-action-list",
+      "properties": [
+        {
+          "name": "appId",
+          "type": "string"
+        },
+        {
+          "name": "menu",
+          "attribute": false,
+          "type": "SidebarMenu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": []
+    },
+    {
+      "name": "visual-builder.workbench-tree",
+      "properties": [
+        {
+          "name": "nodes",
+          "attribute": false,
+          "type": "WorkbenchNodeData[]"
+        },
+        {
+          "name": "actions",
+          "attribute": false,
+          "type": "WorkbenchTreeAction[]"
+        },
+        {
+          "name": "actionsHidden",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "isTransformName",
+          "type": "boolean"
+        },
+        {
+          "name": "searchPlaceholder",
+          "type": "string"
+        },
+        {
+          "name": "noSearch",
+          "type": "boolean"
+        },
+        {
+          "name": "activeKey",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "showMatchedNodeOnly",
+          "type": "boolean"
+        },
+        {
+          "name": "matchNodeDataFields",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "fixedActionsFor",
+          "attribute": false,
+          "type": "Record<string, unknown> | Record<string, unknown>[]"
+        },
+        {
+          "name": "collapsible",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsedNodes",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "allowDrag",
+          "type": "boolean"
+        },
+        {
+          "name": "allowDragToRoot",
+          "type": "boolean"
+        },
+        {
+          "name": "allowDragToInside",
+          "type": "boolean"
+        },
+        {
+          "name": "nodeKey",
+          "type": "string"
+        },
+        {
+          "name": "skipNotify",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "detail": {
+            "type": "ActionClickDetail"
+          }
+        },
+        {
+          "name": "node.click",
+          "detail": {
+            "type": "unknown"
+          }
+        },
+        {
+          "name": "node.drop",
+          "detail": {
+            "type": "any"
+          }
+        },
+        {
+          "name": "context.menu",
+          "detail": {
+            "type": "unknown"
+          }
+        },
+        {
+          "name": "node.toggle",
+          "detail": {
+            "type": "{\n    nodeId: string;\n    collapsed: boolean;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": ""
+    },
+    {
+      "name": "visual-builder.workbench-history-action",
+      "properties": [
+        {
+          "name": "appId",
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "history.item.click",
+          "description": "点击历史项标题触发",
+          "detail": {
+            "type": "HistoryData & { enableRollback: boolean }"
+          }
+        },
+        {
+          "name": "rollback",
+          "description": "点击回滚触发",
+          "detail": {
+            "type": "HistoryData"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "项目变更历史"
+    }
+  ],
+  "providers": [
+    {
+      "name": "visual-builder.collect-used-contracts"
+    },
+    {
+      "name": "visual-builder.inject-preview-agent"
+    }
+  ]
+}

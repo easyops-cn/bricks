@@ -1,0 +1,15 @@
+{
+  "eo-form-renderer": {
+    "properties": [
+      {
+        "name": "formData",
+        "annotation": {
+          "type": "keyword",
+          "value": "unknown"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  }
+}

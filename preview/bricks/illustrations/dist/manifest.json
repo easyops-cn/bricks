@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/illustrations",
+  "name": "illustrations",
+  "bricks": [],
+  "providers": [
+    {
+      "name": "illustrations.get-illustrations-by-category"
+    },
+    {
+      "name": "illustrations.get-illustration"
+    },
+    {
+      "name": "illustrations.translate-illustration-config"
+    }
+  ]
+}

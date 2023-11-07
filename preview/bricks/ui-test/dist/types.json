@@ -1,0 +1,3473 @@
+{
+  "ui-test.get-flat-nodes-in-tree": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "tree",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TestTreeData"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "FlatNode"
+          }
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "TestTreeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandIcon"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeNodeItemData"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "labelColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandIcon",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "color"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "TreeNodeItemData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isChainChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isSortChange"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "displayLabel"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeGraphData"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeGraphData"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextChildSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextSiblingSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isLastChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeGraphData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "FlatNode",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "display"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "initialSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.insert-node": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "treeData",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TestTreeData"
+            }
+          }
+        }
+      },
+      {
+        "name": "itemNode",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TreeNodeItemData"
+          }
+        }
+      },
+      {
+        "name": "formData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "any"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "param_4",
+        "isRestElement": false
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "undefined"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "TestTreeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandIcon"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeNodeItemData"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "labelColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandIcon",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "color"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "TreeNodeItemData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isChainChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isSortChange"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "displayLabel"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeGraphData"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeGraphData"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextChildSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextSiblingSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isLastChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeGraphData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.rename-file": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "prevName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "curName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "appId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "undefined"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ui-test.save-recorded-commands": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "param_1",
+        "isRestElement": false,
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SaveRecordedCommandsParams"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "void"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "SaveRecordedCommandsParams",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "steps"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "SelectedRecordStep"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "initialSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.sort-test-tree-node": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "treeData",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TestTreeData"
+            }
+          }
+        }
+      },
+      {
+        "name": "itemData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TreeNodeItemData"
+          }
+        }
+      },
+      {
+        "name": "action",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Action"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "SortData"
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "TestTreeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandIcon"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeNodeItemData"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "labelColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandIcon",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "color"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "TreeNodeItemData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isChainChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isSortChange"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "displayLabel"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeGraphData"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeGraphData"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextChildSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextSiblingSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isLastChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeGraphData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Action",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "move-up"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "move-down"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "SortData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "treeData"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sortedChangeChildren"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.choose-directory": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "params",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Params"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "Params",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "action"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "get"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "set"
+                }
+              ]
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.clone-nodes": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "clonedData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TreeNodeItemData"
+          }
+        }
+      },
+      {
+        "name": "parentData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TreeNodeItemData"
+          }
+        }
+      },
+      {
+        "name": "treeData",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TestTreeData"
+            }
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "void"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "TreeNodeItemData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isChainChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isSortChange"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "displayLabel"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeGraphData"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeGraphData"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextChildSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nextSiblingSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isLastChild"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeGraphData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "TestTreeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandIcon"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeNodeItemData"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TestTreeData"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "labelColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandIcon",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "color"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ui-test.apply-snippet": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "param_1",
+        "isRestElement": false,
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ApplySnippetParams"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "void"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "ApplySnippetParams",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodes"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeItem"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "initialSort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.delete-file": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "suiteData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NodeItem"
+          }
+        }
+      },
+      {
+        "name": "appId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "undefined"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "NodeItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeItem"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "any"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeFlag"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeFlag",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "only"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "skip"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ui-test.export-as-file": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "suiteData",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NodeItem"
+          }
+        }
+      },
+      {
+        "name": "appId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "boolean"
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "NodeItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "NodeItem"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "any"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeFlag"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeFlag",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "only"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "skip"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ui-test.inject-preview-agent": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "previewFromOrigin",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "previewOptions",
+        "annotation": {
+          "type": "keyword",
+          "value": "unknown"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "keyword",
+              "value": "unknown"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ui-test.preview-container": {
+    "properties": [
+      {
+        "name": "src",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "recording",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "inspecting",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "hoverRelatedCommands",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        }
+      },
+      {
+        "name": "activeRelatedCommands",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "NodeGraphData"
+            }
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "url.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "inspect.select",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "InspectSelector"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "record.complete",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "RecordStep"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "back",
+        "params": [],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "forward",
+        "params": [],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "reload",
+        "params": [],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "NodeGraphData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sort"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "flag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "NodeType",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Suite"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "suite"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Block"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "block"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Command"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "command"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "InspectSelector",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "testid"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "id"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "css-selector"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tag"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "RecordStep",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "event"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "targets"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "InspectSelector"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "ui-test.get-commands": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "options",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GetCommandsOptions"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "Promise"
+        },
+        "typeParameters": {
+          "type": "typeParameterInstantiation",
+          "params": [
+            {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandDoc"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "GetCommandsOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "category"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandCategory"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "chain"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandChain"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "q"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "CommandDoc",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "category"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandCategory"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "from"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandFrom"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "chain"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandChain"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "description"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandParam"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "overloads"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandOverload"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "keywords"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandIcon"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandFrom",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "cypress"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "third-party"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "custom"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "CommandParam",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CommandParamType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "description"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "required"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "default"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "enum"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "parenthesizedType",
+                "annotation": {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "keyword",
+                      "value": "string"
+                    },
+                    {
+                      "type": "keyword",
+                      "value": "number"
+                    },
+                    {
+                      "type": "reference",
+                      "typeName": {
+                        "type": "identifier",
+                        "name": "EnumItem"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandParamType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "number"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "string"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "boolean"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "object"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "array"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "function"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "mixed"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "EnumItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "CommandOverload",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "params"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CommandParam"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CommandIcon",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "color"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

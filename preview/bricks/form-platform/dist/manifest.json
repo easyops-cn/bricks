@@ -1,0 +1,110 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/form-platform",
+  "name": "form-platform",
+  "bricks": [
+    {
+      "name": "eo-user-or-user-group-select",
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "description": "字段placeholder",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "string[] | UserOrUserGroupSelectValue"
+        },
+        {
+          "name": "objectList",
+          "description": "模型列表，不传该属性构件内部会发请求获取该列表，如果需要传该属性则优先使用外部传进来的数据，该数据来自\"providers-of-cmdb.cmdb-object-api-get-object-ref\" 如 demo 所示\nadvanced",
+          "attribute": false,
+          "type": "Partial<CmdbModels.ModelCmdbObject>[]"
+        },
+        {
+          "name": "query",
+          "description": "用户和用户组`search`接口的`query`，此参数比较适用于，两者接口需要参数相同的情况\nadvanced",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "userQuery",
+          "description": "针对`USER/instance/_search`接口的`query`，此参数比较适用于，可能只需要针对用户做筛选的情况",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "userGroupQuery",
+          "description": "针对`USER_GROUP/instance/_search`接口的`query`，此参数比较适用于，可能只需要针对用户组做筛选的情况",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "optionsMode",
+          "description": "支持选择用户、用户组或者两者\n{\n  \"optionType\": \"button\",\n  \"options\": [\n    {\n      \"label\": \"All\",\n      \"value\": \"all\"\n    },\n    {\n      \"label\": \"User\",\n      \"value\": \"user\",\n      \"icon\": {\n        \"lib\": \"antd\",\n        \"icon\": \"user\",\n        \"theme\": \"outlined\"\n      }\n    },\n    {\n      \"label\": \"Group\",\n      \"value\": \"group\",\n      \"icon\": {\n        \"lib\": \"antd\",\n        \"icon\": \"usergroup-add\",\n        \"theme\": \"outlined\"\n      }\n    }\n  ]\n}",
+          "default": "\"all\"",
+          "type": "\"user\" | \"group\" | \"all\""
+        },
+        {
+          "name": "mergeUseAndUserGroup",
+          "description": "是否合并用户和用户组数据，当设置为 true 时，输入的`value`和`user.group.change`事件输出的 detail 都为`string[]`格式。",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "isMultiple",
+          "description": "是否多选，默认为多选",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "staticList",
+          "description": "固定白名单列表，该列表中的值用户不能取消。",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "hideAddMeQuickly",
+          "description": "快速选择我",
+          "default": "true",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "string[] | UserOrUserGroupSelectValue"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-user-or-user-group-select`"
+    }
+  ],
+  "providers": []
+}

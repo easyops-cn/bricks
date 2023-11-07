@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrick_docs=self.webpackChunkbrick_docs||[]).push([[4485],{51216:e=>{e.exports=JSON.parse('{"title":"Brick package: advanced","slug":"/bricks/category/advanced","permalink":"/bricks/category/advanced","navigation":{"previous":{"title":"Overview","permalink":"/"},"next":{"title":"eo-cascader","permalink":"/bricks/advanced/eo-cascader"}}}')}}]);

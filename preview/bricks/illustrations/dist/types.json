@@ -1,0 +1,166 @@
+{
+  "illustrations.get-illustrations-by-category": {
+    "type": "provider",
+    "params": [],
+    "returns": {}
+  },
+  "illustrations.get-illustration": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "props",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "IllustrationProps"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "union",
+        "types": [
+          {
+            "type": "keyword",
+            "value": "string"
+          },
+          {
+            "type": "keyword",
+            "value": "undefined"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "IllustrationProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "category"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "theme"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "SiteTheme"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "illustrations.translate-illustration-config": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "useNewIllustration",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "illustrationsConfig",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "IllustrationProps"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "reference",
+        "typeName": {
+          "type": "identifier",
+          "name": "IllustrationProps"
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "IllustrationProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "category"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "theme"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "SiteTheme"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

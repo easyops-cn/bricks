@@ -1,0 +1,38 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/nav",
+  "name": "nav",
+  "bricks": [
+    {
+      "name": "eo-nav-menu",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单项",
+          "attribute": false,
+          "type": "SidebarMenu"
+        },
+        {
+          "name": "showTooltip",
+          "description": "是否显示 tooltip",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "菜单构件"
+    },
+    {
+      "name": "eo-launchpad-button",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "Launchpad 按钮构件"
+    }
+  ],
+  "providers": []
+}
