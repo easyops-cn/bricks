@@ -1,0 +1,3 @@
+/**! @contract easyops.api.next_builder.contract_center.SearchContract@1.0.0 */
+
+/**! @contract easyops.api.next_builder.workspace.GetChangeHistory@1.0.0 */

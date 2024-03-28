@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_next_bricks_icons=self.webpackChunk_next_bricks_icons||[]).push([[2123],{5988:(s,c,e)=>{e.r(c),e(2282),e(7299),e(7708),e(8152),e(5903),e(4899)}}]);

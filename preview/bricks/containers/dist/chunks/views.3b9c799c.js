@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_next_bricks_containers=self.webpackChunk_next_bricks_containers||[]).push([[475],{9764:(e,s,n)=>{n.r(s),n(1462),n(1432),n(6690),n(1812)}}]);

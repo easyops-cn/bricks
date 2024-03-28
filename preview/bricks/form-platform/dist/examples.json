@@ -1,0 +1,5 @@
+{
+  "eo-user-or-user-group-select": {
+    "doc": "构件 `eo-user-or-user-group-select`\n\n## Examples\n\n### Basic\n\n```yaml preview\n- brick: eo-user-or-user-group-select\n  properties:\n    label: Label\n    name: user\n    placeholder: 用户\n    isMultiple: true\n# -- YAML DELIMITER (1nbbm8) --\n# <eo-user-or-user-group-select\n#   label=\"Label\"\n#   name=\"user\"\n#   placeholder=\"用户\"\n#   is-multiple\n# ></eo-user-or-user-group-select>\n# \n```\n"
+  }
+}

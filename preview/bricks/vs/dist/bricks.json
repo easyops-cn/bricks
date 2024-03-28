@@ -1,0 +1,18 @@
+{
+  "id": "bricks/vs",
+  "bricks": [
+    "vs.code-editor"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {
+    "vs.code-editor": [
+      "eo-form-item",
+      "eo-tooltip",
+      "eo-icon",
+      "basic.copy-to-clipboard",
+      "basic.show-notification"
+    ]
+  },
+  "filePath": "bricks/vs/dist/index.9c7996cd.js"
+}

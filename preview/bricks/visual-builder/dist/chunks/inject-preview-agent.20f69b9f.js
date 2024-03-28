@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_next_bricks_visual_builder=self.webpackChunk_next_bricks_visual_builder||[]).push([[4963],{7030:(e,i,r)=>{r.r(i),r.d(i,{injectPreviewAgent:()=>t});var s=r(8438),n=r(9027);function t(e,i){return(0,n.A)(e,i)}r(6788),customElements.define("visual-builder.inject-preview-agent",(0,s.createProviderClass)(t))}}]);
+//# sourceMappingURL=inject-preview-agent.20f69b9f.js.map

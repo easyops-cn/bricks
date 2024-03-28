@@ -1,0 +1,5 @@
+/**! @contract easyops.api.cmdb.instance.CreateInstance@1.1.0 */
+
+/**! @contract easyops.api.cmdb.instance.PostSearchV3@1.1.0 */
+
+/**! @contract easyops.api.cmdb.instance.UpdateInstanceV2@1.0.0 */

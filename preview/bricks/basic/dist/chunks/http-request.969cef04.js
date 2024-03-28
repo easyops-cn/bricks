@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_next_bricks_basic=self.webpackChunk_next_bricks_basic||[]).push([[539],{9621:(e,t,s)=>{s.r(t),s.d(t,{httpRequest:()=>u});var r=s(2681),c=s(5290);function u(e,t,s){return c.http.request(e,t,s)}customElements.define("basic.http-request",(0,r.createProviderClass)(u))}}]);
+//# sourceMappingURL=http-request.969cef04.js.map

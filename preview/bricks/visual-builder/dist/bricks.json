@@ -1,0 +1,53 @@
+{
+  "id": "bricks/visual-builder",
+  "bricks": [
+    "visual-builder.workbench-pane",
+    "visual-builder.workbench-action",
+    "visual-builder.workbench-sidebar",
+    "visual-builder.workbench-action-list",
+    "visual-builder.workbench-tree",
+    "visual-builder.inject-preview-agent",
+    "visual-builder.workbench-history-action",
+    "visual-builder.page-arch-node",
+    "visual-builder.contract-select",
+    "visual-builder.collect-used-contracts"
+  ],
+  "elements": [],
+  "processors": [],
+  "dependencies": {
+    "visual-builder.workbench-pane": [
+      "eo-icon"
+    ],
+    "visual-builder.workbench-action": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "visual-builder.workbench-action-list": [
+      "visual-builder.workbench-action",
+      "eo-link",
+      "eo-icon"
+    ],
+    "visual-builder.workbench-tree": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "visual-builder.workbench-history-action": [
+      "eo-button",
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-popover"
+    ],
+    "visual-builder.page-arch-node": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.contract-select": [
+      "eo-form-item",
+      "eo-auto-complete",
+      "eo-icon",
+      "eo-input"
+    ]
+  },
+  "filePath": "bricks/visual-builder/dist/index.a327cedf.js"
+}
