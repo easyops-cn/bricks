@@ -1,0 +1,9 @@
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/**! @contract easyops.api.user_service.my_collection.ListMyCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.my_collection.UpsertMyCollection@1.0.0 */

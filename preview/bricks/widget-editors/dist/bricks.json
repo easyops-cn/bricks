@@ -1,0 +1,12 @@
+{
+  "id": "bricks/widget-editors",
+  "bricks": [],
+  "elements": [],
+  "processors": [],
+  "editors": [
+    "base-layout-v3.tpl-page-layout",
+    "base-layout.tpl-base-page-module"
+  ],
+  "dependencies": {},
+  "filePath": "bricks/widget-editors/dist/index.ff71ed90.js"
+}

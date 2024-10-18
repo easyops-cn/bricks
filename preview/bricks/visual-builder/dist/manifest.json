@@ -1,0 +1,777 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/visual-builder",
+  "name": "visual-builder",
+  "bricks": [
+    {
+      "name": "visual-builder.workbench-pane",
+      "properties": [
+        {
+          "name": "titleLabel",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "badge",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "active.change",
+          "detail": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "active.firstActivated",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.workbench-action-list",
+      "properties": [
+        {
+          "name": "appId",
+          "type": "string"
+        },
+        {
+          "name": "menu",
+          "attribute": false,
+          "type": "SidebarMenu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.workbench-tree",
+      "properties": [
+        {
+          "name": "nodes",
+          "attribute": false,
+          "type": "WorkbenchNodeData[]"
+        },
+        {
+          "name": "actions",
+          "attribute": false,
+          "type": "WorkbenchTreeAction[]"
+        },
+        {
+          "name": "actionsHidden",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "isTransformName",
+          "type": "boolean"
+        },
+        {
+          "name": "searchPlaceholder",
+          "type": "string"
+        },
+        {
+          "name": "noSearch",
+          "type": "boolean"
+        },
+        {
+          "name": "activeKey",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "showMatchedNodeOnly",
+          "type": "boolean"
+        },
+        {
+          "name": "matchNodeDataFields",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "fixedActionsFor",
+          "attribute": false,
+          "type": "Record<string, unknown> | Record<string, unknown>[]"
+        },
+        {
+          "name": "collapsible",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsedNodes",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "allowDrag",
+          "type": "boolean"
+        },
+        {
+          "name": "allowDragToRoot",
+          "type": "boolean"
+        },
+        {
+          "name": "allowDragToInside",
+          "type": "boolean"
+        },
+        {
+          "name": "nodeKey",
+          "type": "string"
+        },
+        {
+          "name": "skipNotify",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "detail": {
+            "type": "ActionClickDetail"
+          }
+        },
+        {
+          "name": "node.click",
+          "detail": {
+            "type": "unknown"
+          }
+        },
+        {
+          "name": "node.drop",
+          "detail": {
+            "type": "any"
+          }
+        },
+        {
+          "name": "context.menu",
+          "detail": {
+            "type": "unknown"
+          }
+        },
+        {
+          "name": "node.toggle",
+          "detail": {
+            "type": "{\n    nodeId: string;\n    collapsed: boolean;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.workbench-history-action",
+      "properties": [
+        {
+          "name": "appId",
+          "type": "string"
+        },
+        {
+          "name": "projectId",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "history.item.click",
+          "description": "点击历史项标题触发",
+          "detail": {
+            "type": "HistoryData & { enableRollback: boolean }"
+          }
+        },
+        {
+          "name": "rollback",
+          "description": "点击回滚触发",
+          "detail": {
+            "type": "HistoryData"
+          }
+        },
+        {
+          "name": "rollback.all",
+          "description": "回滚全部",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "项目变更历史",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.page-arch-node",
+      "properties": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "PageArchNodeType"
+        },
+        {
+          "name": "external",
+          "attribute": false,
+          "type": "ExtraNodeData"
+        },
+        {
+          "name": "subNodes",
+          "attribute": false,
+          "type": "ExtraNodeData[]"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "notSynced",
+          "type": "boolean"
+        },
+        {
+          "name": "disableChildAppend",
+          "type": "boolean"
+        },
+        {
+          "name": "autoFocusOnce",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "label.editing.change",
+          "detail": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "label.change",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "node.click",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "node.dblclick",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "node.contextmenu",
+          "detail": {
+            "type": "ContextMenuDetail"
+          }
+        },
+        {
+          "name": "child.append",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "external.click",
+          "detail": {
+            "type": "ExtraNodeData"
+          }
+        },
+        {
+          "name": "subNode.dblclick",
+          "detail": {
+            "type": "ExtraNodeData"
+          }
+        },
+        {
+          "name": "subNode.contextmenu",
+          "detail": {
+            "type": "SubNodeContextMenuData"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `visual-builder.page-arch-node`"
+    },
+    {
+      "name": "visual-builder.generate-snippets-context-menu",
+      "properties": [
+        {
+          "name": "options",
+          "attribute": false,
+          "type": "SnippetOption[]"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "position",
+          "attribute": false,
+          "type": "Position"
+        }
+      ],
+      "events": [
+        {
+          "name": "item.drag.start",
+          "detail": {
+            "type": "SnippetItem"
+          }
+        },
+        {
+          "name": "item.drag.end",
+          "detail": {
+            "type": "SnippetItem"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "OpenInfo"
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "构件 `visual-builder.generate-snippets-context-menu`"
+    },
+    {
+      "name": "visual-builder.contract-select",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "suffix",
+          "attribute": false,
+          "type": "{ useBrick: UseSingleBrickConf | UseSingleBrickConf[] }"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "契约选择构件"
+    },
+    {
+      "name": "visual-builder.chat-conversation",
+      "properties": [
+        {
+          "name": "messages",
+          "attribute": false,
+          "type": "Message[]"
+        },
+        {
+          "name": "errorBoundary",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "storyboard.update",
+          "detail": {
+            "type": "BrickConf[]"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "用于 Visual Builder 的智能聊天对话列表"
+    },
+    {
+      "name": "visual-builder.chat-preview",
+      "properties": [
+        {
+          "name": "storyboard",
+          "attribute": false,
+          "type": "BrickConf | BrickConf[]"
+        },
+        {
+          "name": "theme",
+          "type": "string"
+        },
+        {
+          "name": "uiVersion",
+          "type": "string"
+        },
+        {
+          "name": "app",
+          "type": "MicroApp"
+        },
+        {
+          "name": "inspecting",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "activeTarget.change",
+          "detail": {
+            "type": "InspectSelector | undefined"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "select",
+          "params": [
+            {
+              "name": "payload",
+              "type": "InspectSelector"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `visual-builder.chat-preview`"
+    },
+    {
+      "name": "visual-builder.pre-generated-preview",
+      "properties": [
+        {
+          "name": "generations",
+          "attribute": false,
+          "type": "AttributeGeneration[]"
+        },
+        {
+          "name": "category",
+          "description": "",
+          "default": "\"value\"",
+          "type": "PreviewCategory"
+        },
+        {
+          "name": "theme",
+          "type": "string"
+        },
+        {
+          "name": "uiVersion",
+          "type": "string"
+        },
+        {
+          "name": "app",
+          "type": "MicroApp"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `visual-builder.pre-generated-preview`"
+    },
+    {
+      "name": "visual-builder.pre-generated-table-view",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `visual-builder.pre-generated-table-view`"
+    },
+    {
+      "name": "visual-builder.workbench-sidebar",
+      "properties": [
+        {
+          "name": "titleLabel",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.workbench-action",
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "to",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "href",
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "type": "string"
+        },
+        {
+          "name": "tooltip",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "",
+      "insider": true
+    },
+    {
+      "name": "visual-builder.pre-generated-container",
+      "properties": [
+        {
+          "name": "useBrick",
+          "attribute": false,
+          "type": "UseBrickConf"
+        },
+        {
+          "name": "dataSource",
+          "attribute": false,
+          "type": "unknown"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `visual-builder.pre-generated-container`"
+    },
+    {
+      "name": "visual-builder.property-editor",
+      "properties": [
+        {
+          "name": "editorName",
+          "description": "构件名称",
+          "type": "string"
+        },
+        {
+          "name": "values",
+          "description": "值",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "advancedMode",
+          "description": "高级模式",
+          "type": "boolean"
+        },
+        {
+          "name": "dataList",
+          "attribute": false,
+          "type": "DataItem[]"
+        },
+        {
+          "name": "editorPackages",
+          "attribute": false,
+          "type": "BrickPackage[]"
+        },
+        {
+          "name": "links",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "extraLibs",
+          "attribute": false,
+          "type": "SelectOptions"
+        },
+        {
+          "name": "childSlots",
+          "attribute": false,
+          "type": "SelectOptions"
+        }
+      ],
+      "events": [
+        {
+          "name": "validate.success",
+          "description": "表单验证成功时触发事件",
+          "detail": {
+            "type": "Record<string, unknown>"
+          }
+        },
+        {
+          "name": "validate.error",
+          "description": "表单验证报错时触发事件",
+          "detail": {
+            "type": "any[]"
+          }
+        },
+        {
+          "name": "values.change",
+          "detail": {
+            "type": "any"
+          }
+        },
+        {
+          "name": "token.click",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "trigger.action",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "validate",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "构件 `visual-builder.property-editor`"
+    },
+    {
+      "name": "visual-builder.raw-data-preview",
+      "properties": [
+        {
+          "name": "previewUrl",
+          "type": "string"
+        },
+        {
+          "name": "generations",
+          "attribute": false,
+          "type": "AttributeGeneration[]"
+        },
+        {
+          "name": "mocks",
+          "attribute": false,
+          "type": "Record<string, unknown>[]"
+        },
+        {
+          "name": "busy",
+          "type": "boolean"
+        },
+        {
+          "name": "category",
+          "description": "",
+          "default": "\"value\"",
+          "type": "PreviewCategory"
+        },
+        {
+          "name": "theme",
+          "type": "string"
+        },
+        {
+          "name": "uiVersion",
+          "type": "string"
+        },
+        {
+          "name": "app",
+          "type": "MicroApp"
+        }
+      ],
+      "events": [
+        {
+          "name": "comment",
+          "detail": {
+            "type": "CommentDetail"
+          }
+        },
+        {
+          "name": "approve",
+          "detail": {
+            "type": "ApproveDetail"
+          }
+        },
+        {
+          "name": "view.attr.prompt",
+          "detail": {
+            "type": "AttributeGeneration"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `visual-builder.raw-data-preview`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "visual-builder.batch-update-raw-data-generated-view"
+    },
+    {
+      "name": "visual-builder.check-editor-by-name"
+    },
+    {
+      "name": "visual-builder.get-data-deps"
+    },
+    {
+      "name": "visual-builder.get-raw-data-system-prompts"
+    },
+    {
+      "name": "visual-builder.parse-path"
+    },
+    {
+      "name": "visual-builder.get-dependency-tree"
+    },
+    {
+      "name": "visual-builder.inject-chat-preview-agent"
+    }
+  ]
+}

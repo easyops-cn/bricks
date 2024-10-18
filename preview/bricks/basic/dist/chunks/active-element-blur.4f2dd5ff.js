@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_basic=globalThis.webpackChunk_next_bricks_basic||[]).push([[8068],{5915:(e,t,c)=>{c.r(t),c.d(t,{activeElementBlur:()=>i});var n=c(2681);function i(){document.activeElement instanceof HTMLElement&&document.activeElement.blur()}customElements.define("basic.active-element-blur",(0,n.createProviderClass)(i))}}]);
+//# sourceMappingURL=active-element-blur.4f2dd5ff.js.map

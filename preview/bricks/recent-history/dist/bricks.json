@@ -1,0 +1,19 @@
+{
+  "id": "bricks/recent-history",
+  "bricks": [
+    "recent-history.get-all-history",
+    "recent-history.push-history",
+    "recent-history.clear-history",
+    "recent-history.recent-visit"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "recent-history.recent-visit": [
+      "eo-link",
+      "eo-tag"
+    ]
+  },
+  "filePath": "bricks/recent-history/dist/index.13827fe9.js"
+}

@@ -1,0 +1,140 @@
+{
+  "id": "bricks/nav",
+  "bricks": [
+    "nav.launchpad-config",
+    "nav.easyops-navbar-alerts",
+    "nav.app-bar-wrapper",
+    "nav.nav-logo",
+    "nav.poll-announce"
+  ],
+  "elements": [
+    "eo-nav-menu",
+    "eo-launchpad-button",
+    "eo-launchpad-button-v2",
+    "eo-launchpad-quick-access",
+    "eo-search-launchpad",
+    "eo-launchpad-recent-visits",
+    "eo-app-bar-wrapper",
+    "eo-frame-breadcrumb",
+    "eo-sidebar-menu-item",
+    "eo-sidebar-menu-group",
+    "eo-sidebar-menu-submenu",
+    "eo-sidebar-menu",
+    "eo-sidebar",
+    "eo-sidebar-sub-menu",
+    "eo-directory",
+    "eo-directory-tree",
+    "eo-directory-tree-leaf",
+    "eo-directory-tree-internal-node"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-nav-menu": [
+      "eo-menu-item",
+      "eo-popover",
+      "eo-search",
+      "eo-icon",
+      "eo-link",
+      "eo-input",
+      "eo-tooltip"
+    ],
+    "eo-launchpad-button": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "eo-launchpad-button-v2": [
+      "basic.lock-body-scroll",
+      "eo-icon",
+      "eo-link",
+      "basic.show-dialog",
+      "basic.show-notification"
+    ],
+    "nav.launchpad-config": [
+      "eo-icon",
+      "eo-link",
+      "eo-dropdown-actions",
+      "basic.show-dialog"
+    ],
+    "nav.easyops-navbar-alerts": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "eo-launchpad-quick-access": [
+      "eo-icon",
+      "eo-link",
+      "basic.show-dialog",
+      "basic.show-notification"
+    ],
+    "eo-search-launchpad": [
+      "eo-icon",
+      "eo-link",
+      "basic.show-dialog",
+      "basic.show-notification"
+    ],
+    "eo-launchpad-recent-visits": [
+      "eo-link",
+      "eo-icon",
+      "basic.show-dialog",
+      "basic.show-notification"
+    ],
+    "eo-frame-breadcrumb": [
+      "eo-breadcrumb",
+      "eo-breadcrumb-item",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-item": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-group": [
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar-menu-submenu": [
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group"
+    ],
+    "eo-sidebar-menu": [
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar": [
+      "eo-tooltip",
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar-sub-menu": [
+      "eo-icon",
+      "eo-menu",
+      "eo-menu-group",
+      "eo-menu-item-sub-menu",
+      "eo-menu-item",
+      "eo-link"
+    ],
+    "eo-directory": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "eo-directory-tree": [
+      "eo-search",
+      "eo-directory-tree-leaf",
+      "eo-directory-tree-internal-node"
+    ],
+    "nav.nav-logo": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "nav.poll-announce": [
+      "basic.show-notification"
+    ]
+  },
+  "filePath": "bricks/nav/dist/index.8c70e8e6.js"
+}

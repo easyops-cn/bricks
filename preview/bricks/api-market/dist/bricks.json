@@ -1,0 +1,19 @@
+{
+  "id": "bricks/api-market",
+  "bricks": [
+    "api-market.apis-directory-tree"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "api-market.apis-directory-tree": [
+      "eo-directory-tree-leaf",
+      "eo-directory-tree-internal-node",
+      "eo-tag",
+      "eo-mini-actions",
+      "eo-search"
+    ]
+  },
+  "filePath": "bricks/api-market/dist/index.b3feaa46.js"
+}

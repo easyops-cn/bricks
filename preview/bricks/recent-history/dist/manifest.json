@@ -1,0 +1,49 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/recent-history",
+  "name": "recent-history",
+  "bricks": [
+    {
+      "name": "recent-history.recent-visit",
+      "properties": [
+        {
+          "name": "namespace",
+          "description": "命名空间",
+          "type": "string"
+        },
+        {
+          "name": "capacity",
+          "description": "最近访问数量",
+          "type": "number"
+        },
+        {
+          "name": "compareKeys",
+          "description": "设置后不在该列表内的数据会被剔除",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "urlTemplate",
+          "description": "点击标签跳转的 url 链接，支持模版变量",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "最近访问"
+    }
+  ],
+  "providers": [
+    {
+      "name": "recent-history.get-all-history"
+    },
+    {
+      "name": "recent-history.push-history"
+    },
+    {
+      "name": "recent-history.clear-history"
+    }
+  ]
+}

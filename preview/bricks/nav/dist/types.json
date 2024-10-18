@@ -1,0 +1,1910 @@
+{
+  "nav.easyops-navbar-alerts": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  },
+  "eo-app-bar-wrapper": {
+    "properties": [
+      {
+        "name": "isFixed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "position",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "static"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "fixed"
+            }
+          ]
+        }
+      },
+      {
+        "name": "displayCenter",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "extraAppBarContentStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-frame-breadcrumb": {
+    "properties": [
+      {
+        "name": "breadcrumb",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "BreadcrumbItemConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "noCurrentApp",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "menu",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Menu"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Menu",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "link"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ExtendedLocationDescriptor"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-sidebar-menu-item": {
+    "properties": [
+      {
+        "name": "url",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "url"
+          }
+        }
+      },
+      {
+        "name": "href",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "href"
+          }
+        }
+      },
+      {
+        "name": "target",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LinkProps"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "target"
+          }
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      },
+      {
+        "name": "selected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "inSubmenu",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "menuCollapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-sidebar-sub-menu": {
+    "properties": [
+      {
+        "name": "menu",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SidebarMenu"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-directory": {
+    "properties": [
+      {
+        "name": "position",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "static"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "fixed"
+            }
+          ]
+        }
+      },
+      {
+        "name": "directoryTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "menuItems",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MenuItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "hideRightBorder",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "suffixBrick",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "useBrick"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UseBrickConf"
+                }
+              },
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "defaultSelectedKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "menu.item.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MenuItemClickEventDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "suffix.icon.click",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "key"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "MenuItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "group"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "item"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "MenuChildrenItem"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "suffixIcon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "suffixIconTooltip"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "suffixIconDisabled"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "MenuChildrenItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "MenuItemClickEventDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MenuChildrenItem"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "groupKey"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "nav.nav-logo": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  },
+  "eo-search-launchpad": {
+    "properties": [
+      {
+        "name": "readonly",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-launchpad-recent-visits": {
+    "properties": [
+      {
+        "name": "target",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Target"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-sidebar-menu-submenu": {
+    "properties": [
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      },
+      {
+        "name": "selected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "collapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "menuCollapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-sidebar-menu": {
+    "properties": [
+      {
+        "name": "menuCollapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-directory-tree-internal-node": {
+    "properties": [
+      {
+        "name": "depth",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "expanded",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "selectable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "selected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "expand",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "boolean"
+          }
+        }
+      },
+      {
+        "name": "select",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "eo-sidebar-menu-group": {
+    "properties": [
+      {
+        "name": "collapsable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "collapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "selected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "menuCollapsed",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-sidebar": {
+    "properties": [
+      {
+        "name": "menu",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SidebarMenuType"
+          }
+        }
+      },
+      {
+        "name": "hiddenFixedIcon",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "expandedState",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ExpandedState"
+          }
+        }
+      },
+      {
+        "name": "position",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "static"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "fixed"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "actual.width.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "number"
+          }
+        }
+      },
+      {
+        "name": "expanded.state.change",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ExpandedState"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "enum",
+        "name": "ExpandedState",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Collapsed"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "collapsed"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Hovered"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "hovered"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Expanded"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "expanded"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "eo-directory-tree-leaf": {
+    "properties": [
+      {
+        "name": "depth",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "selected",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "select",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "nav.poll-announce": {
+    "properties": [
+      {
+        "name": "pollEnabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "realTimeMessage",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Message"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "notification.close",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "notification.open",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Message",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-launchpad-quick-access": {
+    "properties": [
+      {
+        "name": "readonly",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "target",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Target"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-directory-tree": {
+    "properties": [
+      {
+        "name": "data",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TreeItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "directoryTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "searchable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "searchFields",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "parenthesizedType",
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "suffixBrick",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "useBrick"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UseBrickConf"
+                }
+              },
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "selectedKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "expandedKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "expand",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "keys"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "node"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeData"
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "select",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "keys"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "node"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeData"
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "expandAll",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "collapseAll",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "expandAccordingToSelectedKeys",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "TreeItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TreeItem"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "depth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "index"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeItem"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "nav.launchpad-config": {
+    "properties": [
+      {
+        "name": "menuGroups",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ConfigMenuGroup"
+            }
+          }
+        }
+      },
+      {
+        "name": "actions",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MenuAction"
+            }
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "action.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MenuActionEventDetail"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ConfigMenuGroup",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "order"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "items"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ConfigMenuItem"
+                }
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "ConfigMenuBase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "ConfigMenuItem",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ConfigMenuItemNormal"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ConfigMenuItemDir"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "ConfigMenuItemNormal",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ConfigMenuItemApp"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ConfigMenuItemCustom"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "ConfigMenuItemApp",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "app"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "url"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "locales"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "AppLocales"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "ConfigMenuItemBase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConfigMenuItemBase",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "app"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "custom"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "dir"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "menuIcon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Exclude"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "MenuIcon"
+                    }
+                  },
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "LegacyAntdIcon"
+                    }
+                  }
+                ]
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "position"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "ConfigMenuBase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConfigMenuBase",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "instanceId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConfigMenuItemCustom",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "custom"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "url"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "ConfigMenuItemBase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConfigMenuItemDir",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "dir"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "items"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ConfigMenuItemNormal"
+                }
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "ConfigMenuItemBase"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "MenuAction",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MenuSimpleAction"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MenuActionDivider"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "MenuSimpleAction",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "event"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "danger"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "MenuActionDivider",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "divider"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "MenuActionEventDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ConfigMenuGroup"
+                  }
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ConfigMenuItem"
+                  }
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "action"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MenuSimpleAction"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-nav-menu": {
+    "properties": [
+      {
+        "name": "menu",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SidebarMenu"
+          }
+        }
+      },
+      {
+        "name": "mainMenuTitleStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "showTooltip",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-launchpad-button-v2": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  },
+  "eo-launchpad-button": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/vs",
+  "name": "vs",
+  "bricks": [
+    {
+      "name": "vs.code-editor",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "description": "",
+          "default": "\"plaintext\"",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "description": "主题，支持 `\"auto\" | \"vs\" | \"vs-dark\"`",
+          "default": "\"auto\"",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean"
+        },
+        {
+          "name": "automaticLayout",
+          "type": "\"fit-container\" | \"fit-content\" | \"none\""
+        },
+        {
+          "name": "minLines",
+          "description": "",
+          "default": "3",
+          "type": "number"
+        },
+        {
+          "name": "completers",
+          "attribute": false,
+          "type": "monaco.languages.CompletionItem[]"
+        },
+        {
+          "name": "advancedCompleters",
+          "attribute": false,
+          "type": "AdvancedCompleterMap"
+        },
+        {
+          "name": "markers",
+          "attribute": false,
+          "type": "Marker[]"
+        },
+        {
+          "name": "links",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "maxLines",
+          "description": "",
+          "default": "Infinity",
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "showExpandButton",
+          "description": "是否展示展开按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "lineNumbers",
+          "description": "行数配置",
+          "type": "monaco.editor.LineNumbersType"
+        },
+        {
+          "name": "tokenConfig",
+          "description": "自定义高亮配置",
+          "attribute": false,
+          "type": "TokenConfig"
+        },
+        {
+          "name": "customValidationInBrickNextYaml",
+          "description": "在 brick_next_yaml 中是否开启语义相关校验",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "showCopyButton",
+          "description": "是否展示复制按钮",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "glyphMargin",
+          "description": "显示字形边距",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "extraLibs",
+          "description": "",
+          "attribute": false,
+          "type": "ExtraLib[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "code.change",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "user.input",
+          "detail": {
+            "type": "any"
+          }
+        },
+        {
+          "name": "token.click",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件代码编辑器",
+      "category": "form-input-advanced"
+    }
+  ],
+  "providers": []
+}

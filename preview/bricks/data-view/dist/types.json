@@ -1,0 +1,4324 @@
+{
+  "data-view.gauge-chart": {
+    "properties": [
+      {
+        "name": "radius",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "strokeWidth",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "fontSize",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.modern-style-component-title": {
+    "properties": [
+      {
+        "name": "hideLeftComponent",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "hideRightComponent",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "componentTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "titleTextStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "squareColor",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "color"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.modern-style-page-title": {
+    "properties": [
+      {
+        "name": "pageTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "backgroundStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "leftRoundStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "rightRoundStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.tabs-drawer": {
+    "properties": [
+      {
+        "name": "tabList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TabItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "activeKey",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "width",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "drawerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "bodyStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "zIndex",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "visible",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "open",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "close",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "tab.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "open",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "close",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "TabItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "computed": false,
+            "description": "菜单标题对应的图标。"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false,
+            "description": "唯一标识"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false,
+            "description": "菜单标题。"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tooltip"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.battery-chart": {
+    "properties": [
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "batteryWidth",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "batteryHeight",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "thresholdColors",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ThresholdColor"
+            }
+          }
+        }
+      },
+      {
+        "name": "thresholdValue",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ThresholdColor",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "color"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "startValue"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "endValue"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "headerColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "optional": true,
+            "computed": false,
+            "description": "电池头的颜色，默认取 color，color为渐变色，需要单独配置头部颜色，请使用该属性"
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.dropdown-menu": {
+    "properties": [
+      {
+        "name": "options",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "label"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "value"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "allowClear",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "value.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "data-view.particle-animation": {
+    "properties": [
+      {
+        "name": "colors",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ColorType"
+          }
+        }
+      },
+      {
+        "name": "containerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ColorType",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "startColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "middleColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "endColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.app-wall-card-item": {
+    "properties": [
+      {
+        "name": "status",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "normal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "warning"
+            }
+          ]
+        }
+      },
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.app-wall-system-card": {
+    "properties": [
+      {
+        "name": "status",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "StatusType"
+          }
+        }
+      },
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "itemList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DescriptionItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "buttonName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "containerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "button-click",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "StatusType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "normal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "warning"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DescriptionItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.app-wall-relation-line": {
+    "properties": [
+      {
+        "name": "lightColor",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "blue"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "purple"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.cabinet-button": {
+    "properties": [
+      {
+        "name": "buttonStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.cabinet-node": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "container-group"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "physical-machine"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "virtual-machine"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "pod"
+            }
+          ]
+        }
+      },
+      {
+        "name": "nodeTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "status",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "active"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "faded"
+            }
+          ]
+        }
+      },
+      {
+        "name": "isAlert",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.cabinet-app-layer": {
+    "properties": [
+      {
+        "name": "appTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "status",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "active"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "faded"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.cabinet-graph": {
+    "properties": [
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "AppData"
+          }
+        }
+      },
+      {
+        "name": "activeKey",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "hiddenCloseBtn",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "close.button.click",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "cabinet.click",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "type"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ChangeType"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "data"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "Record"
+                  },
+                  "typeParameters": {
+                    "type": "typeParameterInstantiation",
+                    "params": [
+                      {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      {
+                        "type": "keyword",
+                        "value": "any"
+                      }
+                    ]
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "cabinet.dbclick",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "type"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ChangeType"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "data"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "Record"
+                  },
+                  "typeParameters": {
+                    "type": "typeParameterInstantiation",
+                    "params": [
+                      {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      {
+                        "type": "keyword",
+                        "value": "any"
+                      }
+                    ]
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "AppData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "appName"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clusters"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "Clusters"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "Clusters",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clusterName"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "host"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "k8s"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "k8s-blue"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodes"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "Node"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "Node",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodeTitle"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "container-group"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "physical-machine"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "virtual-machine"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isAlert"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "ChangeType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "cluster"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "layer"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.graph-node": {
+    "properties": [
+      {
+        "name": "url",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.grid-background": {
+    "properties": [
+      {
+        "name": "color",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "color"
+          }
+        }
+      },
+      {
+        "name": "maskStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "particleColor",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ParticleColor"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ParticleColor",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "startColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "endColor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "color"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.gear-background": {
+    "properties": [
+      {
+        "name": "color",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "color"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.title-text": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TitleType"
+          }
+        }
+      },
+      {
+        "name": "text",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "fontSize",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "fontSize"
+          }
+        }
+      },
+      {
+        "name": "fontWeight",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "fontWeight"
+          }
+        }
+      },
+      {
+        "name": "letterSpacing",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "letterSpacing"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "TitleType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "normal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "stroke"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "gradient"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.brick-notification": {
+    "properties": [
+      {
+        "name": "message",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.tabs-page-title": {
+    "properties": [
+      {
+        "name": "tabList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TabsItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "activeKey",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "tab.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "TabsItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false,
+            "description": "唯一标识，对应 slot 名称"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false,
+            "description": "标签名称"
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.top-title-bar": {
+    "properties": [
+      {
+        "name": "text",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TitleBarType"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "TitleBarType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "normal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "sample"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "square"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.lights-component-title": {
+    "properties": [
+      {
+        "name": "componentTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "theme",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "light"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "dark"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.hi-tech-button": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "buttonType"
+          }
+        }
+      },
+      {
+        "name": "buttonStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "disabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "buttonType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "parallelogram"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "stereoscopic"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "shading"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "round"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.tech-mesh-base-view": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  },
+  "data-view.simple-card-item": {
+    "properties": [
+      {
+        "name": "status",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "normal"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "warning"
+            }
+          ]
+        }
+      },
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "titleStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "description",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "color",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "color"
+          }
+        }
+      },
+      {
+        "name": "desStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "descriptionList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "descriptionListItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "background",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "background"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "descriptionListItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.basic-index-group": {
+    "properties": [
+      {
+        "name": "itemList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ItemProps"
+            }
+          }
+        }
+      },
+      {
+        "name": "width",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "gap",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ItemProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "number"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "host"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "cloud"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "network"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "database"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "imgSrc"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "description"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "trendIcon"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "up"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "down"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.data-display-flipper": {
+    "properties": [
+      {
+        "name": "flipperTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "flipperStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "data",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "unit",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "enableTitlePrefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showDefaultPrefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "separator",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.data-display-flipper-fifth": {
+    "properties": [
+      {
+        "name": "flipperTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "flipperStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "data",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "unit",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "enableTitlePrefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showDefaultPrefix",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.data-display-flipper-sixth": {
+    "properties": [
+      {
+        "name": "flipperTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "flipperStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "data",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.indicator-card": {
+    "properties": [
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Layout"
+          }
+        }
+      },
+      {
+        "name": "datasource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Datasource"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "Layout",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "column"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "column-townhouse"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "row"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "row-townhouse"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "Datasource",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "desc"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "unit"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.loading-panel": {
+    "properties": [
+      {
+        "name": "customTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "loading",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "useRealTimeProgress",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "progress",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "intervalTime",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "end",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": []
+  },
+  "data-view.cabinet-container": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ContainerType"
+          }
+        }
+      },
+      {
+        "name": "data",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CabinetNodeProps"
+            }
+          }
+        }
+      },
+      {
+        "name": "status",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "active"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "faded"
+            }
+          ]
+        }
+      },
+      {
+        "name": "customTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "container.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ClickEventDataType"
+            }
+          }
+        }
+      },
+      {
+        "name": "container.dbclick",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ClickEventDataType"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "ContainerType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "host"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "k8s"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "k8s-blue"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "CabinetNodeProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "container-group"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "physical-machine"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "virtual-machine"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "pod"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodeTitle"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "status"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "active"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "faded"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "isAlert"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ClickEventDataType",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "node"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "container"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "CabinetNodeProps"
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "undefined"
+                }
+              ]
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.cabinet-thumbnail": {
+    "properties": [
+      {
+        "name": "clusters",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Clusters"
+            }
+          }
+        }
+      },
+      {
+        "name": "columns",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "appName",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Clusters",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CabinetNodeProps"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ContainerType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "undefined"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.graph-layout-grid": {
+    "properties": [
+      {
+        "name": "columns",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "rows",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "isReverse",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DataSourceType"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "DataSourceType",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GraphTextProps"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GraphNodeProps"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.progress-bar-list": {
+    "properties": [
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Data"
+            }
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Data",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "count"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "loopBackground"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CSSProperties"
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "background"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "barBackground"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "CSSProperties"
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "background"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.modern-style-treemap": {
+    "properties": [
+      {
+        "name": "data",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TreemapData"
+          }
+        }
+      },
+      {
+        "name": "tail",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TailTypes"
+          }
+        }
+      },
+      {
+        "name": "leafUseBrick",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "useBrick"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UseBrickConf"
+                }
+              },
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "leafContainerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      },
+      {
+        "name": "tooltipUseBrick",
+        "annotation": {
+          "type": "typeLiteral",
+          "members": [
+            {
+              "type": "propertySignature",
+              "key": {
+                "type": "identifier",
+                "name": "useBrick"
+              },
+              "annotation": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UseBrickConf"
+                }
+              },
+              "computed": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "tooltipStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "treemap.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TreemapData"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "TreemapData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TreemapData"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "TailTypes",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapBinary"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapBinary"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapDice"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapDice"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapResquarify"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapResquarify"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapSlice"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapSlice"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapSliceDice"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapSliceDice"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "treemapSquarify"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "treemapSquarify"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.complex-search": {
+    "properties": [
+      {
+        "name": "value",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "options",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "OptionItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "tooltipUseBrick",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ReactUseMultipleBricksProps"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "search",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "select",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "OptionItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "focus",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "blur",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "OptionItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "propName",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.graph-text": {
+    "properties": [
+      {
+        "name": "text",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "keyword",
+              "value": "number"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "data-view.china-map-chart": {
+    "properties": [
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DataSource"
+            }
+          }
+        }
+      },
+      {
+        "name": "detailContentStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CSSProperties"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "detail.open.change",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "open"
+                },
+                "annotation": {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "data"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "Record"
+                  },
+                  "typeParameters": {
+                    "type": "typeParameterInstantiation",
+                    "params": [
+                      {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      {
+                        "type": "keyword",
+                        "value": "any"
+                      }
+                    ]
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "DataSource",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "city"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "detailDisplayLocation"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "pageCenter"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "textBottom"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "x",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "data-view.app-wall": {
+    "properties": [
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      },
+      {
+        "name": "relations",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Relation"
+            }
+          }
+        }
+      },
+      {
+        "name": "useDblclick",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "useDistanceConfig",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "disabledDefaultClickEvent",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "cardSize",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CardSize"
+          }
+        }
+      },
+      {
+        "name": "cardBrickName",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "AppWallCardBrickNameType"
+          }
+        }
+      },
+      {
+        "name": "containerId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "noRotate",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "boundMargin",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "useSystemPopover",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "system.card.button.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      },
+      {
+        "name": "left.btn.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      },
+      {
+        "name": "right.btn.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      },
+      {
+        "name": "on.card.dbclick",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      },
+      {
+        "name": "card.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "AppData"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "AppData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "status"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "normal"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "warning"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "cardItemProps"
+            },
+            "annotation": {
+              "type": "intersection",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "AppWallCardItemProps"
+                  }
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SimpleCardItemProps"
+                  }
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "systemCardProps"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "SystemCardProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "trapezoidalProps"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TrapezoidalProps"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "Relation",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "CardSize",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "outerWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "outerHeight"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lgWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lgHeight"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "AppWallCardBrickNameType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "data-view.app-wall-card-item"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "data-view.simple-card-item"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "data-view.radar-chart": {
+    "properties": [
+      {
+        "name": "dataSource",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Data"
+            }
+          }
+        }
+      },
+      {
+        "name": "width",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "radius",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "scale",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "height",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "dataFill",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DataFill"
+          }
+        }
+      },
+      {
+        "name": "dataCircle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DataCircle"
+          }
+        }
+      },
+      {
+        "name": "dataLine",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DataLine"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "Data",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "value"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "maxValue"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "color"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Color"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "percentValue"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "number"
+                },
+                {
+                  "type": "keyword",
+                  "value": "string"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Color",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "color"
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DataFill",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "fillStyle"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Color"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "DataCircle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Omit"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "DataCircleOptions"
+                }
+              },
+              {
+                "type": "jsLiteral",
+                "value": "dataPoints"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DataCircleOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "r"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "fillStyle"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Color"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "DataLineOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "DataLineOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dataPoints"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "Axis"
+                }
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeStyle"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Color"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lineWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "Axis",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "x"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "y"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "DataLine",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "lineWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeStyle"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Color"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

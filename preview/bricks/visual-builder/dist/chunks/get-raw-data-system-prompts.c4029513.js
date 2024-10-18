@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_visual_builder=globalThis.webpackChunk_next_bricks_visual_builder||[]).push([[7031],{5457:(e,t,s)=>{s.r(t),s.d(t,{getRawDataSystemPrompts:()=>o});var r=s(3078),a=s(3084),u=s(7710),i=s(5799),l=s(4671),n=s(8397),b=s(3404),c=s(3287);function o(){return{boolean:a,"date-time":u,enum:i,number:l,others:n,"struct-list":b,struct:c}}customElements.define("visual-builder.get-raw-data-system-prompts",(0,r.createProviderClass)(o))}}]);
+//# sourceMappingURL=get-raw-data-system-prompts.c4029513.js.map

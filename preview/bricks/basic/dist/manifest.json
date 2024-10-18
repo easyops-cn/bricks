@@ -1,0 +1,1851 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/basic",
+  "name": "basic",
+  "bricks": [
+    {
+      "name": "eo-link",
+      "alias": [
+        "basic.general-link"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "链接类型",
+          "default": "\"link\"",
+          "type": "LinkType"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "href",
+          "description": "设置 `href` 时将使用原生 `<a>` 标签，通常用于外链的跳转",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "attribute": false,
+          "type": "ExtendedLocationDescriptor"
+        },
+        {
+          "name": "target",
+          "description": "链接跳转目标",
+          "type": "Target"
+        },
+        {
+          "name": "showExternalIcon",
+          "description": "target 为 _blank 时，是否在后面显示特定图标",
+          "type": "boolean"
+        },
+        {
+          "name": "underline",
+          "description": "是否显示下划线",
+          "type": "boolean"
+        },
+        {
+          "name": "replace",
+          "description": "是否使用 `history.replace` 而不是默认的 `history.push`",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "danger",
+          "description": "是否开启危险状态",
+          "type": "boolean"
+        },
+        {
+          "name": "tooltip",
+          "description": "文字提示",
+          "type": "string"
+        },
+        {
+          "name": "linkStyle",
+          "description": "链接样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "链接内容"
+        }
+      ],
+      "methods": [],
+      "parts": [
+        {
+          "name": "link",
+          "description": "锚元素"
+        }
+      ],
+      "description": "通用链接构件",
+      "category": "text"
+    },
+    {
+      "name": "eo-button",
+      "alias": [
+        "basic.general-button"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "按钮类型",
+          "type": "ButtonType"
+        },
+        {
+          "name": "size",
+          "description": "按钮大小",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "danger",
+          "description": "是否开启危险状态",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "shape",
+          "description": "按钮形状，支持圆形、椭圆形，不设置为默认方形",
+          "type": "Shape"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "href",
+          "description": "跳转外链地址",
+          "type": "string"
+        },
+        {
+          "name": "target",
+          "description": "链接类型",
+          "type": "string"
+        },
+        {
+          "name": "tooltip",
+          "description": "tooltip",
+          "type": "string"
+        },
+        {
+          "name": "buttonStyle",
+          "description": "按钮样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "按钮内容"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "通用按钮构件",
+      "category": "interact-basic"
+    },
+    {
+      "name": "eo-text",
+      "alias": [
+        "basic.general-text"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "文本类型",
+          "default": "\"default\"",
+          "type": "TextType"
+        },
+        {
+          "name": "editable",
+          "description": "是否可编辑",
+          "attribute": false,
+          "type": "boolean | EditableConfig"
+        },
+        {
+          "name": "fontSize",
+          "description": "字体大小",
+          "default": "\"14px\"",
+          "type": "CSSProperties[\"fontSize\"]"
+        },
+        {
+          "name": "fontWeight",
+          "description": "字体粗细",
+          "default": "\"normal\"",
+          "type": "CSSProperties[\"fontWeight\"]"
+        },
+        {
+          "name": "color",
+          "description": "字体颜色",
+          "default": "\"black\"",
+          "type": "CSSProperties[\"color\"]"
+        },
+        {
+          "name": "lineHeight",
+          "description": "字体行高",
+          "default": "\"14px\"",
+          "type": "CSSProperties[\"lineHeight\"]"
+        },
+        {
+          "name": "textAlign",
+          "description": "字体对齐方式",
+          "default": "\"left\"",
+          "type": "CSSProperties[\"textAlign\"]"
+        },
+        {
+          "name": "display",
+          "description": "显示类型",
+          "default": "\"inline\"",
+          "type": "CSSProperties[\"display\"]"
+        },
+        {
+          "name": "customStyle",
+          "description": "自定义样式",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "值改变事件",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "update",
+          "description": "值更新事件",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用文本构件",
+      "category": "text"
+    },
+    {
+      "name": "eo-dropdown-button",
+      "alias": [
+        "basic.dropdown-button"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "按钮类型",
+          "type": "ButtonType"
+        },
+        {
+          "name": "actions",
+          "description": "下拉按钮菜单",
+          "attribute": false,
+          "type": "Action[]"
+        },
+        {
+          "name": "btnText",
+          "description": "按钮默认文字",
+          "default": "\"管理\"",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "按钮默认图标",
+          "default": "{ lib: \"antd\", icon: \"setting\", theme: \"filled\" }",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "size",
+          "description": "按钮大小",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "shape",
+          "description": "按钮形状",
+          "type": "Shape"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "description": "操作点击事件",
+          "detail": {
+            "description": "SimpleAction",
+            "type": "SimpleAction"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "下拉按钮",
+      "category": "interact-basic"
+    },
+    {
+      "name": "eo-image",
+      "alias": [
+        "basic.general-image"
+      ],
+      "properties": [
+        {
+          "name": "imgList",
+          "description": "图片列表",
+          "attribute": false,
+          "type": "ImageConfig[]"
+        },
+        {
+          "name": "width",
+          "description": "图片宽度",
+          "type": "string"
+        },
+        {
+          "name": "height",
+          "description": "图片高度",
+          "type": "string"
+        },
+        {
+          "name": "onlyPreview",
+          "description": "纯预览模式",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "visibleChange",
+          "description": "预览改变事件",
+          "detail": {
+            "description": "boolean",
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ],
+          "description": "打开预览框",
+          "returns": {}
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "关闭预览框",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "通用图片构件",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-popover",
+      "alias": [
+        "basic.general-popover"
+      ],
+      "properties": [
+        {
+          "name": "placement",
+          "description": "弹出层放置位置",
+          "type": "Placement"
+        },
+        {
+          "name": "trigger",
+          "description": "弹出触发方式",
+          "default": "\"click\"",
+          "type": "TriggerEvent"
+        },
+        {
+          "name": "active",
+          "description": "弹出层是否已激活",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "arrow",
+          "description": "弹出层是否显示箭头",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "shiftPadding",
+          "description": "发生移位行为之前超出的填充量",
+          "type": "number"
+        },
+        {
+          "name": "arrowColor",
+          "description": "箭头颜色",
+          "type": "string"
+        },
+        {
+          "name": "strategy",
+          "description": "弹出层如何定位",
+          "default": "\"absolute\"",
+          "type": "\"absolute\" | \"fixed\""
+        },
+        {
+          "name": "sync",
+          "description": "将弹出层的宽高与 anchor 元素同步",
+          "type": "Sync"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "distance",
+          "description": "弹出窗口与其锚点之间的距离",
+          "type": "number"
+        },
+        {
+          "name": "anchorDisplay",
+          "description": "触发器的显示类型",
+          "default": "\"inline-block\"",
+          "type": "CSSProperties[\"display\"]"
+        },
+        {
+          "name": "zIndex",
+          "description": "弹出层的 Z 轴顺序",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "visible.change",
+          "description": "当弹出层可见性变化之后触发",
+          "detail": {
+            "description": "当前是否可见",
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "before.visible.change",
+          "description": "当弹出层可见性变化时触发",
+          "detail": {
+            "description": "当前是否可见",
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": null,
+          "description": "弹出层内容"
+        },
+        {
+          "name": "anchor",
+          "description": "触发弹出层的元素"
+        }
+      ],
+      "methods": [],
+      "parts": [
+        {
+          "name": "popup",
+          "description": "The popup’s container. Useful for setting a background color, box shadow, etc."
+        }
+      ],
+      "description": "通用弹出层构件",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-menu",
+      "alias": [
+        "basic.general-menu"
+      ],
+      "properties": [
+        {
+          "name": "mode",
+          "description": "菜单布局方式 支持垂直、水平两种",
+          "default": "\"vertical\"",
+          "type": "\"vertical\" | \"horizontal\""
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "菜单内容"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "菜单构件",
+      "insider": true
+    },
+    {
+      "name": "eo-menu-item",
+      "alias": [
+        "basic.general-menu-item"
+      ],
+      "properties": [
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "active",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [
+        {
+          "name": "menu-item",
+          "description": "外层容器"
+        }
+      ],
+      "description": "菜单构件",
+      "insider": true
+    },
+    {
+      "name": "eo-tag",
+      "alias": [
+        "basic.general-tag"
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "description": "按钮大小",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "color",
+          "description": "颜色",
+          "type": "TagColor | string"
+        },
+        {
+          "name": "outline",
+          "description": "是否有边线",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "closable",
+          "description": "是否允许关闭",
+          "type": "boolean"
+        },
+        {
+          "name": "ellipsisWidth",
+          "description": "超过宽度文本隐藏宽度",
+          "type": "string"
+        },
+        {
+          "name": "checkable",
+          "description": "是否允许选择",
+          "type": "boolean"
+        },
+        {
+          "name": "checked",
+          "description": "是否选择",
+          "type": "boolean"
+        },
+        {
+          "name": "tagStyle",
+          "description": "标签自定义样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "check",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "TagProps"
+          }
+        },
+        {
+          "name": "close",
+          "description": "",
+          "detail": {
+            "description": null,
+            "type": "TagProps"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "标签构件",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-tag-list",
+      "alias": [
+        "basic.general-tag-list"
+      ],
+      "properties": [
+        {
+          "name": "list",
+          "description": "标签列表",
+          "attribute": false,
+          "type": "Array<TagListItem | string>"
+        },
+        {
+          "name": "size",
+          "description": "按钮大小",
+          "default": "\"medium\"",
+          "type": "ComponentSize"
+        },
+        {
+          "name": "color",
+          "description": "颜色",
+          "type": "TagColor | string"
+        },
+        {
+          "name": "outline",
+          "description": "是否有边线",
+          "type": "boolean"
+        },
+        {
+          "name": "showTagCircle",
+          "description": "显示圆点",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "closable",
+          "description": "是否允许关闭",
+          "type": "boolean"
+        },
+        {
+          "name": "checkable",
+          "description": "是否允许选择",
+          "type": "boolean"
+        },
+        {
+          "name": "multiple",
+          "description": "是否允许多选",
+          "type": "boolean"
+        },
+        {
+          "name": "tagStyle",
+          "description": "标签自定义样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "check",
+          "description": "选择标签事件",
+          "detail": {
+            "type": "{\n    item: TagListItem | string | undefined;\n    list: TagListItem[];\n  }"
+          }
+        },
+        {
+          "name": "close",
+          "description": "关闭标签事件",
+          "detail": {
+            "type": "{\n    item: TagListItem | string | undefined;\n    list: TagListItem[];\n  }"
+          }
+        },
+        {
+          "name": "tag.click",
+          "description": "点击标签事件",
+          "detail": {
+            "type": "TagListItem | string | undefined"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "标签列表构件",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-dropdown-actions",
+      "properties": [
+        {
+          "name": "actions",
+          "description": "操作列表配置",
+          "attribute": false,
+          "type": "Action[]"
+        },
+        {
+          "name": "checkedKeys",
+          "description": "actions选中项配置",
+          "default": "[]",
+          "attribute": false,
+          "type": "(string | number)[]"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "description": "点击按钮时触发",
+          "detail": {
+            "description": "该按钮配置",
+            "type": "SimpleAction"
+          }
+        },
+        {
+          "name": "visible.change",
+          "description": "当弹出层可见性变化之后触发",
+          "detail": {
+            "description": "当前是否可见",
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "下拉菜单",
+      "category": "interact-basic"
+    },
+    {
+      "name": "eo-mini-actions",
+      "properties": [
+        {
+          "name": "actions",
+          "description": "操作列表配置",
+          "attribute": false,
+          "type": "ActionType[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "description": "点击按钮时触发",
+          "detail": {
+            "description": "该按钮配置",
+            "type": "SimpleActionType"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "小尺寸按钮组",
+      "category": "interact-basic"
+    },
+    {
+      "name": "eo-avatar",
+      "properties": [
+        {
+          "name": "size",
+          "description": "尺寸",
+          "default": "\"medium\"",
+          "type": "AvatarSize"
+        },
+        {
+          "name": "shape",
+          "description": "形状",
+          "default": "\"circle\"",
+          "type": "\"circle\" | \"round-square\""
+        },
+        {
+          "name": "src",
+          "description": "图片地址",
+          "type": "string"
+        },
+        {
+          "name": "alt",
+          "description": "图像无法显示时的替代文本",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "name",
+          "description": "用户名",
+          "type": "string"
+        },
+        {
+          "name": "bordered",
+          "description": "是否有边框",
+          "type": "boolean"
+        },
+        {
+          "name": "showName",
+          "description": "是否展示名称",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [
+        {
+          "name": "avatar",
+          "description": "头像容器"
+        },
+        {
+          "name": "avatar-img",
+          "description": "显示为图片时的头像容器"
+        },
+        {
+          "name": "avatar-icon",
+          "description": "显示为图标时的头像容器"
+        },
+        {
+          "name": "avatar-text",
+          "description": "显示为文本时的头像容器"
+        }
+      ],
+      "description": "头像",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-tooltip",
+      "properties": [
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "content",
+          "description": "内容",
+          "type": "string"
+        },
+        {
+          "name": "placement",
+          "description": "弹出位置",
+          "type": "Placement"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "open",
+          "description": "是否显示",
+          "type": "boolean"
+        },
+        {
+          "name": "trigger",
+          "description": "激活方式，包括 `click` | `hover` | `focus` | `manual`，可以多选用空格分隔",
+          "type": "string"
+        },
+        {
+          "name": "hoist",
+          "description": "是否使用固定定位防止内容被裁切",
+          "type": "boolean"
+        },
+        {
+          "name": "maxWidth",
+          "description": "最大长度",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "open.change",
+          "description": "当提示可见性开始变化时触发",
+          "detail": {
+            "description": "当前是否可见",
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "after.open.change",
+          "description": "当提示可见性变化完成并完成所有动画后触发。",
+          "detail": {
+            "description": "当前是否可见",
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": null,
+          "description": "提示的目标元素"
+        },
+        {
+          "name": "content",
+          "description": "放置在提示中的元素"
+        }
+      ],
+      "methods": [
+        {
+          "name": "show",
+          "params": [],
+          "description": "显示提示",
+          "returns": {}
+        },
+        {
+          "name": "hide",
+          "params": [],
+          "description": "隐藏提示",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "提示",
+      "category": "feedback-and-tooltip"
+    },
+    {
+      "name": "eo-sidebar-sub-menu",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单项",
+          "attribute": false,
+          "type": "SidebarMenu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-sidebar-sub-menu` 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-menu-item-sub-menu",
+      "properties": [
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "titleStyle",
+          "description": "title样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "bodyStyle",
+          "description": "body样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "collapsed",
+          "description": "是否为折叠状态",
+          "default": "true",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-menu-item-sub-menu`",
+      "insider": true
+    },
+    {
+      "name": "eo-menu-group",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-menu-group`",
+      "insider": true
+    },
+    {
+      "name": "eo-breadcrumb-item",
+      "properties": [
+        {
+          "name": "href",
+          "description": "外链的链接地址",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "attribute": false,
+          "type": "ExtendedLocationDescriptor"
+        },
+        {
+          "name": "target",
+          "description": "链接跳转目标",
+          "type": "Target"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "prefix",
+          "description": "前缀"
+        },
+        {
+          "name": "prefix",
+          "description": "后缀"
+        },
+        {
+          "name": "separator",
+          "description": "分隔符"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "面包屑单项"
+    },
+    {
+      "name": "eo-breadcrumb",
+      "properties": [],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "面包屑项，可使用 eo-breadcrumb-item 构件"
+        },
+        {
+          "name": "separator",
+          "description": "分隔符，默认为 /"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "面包屑容器"
+    },
+    {
+      "name": "eo-frame-breadcrumb",
+      "properties": [
+        {
+          "name": "breadcrumb",
+          "description": "面包屑配置",
+          "attribute": false,
+          "type": "BreadcrumbItemConf[]"
+        },
+        {
+          "name": "noCurrentApp",
+          "description": "是否隐藏当前应用名称",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "description": "菜单配置",
+          "attribute": false,
+          "type": "Menu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "面包屑 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true
+    },
+    {
+      "name": "eo-sidebar-menu-item",
+      "properties": [
+        {
+          "name": "url",
+          "description": "菜单项对应的系统内地址",
+          "attribute": false,
+          "type": "LinkProps[\"url\"]"
+        },
+        {
+          "name": "href",
+          "description": "菜单项对应的外部链接地址",
+          "type": "LinkProps[\"href\"]"
+        },
+        {
+          "name": "target",
+          "description": "菜单项链接打开的目标",
+          "type": "LinkProps[\"target\"]"
+        },
+        {
+          "name": "icon",
+          "description": "菜单项的图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单项 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu-group",
+      "properties": [
+        {
+          "name": "collapsable",
+          "description": "是否允许折叠",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsed",
+          "description": "是否折叠",
+          "type": "boolean"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "title",
+          "description": "分组标题"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单分组 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu-submenu",
+      "properties": [
+        {
+          "name": "icon",
+          "description": "菜单的图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsed",
+          "description": "是否折叠",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "title",
+          "description": "子菜单标题"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单子菜单 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu",
+      "properties": [
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单数据",
+          "attribute": false,
+          "type": "SidebarMenuType"
+        },
+        {
+          "name": "hiddenFixedIcon",
+          "description": "是否隐藏固定按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "expandedState",
+          "description": "侧栏状态",
+          "type": "ExpandedState"
+        },
+        {
+          "name": "position",
+          "description": "设置定位方式：静态定位或固定定位。",
+          "default": "\"fixed\"",
+          "type": "\"static\" | \"fixed\""
+        }
+      ],
+      "events": [
+        {
+          "name": "actual.width.change",
+          "description": "宽度变化时触发",
+          "detail": {
+            "description": "当前宽度",
+            "type": "number"
+          }
+        },
+        {
+          "name": "expanded.state.change",
+          "description": "侧栏状态变化时触发",
+          "detail": {
+            "description": "侧栏状态",
+            "type": "ExpandedState"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧边栏 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true,
+      "category": "navigation"
+    },
+    {
+      "name": "eo-app-bar-wrapper",
+      "alias": [
+        "basic.app-bar-wrapper"
+      ],
+      "properties": [
+        {
+          "name": "isFixed",
+          "description": "是否固定定位。",
+          "deprecated": "使用 `position` 属性代替",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "position",
+          "description": "设置定位方式：静态定位或固定定位。\n\n设置时优先级高于 `isFixed`。",
+          "default": "\"fixed\"",
+          "type": "\"static\" | \"fixed\""
+        },
+        {
+          "name": "displayCenter",
+          "description": "居中显示",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "extraAppBarContentStyle",
+          "description": "自定义样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "left",
+          "description": "左侧内容区"
+        },
+        {
+          "name": "right",
+          "description": "右侧内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "应用顶部容器 已迁移至 `nav` 构件包，后续在在 `basic` 构件包中将不再更新。",
+      "deprecated": true
+    },
+    {
+      "name": "eo-page-title",
+      "properties": [
+        {
+          "name": "pageTitle",
+          "description": "页面标题",
+          "type": "string"
+        },
+        {
+          "name": "pageTitleScale",
+          "description": "页面标题比例",
+          "type": "number"
+        },
+        {
+          "name": "dashboardMode",
+          "description": "是否以 dashboard 模式显示",
+          "default": "false",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "页面标题",
+      "category": "text"
+    },
+    {
+      "name": "eo-counter-badge",
+      "properties": [
+        {
+          "name": "icon",
+          "description": "在内容中使用Icon",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "color",
+          "description": "徽标的背景颜色。",
+          "type": "string"
+        },
+        {
+          "name": "fontColor",
+          "description": "微标的字体颜色",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "description": "展示的数字，大于 overflowCount 时显示为 ${overflowCount}+，为 0 时隐藏",
+          "type": "number"
+        },
+        {
+          "name": "overflowCount",
+          "description": "展示封顶的数字值",
+          "default": "true",
+          "type": "number"
+        },
+        {
+          "name": "dot",
+          "description": "不展示数字，只有一个小圆点.",
+          "type": "boolean"
+        },
+        {
+          "name": "offset",
+          "description": "设置状态点的位置偏移，格式为 [x, y]",
+          "attribute": false,
+          "type": "[number, number]"
+        },
+        {
+          "name": "showZero",
+          "description": "当数值为 0 时，是否展示徽标",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "通用徽标构件",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-easyops-avatar",
+      "properties": [
+        {
+          "name": "nameOrInstanceId",
+          "description": "用户名或 instanceId",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "description": "尺寸",
+          "default": "\"medium\"",
+          "type": "AvatarSize"
+        },
+        {
+          "name": "bordered",
+          "description": "是否有边框",
+          "type": "boolean"
+        },
+        {
+          "name": "showName",
+          "description": "是否展示用户名称",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "easyops 头像",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-avatar-group",
+      "properties": [
+        {
+          "name": "size",
+          "description": "尺寸",
+          "type": "AvatarSize"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "头像组"
+    },
+    {
+      "name": "eo-actions",
+      "properties": [
+        {
+          "name": "actions",
+          "description": "操作列表配置",
+          "attribute": false,
+          "type": "Action[]"
+        },
+        {
+          "name": "checkedKeys",
+          "description": "actions选中项配置",
+          "default": "[]",
+          "attribute": false,
+          "type": "(string | number)[]"
+        },
+        {
+          "name": "itemDraggable",
+          "description": "action中的菜单项是否可拖拽",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "description": "点击按钮时触发",
+          "detail": {
+            "description": "该按钮配置",
+            "type": "SimpleAction"
+          }
+        },
+        {
+          "name": "item.drag.start",
+          "description": "开始拖拽菜单项时触发",
+          "detail": {
+            "description": "该菜单项动作配置",
+            "type": "SimpleAction"
+          }
+        },
+        {
+          "name": "item.drag.end",
+          "description": "完成拖拽菜单项时触发",
+          "detail": {
+            "description": "该菜单项动作配置",
+            "type": "SimpleAction"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-actions`",
+      "category": "interact-basic"
+    },
+    {
+      "name": "eo-context-menu",
+      "properties": [
+        {
+          "name": "actions",
+          "description": "动作列表",
+          "attribute": false,
+          "type": "Action[]"
+        },
+        {
+          "name": "active",
+          "description": "是否激活",
+          "type": "boolean"
+        },
+        {
+          "name": "position",
+          "attribute": false,
+          "type": "Position"
+        },
+        {
+          "name": "itemDraggable",
+          "description": "action中的菜单项是否可拖拽",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "description": "点击菜单项动作时触发",
+          "detail": {
+            "description": "该菜单项动作配置",
+            "type": "SimpleAction"
+          }
+        },
+        {
+          "name": "item.drag.start",
+          "description": "开始拖拽菜单项时触发",
+          "detail": {
+            "description": "该菜单项动作配置",
+            "type": "SimpleAction"
+          }
+        },
+        {
+          "name": "item.drag.end",
+          "description": "完成拖拽菜单项时触发",
+          "detail": {
+            "description": "该菜单项动作配置",
+            "type": "SimpleAction"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "OpenInfo"
+            }
+          ]
+        },
+        {
+          "name": "close",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "构件 `eo-context-menu`"
+    },
+    {
+      "name": "eo-formatter-number",
+      "properties": [
+        {
+          "name": "value",
+          "type": "number"
+        },
+        {
+          "name": "type",
+          "description": "格式化类型",
+          "type": "NumberType"
+        },
+        {
+          "name": "currency",
+          "description": "货币名",
+          "default": "\"CNY\"",
+          "type": "string"
+        },
+        {
+          "name": "unit",
+          "type": "string"
+        },
+        {
+          "name": "originalUnit",
+          "description": "原始单位，用于单位转换",
+          "type": "NumberOriginalUnit"
+        },
+        {
+          "name": "decimals",
+          "description": "保留的小数位数",
+          "type": "number"
+        },
+        {
+          "name": "thousandsSeparator",
+          "description": "是否启用千分位分隔符",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "fallback",
+          "description": "当 value 为空或不是数字时的回退显示内容",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "数字格式化，支持普通数字、货币、百分比、二进制字节等数字的格式化显示。"
+    },
+    {
+      "name": "eo-event-agent",
+      "properties": [],
+      "events": [
+        {
+          "name": "trigger",
+          "description": "事件被触发。",
+          "detail": {
+            "type": "unknown"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "trigger",
+          "params": [
+            {
+              "name": "detail",
+              "type": "unknown"
+            }
+          ],
+          "description": "触发一次事件，传递的参数为事件详情。",
+          "returns": {
+            "type": "void"
+          }
+        }
+      ],
+      "parts": [],
+      "description": "事件代理。"
+    },
+    {
+      "name": "eo-message-listener",
+      "properties": [
+        {
+          "name": "sameOrigin",
+          "description": "是否仅接收同源消息",
+          "default": "true",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "message",
+          "detail": {
+            "type": "MessageDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "用于监听 window.postMessage 事件的构件"
+    },
+    {
+      "name": "eo-broadcast-channel",
+      "properties": [
+        {
+          "name": "channel",
+          "description": "广播频道名称，详见 [BroadcastChannel](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API)。",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "message",
+          "description": "广播频道消息事件",
+          "detail": {
+            "type": "unknown"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "postMessage",
+          "params": [
+            {
+              "name": "data",
+              "type": "unknown"
+            }
+          ],
+          "description": "发送一条消息",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "构件 `eo-broadcast-channel`"
+    },
+    {
+      "name": "basic.home-redirect",
+      "properties": [
+        {
+          "name": "appId",
+          "description": "指定的应用 Id",
+          "type": "string"
+        },
+        {
+          "name": "redirectUrl",
+          "description": "指定的跳转 url",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `basic.home-redirect`"
+    },
+    {
+      "name": "eo-iframe",
+      "properties": [
+        {
+          "name": "src",
+          "description": "",
+          "required": true,
+          "type": "string"
+        },
+        {
+          "name": "iframeStyle",
+          "description": "Default style:\n\n```css\niframe {\n  margin: 0;\n  border: 0;\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  vertical-align: top;\n}\n```",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "load",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "postMessage",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "PostMessageParameters"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `eo-iframe`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "basic.active-element-blur"
+    },
+    {
+      "name": "basic.change-language",
+      "description": "更改站点语言。"
+    },
+    {
+      "name": "basic.copy-to-clipboard",
+      "description": "复制文本内容到粘贴板。"
+    },
+    {
+      "name": "basic.get-language",
+      "description": "获取当前站点语言。"
+    },
+    {
+      "name": "basic.http-proxy-request",
+      "description": "用于对接第三方接口，请求将会被后台代理转发"
+    },
+    {
+      "name": "basic.http-request",
+      "description": "发送 HTTP 请求。"
+    },
+    {
+      "name": "basic.set-theme-by-apps"
+    },
+    {
+      "name": "basic.set-timeout",
+      "description": ""
+    },
+    {
+      "name": "basic.v3-widget-mate"
+    },
+    {
+      "name": "basic.lock-body-scroll"
+    },
+    {
+      "name": "basic.show-watermark"
+    },
+    {
+      "name": "basic.show-dialog",
+      "description": "显示对话框。"
+    },
+    {
+      "name": "basic.show-notification",
+      "description": "显示通知消息。"
+    }
+  ]
+}

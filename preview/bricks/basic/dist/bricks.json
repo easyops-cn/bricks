@@ -1,0 +1,288 @@
+{
+  "id": "bricks/basic",
+  "bricks": [
+    "basic.active-element-blur",
+    "basic.change-language",
+    "basic.copy-to-clipboard",
+    "basic.get-language",
+    "basic.http-proxy-request",
+    "basic.http-request",
+    "basic.set-theme-by-apps",
+    "basic.set-timeout",
+    "basic.general-link",
+    "basic.general-button",
+    "basic.general-text",
+    "basic.dropdown-button",
+    "basic.general-image",
+    "basic.general-popover",
+    "basic.general-menu",
+    "basic.general-menu-item",
+    "basic.general-tag",
+    "basic.general-tag-list",
+    "basic.app-bar-wrapper",
+    "basic.v3-widget-mate",
+    "basic.lock-body-scroll",
+    "basic.show-watermark",
+    "basic.home-redirect",
+    "basic.show-dialog",
+    "basic.show-notification"
+  ],
+  "elements": [
+    "eo-link",
+    "eo-button",
+    "eo-text",
+    "eo-dropdown-button",
+    "eo-image",
+    "eo-popover",
+    "eo-menu",
+    "eo-menu-item",
+    "eo-tag",
+    "eo-tag-list",
+    "eo-dropdown-actions",
+    "eo-mini-actions",
+    "eo-avatar",
+    "eo-tooltip",
+    "eo-sidebar-sub-menu",
+    "eo-menu-item-sub-menu",
+    "eo-menu-group",
+    "eo-breadcrumb-item",
+    "eo-breadcrumb",
+    "eo-frame-breadcrumb",
+    "eo-sidebar-menu-item",
+    "eo-sidebar-menu-group",
+    "eo-sidebar-menu-submenu",
+    "eo-sidebar-menu",
+    "eo-sidebar",
+    "eo-app-bar-wrapper",
+    "eo-page-title",
+    "eo-counter-badge",
+    "eo-easyops-avatar",
+    "eo-avatar-group",
+    "eo-actions",
+    "eo-context-menu",
+    "eo-formatter-number",
+    "eo-event-agent",
+    "eo-message-listener",
+    "eo-broadcast-channel",
+    "eo-iframe"
+  ],
+  "processors": [],
+  "editors": [
+    "eo-button",
+    "eo-text",
+    "eo-submit-buttons",
+    "eo-search-bar",
+    "eo-spin",
+    "eo-tag",
+    "eo-popover",
+    "eo-search",
+    "eo-category",
+    "eo-input",
+    "eo-checkbox",
+    "eo-form",
+    "eo-radio",
+    "eo-select",
+    "eo-switch",
+    "eo-textarea",
+    "eo-tab-list",
+    "eo-drawer",
+    "eo-divider",
+    "eo-modal",
+    "eo-card-item",
+    "eo-link",
+    "eo-mini-actions",
+    "eo-flex-layout",
+    "eo-grid-layout",
+    "eo-easy-view",
+    "eo-next-table",
+    "eo-descriptions",
+    "eo-alert"
+  ],
+  "dependencies": {
+    "eo-link": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "basic.general-link": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "eo-button": [
+      "eo-link",
+      "eo-tooltip",
+      "eo-icon"
+    ],
+    "basic.general-button": [
+      "eo-link",
+      "eo-tooltip",
+      "eo-icon"
+    ],
+    "eo-text": [
+      "eo-link",
+      "eo-input",
+      "eo-textarea",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "basic.general-text": [
+      "eo-link",
+      "eo-input",
+      "eo-textarea",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "eo-dropdown-button": [
+      "eo-button",
+      "eo-dropdown-actions"
+    ],
+    "basic.dropdown-button": [
+      "eo-button",
+      "eo-dropdown-actions"
+    ],
+    "eo-image": [
+      "eo-icon"
+    ],
+    "basic.general-image": [
+      "eo-icon"
+    ],
+    "eo-popover": [
+      "sl-popup"
+    ],
+    "basic.general-popover": [
+      "sl-popup"
+    ],
+    "eo-menu-item": [
+      "eo-icon"
+    ],
+    "basic.general-menu-item": [
+      "eo-icon"
+    ],
+    "eo-tag": [
+      "eo-icon"
+    ],
+    "basic.general-tag": [
+      "eo-icon"
+    ],
+    "eo-tag-list": [
+      "eo-icon",
+      "eo-tag"
+    ],
+    "basic.general-tag-list": [
+      "eo-icon",
+      "eo-tag"
+    ],
+    "eo-dropdown-actions": [
+      "eo-popover",
+      "eo-actions"
+    ],
+    "eo-mini-actions": [
+      "eo-tooltip",
+      "eo-icon",
+      "eo-link",
+      "eo-popover",
+      "eo-actions"
+    ],
+    "eo-avatar": [
+      "eo-icon",
+      "sl-resize-observer"
+    ],
+    "eo-tooltip": [
+      "eo-icon",
+      "sl-tooltip"
+    ],
+    "eo-sidebar-sub-menu": [
+      "eo-icon",
+      "eo-menu",
+      "eo-menu-group",
+      "eo-menu-item-sub-menu",
+      "eo-menu-item",
+      "eo-link",
+      "eo-tooltip"
+    ],
+    "eo-menu-item-sub-menu": [
+      "eo-icon"
+    ],
+    "eo-breadcrumb-item": [
+      "eo-link"
+    ],
+    "eo-breadcrumb": [
+      "eo-link"
+    ],
+    "eo-frame-breadcrumb": [
+      "eo-breadcrumb",
+      "eo-breadcrumb-item",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-item": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "eo-sidebar-menu-group": [
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar-menu-submenu": [
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group"
+    ],
+    "eo-sidebar-menu": [
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-sidebar": [
+      "eo-tooltip",
+      "eo-icon",
+      "eo-sidebar-menu",
+      "eo-sidebar-menu-item",
+      "eo-sidebar-menu-group",
+      "eo-sidebar-menu-submenu"
+    ],
+    "eo-counter-badge": [
+      "eo-icon"
+    ],
+    "eo-easyops-avatar": [
+      "eo-avatar"
+    ],
+    "eo-avatar-group": [
+      "eo-icon",
+      "sl-resize-observer"
+    ],
+    "eo-actions": [
+      "eo-tooltip",
+      "eo-link",
+      "eo-menu",
+      "eo-menu-item",
+      "eo-popover"
+    ],
+    "eo-context-menu": [
+      "basic.lock-body-scroll",
+      "eo-actions"
+    ],
+    "basic.show-dialog": [
+      "eo-button",
+      "eo-antd-icon",
+      "eo-input",
+      "sl-dialog"
+    ],
+    "basic.show-notification": [
+      "eo-icon",
+      "eo-link",
+      "sl-alert"
+    ]
+  },
+  "filePath": "bricks/basic/dist/index.05677b65.js",
+  "deprecatedElements": [
+    "eo-app-bar-wrapper",
+    "eo-frame-breadcrumb",
+    "eo-sidebar",
+    "eo-sidebar-menu-item",
+    "eo-sidebar-menu-group",
+    "eo-sidebar-menu",
+    "eo-sidebar-sub-menu",
+    "eo-sidebar-menu-submenu"
+  ]
+}

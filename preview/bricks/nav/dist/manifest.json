@@ -1,0 +1,700 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/nav",
+  "name": "nav",
+  "bricks": [
+    {
+      "name": "eo-nav-menu",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单项",
+          "attribute": false,
+          "type": "SidebarMenu"
+        },
+        {
+          "name": "mainMenuTitleStyle",
+          "attribute": false,
+          "type": "CSSProperties"
+        },
+        {
+          "name": "showTooltip",
+          "description": "是否显示 tooltip",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "菜单构件",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-launchpad-button",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "Launchpad 按钮构件",
+      "insider": true
+    },
+    {
+      "name": "eo-launchpad-button-v2",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-launchpad-button-v2`",
+      "insider": true
+    },
+    {
+      "name": "nav.launchpad-config",
+      "properties": [
+        {
+          "name": "menuGroups",
+          "attribute": false,
+          "type": "ConfigMenuGroup[]"
+        },
+        {
+          "name": "actions",
+          "attribute": false,
+          "type": "MenuAction[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "detail": {
+            "type": "MenuActionEventDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `nav.launchpad-config`",
+      "insider": true
+    },
+    {
+      "name": "nav.easyops-navbar-alerts",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `nav.easyops-navbar-alerts`",
+      "insider": true
+    },
+    {
+      "name": "eo-launchpad-quick-access",
+      "properties": [
+        {
+          "name": "readonly",
+          "type": "boolean"
+        },
+        {
+          "name": "target",
+          "attribute": false,
+          "type": "Target"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "快捷访问",
+      "insider": true
+    },
+    {
+      "name": "eo-search-launchpad",
+      "properties": [
+        {
+          "name": "readonly",
+          "description": "简约模式",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "launchpad 搜索",
+      "insider": true
+    },
+    {
+      "name": "eo-launchpad-recent-visits",
+      "properties": [
+        {
+          "name": "target",
+          "attribute": false,
+          "type": "Target"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "launchpad 最近访问",
+      "insider": true
+    },
+    {
+      "name": "eo-app-bar-wrapper",
+      "alias": [
+        "basic.app-bar-wrapper"
+      ],
+      "properties": [
+        {
+          "name": "isFixed",
+          "description": "是否固定定位。",
+          "deprecated": "使用 `position` 属性代替",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "position",
+          "description": "设置定位方式：静态定位或固定定位。\n\n设置时优先级高于 `isFixed`。",
+          "default": "\"fixed\"",
+          "type": "\"static\" | \"fixed\""
+        },
+        {
+          "name": "displayCenter",
+          "description": "居中显示",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "extraAppBarContentStyle",
+          "description": "自定义样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "left",
+          "description": "左侧内容区"
+        },
+        {
+          "name": "right",
+          "description": "右侧内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "应用顶部容器"
+    },
+    {
+      "name": "eo-frame-breadcrumb",
+      "properties": [
+        {
+          "name": "breadcrumb",
+          "description": "面包屑配置",
+          "attribute": false,
+          "type": "BreadcrumbItemConf[]"
+        },
+        {
+          "name": "noCurrentApp",
+          "description": "是否隐藏当前应用名称",
+          "type": "boolean"
+        },
+        {
+          "name": "menu",
+          "description": "菜单配置",
+          "attribute": false,
+          "type": "Menu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "面包屑"
+    },
+    {
+      "name": "eo-sidebar-menu-item",
+      "properties": [
+        {
+          "name": "url",
+          "description": "菜单项对应的系统内地址",
+          "attribute": false,
+          "type": "LinkProps[\"url\"]"
+        },
+        {
+          "name": "href",
+          "description": "菜单项对应的外部链接地址",
+          "type": "LinkProps[\"href\"]"
+        },
+        {
+          "name": "target",
+          "description": "菜单项链接打开的目标",
+          "type": "LinkProps[\"target\"]"
+        },
+        {
+          "name": "icon",
+          "description": "菜单项的图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "inSubmenu",
+          "description": "是否在二级菜单中",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单项",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu-group",
+      "properties": [
+        {
+          "name": "collapsable",
+          "description": "是否允许折叠",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsed",
+          "description": "是否折叠",
+          "type": "boolean"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "title",
+          "description": "分组标题"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单分组",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu-submenu",
+      "properties": [
+        {
+          "name": "icon",
+          "description": "菜单的图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "collapsed",
+          "description": "是否折叠",
+          "type": "boolean"
+        },
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "title",
+          "description": "子菜单标题"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单子菜单",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-menu",
+      "properties": [
+        {
+          "name": "menuCollapsed",
+          "description": "菜单整体是否收起状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧栏菜单",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单数据",
+          "attribute": false,
+          "type": "SidebarMenuType"
+        },
+        {
+          "name": "hiddenFixedIcon",
+          "description": "是否隐藏固定按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "expandedState",
+          "description": "侧栏状态",
+          "type": "ExpandedState"
+        },
+        {
+          "name": "position",
+          "description": "设置定位方式：静态定位或固定定位。",
+          "default": "\"fixed\"",
+          "type": "\"static\" | \"fixed\""
+        }
+      ],
+      "events": [
+        {
+          "name": "actual.width.change",
+          "description": "宽度变化时触发",
+          "detail": {
+            "description": "当前宽度",
+            "type": "number"
+          }
+        },
+        {
+          "name": "expanded.state.change",
+          "description": "侧栏状态变化时触发",
+          "detail": {
+            "description": "侧栏状态",
+            "type": "ExpandedState"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "侧边栏",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-sidebar-sub-menu",
+      "properties": [
+        {
+          "name": "menu",
+          "description": "菜单项",
+          "attribute": false,
+          "type": "SidebarMenu"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-sidebar-sub-menu`",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-directory",
+      "properties": [
+        {
+          "name": "position",
+          "description": "设置定位方式：静态定位或固定定位。",
+          "default": "\"fixed\"",
+          "type": "\"static\" | \"fixed\""
+        },
+        {
+          "name": "directoryTitle",
+          "description": "目录标题",
+          "type": "string"
+        },
+        {
+          "name": "menuItems",
+          "description": "菜单数据",
+          "required": true,
+          "default": "[]",
+          "attribute": false,
+          "type": "MenuItem[]"
+        },
+        {
+          "name": "hideRightBorder",
+          "description": "是否隐藏右边线",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "suffixBrick",
+          "description": "后缀 useBrick",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        },
+        {
+          "name": "defaultSelectedKeys",
+          "description": "默认选中高亮的菜单项",
+          "attribute": false,
+          "type": "string[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "menu.item.click",
+          "description": "菜单点击，groupKey 表示对应分组的key，data 表示对应菜单项",
+          "detail": {
+            "description": "{ groupKey: string, data: MenuChildrenItem   }",
+            "type": "MenuItemClickEventDetail"
+          }
+        },
+        {
+          "name": "suffix.icon.click",
+          "description": "点击icon，detail为 对应菜单项或者是分组的key",
+          "detail": {
+            "description": "{ key: string  }",
+            "type": "{ key: string }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "目录"
+    },
+    {
+      "name": "eo-directory-tree",
+      "properties": [
+        {
+          "name": "data",
+          "description": "数据源",
+          "default": "[]",
+          "attribute": false,
+          "type": "TreeItem[]"
+        },
+        {
+          "name": "directoryTitle",
+          "description": "目录标题",
+          "type": "string"
+        },
+        {
+          "name": "searchable",
+          "description": "可搜索",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "description": "搜索占位说明",
+          "type": "string"
+        },
+        {
+          "name": "searchFields",
+          "description": "除了 title 以外，额外的搜索字段",
+          "attribute": false,
+          "type": "(string | string[])[]"
+        },
+        {
+          "name": "suffixBrick",
+          "description": "后缀 useBrick",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        },
+        {
+          "name": "selectedKeys",
+          "description": "选中的 keys",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "expandedKeys",
+          "description": "展开的 keys",
+          "attribute": false,
+          "type": "string[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "expand",
+          "description": "展开事件",
+          "detail": {
+            "description": "keys - 展开的 keys",
+            "type": "{ keys: string[]; node: NodeData }"
+          }
+        },
+        {
+          "name": "select",
+          "description": "选择事件",
+          "detail": {
+            "description": "keys - 选择的 keys",
+            "type": "{ keys: string[]; node: NodeData }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "expandAll",
+          "params": [],
+          "description": "展开全部",
+          "returns": {}
+        },
+        {
+          "name": "collapseAll",
+          "params": [],
+          "description": "收起全部",
+          "returns": {}
+        },
+        {
+          "name": "expandAccordingToSelectedKeys",
+          "params": [],
+          "description": "根据选择项展开",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "目录树"
+    },
+    {
+      "name": "eo-directory-tree-leaf",
+      "properties": [
+        {
+          "name": "depth",
+          "description": "深度",
+          "default": "0",
+          "type": "number"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "select",
+          "description": "选择事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "目录树叶子节点"
+    },
+    {
+      "name": "eo-directory-tree-internal-node",
+      "properties": [
+        {
+          "name": "depth",
+          "description": "深度",
+          "default": "0",
+          "type": "number"
+        },
+        {
+          "name": "expanded",
+          "description": "是否展开",
+          "type": "boolean"
+        },
+        {
+          "name": "selectable",
+          "description": "可选择",
+          "type": "boolean"
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "expand",
+          "description": "展开事件",
+          "detail": {
+            "description": "展开状态",
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "select",
+          "description": "选择事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "目录树节点节点"
+    },
+    {
+      "name": "nav.nav-logo",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "导航栏图标"
+    },
+    {
+      "name": "nav.poll-announce",
+      "properties": [
+        {
+          "name": "pollEnabled",
+          "description": "是否启用轮询\n\n- 启用时，将会不断轮询通知列表接口\n- 未启用时，通过 `realTimeMessage` 属性传入实时通知消息\n\n注意：v2 构件 `nav-legacy.poll-announce` 该属性名称为 `pollDisabled`，但其实际意义却是 `pollEnabled`，因此在迁移时进行了重命名。",
+          "type": "boolean"
+        },
+        {
+          "name": "realTimeMessage",
+          "description": "实时通知消息（通常通过 WebSocket 消息得到）",
+          "attribute": false,
+          "type": "Message"
+        }
+      ],
+      "events": [
+        {
+          "name": "notification.close",
+          "description": "通知框关闭后，调用忽略通知接口完成后触发",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "notification.open",
+          "description": "轮询得到新的通知时触发。",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "轮询获取通知消息并展示。\n\n 从 v2 构件 `nav-legacy.poll-announce` 迁移而来"
+    }
+  ],
+  "providers": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "bricks/inject",
+  "bricks": [
+    "inject.visual-builder-preview-agent"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {},
+  "filePath": "bricks/inject/dist/index.b28b596b.js"
+}

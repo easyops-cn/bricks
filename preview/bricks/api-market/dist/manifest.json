@@ -1,0 +1,107 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/api-market",
+  "name": "api-market",
+  "bricks": [
+    {
+      "name": "api-market.apis-directory-tree",
+      "properties": [
+        {
+          "name": "data",
+          "description": "数据源",
+          "default": "[]",
+          "attribute": false,
+          "type": "TreeItem[]"
+        },
+        {
+          "name": "directoryTitle",
+          "description": "目录标题",
+          "type": "string"
+        },
+        {
+          "name": "searchable",
+          "description": "可搜索",
+          "type": "boolean"
+        },
+        {
+          "name": "hiddenNodeSuffix",
+          "description": "隐藏node节点右侧操作",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "description": "搜索占位说明",
+          "type": "string"
+        },
+        {
+          "name": "searchFields",
+          "description": "除了 title 以外，额外的搜索字段",
+          "attribute": false,
+          "type": "(string | string[])[]"
+        },
+        {
+          "name": "selectedKeys",
+          "description": "选中的 keys",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "expandedKeys",
+          "description": "展开的 keys",
+          "attribute": false,
+          "type": "string[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "expand",
+          "description": "展开事件",
+          "detail": {
+            "description": "keys - 展开的 keys",
+            "type": "{ keys: string[]; node: NodeData }"
+          }
+        },
+        {
+          "name": "select",
+          "description": "选择事件",
+          "detail": {
+            "description": "keys - 选择的 keys",
+            "type": "{ keys: string[]; node: NodeData }"
+          }
+        },
+        {
+          "name": "action.click",
+          "description": "actions点击事件",
+          "detail": {
+            "type": "{\n    data: NodeData;\n    action: SimpleActionType;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "expandAll",
+          "params": [],
+          "description": "展开全部",
+          "returns": {}
+        },
+        {
+          "name": "collapseAll",
+          "params": [],
+          "description": "收起全部",
+          "returns": {}
+        },
+        {
+          "name": "expandAccordingToSelectedKeys",
+          "params": [],
+          "description": "根据选择项展开",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "API目录树"
+    }
+  ],
+  "providers": []
+}

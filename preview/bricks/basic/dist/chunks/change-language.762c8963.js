@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_basic=globalThis.webpackChunk_next_bricks_basic||[]).push([[4174],{6568:(a,e,n)=>{n.r(e),n.d(e,{changeLanguage:()=>i});var c=n(2681),s=n(6181);async function i(a){await s.i18n.changeLanguage(a)}customElements.define("basic.change-language",(0,c.createProviderClass)(i))}}]);
+//# sourceMappingURL=change-language.762c8963.js.map

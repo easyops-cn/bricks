@@ -1,0 +1,7 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/widget-editors",
+  "name": "widget-editors",
+  "bricks": [],
+  "providers": []
+}
