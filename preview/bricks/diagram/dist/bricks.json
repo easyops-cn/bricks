@@ -1,0 +1,20 @@
+{
+  "id": "bricks/diagram",
+  "bricks": [
+    "diagram.experimental-node",
+    "diagram.editable-label"
+  ],
+  "elements": [
+    "eo-diagram",
+    "eo-display-canvas",
+    "eo-draw-canvas"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-draw-canvas": [
+      "basic.lock-body-scroll"
+    ]
+  },
+  "filePath": "bricks/diagram/dist/index.37fb9e1f.js"
+}

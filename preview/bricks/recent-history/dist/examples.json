@@ -1,0 +1,5 @@
+{
+  "recent-history.recent-visit": {
+    "doc": "最近访问\n\n## Examples\n\n### Basic\n\n```yaml preview gap\n- brick: eo-button\n  properties:\n    textContent: Add history\n  events:\n    click:\n      - useProvider: recent-history.push-history\n        args:\n          - playground\n          - 5\n          - key: <% _.uniqueId(\"playground-\") %>\n            name: <% _.uniqueId(\"playground-name\") %>\n- brick: recent-history.recent-visit\n  properties:\n    namespace: playground\n    capacity: 5\n# -- YAML DELIMITER (1nbbm8) --\n# <eo-button id=\"brick-1\">Add history</eo-button>\n# <recent-history.recent-visit\n#   namespace=\"playground\"\n#   capacity=\"5\"\n# ></recent-history.recent-visit>\n# \n# <script>\n#   const brick_1 = document.getElementById(\"brick-1\");\n#   brick_1.addEventListener(\"click\", (e) => {\n#     const provider = document.createElement(\"recent-history.push-history\");\n#     provider.resolve(\"playground\", 5, {\n#       key: '<% _.uniqueId(\"playground-\") %>',\n#       name: '<% _.uniqueId(\"playground-name\") %>',\n#     });\n#   });\n# </script>\n# \n```\n"
+  }
+}

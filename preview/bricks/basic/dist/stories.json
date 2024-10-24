@@ -1,0 +1,745 @@
+[
+  {
+    "storyId": "eo-button",
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-button.628fac91d9fb28a30445.svg"
+    },
+    "text": {
+      "en": "General button",
+      "zh": "通用按钮"
+    },
+    "description": {
+      "en": "General button",
+      "zh": "可发送点击事件、可配置按钮名称、按钮跳转链接等"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "properties": {
+              "textContent": "新建",
+              "tooltip": "新建实例",
+              "icon": {
+                "lib": "fa",
+                "icon": "edit",
+                "prefix": "fas"
+              },
+              "dataset": {
+                "testid": "basic-usage-demo"
+              }
+            },
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-button[basic]",
+        "title": {
+          "en": "Baisc General Button",
+          "zh": "基础按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[basic].e21708ed3d17a861b542.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "properties": {
+              "textContent": "新建",
+              "disabled": true,
+              "disabledTooltip": "无权限",
+              "tooltip": "新建实例"
+            },
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-button[disabled]",
+        "title": {
+          "en": "disabled General Button",
+          "zh": "禁用按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[disabled].023636882fa66c284d59.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "properties": {
+              "buttonShape": "round",
+              "textContent": "搜索",
+              "type": "primary",
+              "icon": {
+                "lib": "antd",
+                "icon": "search"
+              },
+              "url": "/",
+              "target": "_blank"
+            },
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-button[primary]",
+        "title": {
+          "en": "Primary General Button",
+          "zh": "primary样式按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[primary].3dd68f51281bd1924db8.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "properties": {
+              "buttonShape": "circle",
+              "type": "icon",
+              "icon": {
+                "lib": "antd",
+                "icon": "search"
+              },
+              "url": "/",
+              "target": "_blank"
+            },
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-button[icon]",
+        "title": {
+          "en": "Icon General Button",
+          "zh": "图标按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[icon].27480065ba83e18c5a23.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "properties": {
+              "type": "text",
+              "textContent": "更多",
+              "url": "/",
+              "target": "_blank"
+            },
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-button[text]",
+        "title": {
+          "en": "Text General Button",
+          "zh": "文字按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[text].4a4d37c6f097c41609ef.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            },
+            "properties": {
+              "type": "link",
+              "url": "/demo",
+              "textContent": "this is link"
+            }
+          }
+        ],
+        "snippetId": "eo-button[link]",
+        "title": {
+          "en": "Link General Button",
+          "zh": "link按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[link].99966c1eb302bbd1a72e.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-button",
+            "events": {
+              "click": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "click button"
+                  ]
+                }
+              ]
+            },
+            "properties": {
+              "danger": true,
+              "textContent": "danger button"
+            }
+          }
+        ],
+        "snippetId": "eo-button[danger]",
+        "title": {
+          "en": "danger General Button",
+          "zh": "danger类型按钮"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-button[danger].992fc9675d7e374ad217.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-link",
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-link.d0181cd3ad698ceb3d9f.svg"
+    },
+    "text": {
+      "en": "link",
+      "zh": "链接"
+    },
+    "description": {
+      "en": "",
+      "zh": "将值渲染成跳转链接，支持url模板配置"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-link[normal]",
+        "title": {
+          "zh": "通用链接",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-link[normal].dd10260cbd80fc372ba1.svg",
+        "bricks": [
+          {
+            "brick": "eo-link",
+            "properties": {
+              "dataset": {
+                "testid": "basic-usage-demo"
+              },
+              "textContent": "aaa",
+              "url": "/resources/123",
+              "target": "_blank"
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-link[outside]",
+        "title": {
+          "zh": "通用链接(外部跳转)",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-link[outside].a6036a7738710be54e66.svg",
+        "bricks": [
+          {
+            "brick": "eo-link",
+            "properties": {
+              "textContent": "外链跳转",
+              "href": "https://www.baidu.com",
+              "target": "_blank"
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-link[with-icon-events]",
+        "title": {
+          "zh": "通用链接(带图标事件)",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-link[with-icon-events].457e430f1aed07dc377b.svg",
+        "bricks": [
+          {
+            "brick": "eo-link",
+            "properties": {
+              "textContent": "查看",
+              "icon": {
+                "lib": "antd",
+                "type": "file-search",
+                "theme": "outlined"
+              }
+            },
+            "events": {
+              "click": {
+                "action": "console.log"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-text",
+    "text": {
+      "en": "General text",
+      "zh": "通用文本"
+    },
+    "description": {
+      "en": "General text",
+      "zh": "通用文本"
+    },
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-text.1f52564219206b570ebd.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-text",
+            "properties": {
+              "textContent": "容器卡片标题",
+              "fontSize": "var(--card-title-font-size)",
+              "color": "var(--color-header-text)",
+              "fontWeight": "var(--font-weight-500)",
+              "display": "block"
+            }
+          }
+        ],
+        "snippetId": "eo-text[containerCardTitle]",
+        "title": {
+          "en": "Container Card Title",
+          "zh": "容器卡片标题"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-text[containerCardTitle].50ecd2ea64e3fadf7bb5.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-text",
+            "properties": {
+              "textContent": "正文",
+              "fontSize": "var(--normal-font-size)",
+              "color": "var(--color-normal-text)",
+              "fontWeight": "var(--font-weight-400)"
+            }
+          }
+        ],
+        "snippetId": "eo-text[main]",
+        "title": {
+          "en": "main",
+          "zh": "正文"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-text[main].83a9aa8fbd57e126dfe8.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-text",
+            "properties": {
+              "textContent": "辅助文字",
+              "fontSize": "var(--normal-font-size)",
+              "color": "var(--color-secondary-text)",
+              "fontWeight": "var(--font-weight-400)"
+            }
+          }
+        ],
+        "snippetId": "eo-text[auxiliaryText]",
+        "title": {
+          "en": "Auxiliary Text",
+          "zh": "辅助文字\t"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-text[auxiliaryText].17e409f287504c042614.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-text",
+            "properties": {
+              "textContent": "banner标题",
+              "fontSize": "var(--special-title-font-size-small)",
+              "color": "var(--color-header-text)",
+              "fontWeight": "var(--font-weight-500)",
+              "display": "block"
+            }
+          }
+        ],
+        "snippetId": "eo-text[bannerTitle]",
+        "title": {
+          "en": "Banner Title",
+          "zh": "banner标题"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-text[bannerTitle].10c5acea4369c08a60b5.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-text",
+            "properties": {
+              "textContent": "分类标题",
+              "fontSize": "var(--sub-title-font-size-small)",
+              "color": "var(--color-secondary-text)",
+              "fontWeight": "var(--font-weight-400)",
+              "display": "block"
+            }
+          }
+        ],
+        "snippetId": "eo-text[categoryTitle]",
+        "title": {
+          "en": "Category Title",
+          "zh": "分类标题"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-text[categoryTitle].5b810ac1d410f0e7df5d.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-button",
+    "text": {
+      "en": "General Image",
+      "zh": "图片展示构件"
+    },
+    "description": {
+      "en": "Image brick that supports preview",
+      "zh": "支持预览的图片展示构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-image.1cfd0a1cb46aa2a181ea.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-image[normal]",
+        "title": {
+          "en": "Basic picture display components",
+          "zh": "基本图片展示构件"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-image[normal].39010a740410a8c1a003.svg",
+        "bricks": [
+          {
+            "brick": "eo-image",
+            "properties": {
+              "imgList": [
+                {
+                  "src": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                  "width": 100
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-dropdown-button",
+    "text": {
+      "en": "Dropdown Button",
+      "zh": "带下拉框的按钮"
+    },
+    "description": {
+      "en": "A button is on the left, and a related functional menu is on the right. ",
+      "zh": "左边是按钮，右边是额外的相关功能菜单"
+    },
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-dropdown-button.8ce40fc2244c38d979b0.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-dropdown-button[normal]",
+        "title": {
+          "zh": "基础带下拉框的按钮",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-dropdown-button[normal].f25370870dba8aa9d73b.svg",
+        "bricks": [
+          {
+            "brick": "eo-dropdown-button",
+            "properties": {
+              "btnText": "下拉按钮",
+              "icon": {
+                "icon": "setting",
+                "lib": "antd",
+                "theme": "outlined"
+              },
+              "actions": [
+                {
+                  "text": "Query",
+                  "event": "query",
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "search"
+                  }
+                },
+                {
+                  "text": "Edit",
+                  "event": "edit",
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "edit"
+                  }
+                },
+                {
+                  "text": "Delete",
+                  "event": "delete",
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "delete"
+                  },
+                  "disabled": true
+                }
+              ]
+            },
+            "events": {
+              "query": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "query"
+                  ]
+                }
+              ],
+              "edit": [
+                {
+                  "action": "message.info",
+                  "args": [
+                    "edit"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-popover",
+    "text": {
+      "en": "popover container",
+      "zh": "气泡卡片容器"
+    },
+    "description": {
+      "en": "",
+      "zh": "可以配置显示构件和弹出框构件，常用于快速编辑和详情展示"
+    },
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-popover.cf857099559682d8a72c.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-popover[basic]",
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-popover[basic].9cb3f62a700fe63d6520.svg",
+        "title": {
+          "en": "Basic popover",
+          "zh": "基础的气泡卡片"
+        },
+        "bricks": [
+          {
+            "brick": "eo-popover",
+            "properties": {
+              "trigger": "hover",
+              "placement": "bottom"
+            },
+            "children": [
+              {
+                "brick": "eo-input",
+                "slot": "anchor"
+              },
+              {
+                "brick": "div",
+                "properties": {
+                  "style": {
+                    "width": "200px",
+                    "height": "100px",
+                    "display": "flex",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "background": "pink"
+                  },
+                  "textContent": "I'm popover"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-tab-list",
+    "text": {
+      "en": "Tag Label",
+      "zh": "Tag 标签"
+    },
+    "tags": [
+      {
+        "en": "show",
+        "zh": "数据显示"
+      }
+    ],
+    "description": {
+      "en": "tag label, support Tag and CheckableTag",
+      "zh": "进行标记和分类的小标签，同时支持基本标签和可选中标签"
+    },
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-tag-list.4375664bd8c4b4d069e2.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-tag-list[normal]",
+        "title": {
+          "zh": "基本",
+          "en": ""
+        },
+        "message": {
+          "zh": "标签支持多彩标签、可选择标签、可删除标签。",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-tag-list[normal].ec0fa5d41b17e3932950.svg",
+        "bricks": [
+          {
+            "brick": "eo-tag-list",
+            "properties": {
+              "color": "green",
+              "showTagCircle": true,
+              "list": [
+                "Active",
+                "Normal"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-tag-list[disabled-with-close]",
+        "title": {
+          "zh": "复杂场景标签",
+          "en": ""
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-tag-list[disabled-with-close].43a0afc87df519cbcf35.svg",
+        "bricks": [
+          {
+            "brick": "eo-tag-list",
+            "properties": {
+              "closable": true,
+              "checkable": true,
+              "list": [
+                {
+                  "key": "p1",
+                  "text": "紧急变更",
+                  "disabled": true
+                },
+                {
+                  "key": "p2",
+                  "text": "计划变更",
+                  "disabled": true
+                },
+                {
+                  "key": "p3",
+                  "text": "发布流程"
+                },
+                {
+                  "key": "p4",
+                  "text": "发布流程"
+                },
+                {
+                  "key": "p5",
+                  "text": "发布计划"
+                },
+                {
+                  "key": "p6",
+                  "text": "测试计划"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-tooltip",
+    "icon": {
+      "imgSrc": "bricks/basic/dist/stories-assets/eo-tooltip.76aa090a56fe370a3e85.svg"
+    },
+    "text": {
+      "en": "Tooltip Text Prompt",
+      "zh": "Tooltip文字提示"
+    },
+    "description": {
+      "en": "general tooltip",
+      "zh": "普通的 tooltip"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-tooltip[normal]",
+        "title": {
+          "en": "",
+          "zh": "基础的tooltips"
+        },
+        "thumbnail": "bricks/basic/dist/stories-assets/eo-tooltip[normal].cef765ce5503c2f1d8c1.svg",
+        "message": {
+          "zh": "鼠标移入则显示提示，移出消失，气泡浮层不承载复杂文本和操作；建议短文本提示信息不超过10个字，文字过长时请用气泡卡片",
+          "en": ""
+        },
+        "bricks": [
+          {
+            "brick": "eo-tooltip",
+            "properties": {
+              "dataset": {
+                "testid": "basic-usage-demo"
+              },
+              "icon": {
+                "lib": "fa",
+                "icon": "info-circle"
+              },
+              "content": "这是一个 tooltips",
+              "trigger": "hover"
+            },
+            "children": [
+              {
+                "brick": "eo-button",
+                "properties": {
+                  "type": "primary",
+                  "textContent": "hover"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

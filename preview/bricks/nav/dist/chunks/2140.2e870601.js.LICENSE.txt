@@ -1,0 +1,23 @@
+/**! @contract easyops.api.cmdb.instance.PostSearchV3@1.1.0 */
+
+/**! @contract easyops.api.sys_setting.announce.IgnoreAnnounce@1.0.1 */
+
+/**! @contract easyops.api.sys_setting.announce.ListEffectiveAnnounce@1.0.1 */
+
+/**! @contract easyops.api.sys_setting.announce.PollAnnounce@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.CreateCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.CreateCollectionV2@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.DeleteCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.DeleteCollectionV2@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.ListCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.ListCollectionV2@1.0.0 */
+
+/**! @contract easyops.api.user_service.my_collection.ListMyCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.my_collection.UpsertMyCollection@1.0.0 */

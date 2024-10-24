@@ -1,0 +1,741 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/presentational",
+  "name": "presentational",
+  "bricks": [
+    {
+      "name": "eo-descriptions",
+      "alias": [
+        "presentational.general-descriptions"
+      ],
+      "properties": [
+        {
+          "name": "descriptionTitle",
+          "description": "描述标题",
+          "type": "string"
+        },
+        {
+          "name": "list",
+          "description": "描述列表",
+          "attribute": false,
+          "type": "DescriptionItem[]"
+        },
+        {
+          "name": "showCard",
+          "description": "是否展示卡片背景",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "column",
+          "description": "列数",
+          "attribute": true,
+          "type": "number"
+        },
+        {
+          "name": "layout",
+          "description": "布局模式",
+          "default": "\"horizontal\"",
+          "type": "Layout"
+        },
+        {
+          "name": "bordered",
+          "description": "是否展示边框",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "hideGroups",
+          "description": "隐藏的描述列表项",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "dataSource",
+          "description": "数据源",
+          "attribute": false,
+          "type": "Record<string, unknown>"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用描述列表构件",
+      "category": "text"
+    },
+    {
+      "name": "eo-alert",
+      "alias": [
+        "presentational.general-alert"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "警告类型",
+          "attribute": false,
+          "type": "AlertType"
+        },
+        {
+          "name": "hasTitle",
+          "description": "是否显示标题。开启后，可以使用 `title` 插槽",
+          "type": "boolean"
+        },
+        {
+          "name": "showIcon",
+          "description": "是否显示提示图标",
+          "type": "boolean"
+        },
+        {
+          "name": "closable",
+          "description": "是否显示关闭按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "localStorageKey",
+          "description": "以该值和页面 url 作为命名空间，决定是否显示该警告提示",
+          "type": "string"
+        },
+        {
+          "name": "disableUrlNamespace",
+          "description": "关闭后仅以 `localStorageKey` 作为命名空间",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        },
+        {
+          "name": "title",
+          "description": "标题"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "告警提示",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-code-display",
+      "alias": [
+        "presentational.code-display"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "description": "代码内容",
+          "default": "\"\"",
+          "type": "string"
+        },
+        {
+          "name": "language",
+          "description": "语言，具体查阅 [Supported languages](https://prismjs.com/#supported-languages)",
+          "type": "string"
+        },
+        {
+          "name": "hideLineNumber",
+          "description": "是否隐藏行号",
+          "type": "boolean"
+        },
+        {
+          "name": "maxLines",
+          "description": "最大行数",
+          "type": "number"
+        },
+        {
+          "name": "minLines",
+          "description": "最小行数",
+          "type": "number"
+        },
+        {
+          "name": "showCopyButton",
+          "description": "是否显示复制按钮",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "showExportButton",
+          "description": "是否显示导出按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "exportFileName",
+          "description": "导出的文件名",
+          "default": "download.txt",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "代码展示",
+      "category": "display-component"
+    },
+    {
+      "name": "eo-pagination",
+      "properties": [
+        {
+          "name": "type",
+          "description": "",
+          "default": "\"page\"",
+          "type": "\"page\" | \"token\""
+        },
+        {
+          "name": "total",
+          "description": "数据总数",
+          "default": "0",
+          "type": "number"
+        },
+        {
+          "name": "page",
+          "description": "当前页数",
+          "default": "1",
+          "type": "number"
+        },
+        {
+          "name": "pageSize",
+          "description": "每页条数",
+          "default": "20",
+          "type": "number"
+        },
+        {
+          "name": "pageSizeOptions",
+          "description": "指定每页可以显示多少条",
+          "default": "[10, 20, 50, 100]",
+          "attribute": false,
+          "type": "number[]"
+        },
+        {
+          "name": "showSizeChanger",
+          "description": "是否展示`pageSize`分页器",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "nextToken",
+          "type": "string"
+        },
+        {
+          "name": "previousToken",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "页码及每页条数改变事件",
+          "detail": {
+            "type": "ChangeDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "分页",
+      "category": "navigation"
+    },
+    {
+      "name": "eo-card-item",
+      "properties": [
+        {
+          "name": "hasHeader",
+          "description": "是否有顶部小标题",
+          "type": "boolean"
+        },
+        {
+          "name": "cardTitle",
+          "description": "卡片标题",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "描述信息",
+          "type": "string"
+        },
+        {
+          "name": "auxiliaryText",
+          "description": "顶部辅助文字",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "description": "图标",
+          "attribute": false,
+          "type": "IconAvatar | ImgAvatar"
+        },
+        {
+          "name": "href",
+          "description": "设置 `href` 时将使用原生 `<a>` 标签，通常用于外链的跳转",
+          "type": "LinkProps[\"href\"]"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "attribute": false,
+          "type": "LinkProps[\"url\"]"
+        },
+        {
+          "name": "target",
+          "description": "链接跳转目标",
+          "type": "LinkProps[\"target\"]"
+        },
+        {
+          "name": "actions",
+          "description": "操作按钮组",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "showActions",
+          "description": "展示操作按钮组",
+          "default": "\"always\"",
+          "type": "\"always\" | \"hover\""
+        },
+        {
+          "name": "selected",
+          "description": "是否选中",
+          "type": "boolean"
+        },
+        {
+          "name": "styleType",
+          "description": "卡片样式类型",
+          "type": "\"grayish\""
+        },
+        {
+          "name": "hasCover",
+          "description": "是否使用卡片封面",
+          "type": "boolean"
+        },
+        {
+          "name": "coverImage",
+          "description": "卡片封面背景图片",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "coverColor",
+          "description": "卡片封面背景颜色（使用纯色背景）",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "coverImageSize",
+          "description": "卡片封面图片尺寸 ，配置参考 https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size",
+          "attribute": false,
+          "type": "React.CSSProperties[\"backgroundSize\"]"
+        },
+        {
+          "name": "avatarPosition",
+          "description": "图标是否放置在卡片封面",
+          "type": "\"content\" | \"cover\""
+        },
+        {
+          "name": "tagConfig",
+          "attribute": false,
+          "type": "TagConfig"
+        },
+        {
+          "name": "cardStyle",
+          "description": "卡片样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "tag.click",
+          "description": "徽标点击事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": "expanded-area-1",
+          "description": "扩展区域 1，通常放置标签信息"
+        },
+        {
+          "name": "expanded-area-2",
+          "description": "扩展区域 2，通常放置操作和其他属性信息（图标/头像/小字描述/统计信息）"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "信息类卡片 —— 通用卡片",
+      "category": "card-info"
+    },
+    {
+      "name": "eo-divider",
+      "properties": [
+        {
+          "name": "orientation",
+          "description": "标题位置，在horizontal类型的分割线中使用",
+          "default": "center",
+          "attribute": false,
+          "type": "OrientationType"
+        },
+        {
+          "name": "dashed",
+          "description": "是否虚线",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "description": "水平|垂直|放射类型,注意radiation是个特殊的类型，该样式是特定的",
+          "default": "\"horizontal\"",
+          "type": "dividerType"
+        },
+        {
+          "name": "proportion",
+          "description": "当用于数值显示的情况，eg: 如果要展示\"1/3\"，那么传入就是[1,3], 该字段只适配于 type 为 radiation",
+          "attribute": false,
+          "type": "[number, number]"
+        },
+        {
+          "name": "dividerStyle",
+          "description": "分割线自定义样式",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "分割线",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-info-card-item",
+      "properties": [
+        {
+          "name": "cardTitle",
+          "description": "title",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "description": "description",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "description": "链接地址",
+          "type": "string"
+        },
+        {
+          "name": "cardIcon",
+          "description": "图标",
+          "attribute": false,
+          "type": "IconAvatar"
+        },
+        {
+          "name": "detailList",
+          "description": "详细列表",
+          "attribute": false,
+          "type": "InfoCardDetail[]"
+        },
+        {
+          "name": "target",
+          "description": "链接跳转目标",
+          "type": "LinkProps[\"target\"]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "信息卡片",
+      "category": "card-info"
+    },
+    {
+      "name": "eo-humanize-time",
+      "alias": [
+        "presentational.humanize-time"
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "description": "时间截，或字符串，当为字符串时，应提供时间格式 `inputFormat`",
+          "required": true,
+          "attribute": false,
+          "type": "number | string"
+        },
+        {
+          "name": "inputFormat",
+          "description": "字符串的时间格式，如 \"YYYY-MM-DD\", [时间格式参照表](https://day.js.org/docs/en/parse/string-format)",
+          "type": "string"
+        },
+        {
+          "name": "outputFormat",
+          "description": "展示时间格式，如 \"YYYY-MM-DD\"，当设置该属性时，属性 `formatter` 无效 [时间格式参照表](https://day.js.org/docs/en/display/format)",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "description": "使用日期+时间格式输出还是仅日期。",
+          "default": "\"datetime\"",
+          "type": "\"datetime\" | \"date\""
+        },
+        {
+          "name": "isCostTime",
+          "description": "是否展示为耗费时间，例如：'1 个月 20 天'",
+          "type": "boolean"
+        },
+        {
+          "name": "formatter",
+          "description": "格式类型",
+          "default": "\"default\"",
+          "attribute": false,
+          "type": "HumanizeTimeFormat"
+        },
+        {
+          "name": "isMicrosecond",
+          "description": "value 值的单位是否为毫秒（此处属性 id 写错，实际表达意义为 isMillisecond）",
+          "deprecated": "请使用 `isMillisecond`",
+          "type": "boolean"
+        },
+        {
+          "name": "isMillisecond",
+          "description": "value 值的单位是否为毫秒",
+          "type": "boolean"
+        },
+        {
+          "name": "link",
+          "description": "跳转链接，默认为空",
+          "attribute": false,
+          "type": "LinkInfo"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "人性化时间展示，可显示完整时间、相对时间、未来时间、耗时等，支持自定义输入值格式和输出格式。"
+    },
+    {
+      "name": "eo-statistics-card",
+      "properties": [
+        {
+          "name": "cardTitle",
+          "description": "卡片标题",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "type": "string"
+        },
+        {
+          "name": "unit",
+          "description": "单位",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "图标",
+          "attribute": false,
+          "type": "EoStatisticsCardProps[\"icon\"]"
+        },
+        {
+          "name": "size",
+          "description": "尺寸",
+          "default": "\"medium\"",
+          "type": "\"large\" | \"medium\" | \"small\""
+        },
+        {
+          "name": "outline",
+          "description": "卡片轮廓",
+          "default": "\"border\"",
+          "type": "\"border\" | \"background\" | \"none\""
+        },
+        {
+          "name": "background",
+          "description": "背景",
+          "type": "string"
+        },
+        {
+          "name": "descriptionPosition",
+          "description": "描述位置",
+          "default": "\"bottom\"",
+          "type": "\"bottom\" | \"right\""
+        },
+        {
+          "name": "valueStyle",
+          "description": "值样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "interactable",
+          "description": "是否可互动",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "titlePrefix",
+          "description": "标题前缀，放置辅助信息"
+        },
+        {
+          "name": "titleSuffix",
+          "description": "标题前缀，放置辅助信息"
+        },
+        {
+          "name": "description",
+          "description": "描述信息，通常是对于统计值的描述"
+        },
+        {
+          "name": "basicContent",
+          "description": "卡片右侧内容区，适合放置迷你图表，常用于小卡片"
+        },
+        {
+          "name": "extraContent",
+          "description": "卡片下方内容区，适合放置图表，用于展示更多信息的场景"
+        },
+        {
+          "name": "operator",
+          "description": "右上角操作区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "统计卡片"
+    },
+    {
+      "name": "eo-loading-step",
+      "properties": [
+        {
+          "name": "visible",
+          "description": "是否可见",
+          "type": "boolean"
+        },
+        {
+          "name": "width",
+          "description": "宽度",
+          "type": "string"
+        },
+        {
+          "name": "stepTitle",
+          "description": "步骤标题",
+          "type": "string"
+        },
+        {
+          "name": "stepList",
+          "description": "步骤列表",
+          "attribute": false,
+          "type": "StepItem[]"
+        },
+        {
+          "name": "curStep",
+          "description": "当前步骤",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "open",
+          "description": "打开事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "close",
+          "description": "关闭事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [],
+          "description": "打开",
+          "returns": {}
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "关闭",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "加载步骤框"
+    },
+    {
+      "name": "eo-current-time",
+      "properties": [
+        {
+          "name": "format",
+          "description": "时间格式",
+          "default": "\"YYYY-MM-DD HH:mm:ss\"",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "前置图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-current-time`"
+    },
+    {
+      "name": "eo-carousel-text",
+      "properties": [
+        {
+          "name": "text",
+          "description": "展示内容",
+          "default": "\"\"",
+          "type": "string"
+        },
+        {
+          "name": "containerWidth",
+          "description": "容器宽度",
+          "default": "\"100%\"",
+          "type": "CSSProperties[\"width\"]"
+        },
+        {
+          "name": "fontSize",
+          "description": "字体大小",
+          "default": "\"14px\"",
+          "type": "CSSProperties[\"fontSize\"]"
+        },
+        {
+          "name": "fontColor",
+          "description": "字体颜色",
+          "default": "\"black\"",
+          "type": "CSSProperties[\"color\"]"
+        },
+        {
+          "name": "animationDuration",
+          "description": "动画周期所需时间，单位ms",
+          "default": "3000",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-carousel-text`"
+    }
+  ],
+  "providers": []
+}

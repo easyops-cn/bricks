@@ -1,0 +1,342 @@
+{
+  "api-market.apis-directory-tree": {
+    "properties": [
+      {
+        "name": "data",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "TreeItem"
+            }
+          }
+        }
+      },
+      {
+        "name": "directoryTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "searchable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "hiddenNodeSuffix",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "searchFields",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "parenthesizedType",
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "selectedKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "expandedKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "expand",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "keys"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "node"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeData"
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "select",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "keys"
+                },
+                "annotation": {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "node"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeData"
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "action.click",
+        "detail": {
+          "annotation": {
+            "type": "typeLiteral",
+            "members": [
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "data"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeData"
+                  }
+                },
+                "computed": false
+              },
+              {
+                "type": "propertySignature",
+                "key": {
+                  "type": "identifier",
+                  "name": "action"
+                },
+                "annotation": {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SimpleActionType"
+                  }
+                },
+                "computed": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "expandAll",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "collapseAll",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "expandAccordingToSelectedKeys",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "TreeItem",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "children"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "TreeItem"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "depth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "index"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TreeItem"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bricks/ai",
+  "bricks": [
+    "ai.chat-view",
+    "ai.chat-agent"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "ai.chat-view": [
+      "eo-icon",
+      "eo-link",
+      "eo-button",
+      "eo-tag",
+      "eo-tooltip",
+      "basic.copy-to-clipboard",
+      "basic.show-notification",
+      "basic.show-dialog",
+      "eo-modal",
+      "eo-form",
+      "eo-input"
+    ]
+  },
+  "filePath": "bricks/ai/dist/index.501b06f4.js"
+}

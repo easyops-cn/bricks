@@ -1,0 +1,81 @@
+{
+  "id": "bricks/presentational",
+  "bricks": [
+    "presentational.general-descriptions",
+    "presentational.general-alert",
+    "presentational.code-display",
+    "presentational.humanize-time"
+  ],
+  "elements": [
+    "eo-descriptions",
+    "eo-alert",
+    "eo-code-display",
+    "eo-pagination",
+    "eo-card-item",
+    "eo-divider",
+    "eo-info-card-item",
+    "eo-humanize-time",
+    "eo-statistics-card",
+    "eo-loading-step",
+    "eo-current-time",
+    "eo-carousel-text"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-descriptions": [
+      "eo-card",
+      "eo-grid-layout"
+    ],
+    "presentational.general-descriptions": [
+      "eo-card",
+      "eo-grid-layout"
+    ],
+    "eo-alert": [
+      "eo-icon"
+    ],
+    "presentational.general-alert": [
+      "eo-icon"
+    ],
+    "eo-code-display": [
+      "eo-icon",
+      "basic.copy-to-clipboard",
+      "basic.show-notification"
+    ],
+    "presentational.code-display": [
+      "eo-icon",
+      "basic.copy-to-clipboard",
+      "basic.show-notification"
+    ],
+    "eo-pagination": [
+      "eo-icon",
+      "eo-dropdown-actions"
+    ],
+    "eo-card-item": [
+      "eo-link",
+      "eo-icon",
+      "eo-mini-actions"
+    ],
+    "eo-info-card-item": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "eo-humanize-time": [
+      "eo-link"
+    ],
+    "presentational.humanize-time": [
+      "eo-link"
+    ],
+    "eo-statistics-card": [
+      "eo-icon"
+    ],
+    "eo-loading-step": [
+      "basic.lock-body-scroll",
+      "eo-icon"
+    ],
+    "eo-current-time": [
+      "eo-icon"
+    ]
+  },
+  "filePath": "bricks/presentational/dist/index.ad023df5.js"
+}

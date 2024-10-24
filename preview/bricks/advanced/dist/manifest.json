@@ -1,0 +1,1067 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/advanced",
+  "name": "advanced",
+  "bricks": [
+    {
+      "name": "eo-table",
+      "alias": [
+        "advanced.general-table"
+      ],
+      "properties": [
+        {
+          "name": "showCard",
+          "description": "是否显示外层卡片",
+          "default": "true"
+        },
+        {
+          "name": "rowSelection",
+          "description": "表格行是否可选择，具体查阅：[rowSelection](https://ant.design/components/table-cn/#rowSelection)",
+          "attribute": false,
+          "type": "false | TableRowSelection<any>"
+        },
+        {
+          "name": "rowKey",
+          "description": "指定每一行的 key，不指定则默认为索引 index。强烈建议设置该属性，否则在某些情况下可能行为不如预期。",
+          "type": "string"
+        },
+        {
+          "name": "hiddenColumns",
+          "description": "隐藏相应列（输入对应的 dataIndex 或者 key 即可）",
+          "attribute": false,
+          "type": "Array<string | number>"
+        },
+        {
+          "name": "showSelectInfo",
+          "description": "是否显示已选择信息和清除按钮。仅在设置了`rowSelection`时有效。默认不显示",
+          "default": "false"
+        },
+        {
+          "name": "filters",
+          "description": "表头过滤的过滤项，key 为 column 的 dataIndex，value 为过滤值集合。",
+          "attribute": false,
+          "type": "Record<string, string[]>"
+        },
+        {
+          "name": "configProps",
+          "description": "ant-design 的 Table 相关配置项,具体查阅：[Table](https://ant.design/components/table-cn/#Table)，其中分页配置和行选择配值在构件中设置了常用的默认配置，也可自行覆盖，具体描述见下表",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "sort",
+          "description": "被排序列的 dataIndex。通常来自于 url 参数，可以设置成 ${QUERY.sort}。",
+          "type": "string | null"
+        },
+        {
+          "name": "order",
+          "description": "升序/降序，可以设置成 ${QUERY.order}。",
+          "attribute": false,
+          "type": "string | number | null"
+        },
+        {
+          "name": "rowDisabledConfig",
+          "description": "配置每一行是否禁用，其中 `field` 表示数据源中的字段路径， `value` 表示与其字段比较的值， `operator` 表示两者比较的方法，结果为 `true` 时会禁用当前行, 需要注意的是该配置需要在 `rowSelection: true` 的前提下使用，并且设置 `rowKey` 属性赋予每行唯一的 key，防止顺序变化时造成的错误勾选（如上 demo 所示）",
+          "attribute": false,
+          "type": "RowDisabledProps | RowDisabledProps[]"
+        },
+        {
+          "name": "expandedRowBrick",
+          "description": "自定义行展开的构件 [UseBrickConf](/next-docs/docs/api-reference/brick-types.usesinglebrickconf)",
+          "attribute": false,
+          "type": "{\n        useBrick?: UseSingleBrickConf;\n      }"
+        },
+        {
+          "name": "expandIcon",
+          "description": "自定义展开图标。",
+          "default": "{collapsedIcon:{lib:'antd',icon:'down',theme:'outlined'},expandedIcon:{lib:'antd',icon:'right',theme:'outlined'}}",
+          "attribute": false,
+          "type": "{\n        collapsedIcon: GeneralIconProps;\n        expandedIcon: GeneralIconProps;\n      }"
+        },
+        {
+          "name": "expandIconAsCell",
+          "description": "展开的图标是否为一个单元格，默认显示在第一列；设置为 false 的时候，可以通过`expandIconColumnIndex`属性设置展开的图标在哪一列",
+          "default": "true",
+          "attribute": false
+        },
+        {
+          "name": "expandIconColumnIndex",
+          "description": "展开的图标显示在哪一列，如果没有 rowSelection，默认显示在第一列，否则显示在选择框后面。当`expandIconAsCell`为 false 时，该属性生效。",
+          "type": "number"
+        },
+        {
+          "name": "expandRowByClick",
+          "description": "通过点击行来展开子行",
+          "type": "boolean"
+        },
+        {
+          "name": "optimizedColumns",
+          "description": "优化渲染的列（输入对应的 dataIndex），针对配置了 useBrick 的列。当前 antd 在更新 state 的时候，会全量渲染单元格，如果确定某一列在后续操作中不需要重新渲染，例如仅作为展示的单元格，可通过该属性设置以优化性能。注意，在树形表格中，当某一列内包含展开/收起按钮，则不应该设置该列。",
+          "attribute": false,
+          "type": "Array<string | number>"
+        },
+        {
+          "name": "stripEmptyExpandableChildren",
+          "description": "树形数据展示时是否需要去除空数组",
+          "default": "false",
+          "attribute": false
+        },
+        {
+          "name": "defaultExpandAllRows",
+          "description": "初始时，是否展开所有行",
+          "type": "boolean"
+        },
+        {
+          "name": "ellipsisInfo",
+          "description": "是否显示省略信息",
+          "type": "boolean"
+        },
+        {
+          "name": "expandedRowKeys",
+          "description": "展开的行的 rowKey",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "selectAllChildren",
+          "description": "表格树形数据展示的时候，行选择父节点的时候是否同步勾选/取消勾选所有子节点，并且被同步勾选的子节点不能单独取消。注意，该属性必须设置 `rowKey` 属性。",
+          "type": "boolean"
+        },
+        {
+          "name": "defaultSelectAll",
+          "description": "是否默认选择所有行。注意，该属性必须设置 `rowKey` 属性。",
+          "type": "boolean"
+        },
+        {
+          "name": "childrenColumnName",
+          "description": "指定树形结构的列名",
+          "default": "children",
+          "attribute": false
+        },
+        {
+          "name": "sortable",
+          "description": "是否支持排序。默认开启，当对应列的sorter设置成true时则可排序。sortable为false时则排序都不生效。",
+          "default": "true",
+          "attribute": false
+        },
+        {
+          "name": "frontSearch",
+          "description": "是否前端进行搜索，配合`presentational-bricks.brick-input`使用",
+          "type": "boolean"
+        },
+        {
+          "name": "frontSearchQuery",
+          "description": "前端搜索参数",
+          "default": "\"\""
+        },
+        {
+          "name": "exactSearch",
+          "description": "是否精确搜索",
+          "type": "boolean"
+        },
+        {
+          "name": "frontSearchFilterKeys",
+          "description": "进行前端搜索的字段，支持嵌套的写法如[\"name\",\"value.a\"]，不配置的时候默认为对所有 columns 的 dataIndex[]进行前端搜索",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "page",
+          "description": "页码。后台搜索的时候一般不需要配置，列表接口返回格式通常为{list:[],page:1,pageSize:10,total:20}，即默认取自 page；前台搜索的时候，一般配置成 \"${query.page=1|number}\"",
+          "type": "number"
+        },
+        {
+          "name": "pageSize",
+          "description": "页码条数。后台搜索的时候一般不需要配置，列表接口返回格式通常为{list:[],page:1,pageSize:10,total:20}，即默认取自 pageSize/page_size；前台搜索的时候，一般配置成 \"${query.pageSize=10|number}\"",
+          "type": "number"
+        },
+        {
+          "name": "scrollConfigs",
+          "description": "",
+          "default": "{ x: true }",
+          "attribute": false,
+          "type": "TableProps<unknown>[\"scroll\"]"
+        },
+        {
+          "name": "qField",
+          "description": "把过滤条件更新到 url 时的字段名",
+          "default": "\"q\""
+        },
+        {
+          "name": "tableDraggable",
+          "description": "表格行是否可拖拽，注意，树形数据的表格不支持该功能",
+          "type": "boolean"
+        },
+        {
+          "name": "zebraPattern",
+          "description": "是否展示斑马纹",
+          "type": "boolean"
+        },
+        {
+          "name": "storeCheckedByUrl",
+          "description": "翻页时是否记住之前选中的项。注意，选中项的rowKey将保存在url中，如果不设置rowKey，该设置不生效。如果选择太多可能会造成url过长，请谨慎使用",
+          "type": "boolean"
+        },
+        {
+          "name": "extraRows",
+          "description": "额外的行，通常为跨页勾选时，不在当前页的行",
+          "default": "[]",
+          "attribute": false,
+          "type": "Record<string, unknown>[]"
+        },
+        {
+          "name": "autoSelectParentWhenAllChildrenSelected",
+          "description": "当所有子节点选中时，自动选中父节点",
+          "type": "boolean"
+        },
+        {
+          "name": "thTransparent",
+          "description": "表格表头是否透明",
+          "type": "boolean"
+        },
+        {
+          "name": "showHeader",
+          "description": "是否显示表头",
+          "default": "true"
+        },
+        {
+          "name": "pagination",
+          "description": "是否显示分页",
+          "attribute": false,
+          "type": "false | TablePaginationConfig"
+        },
+        {
+          "name": "size",
+          "description": "表格大小（antd原生size）",
+          "type": "SizeType | \"x-small\""
+        },
+        {
+          "name": "type",
+          "description": "选框类型（单选/多选）",
+          "attribute": false,
+          "type": "RowSelectionType"
+        },
+        {
+          "name": "shouldUpdateUrlParams",
+          "description": "是否更新 url 参数。设置为否之后，如果是后台进行分页/排序等功能，则需要结合事件进行编排。如果是前台进行分页/排序，则不需要。",
+          "default": "true"
+        },
+        {
+          "name": "shouldRenderWhenUrlParamsUpdate",
+          "description": "更新 url 参数时是否触发页面重新渲染。仅在`shouldUpdateUrlParams`为true时有效。",
+          "default": "true"
+        },
+        {
+          "name": "selectedRowKeys",
+          "description": "指定选中项的 key 数组",
+          "default": "[]",
+          "attribute": false,
+          "type": "React.Key[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "page.update",
+          "description": "页码变化,pagePath 可在 fields.page 中设置，默认为 page",
+          "detail": {
+            "type": "Record<string, number>"
+          }
+        },
+        {
+          "name": "filter.update",
+          "description": "每页条数变化 ,pagePath 可在 fields.page 中设置,pageSizePath 可在 fields.pageSize 中设置，默认为 pageSize",
+          "detail": {
+            "type": "Record<string, number>"
+          }
+        },
+        {
+          "name": "select.update",
+          "description": "勾选框变化，detail 中为所选的行数据",
+          "detail": {
+            "type": "Record<string, any>[]"
+          }
+        },
+        {
+          "name": "select.row.keys.update",
+          "description": "勾选框变化，detail 中为所选的行key集合",
+          "detail": {
+            "type": "string[]"
+          }
+        },
+        {
+          "name": "sort.update",
+          "description": "排序变化，detail 中的 sort 为对应排序列的 key/dataIndex，order 为升序/降序",
+          "detail": {
+            "type": "{\n    sort: string;\n    order: string | number;\n  }"
+          }
+        },
+        {
+          "name": "row.expand",
+          "description": "点击展开图标时触发的事件，事件详情中`expanded`为是否展开，`record`被点击的行信息",
+          "detail": {
+            "type": "{\n    expanded: boolean;\n    record: Record<string, any>;\n  }"
+          }
+        },
+        {
+          "name": "expand.rows.change",
+          "description": "展开的行变化时触发的事件，事件详情为当前展开的所有行的`rowKey`集合",
+          "detail": {
+            "type": "{\n    expandedRows: React.Key[];\n  }"
+          }
+        },
+        {
+          "name": "row.drag",
+          "description": "表格行拖拽结束发生的事件，事件详情为拖拽后重新排序的所有行数据",
+          "detail": {
+            "type": "{\n    data: Record<string, any>[];\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "filterSourceData",
+          "params": [
+            {
+              "name": "event",
+              "type": "CustomEvent"
+            }
+          ],
+          "description": "搜索过滤",
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "expandAll",
+          "params": [],
+          "description": "展开所有行",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "通用表格构件",
+      "category": "table",
+      "insider": true
+    },
+    {
+      "name": "eo-cascader",
+      "alias": [
+        "advanced.general-cascader"
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "options",
+          "attribute": false,
+          "type": "AntdCascaderProps[\"options\"]"
+        },
+        {
+          "name": "fieldNames",
+          "attribute": false,
+          "type": "AntdCascaderProps[\"fieldNames\"]",
+          "default": "{\n    label: \"label\",\n    value: \"value\",\n    children: \"children\",\n  }"
+        },
+        {
+          "name": "value",
+          "attribute": false,
+          "type": "AntdCascaderProps[\"value\"]"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "allowClear",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "showSearch",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "suffixIcon",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "expandTrigger",
+          "type": "AntdCascaderProps[\"expandTrigger\"]",
+          "default": "\"click\""
+        },
+        {
+          "name": "popupPlacement",
+          "type": "AntdCascaderProps[\"placement\"]",
+          "default": "\"bottomLeft\""
+        },
+        {
+          "name": "size",
+          "type": "AntdCascaderProps[\"size\"]"
+        },
+        {
+          "name": "limit",
+          "type": "number",
+          "default": "50"
+        },
+        {
+          "name": "maxTagCount",
+          "attribute": false,
+          "type": "number | \"responsive\""
+        },
+        {
+          "name": "cascaderStyle",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "cascader.change",
+          "description": "",
+          "detail": {
+            "description": "{ value: AntdCascaderProps[\"value\"], selectedOptions: DefaultOptionType[] | DefaultOptionType[][] }",
+            "type": "{\n    value: AntdCascaderProps[\"value\"];\n    selectedOptions: DefaultOptionType[] | DefaultOptionType[][];\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "级联选择器",
+      "category": "form-input-basic"
+    },
+    {
+      "name": "eo-next-table",
+      "properties": [
+        {
+          "name": "rowKey",
+          "description": "指定表格行的 key",
+          "default": "\"key\"",
+          "type": "string"
+        },
+        {
+          "name": "columns",
+          "description": "列定义",
+          "attribute": false,
+          "type": "Column[]"
+        },
+        {
+          "name": "cell",
+          "description": "单元格",
+          "attribute": false,
+          "type": "CellConfig"
+        },
+        {
+          "name": "dataSource",
+          "description": "数据源",
+          "attribute": false,
+          "type": "DataSource"
+        },
+        {
+          "name": "frontSearch",
+          "description": "是否前端搜索",
+          "type": "boolean"
+        },
+        {
+          "name": "pagination",
+          "description": "分页配置",
+          "attribute": false,
+          "type": "PaginationType"
+        },
+        {
+          "name": "multiSort",
+          "description": "是否支持多列排序，前端搜索时需设置 column.sortPriority 优先级",
+          "type": "boolean"
+        },
+        {
+          "name": "sort",
+          "description": "排序信息",
+          "attribute": false,
+          "type": "Sort | Sort[]"
+        },
+        {
+          "name": "rowSelection",
+          "description": "表格行可选择配置",
+          "attribute": false,
+          "type": "RowSelectionType"
+        },
+        {
+          "name": "selectedRowKeys",
+          "description": "选中项的 key",
+          "attribute": false,
+          "type": "(string | number)[]"
+        },
+        {
+          "name": "hiddenColumns",
+          "description": "隐藏的列（输入对应的 column.key）",
+          "attribute": false,
+          "type": "(string | number)[]"
+        },
+        {
+          "name": "expandable",
+          "description": "表格行展开配置",
+          "attribute": false,
+          "type": "ExpandableType"
+        },
+        {
+          "name": "expandedRowKeys",
+          "description": "展开项的 key",
+          "attribute": false,
+          "type": "(string | number)[]"
+        },
+        {
+          "name": "childrenColumnName",
+          "description": "树形结构的列名",
+          "default": "\"children\"",
+          "type": "string"
+        },
+        {
+          "name": "rowDraggable",
+          "description": "表格行拖拽配置",
+          "type": "boolean"
+        },
+        {
+          "name": "searchFields",
+          "description": "进行前端搜索的字段，支持嵌套的写法。不配置的时候默认为对所有 column.dataIndex 进行前端搜索",
+          "attribute": false,
+          "type": "(string | string[])[]"
+        },
+        {
+          "name": "size",
+          "description": "表格大小",
+          "default": "\"large\"",
+          "type": "TableProps<RecordType>[\"size\"]"
+        },
+        {
+          "name": "showHeader",
+          "description": "是否显示表头",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "scrollConfig",
+          "description": "滚动配置",
+          "default": "{ x: true }",
+          "attribute": false,
+          "type": "TableProps<RecordType>[\"scroll\"]"
+        },
+        {
+          "name": "optimizedColumns",
+          "description": "优化渲染的列（输入对应的 column.key）",
+          "attribute": false,
+          "type": "(string | number)[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "page.change",
+          "description": "page 或 pageSize 改变的回调",
+          "detail": {
+            "description": "改变后的页码及每页条数",
+            "type": "{ page: number; pageSize: number }"
+          }
+        },
+        {
+          "name": "page.size.change",
+          "description": "pageSize 变化的回调",
+          "deprecated": "统一用 `page.change` 事件",
+          "detail": {
+            "description": "改变后的页码及每页条数",
+            "type": "{\n    page: number;\n    pageSize: number;\n  }"
+          }
+        },
+        {
+          "name": "sort.change",
+          "description": "排序变化的回调",
+          "detail": {
+            "description": "当前排序的信息",
+            "type": "Sort | Sort[] | undefined"
+          }
+        },
+        {
+          "name": "row.select",
+          "description": "行选中项发生变化时的回调",
+          "detail": {
+            "description": "改变后的 rowKey 及行数据",
+            "type": "{\n    keys: (string | number)[];\n    rows: RecordType[];\n    info: { type: RowSelectMethod };\n  }"
+          }
+        },
+        {
+          "name": "row.expand",
+          "description": "点击展开图标时触发",
+          "detail": {
+            "description": "当前行的展开情况及数据",
+            "type": "{\n    expanded: boolean;\n    record: RecordType;\n  }"
+          }
+        },
+        {
+          "name": "expanded.rows.change",
+          "description": "展开的行变化时触发",
+          "detail": {
+            "description": "所有展开行的 key",
+            "type": "(string | number)[]"
+          }
+        },
+        {
+          "name": "row.drag",
+          "description": "表格行拖拽结束发生的事件",
+          "detail": {
+            "description": "重新排序的行数据、拖拽的行数据、放下位置的行数据",
+            "type": "{\n    list: RecordType[];\n    active: RecordType;\n    over: RecordType;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "search",
+          "params": [
+            {
+              "name": "params",
+              "type": "{ q: string }"
+            }
+          ],
+          "description": "前端搜索",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "大型表格",
+      "category": "table"
+    },
+    {
+      "name": "eo-workbench-layout",
+      "properties": [
+        {
+          "name": "cardTitle",
+          "type": "string"
+        },
+        {
+          "name": "isEdit",
+          "type": "boolean"
+        },
+        {
+          "name": "layouts",
+          "attribute": false,
+          "type": "Layout[]"
+        },
+        {
+          "name": "componentList",
+          "attribute": false,
+          "type": "Item[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "Layout[]"
+          }
+        },
+        {
+          "name": "save",
+          "detail": {
+            "type": "Layout[]"
+          }
+        },
+        {
+          "name": "cancel",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "action.click",
+          "description": "操作点击事件",
+          "detail": {
+            "description": "{\naction: SimpleAction;\nlayouts: Layout[];\n}",
+            "type": "{\n    action: SimpleAction;\n    layouts: Layout[];\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "setLayouts",
+          "params": [
+            {
+              "name": "layouts",
+              "type": "Layout[]"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "工作台布局",
+      "deprecated": "Please use eo-workbench-layout-v2 which support global styles instead"
+    },
+    {
+      "name": "eo-workbench-layout-v2",
+      "properties": [
+        {
+          "name": "cardTitle",
+          "type": "string"
+        },
+        {
+          "name": "isEdit",
+          "type": "boolean"
+        },
+        {
+          "name": "layouts",
+          "attribute": false,
+          "type": "Layout[]"
+        },
+        {
+          "name": "toolbarBricks",
+          "attribute": false,
+          "type": "{\n        useBrick: UseSingleBrickConf[];\n      }"
+        },
+        {
+          "name": "componentList",
+          "attribute": false,
+          "type": "Item[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "Layout[]"
+          }
+        },
+        {
+          "name": "save",
+          "detail": {
+            "type": "Layout[]"
+          }
+        },
+        {
+          "name": "cancel",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "action.click",
+          "description": "操作点击事件",
+          "detail": {
+            "description": "{\naction: SimpleAction;\nlayouts: Layout[];\n}",
+            "type": "{\n    action: SimpleAction;\n    layouts: Layout[];\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "setLayouts",
+          "params": [
+            {
+              "name": "layouts",
+              "type": "Layout[]"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "工作台布局V2,未使用shadow dom"
+    },
+    {
+      "name": "eo-tree",
+      "properties": [
+        {
+          "name": "dataSource",
+          "attribute": false,
+          "type": "TreeNode[]"
+        },
+        {
+          "name": "checkable",
+          "type": "boolean"
+        },
+        {
+          "name": "selectable",
+          "description": "",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "defaultExpandAll",
+          "type": "boolean"
+        },
+        {
+          "name": "showLine",
+          "type": "boolean"
+        },
+        {
+          "name": "expandedKeys",
+          "attribute": false,
+          "type": "TreeNodeKey[]"
+        },
+        {
+          "name": "checkedKeys",
+          "attribute": false,
+          "type": "TreeNodeKey[]"
+        },
+        {
+          "name": "nodeDraggable",
+          "attribute": false,
+          "type": "boolean | { icon?: false }"
+        },
+        {
+          "name": "switcherIcon",
+          "attribute": false,
+          "type": "\"auto\" | \"chevron\" | false"
+        },
+        {
+          "name": "allowDrop",
+          "attribute": false,
+          "type": "((info: AllowDropInfo) => boolean)"
+        },
+        {
+          "name": "titleSuffixBrick",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        }
+      ],
+      "events": [
+        {
+          "name": "check",
+          "detail": {
+            "type": "TreeNodeKey[]"
+          }
+        },
+        {
+          "name": "check.detail",
+          "detail": {
+            "type": "CheckDetail"
+          }
+        },
+        {
+          "name": "expand",
+          "detail": {
+            "type": "TreeNodeKey[]"
+          }
+        },
+        {
+          "name": "node.drop",
+          "detail": {
+            "type": "DropDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "树形构件"
+    },
+    {
+      "name": "eo-tree-select",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "type": "boolean"
+        },
+        {
+          "name": "treeData",
+          "attribute": false,
+          "type": "AntdTreeSelectProps[\"treeData\"]"
+        },
+        {
+          "name": "treeDefaultExpandAll",
+          "type": "boolean"
+        },
+        {
+          "name": "treeExpandedKeys",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "fieldNames",
+          "attribute": false,
+          "type": "AntdTreeSelectProps[\"fieldNames\"]"
+        },
+        {
+          "name": "value",
+          "attribute": false,
+          "type": "AntdTreeSelectProps[\"value\"]"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "multiple",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "checkable",
+          "type": "boolean"
+        },
+        {
+          "name": "allowClear",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "loading",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "filterTreeNode",
+          "attribute": false,
+          "type": "AntdTreeSelectProps[\"filterTreeNode\"]"
+        },
+        {
+          "name": "showSearch",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "suffixIcon",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "popupPlacement",
+          "type": "AntdTreeSelectProps[\"placement\"]",
+          "default": "\"bottomLeft\""
+        },
+        {
+          "name": "size",
+          "type": "AntdTreeSelectProps[\"size\"]"
+        },
+        {
+          "name": "maxTagCount",
+          "attribute": false,
+          "type": "number | \"responsive\""
+        },
+        {
+          "name": "dropdownStyle",
+          "attribute": false,
+          "type": "CSSProperties"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "description": "",
+          "detail": {
+            "description": "{ value: AntdTreeSelectProps[\"value\"], selectedOptions: DefaultOptionType[] | DefaultOptionType[][] }",
+            "type": "{\n    value: AntdTreeSelectProps[\"value\"];\n  }"
+          }
+        },
+        {
+          "name": "search",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "select",
+          "detail": {
+            "type": "{ value: AntdTreeSelectProps[\"value\"] }"
+          }
+        },
+        {
+          "name": "expand",
+          "detail": {
+            "type": "{ keys: React.Key[] }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "树选择器",
+      "category": "form-input-basic"
+    },
+    {
+      "name": "eo-text-tooltip",
+      "properties": [
+        {
+          "name": "label",
+          "description": "文案",
+          "default": null,
+          "type": "string"
+        },
+        {
+          "name": "lineClamp",
+          "description": "省略行数",
+          "default": "1",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "超出宽度鼠标悬浮显示tooltip\n构件 `eo-text-tooltip`"
+    },
+    {
+      "name": "advanced.pdf-viewer",
+      "properties": [
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "page",
+          "type": "number"
+        },
+        {
+          "name": "search",
+          "type": "string"
+        },
+        {
+          "name": "viewerStyle",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `advanced.pdf-viewer`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "advanced.capture-snapshot",
+      "description": "截图，保存或上传"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "storyId": "eo-markdown-editor",
+    "text": {
+      "en": "Markdown editor",
+      "zh": "Markdown编辑"
+    },
+    "description": {
+      "en": "",
+      "zh": "Markdown编辑构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/markdown/dist/stories-assets/eo-markdown-editor.c63c3da805ad3e213289.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-markdown-editor[normal]",
+        "title": {
+          "en": "",
+          "zh": "基础Markdown编辑构件"
+        },
+        "thumbnail": "bricks/markdown/dist/stories-assets/eo-markdown-editor.c63c3da805ad3e213289.svg",
+        "bricks": [
+          {
+            "brick": "eo-markdown-editor",
+            "properties": {
+              "value": "### 三级标题\n- 列表1\n- 列表2\n- 列表3"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+{
+  "eo-user-or-user-group-select": {
+    "properties": [
+      {
+        "name": "name",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "label",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "required",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "placeholder",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "value",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UserOrUserGroupSelectValue"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "objectList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Partial"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "qualifiedName",
+                    "left": {
+                      "type": "identifier",
+                      "name": "CmdbModels"
+                    },
+                    "right": {
+                      "type": "identifier",
+                      "name": "ModelCmdbObject"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "query",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "any"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "userQuery",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "any"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "userGroupQuery",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "any"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "optionsMode",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "user"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "group"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "all"
+            }
+          ]
+        }
+      },
+      {
+        "name": "mergeUseAndUserGroup",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "disabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "isMultiple",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "staticList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "hideAddMeQuickly",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "array",
+                "elementType": {
+                  "type": "keyword",
+                  "value": "string"
+                }
+              },
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "UserOrUserGroupSelectValue"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "UserOrUserGroupSelectValue",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "selectedUser"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "selectedUserGroup"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  }
+}

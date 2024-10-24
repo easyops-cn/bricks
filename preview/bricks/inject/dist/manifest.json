@@ -1,0 +1,11 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/inject",
+  "name": "inject",
+  "bricks": [],
+  "providers": [
+    {
+      "name": "inject.visual-builder-preview-agent"
+    }
+  ]
+}

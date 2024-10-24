@@ -1,0 +1,2 @@
+(globalThis.webpackChunk_next_bricks_presentational=globalThis.webpackChunk_next_bricks_presentational||[]).push([[2709],{66570:()=>{Prism.languages.properties={comment:/^[ \t]*[#!].*$/m,value:{pattern:/(^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?: *[=:] *(?! )| ))(?:\\(?:\r\n|[\s\S])|[^\\\r\n])+/m,lookbehind:!0,alias:"attr-value"},key:{pattern:/^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,alias:"attr-name"},punctuation:/[=:]/}}}]);
+//# sourceMappingURL=prism-properties-min-js.80691712.js.map

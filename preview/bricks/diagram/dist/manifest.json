@@ -1,0 +1,616 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/diagram",
+  "name": "diagram",
+  "bricks": [
+    {
+      "name": "eo-diagram",
+      "properties": [
+        {
+          "name": "layout",
+          "description": "",
+          "required": true,
+          "type": "\"dagre\" | \"force\""
+        },
+        {
+          "name": "nodes",
+          "attribute": false,
+          "type": "DiagramNode[]"
+        },
+        {
+          "name": "edges",
+          "attribute": false,
+          "type": "DiagramEdge[]"
+        },
+        {
+          "name": "nodeBricks",
+          "attribute": false,
+          "type": "NodeBrickConf[]"
+        },
+        {
+          "name": "lines",
+          "attribute": false,
+          "type": "LineConf[]"
+        },
+        {
+          "name": "layoutOptions",
+          "attribute": false,
+          "type": "LayoutOptions"
+        },
+        {
+          "name": "activeTarget",
+          "attribute": false,
+          "type": "ActiveTarget | null"
+        },
+        {
+          "name": "disableKeyboardAction",
+          "type": "boolean"
+        },
+        {
+          "name": "connectNodes",
+          "attribute": false,
+          "type": "ConnectNodesOptions"
+        },
+        {
+          "name": "dragNodes",
+          "attribute": false,
+          "type": "DragNodesOptions"
+        },
+        {
+          "name": "zoomable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "scrollable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "pannable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "scaleRange",
+          "attribute": false,
+          "type": "RangeTuple"
+        }
+      ],
+      "events": [
+        {
+          "name": "activeTarget.change",
+          "detail": {
+            "type": "ActiveTarget | null"
+          }
+        },
+        {
+          "name": "node.delete",
+          "detail": {
+            "type": "DiagramNode"
+          }
+        },
+        {
+          "name": "edge.delete",
+          "detail": {
+            "type": "DiagramEdge"
+          }
+        },
+        {
+          "name": "line.click",
+          "detail": {
+            "type": "LineTarget"
+          }
+        },
+        {
+          "name": "line.dblclick",
+          "detail": {
+            "type": "LineTarget"
+          }
+        },
+        {
+          "name": "nodes.connect",
+          "detail": {
+            "type": "ConnectLineDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "callOnLineLabel",
+          "params": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "method",
+              "type": "string"
+            },
+            {
+              "name": "param_3",
+              "type": "unknown[]"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `eo-diagram`"
+    },
+    {
+      "name": "diagram.experimental-node",
+      "properties": [
+        {
+          "name": "usage",
+          "type": "ExperimentalUsage"
+        },
+        {
+          "name": "status",
+          "type": "NodeStatus"
+        },
+        {
+          "name": "decorator",
+          "type": "DecoratorType"
+        }
+      ],
+      "events": [
+        {
+          "name": "drag.start",
+          "detail": {
+            "type": "PositionTuple"
+          }
+        },
+        {
+          "name": "drag.move",
+          "detail": {
+            "type": "PositionTuple"
+          }
+        },
+        {
+          "name": "drag.end",
+          "detail": {
+            "type": "PositionTuple"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `diagram.experimental-node`"
+    },
+    {
+      "name": "diagram.editable-label",
+      "properties": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "type": "LabelType"
+        }
+      ],
+      "events": [
+        {
+          "name": "label.editing.change",
+          "detail": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "label.change",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "enableEditing",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "构件 `diagram.editable-label`"
+    },
+    {
+      "name": "eo-display-canvas",
+      "properties": [
+        {
+          "name": "cells",
+          "description": "用于查看的画布可以更新 `cells` 属性。",
+          "attribute": false,
+          "type": "InitialCell[]"
+        },
+        {
+          "name": "layout",
+          "type": "LayoutType"
+        },
+        {
+          "name": "layoutOptions",
+          "attribute": false,
+          "type": "LayoutOptions"
+        },
+        {
+          "name": "defaultNodeSize",
+          "attribute": false,
+          "type": "SizeTuple",
+          "default": "[DEFAULT_NODE_SIZE, DEFAULT_NODE_SIZE]"
+        },
+        {
+          "name": "defaultNodeBricks",
+          "attribute": false,
+          "type": "NodeBrickConf[]"
+        },
+        {
+          "name": "degradedThreshold",
+          "description": "当节点数量达到或超过 `degradedThreshold` 时，节点将被降级展示。",
+          "default": "500",
+          "type": "number"
+        },
+        {
+          "name": "degradedNodeLabel",
+          "description": "设置节点将降级展示时显示的名称。",
+          "default": "\"<% DATA.node.id %>\"",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "defaultEdgeLines",
+          "description": "使用条件判断设置默认的边对应的连线。在 `if` 表达式中 `DATA` 为 `{ edge }`，例如：\n\n```yaml\ndefaultEdgeLines:\n  - if: <% DATA.edge.data?.virtual %>\n    dashed: true\n```",
+          "attribute": false,
+          "type": "EdgeLineConf[]"
+        },
+        {
+          "name": "activeTarget",
+          "attribute": false,
+          "type": "ActiveTarget | null"
+        },
+        {
+          "name": "fadeUnrelatedCells",
+          "description": "当鼠标悬浮到某节点上时，隐藏其他跟该节点无关的元素。",
+          "type": "boolean"
+        },
+        {
+          "name": "zoomable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "scrollable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "pannable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "scaleRange",
+          "attribute": false,
+          "type": "RangeTuple"
+        },
+        {
+          "name": "hideZoomBar",
+          "description": "隐藏右下角放大缩小的控制栏",
+          "type": "boolean"
+        },
+        {
+          "name": "autoCenterWhenCellsChange",
+          "description": "每当 cells 改变时，重新自动居中",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "activeTarget.change",
+          "detail": {
+            "type": "ActiveTarget | null"
+          }
+        },
+        {
+          "name": "cell.contextmenu",
+          "detail": {
+            "type": "CellContextMenuDetail"
+          }
+        },
+        {
+          "name": "cell.click",
+          "detail": {
+            "type": "CellContextMenuDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "用于展示查看的画布。"
+    },
+    {
+      "name": "eo-draw-canvas",
+      "properties": [
+        {
+          "name": "cells",
+          "description": "仅当初始化时使用，渲染后重新设置 `cells` 将无效。",
+          "attribute": false,
+          "type": "InitialCell[]"
+        },
+        {
+          "name": "layout",
+          "type": "LayoutType"
+        },
+        {
+          "name": "layoutOptions",
+          "attribute": false,
+          "type": "LayoutOptions"
+        },
+        {
+          "name": "defaultNodeSize",
+          "description": "",
+          "default": "[100,20]",
+          "attribute": false,
+          "type": "SizeTuple"
+        },
+        {
+          "name": "defaultNodeBricks",
+          "attribute": false,
+          "type": "NodeBrickConf[]"
+        },
+        {
+          "name": "degradedThreshold",
+          "description": "当节点数量达到或超过 `degradedThreshold` 时，节点将被降级展示。",
+          "default": "500",
+          "type": "number"
+        },
+        {
+          "name": "degradedNodeLabel",
+          "description": "设置节点将降级展示时显示的名称。",
+          "default": "\"<% DATA.node.id %>\"",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "defaultEdgeLines",
+          "description": "使用条件判断设置默认的边对应的连线。在 `if` 表达式中 `DATA` 为 `{ edge }`，例如：\n\n```yaml\ndefaultEdgeLines:\n  - if: <% DATA.edge.data?.virtual %>\n    dashed: true\n```",
+          "attribute": false,
+          "type": "EdgeLineConf[]"
+        },
+        {
+          "name": "activeTarget",
+          "attribute": false,
+          "type": "ActiveTarget | null"
+        },
+        {
+          "name": "fadeUnrelatedCells",
+          "description": "当 `activeTarget` 不为 `null` 时，隐藏其他跟该 `activeTarget` 无关的元素。",
+          "type": "boolean"
+        },
+        {
+          "name": "zoomable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "scrollable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "pannable",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "allowEdgeToArea",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "dragBehavior",
+          "description": "按住鼠标拖动时的行为：\n - `none`：无\n - `lasso`：绘制选区\n - `grab`：拖动画布",
+          "default": "\"none\"",
+          "type": "DragBehavior"
+        },
+        {
+          "name": "ctrlDragBehavior",
+          "description": "按住 ctrl 键并按住鼠标拖动时的行为：\n - `none`：无\n - `grab`：拖动画布",
+          "default": "\"none\"",
+          "type": "CtrlDragBehavior"
+        },
+        {
+          "name": "scaleRange",
+          "attribute": false,
+          "type": "RangeTuple"
+        },
+        {
+          "name": "lineSettings",
+          "attribute": false,
+          "type": "LineSettings"
+        },
+        {
+          "name": "lineConnector",
+          "attribute": false,
+          "type": "LineConnecterConf | boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "activeTarget.change",
+          "detail": {
+            "type": "ActiveTarget | null"
+          }
+        },
+        {
+          "name": "node.move",
+          "description": "",
+          "deprecated": "Use `cell.move` instead.",
+          "detail": {
+            "type": "MoveCellPayload"
+          }
+        },
+        {
+          "name": "cell.move",
+          "detail": {
+            "type": "MoveCellPayload"
+          }
+        },
+        {
+          "name": "cells.move",
+          "detail": {
+            "type": "MoveCellPayload[]"
+          }
+        },
+        {
+          "name": "cell.resize",
+          "detail": {
+            "type": "ResizeCellPayload"
+          }
+        },
+        {
+          "name": "node.delete",
+          "description": "",
+          "deprecated": "Use `cell.delete` instead.",
+          "detail": {
+            "type": "Cell"
+          }
+        },
+        {
+          "name": "cell.delete",
+          "detail": {
+            "type": "Cell"
+          }
+        },
+        {
+          "name": "cells.delete",
+          "detail": {
+            "type": "Cell[]"
+          }
+        },
+        {
+          "name": "cell.contextmenu",
+          "detail": {
+            "type": "CellContextMenuDetail"
+          }
+        },
+        {
+          "name": "edge.add",
+          "description": "通过画布绘图的方式添加边（手动调用 `addEdge` 方法不会触发该事件）。",
+          "detail": {
+            "type": "ConnectNodesDetail"
+          }
+        },
+        {
+          "name": "edge.view.change",
+          "detail": {
+            "type": "EdgeViewChangePayload"
+          }
+        },
+        {
+          "name": "decorator.text.change",
+          "detail": {
+            "type": "DecoratorTextChangeDetail"
+          }
+        },
+        {
+          "name": "node.container.change",
+          "description": "node节点跟容器组关系改变事件，有containerCell是新增关系，否则删除关系",
+          "detail": {
+            "type": "MoveCellPayload[]"
+          }
+        },
+        {
+          "name": "scale.change",
+          "description": "缩放变化后，从素材库拖拽元素进画布时，拖拽图像应设置对应的缩放比例。",
+          "detail": {
+            "type": "number"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "dropNode",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "DropNodeInfo"
+            }
+          ],
+          "returns": {
+            "type": "Promise<NodeCell | null>"
+          }
+        },
+        {
+          "name": "dropDecorator",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "DropDecoratorInfo"
+            }
+          ],
+          "returns": {
+            "type": "Promise<DecoratorCell | null>"
+          }
+        },
+        {
+          "name": "addNodes",
+          "params": [
+            {
+              "name": "nodes",
+              "type": "AddNodeInfo[]"
+            }
+          ],
+          "returns": {
+            "type": "Promise<NodeCell[]>"
+          }
+        },
+        {
+          "name": "addEdge",
+          "params": [
+            {
+              "name": "param_1",
+              "type": "AddEdgeInfo"
+            }
+          ],
+          "returns": {
+            "type": "Promise<EdgeCell>"
+          }
+        },
+        {
+          "name": "manuallyConnectNodes",
+          "params": [
+            {
+              "name": "source",
+              "type": "NodeId"
+            }
+          ],
+          "returns": {
+            "type": "Promise<ConnectNodesDetail>"
+          }
+        },
+        {
+          "name": "updateCells",
+          "params": [
+            {
+              "name": "cells",
+              "type": "InitialCell[]"
+            },
+            {
+              "name": "ctx",
+              "type": "UpdateCellsContext"
+            }
+          ],
+          "returns": {
+            "type": "Promise<{ updated: Cell[] }>"
+          }
+        }
+      ],
+      "parts": [],
+      "description": "用于手工绘图的画布。\n\n注意：将配套另外一个用于展示的画布构件。"
+    }
+  ],
+  "providers": []
+}

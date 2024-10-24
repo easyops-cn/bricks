@@ -1,0 +1,59 @@
+{
+  "id": "bricks/advanced",
+  "bricks": [
+    "advanced.general-table",
+    "advanced.general-cascader",
+    "advanced.capture-snapshot",
+    "advanced.pdf-viewer"
+  ],
+  "elements": [
+    "eo-table",
+    "eo-cascader",
+    "eo-next-table",
+    "eo-workbench-layout",
+    "eo-workbench-layout-v2",
+    "eo-tree",
+    "eo-tree-select",
+    "eo-text-tooltip"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-table": [
+      "eo-icon"
+    ],
+    "advanced.general-table": [
+      "eo-icon"
+    ],
+    "eo-cascader": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "advanced.general-cascader": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "eo-next-table": [
+      "eo-link"
+    ],
+    "eo-workbench-layout": [
+      "eo-button",
+      "eo-dropdown-button",
+      "eo-icon",
+      "eo-checkbox",
+      "basic.show-dialog"
+    ],
+    "eo-workbench-layout-v2": [
+      "eo-button",
+      "eo-dropdown-button",
+      "eo-icon",
+      "eo-checkbox",
+      "basic.show-dialog"
+    ],
+    "eo-tree-select": [
+      "eo-icon",
+      "eo-form-item"
+    ]
+  },
+  "filePath": "bricks/advanced/dist/index.1e201b66.js"
+}

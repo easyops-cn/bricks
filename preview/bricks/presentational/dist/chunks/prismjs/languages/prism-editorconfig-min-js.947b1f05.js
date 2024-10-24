@@ -1,0 +1,2 @@
+(globalThis.webpackChunk_next_bricks_presentational=globalThis.webpackChunk_next_bricks_presentational||[]).push([[9051],{9072:()=>{Prism.languages.editorconfig={comment:/[;#].*/,section:{pattern:/(^[ \t]*)\[.+\]/m,lookbehind:!0,alias:"selector",inside:{regex:/\\\\[\[\]{},!?.*]/,operator:/[!?]|\.\.|\*{1,2}/,punctuation:/[\[\]{},]/}},key:{pattern:/(^[ \t]*)[^\s=]+(?=[ \t]*=)/m,lookbehind:!0,alias:"attr-name"},value:{pattern:/=.*/,alias:"attr-value",inside:{punctuation:/^=/}}}}}]);
+//# sourceMappingURL=prism-editorconfig-min-js.947b1f05.js.map

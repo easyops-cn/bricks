@@ -1,0 +1,103 @@
+{
+  "id": "bricks/containers",
+  "bricks": [
+    "containers.micro-view",
+    "containers.general-category",
+    "containers.general-modal",
+    "containers.general-card",
+    "containers.general-drawer",
+    "containers.grid-layout",
+    "containers.flex-layout",
+    "containers.easy-view",
+    "containers.search-bar",
+    "containers.tab-group",
+    "containers.tab-list",
+    "containers.tab-item"
+  ],
+  "elements": [
+    "eo-micro-view",
+    "eo-category",
+    "eo-modal",
+    "eo-card",
+    "eo-drawer",
+    "eo-grid-layout",
+    "eo-flex-layout",
+    "eo-easy-view",
+    "eo-search-bar",
+    "eo-spin",
+    "eo-content-layout",
+    "eo-popup",
+    "eo-resizable-box",
+    "eo-tab-group",
+    "eo-tab-list",
+    "eo-tab-item",
+    "eo-page-view",
+    "eo-main-view",
+    "eo-narrow-view",
+    "eo-banner"
+  ],
+  "processors": [],
+  "editors": [
+    "eo-card"
+  ],
+  "dependencies": {
+    "eo-micro-view": [
+      "eo-page-title"
+    ],
+    "containers.micro-view": [
+      "eo-page-title"
+    ],
+    "eo-modal": [
+      "basic.lock-body-scroll",
+      "eo-button",
+      "eo-icon"
+    ],
+    "containers.general-modal": [
+      "basic.lock-body-scroll",
+      "eo-button",
+      "eo-icon"
+    ],
+    "eo-card": [
+      "eo-button",
+      "eo-icon"
+    ],
+    "containers.general-card": [
+      "eo-button",
+      "eo-icon"
+    ],
+    "eo-drawer": [
+      "basic.lock-body-scroll",
+      "eo-icon"
+    ],
+    "containers.general-drawer": [
+      "basic.lock-body-scroll",
+      "eo-icon"
+    ],
+    "eo-popup": [
+      "eo-icon"
+    ],
+    "eo-tab-list": [
+      "eo-tab-group",
+      "eo-tab-item"
+    ],
+    "containers.tab-list": [
+      "eo-tab-group",
+      "eo-tab-item"
+    ],
+    "eo-tab-item": [
+      "eo-counter-badge",
+      "eo-icon"
+    ],
+    "containers.tab-item": [
+      "eo-counter-badge",
+      "eo-icon"
+    ],
+    "eo-main-view": [
+      "eo-page-title"
+    ],
+    "eo-banner": [
+      "eo-page-title"
+    ]
+  },
+  "filePath": "bricks/containers/dist/index.f696cd6c.js"
+}

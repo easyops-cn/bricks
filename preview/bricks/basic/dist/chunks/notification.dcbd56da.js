@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_basic=globalThis.webpackChunk_next_bricks_basic||[]).push([[3602],{7763:(s,b,c)=>{c.r(b),c(8427),c(7716)}}]);

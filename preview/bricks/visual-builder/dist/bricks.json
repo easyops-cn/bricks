@@ -1,0 +1,83 @@
+{
+  "id": "bricks/visual-builder",
+  "bricks": [
+    "visual-builder.workbench-pane",
+    "visual-builder.workbench-action-list",
+    "visual-builder.workbench-tree",
+    "visual-builder.workbench-history-action",
+    "visual-builder.page-arch-node",
+    "visual-builder.generate-snippets-context-menu",
+    "visual-builder.contract-select",
+    "visual-builder.chat-conversation",
+    "visual-builder.batch-update-raw-data-generated-view",
+    "visual-builder.chat-preview",
+    "visual-builder.check-editor-by-name",
+    "visual-builder.get-data-deps",
+    "visual-builder.get-dependency-tree",
+    "visual-builder.get-raw-data-system-prompts",
+    "visual-builder.inject-chat-preview-agent",
+    "visual-builder.parse-path",
+    "visual-builder.pre-generated-preview",
+    "visual-builder.pre-generated-table-view",
+    "visual-builder.workbench-sidebar",
+    "visual-builder.workbench-action",
+    "visual-builder.pre-generated-container",
+    "visual-builder.property-editor",
+    "visual-builder.raw-data-preview"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "visual-builder.workbench-pane": [
+      "eo-icon"
+    ],
+    "visual-builder.workbench-action-list": [
+      "visual-builder.workbench-action",
+      "eo-link",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.workbench-tree": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "visual-builder.workbench-history-action": [
+      "eo-button",
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-popover"
+    ],
+    "visual-builder.page-arch-node": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.generate-snippets-context-menu": [
+      "eo-menu",
+      "eo-menu-item",
+      "eo-tooltip",
+      "basic.lock-body-scroll"
+    ],
+    "visual-builder.contract-select": [
+      "eo-form-item",
+      "eo-auto-complete",
+      "eo-icon",
+      "eo-input"
+    ],
+    "visual-builder.chat-conversation": [
+      "eo-avatar"
+    ],
+    "visual-builder.workbench-action": [
+      "eo-link",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.property-editor": [
+      "eo-icon-select",
+      "vs.code-editor",
+      "eo-tooltip"
+    ]
+  },
+  "filePath": "bricks/visual-builder/dist/index.a5ed5ef8.js"
+}

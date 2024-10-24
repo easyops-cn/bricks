@@ -1,0 +1,1195 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/containers",
+  "name": "containers",
+  "bricks": [
+    {
+      "name": "eo-micro-view",
+      "alias": [
+        "containers.micro-view"
+      ],
+      "properties": [
+        {
+          "name": "pageTitle",
+          "description": "页面标题",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "基础页面布局",
+      "deprecated": true,
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-category",
+      "alias": [
+        "containers.general-category"
+      ],
+      "properties": [
+        {
+          "name": "categories",
+          "description": "分类信息",
+          "attribute": false,
+          "type": "categoryProps[]"
+        },
+        {
+          "name": "contentStyle",
+          "description": "内容样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "headerStyle",
+          "description": "头部样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "containerStyle",
+          "description": "容器样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "split",
+          "description": "是否展示分割线",
+          "type": "boolean"
+        },
+        {
+          "name": "headerMask",
+          "description": "是否显示头部线条",
+          "type": "boolean"
+        },
+        {
+          "name": "showIndex",
+          "description": "是否显示序号",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "通用分类容器",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-modal",
+      "alias": [
+        "containers.general-modal"
+      ],
+      "properties": [
+        {
+          "name": "modalTitle",
+          "description": "标题",
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "description": "宽度",
+          "type": "string | number"
+        },
+        {
+          "name": "maskClosable",
+          "description": "点击遮罩层是否关闭模态框",
+          "type": "boolean"
+        },
+        {
+          "name": "fullscreen",
+          "description": "全屏模式",
+          "type": "boolean"
+        },
+        {
+          "name": "closeWhenConfirm",
+          "description": "点击确定按钮时自动关闭弹窗",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "confirmDisabled",
+          "description": "确认按钮是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "visible",
+          "description": "点击遮罩层是否关闭模态框",
+          "type": "boolean"
+        },
+        {
+          "name": "confirmText",
+          "description": "确认按钮文本",
+          "type": "string"
+        },
+        {
+          "name": "cancelText",
+          "description": "取消按钮文本",
+          "type": "string"
+        },
+        {
+          "name": "hideCancelButton",
+          "description": "是否隐藏取消按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "stackable",
+          "description": "是否可堆叠，开启后每次打开抽屉会将新的抽屉置于上层（zIndex ++）\n\n注意：仅初始设置有效。",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "open",
+          "description": "打开弹窗事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "close",
+          "description": "关闭弹窗事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "confirm",
+          "description": "确认按钮事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "cancel",
+          "description": "取消按钮事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容插槽"
+        }
+      ],
+      "methods": [
+        {
+          "name": "open",
+          "params": [],
+          "description": "打开模态框方法",
+          "returns": {}
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "关闭模态框方法",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "模态框",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-card",
+      "alias": [
+        "containers.general-card"
+      ],
+      "properties": [
+        {
+          "name": "cardTitle",
+          "description": "标题",
+          "type": "string"
+        },
+        {
+          "name": "headerIcon",
+          "description": "头部图标",
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "fillVertical",
+          "description": "自动撑满父容器。注意不可以同时使用 `fillVertical` 和 `verticalCenter`",
+          "type": "boolean"
+        },
+        {
+          "name": "verticalCenter",
+          "description": "垂直居中。注意不可以同时使用 `fillVertical` 和 `verticalCenter`",
+          "type": "boolean"
+        },
+        {
+          "name": "hasExtraSlot",
+          "description": "是否右上角有操作区 slot",
+          "type": "boolean"
+        },
+        {
+          "name": "operationButtons",
+          "description": "右上角的操作按钮列表",
+          "default": "[]",
+          "attribute": false,
+          "type": "OperationButton[]"
+        },
+        {
+          "name": "headerStyle",
+          "description": "头部样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "bodyStyle",
+          "description": "内容区域样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "background",
+          "description": "背景",
+          "attribute": false,
+          "type": "boolean | string"
+        },
+        {
+          "name": "outline",
+          "description": "卡片轮廓。默认情况下，使用默认背景填充色，8.2 下默认则为无描边且无填充。",
+          "default": "\"default\"",
+          "type": "CardOutline"
+        },
+        {
+          "name": "hideSplit",
+          "description": "是否隐藏分割线",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "卡片内容"
+        },
+        {
+          "name": "extra",
+          "description": "头部右侧拓展元素"
+        },
+        {
+          "name": "titleSuffix",
+          "description": "标题后缀的插槽"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "通用卡片构件",
+      "category": "card-info"
+    },
+    {
+      "name": "eo-drawer",
+      "alias": [
+        "containers.general-drawer"
+      ],
+      "properties": [
+        {
+          "name": "customTitle",
+          "description": "标题",
+          "type": "string"
+        },
+        {
+          "name": "width",
+          "description": "宽度(placement为left，right时生效)",
+          "type": "number"
+        },
+        {
+          "name": "height",
+          "description": "高度(placement为top，bottom时生效)",
+          "type": "number"
+        },
+        {
+          "name": "closable",
+          "description": "是否显示右上角的关闭按钮",
+          "type": "boolean"
+        },
+        {
+          "name": "mask",
+          "description": "是否展示遮罩层",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "maskClosable",
+          "description": "点击遮罩层是否关闭抽屉",
+          "type": "boolean"
+        },
+        {
+          "name": "visible",
+          "description": "抽屉是否显示",
+          "type": "boolean"
+        },
+        {
+          "name": "footerSlot",
+          "description": "是否存在底层插槽",
+          "type": "boolean"
+        },
+        {
+          "name": "placement",
+          "description": "抽屉方向",
+          "type": "Placement"
+        },
+        {
+          "name": "scrollToTopWhenOpen",
+          "description": "打开抽屉时内容区是否自动滚动到顶部\n\n注意：仅初始设置有效。",
+          "default": "true",
+          "attribute": false
+        },
+        {
+          "name": "maskStyle",
+          "description": "自定义遮罩层的样式",
+          "default": "{}",
+          "attribute": false
+        },
+        {
+          "name": "stackable",
+          "description": "是否可堆叠，开启后每次打开抽屉会将新的抽屉置于上层（zIndex ++）\n\n注意：仅初始设置有效。",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "open",
+          "description": "抽屉开启事件",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "close",
+          "description": "抽屉关闭事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": null,
+          "description": "抽屉内容插槽"
+        },
+        {
+          "name": "headerLeft",
+          "description": "头部左上角"
+        },
+        {
+          "name": "extra",
+          "description": "头部右上角"
+        },
+        {
+          "name": "footer",
+          "description": "抽屉底部插槽"
+        }
+      ],
+      "methods": [
+        {
+          "name": "open",
+          "params": [],
+          "description": "抽屉开启方法",
+          "returns": {}
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "抽屉关闭方法",
+          "returns": {}
+        }
+      ],
+      "parts": [],
+      "description": "通用抽屉构件",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-grid-layout",
+      "alias": [
+        "containers.grid-layout"
+      ],
+      "properties": [
+        {
+          "name": "columns",
+          "description": "网格布局列数（各列等宽）",
+          "type": "number"
+        },
+        {
+          "name": "rows",
+          "description": "网格布局行数",
+          "default": "1"
+        },
+        {
+          "name": "rowSpan",
+          "description": "在父级网格中所占行数",
+          "default": "1"
+        },
+        {
+          "name": "columnSpan",
+          "description": "在父级网格中所占列数",
+          "default": "1"
+        },
+        {
+          "name": "templateColumns",
+          "description": "网格布局模板列",
+          "type": "string"
+        },
+        {
+          "name": "alignItems",
+          "description": "设置单元格的垂直位置",
+          "type": "CSSProperties[\"alignItems\"]"
+        },
+        {
+          "name": "alignContent",
+          "description": "设置整个内容区域的垂直位置",
+          "type": "CSSProperties[\"alignContent\"]"
+        },
+        {
+          "name": "justifyItems",
+          "description": "设置单元格内容的水平位置",
+          "type": "CSSProperties[\"justifyItems\"]"
+        },
+        {
+          "name": "justifyContent",
+          "description": "设置整个内容区域在容器里面的水平位置",
+          "type": "CSSProperties[\"justifyContent\"]"
+        },
+        {
+          "name": "autoFlow",
+          "description": "子元素自动排布顺序",
+          "type": "CSSProperties[\"gridAutoFlow\"]"
+        },
+        {
+          "name": "responsive",
+          "description": "响应式布局设置",
+          "attribute": false,
+          "type": "ResponsiveSettings"
+        },
+        {
+          "name": "gap",
+          "description": "子元素之间的间距",
+          "default": "\"var(--page-card-gap)\""
+        },
+        {
+          "name": "showGridBorder",
+          "description": "是否展示网格布局边框",
+          "default": "false"
+        },
+        {
+          "name": "gridBorderColor",
+          "description": "网格布局边框颜色",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "多行多列的响应式网格布局",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-flex-layout",
+      "alias": [
+        "containers.flex-layout"
+      ],
+      "properties": [
+        {
+          "name": "flexDirection",
+          "description": "定义 [flex-direction](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction)",
+          "type": "CSSProperties[\"flexDirection\"]"
+        },
+        {
+          "name": "justifyContent",
+          "description": "定义 [justify-content](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)",
+          "type": "CSSProperties[\"justifyContent\"]"
+        },
+        {
+          "name": "alignItems",
+          "description": "定义 [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)",
+          "type": "CSSProperties[\"alignItems\"]"
+        },
+        {
+          "name": "alignContent",
+          "description": "定义 [align-content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)",
+          "type": "CSSProperties[\"alignContent\"]"
+        },
+        {
+          "name": "flexWrap",
+          "description": "定义 [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)",
+          "type": "CSSProperties[\"flexWrap\"]"
+        },
+        {
+          "name": "gap",
+          "description": "定义 [gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "flex 布局容器",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-easy-view",
+      "alias": [
+        "containers.easy-view"
+      ],
+      "properties": [
+        {
+          "name": "gridAreas",
+          "description": "以键值对形式定义多个 [grid-area](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area)",
+          "attribute": false,
+          "type": "Record<string, (string | number)[]>"
+        },
+        {
+          "name": "gridTemplateAreas",
+          "description": "定义 [grid-template-areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)",
+          "attribute": false,
+          "type": "string[][]"
+        },
+        {
+          "name": "gridTemplateColumns",
+          "description": "定义 [grid-template-columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "gridTemplateRows",
+          "description": "定义 [grid-template-rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "containerStyle",
+          "description": "定义网格容器的样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "styleByAreas",
+          "description": "定义网格内各区域的样式",
+          "attribute": false,
+          "type": "Record<string, React.CSSProperties>"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "基于网格的简易布局容器",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-search-bar",
+      "alias": [
+        "containers.search-bar"
+      ],
+      "properties": [
+        {
+          "name": "marginBottom",
+          "description": "bottom 偏移，`search-bar`常适配于`brick-table`，故默认加这个偏移，符合设计规范",
+          "default": "\"var(--card-content-gap)\"",
+          "attribute": false
+        },
+        {
+          "name": "wrap",
+          "description": "当在搜索框插槽`start`和`end`内元素居多时，元素溢出，设置为`true`时，内容区域可以换行",
+          "type": "boolean"
+        },
+        {
+          "name": "align",
+          "description": "搜索栏中对齐的方式",
+          "default": "\"center\"",
+          "attribute": false,
+          "type": "Align"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": "start",
+          "description": "左侧搜索栏"
+        },
+        {
+          "name": "end",
+          "description": "右侧操作栏"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "常用来包裹内容上方的搜索类构件",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-spin",
+      "properties": [
+        {
+          "name": "size",
+          "description": "加载指示符大小",
+          "default": "\"default\"",
+          "type": "\"small\" | \"default\" | \"large\""
+        },
+        {
+          "name": "tip",
+          "description": "自定义描述文案",
+          "type": "string"
+        },
+        {
+          "name": "spinning",
+          "description": "是否为加载中状态",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "容器内容"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "加载中",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-content-layout",
+      "properties": [],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "内容区流式布局（上下），为子元素之间提供默认的间距。",
+      "category": "container-layout",
+      "insider": true
+    },
+    {
+      "name": "eo-popup",
+      "properties": [
+        {
+          "name": "popupId",
+          "description": "浮层Id, 如果有设置浮层id, 会开启位置记录功能",
+          "type": "string"
+        },
+        {
+          "name": "popupWidth",
+          "description": "弹窗宽度",
+          "default": "500",
+          "type": "React.CSSProperties[\"width\"]"
+        },
+        {
+          "name": "popupHeight",
+          "description": "弹窗高度",
+          "type": "React.CSSProperties[\"height\"]"
+        },
+        {
+          "name": "popupTitle",
+          "description": "弹窗标题",
+          "type": "string"
+        },
+        {
+          "name": "openDirection",
+          "description": "弹窗打开位置",
+          "default": "center",
+          "type": "OpenDirection"
+        },
+        {
+          "name": "visible",
+          "description": "是否显示模态框",
+          "type": "boolean"
+        },
+        {
+          "name": "headerStyle",
+          "description": "用于设置 popup head的样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "wrapperStyle",
+          "description": "用于设置 popup wrapper的样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "noPadding",
+          "description": "内容没有边距",
+          "type": "boolean"
+        },
+        {
+          "name": "resizable",
+          "description": "是否可调整尺寸",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": [],
+          "description": "显示弹窗",
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "close",
+          "params": [],
+          "description": "关闭弹窗",
+          "returns": {
+            "type": "void"
+          }
+        }
+      ],
+      "parts": [],
+      "description": "构件 `eo-popup`"
+    },
+    {
+      "name": "eo-resizable-box",
+      "properties": [
+        {
+          "name": "resizeDirection",
+          "description": "调整方向",
+          "default": "\"right\"",
+          "type": "ResizeDirection"
+        },
+        {
+          "name": "storageKey",
+          "description": "用于存放当前尺寸的 (local) storage key",
+          "type": "string"
+        },
+        {
+          "name": "defaultSize",
+          "description": "默认尺寸（px）",
+          "default": "200",
+          "type": "number"
+        },
+        {
+          "name": "minSize",
+          "description": "最小尺寸（px）",
+          "default": "defaultSize",
+          "type": "number"
+        },
+        {
+          "name": "minSpace",
+          "description": "留给其他部分的最小空间。\n\n即：控制尺寸不超过 `documentElement.clientWidth - minSpace`（水平方向时）。",
+          "default": "300",
+          "type": "number"
+        },
+        {
+          "name": "disabled",
+          "description": "禁用 resize",
+          "type": "boolean"
+        },
+        {
+          "name": "variant",
+          "description": "",
+          "default": "\"default\"",
+          "type": "\"dashboard\" | \"default\""
+        },
+        {
+          "name": "boxStyle",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "boxStyleWhenNotResizing",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "syncSizeWithHost",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "可以左右或上下调整尺寸的容器。\n\n注意与 v2 构件 `basic-bricks.resizable-box` 的差别：\n\n- 移除属性 `resizable`，改为使用 `disabled` 控制是否可调整尺寸；\n- 放在 `containers-NB` 包，而不是 `basic-bricks-NB`。"
+    },
+    {
+      "name": "eo-tab-group",
+      "alias": [
+        "containers.tab-group"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "样式类型",
+          "default": "\"default\"",
+          "type": "TabType"
+        },
+        {
+          "name": "activePanel",
+          "description": "是否展示背景",
+          "type": "string"
+        },
+        {
+          "name": "contentStyle",
+          "description": "内容样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "outline",
+          "description": "轮廓。默认情况下，使用阴影，8.2 下默认则为无轮廓。\n\n该属性对 panel 类型无效（其始终无轮廓）。",
+          "default": "\"default\"",
+          "type": "TabsOutline"
+        }
+      ],
+      "events": [
+        {
+          "name": "tab.select",
+          "description": "选择 tab 时触发",
+          "detail": {
+            "description": "panel",
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "Tab 容器组",
+      "insider": true
+    },
+    {
+      "name": "eo-tab-list",
+      "alias": [
+        "containers.tab-list"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "样式类型",
+          "default": "\"default\"",
+          "type": "TabType"
+        },
+        {
+          "name": "tabs",
+          "description": "标签页列表",
+          "attribute": false,
+          "type": "Array<TabItemProps | string>"
+        },
+        {
+          "name": "activePanel",
+          "description": "激活状态 tab 的 panel",
+          "type": "string"
+        },
+        {
+          "name": "contentStyle",
+          "description": "内容样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "outline",
+          "description": "轮廓。默认情况下，使用阴影，8.2 下默认则为无轮廓。\n\n该属性对 panel 类型无效（其始终无轮廓）。",
+          "default": "\"default\"",
+          "type": "TabsOutline"
+        },
+        {
+          "name": "autoPlay",
+          "description": "是否开启标签内容自动轮播",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "autoSpeed",
+          "description": "轮播的时间间隔，单位 ms",
+          "default": "3000",
+          "type": "number"
+        }
+      ],
+      "events": [
+        {
+          "name": "tab.select",
+          "description": "选择 tab 时触发",
+          "detail": {
+            "description": "panel",
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "name": "extra",
+          "description": "头部插槽"
+        },
+        {
+          "name": null,
+          "description": "[panel] - Tab 页插槽"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "Tab 列表",
+      "category": "container-display"
+    },
+    {
+      "name": "eo-tab-item",
+      "alias": [
+        "containers.tab-item"
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "description": "样式类型",
+          "default": "\"default\"",
+          "type": "TabType"
+        },
+        {
+          "name": "panel",
+          "description": "",
+          "required": true,
+          "default": null,
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "GeneralIconProps"
+        },
+        {
+          "name": "disabled",
+          "description": "",
+          "required": true,
+          "default": null,
+          "type": "boolean"
+        },
+        {
+          "name": "active",
+          "description": "",
+          "required": true,
+          "default": null,
+          "type": "boolean"
+        },
+        {
+          "name": "badgeConf",
+          "description": "",
+          "required": true,
+          "default": null,
+          "attribute": false,
+          "type": "BadgeProps"
+        },
+        {
+          "name": "panelColor",
+          "description": "面板颜色",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "Tab 子项构件",
+      "insider": true
+    },
+    {
+      "name": "eo-page-view",
+      "properties": [
+        {
+          "name": "narrow",
+          "description": "设置窄布局模式（居中）。\n\n- \"full\": 全尺寸（非窄布局居中）\n- \"small\": 小尺寸窄布局\n- \"medium\": 中等尺寸窄布局\n- \"large\": 大尺寸窄布局",
+          "default": "\"full\"",
+          "type": "NarrowViewSize"
+        },
+        {
+          "name": "showFooter",
+          "description": "是否显示底栏（通常放置按钮）",
+          "type": "boolean"
+        },
+        {
+          "name": "fixedFooter",
+          "description": "底栏始终固定在底部。\n未设置时 footer 默认为 sticky，即：屏幕高度足够时，底栏跟随内容区上移而不是始终固定。",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        },
+        {
+          "name": "header",
+          "description": "顶栏"
+        },
+        {
+          "name": "sidebar",
+          "description": "侧边栏"
+        },
+        {
+          "name": "subSidebar",
+          "description": "子侧边栏"
+        },
+        {
+          "name": "footer",
+          "description": "底栏（通常放置按钮）"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "页面视图",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-main-view",
+      "properties": [
+        {
+          "name": "contentGap",
+          "description": "标题栏和内容区之间的间隔。\n如果内容区已包含一些视觉上的留白，可以设置 `contentGap: small`。",
+          "default": "\"medium\"",
+          "type": "MainViewGap"
+        },
+        {
+          "name": "narrow",
+          "description": "设置窄布局模式（居中）。\n\n- \"full\": 全尺寸（非窄布局居中）\n- \"small\": 小尺寸窄布局\n- \"medium\": 中等尺寸窄布局\n- \"large\": 大尺寸窄布局",
+          "default": "\"full\"",
+          "type": "NarrowViewSize"
+        },
+        {
+          "name": "fillContainer",
+          "description": "设置是否铺满容器。",
+          "type": "boolean"
+        },
+        {
+          "name": "bannerAlone",
+          "description": "设置仅使用 banner 时，面包屑、标题和工具栏将不会显示。",
+          "type": "boolean"
+        },
+        {
+          "name": "bannerTitle",
+          "type": "string"
+        },
+        {
+          "name": "bannerDescription",
+          "type": "string"
+        },
+        {
+          "name": "bannerImage",
+          "type": "string"
+        },
+        {
+          "name": "bannerSunk",
+          "type": "boolean"
+        },
+        {
+          "name": "showBanner",
+          "description": "是否展示 banner（包括页面标题，面包屑，工作栏）",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "noPadding",
+          "description": "是否没有边距",
+          "type": "boolean"
+        },
+        {
+          "name": "showFooter",
+          "description": "是否显示底栏（通常放置按钮）",
+          "deprecated": "已废弃，请使用 eo-page-view 的 footer",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        },
+        {
+          "name": "breadcrumb",
+          "description": "面包屑"
+        },
+        {
+          "name": "pageTitle",
+          "description": "页面标题"
+        },
+        {
+          "name": "toolbar",
+          "description": "工具栏"
+        },
+        {
+          "name": "banner",
+          "description": "Banner 内容"
+        },
+        {
+          "name": "footer",
+          "description": "底栏（通常放置按钮），已废弃，请使用 eo-page-view 的 footer"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "主内容视图",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-narrow-view",
+      "properties": [
+        {
+          "name": "size",
+          "description": "",
+          "default": "\"medium\"",
+          "type": "NarrowViewSize"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "窄布局视图（居中）",
+      "category": "container-layout"
+    },
+    {
+      "name": "eo-banner",
+      "properties": [
+        {
+          "name": "bannerTitle",
+          "type": "string"
+        },
+        {
+          "name": "bannerDescription",
+          "type": "string"
+        },
+        {
+          "name": "narrow",
+          "description": "设置窄布局模式（居中）。\n\n- \"full\": 全尺寸（非窄布局居中）\n- \"small\": 小尺寸窄布局\n- \"medium\": 中等尺寸窄布局\n- \"large\": 大尺寸窄布局",
+          "default": "\"full\"",
+          "type": "NarrowViewSize"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容区"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-banner`",
+      "category": "container-layout",
+      "insider": true
+    }
+  ],
+  "providers": []
+}

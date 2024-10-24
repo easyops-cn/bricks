@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_inject=globalThis.webpackChunk_next_bricks_inject||[]).push([[46],{4845:(e,i,n)=>{n.r(i),n.d(i,{visualBuilderPreviewAgent:()=>t});var r=n(3078),s=n(7876);async function t(e,i){return(0,s.A)(e,i)}customElements.define("inject.visual-builder-preview-agent",(0,r.createProviderClass)(t))}}]);
+//# sourceMappingURL=visual-builder-preview-agent.ac3c2963.js.map

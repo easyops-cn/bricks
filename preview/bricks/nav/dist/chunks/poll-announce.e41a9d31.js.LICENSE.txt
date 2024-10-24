@@ -1,0 +1,5 @@
+/**! @contract easyops.api.sys_setting.announce.IgnoreAnnounce@1.0.1 */
+
+/**! @contract easyops.api.sys_setting.announce.ListEffectiveAnnounce@1.0.1 */
+
+/**! @contract easyops.api.sys_setting.announce.PollAnnounce@1.0.0 */

@@ -1,0 +1,178 @@
+{
+  "id": "bricks/form",
+  "bricks": [
+    "form.general-input",
+    "form.general-form",
+    "form.general-textarea",
+    "form.general-form-item",
+    "form.general-radio",
+    "form.general-select",
+    "form.submit-buttons",
+    "form.general-checkbox",
+    "form.dynamic-form-item",
+    "form.general-search",
+    "form.icon-select",
+    "form.upload-image",
+    "form.general-switch"
+  ],
+  "elements": [
+    "eo-input",
+    "eo-form",
+    "eo-textarea",
+    "eo-form-item",
+    "eo-radio",
+    "eo-select",
+    "eo-submit-buttons",
+    "eo-checkbox",
+    "eo-dynamic-form-item",
+    "eo-search",
+    "eo-icon-select",
+    "eo-upload-image",
+    "eo-switch",
+    "eo-upload-file",
+    "eo-auto-complete",
+    "eo-time-picker",
+    "eo-date-picker",
+    "eo-time-range-picker",
+    "eo-color-picker"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-input": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "form.general-input": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "eo-textarea": [
+      "eo-form-item"
+    ],
+    "form.general-textarea": [
+      "eo-form-item"
+    ],
+    "eo-radio": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "form.general-radio": [
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "eo-select": [
+      "eo-form-item",
+      "eo-tag",
+      "eo-icon"
+    ],
+    "form.general-select": [
+      "eo-form-item",
+      "eo-tag",
+      "eo-icon"
+    ],
+    "eo-submit-buttons": [
+      "eo-form-item",
+      "eo-button"
+    ],
+    "form.submit-buttons": [
+      "eo-form-item",
+      "eo-button"
+    ],
+    "eo-checkbox": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "form.general-checkbox": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "eo-dynamic-form-item": [
+      "eo-icon",
+      "eo-button",
+      "eo-form",
+      "eo-form-item"
+    ],
+    "form.dynamic-form-item": [
+      "eo-icon",
+      "eo-button",
+      "eo-form",
+      "eo-form-item"
+    ],
+    "eo-search": [
+      "eo-icon",
+      "eo-input",
+      "eo-form-item"
+    ],
+    "form.general-search": [
+      "eo-icon",
+      "eo-input",
+      "eo-form-item"
+    ],
+    "eo-icon-select": [
+      "icons.get-libs",
+      "icons.search-icons",
+      "eo-radio",
+      "eo-icon",
+      "eo-modal",
+      "eo-search",
+      "eo-form-item"
+    ],
+    "form.icon-select": [
+      "icons.get-libs",
+      "icons.search-icons",
+      "eo-radio",
+      "eo-icon",
+      "eo-modal",
+      "eo-search",
+      "eo-form-item"
+    ],
+    "eo-upload-image": [
+      "eo-button",
+      "eo-image",
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "form.upload-image": [
+      "eo-button",
+      "eo-image",
+      "eo-icon",
+      "eo-form-item"
+    ],
+    "eo-switch": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "form.general-switch": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "eo-upload-file": [
+      "eo-button",
+      "eo-icon",
+      "eo-easyops-icon",
+      "eo-tooltip",
+      "eo-form-item"
+    ],
+    "eo-auto-complete": [
+      "eo-form-item",
+      "eo-input",
+      "eo-icon"
+    ],
+    "eo-time-picker": [
+      "eo-form-item"
+    ],
+    "eo-date-picker": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "eo-time-range-picker": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "eo-color-picker": [
+      "eo-form-item"
+    ]
+  },
+  "filePath": "bricks/form/dist/index.93fdb6c8.js"
+}

@@ -1,0 +1,49 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/illustrations",
+  "name": "illustrations",
+  "bricks": [
+    {
+      "name": "illustrations.loading-transition",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `illustrations.loading-transition`"
+    },
+    {
+      "name": "illustrations.error-message",
+      "properties": [
+        {
+          "name": "errorTitle",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "type": "ErrorMessageVariant"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `illustrations.error-message`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "illustrations.get-illustrations-by-category"
+    },
+    {
+      "name": "illustrations.get-illustration"
+    },
+    {
+      "name": "illustrations.translate-illustration-config"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_advanced=globalThis.webpackChunk_next_bricks_advanced||[]).push([[8097,478],{88097:(i,n,a)=>{a.r(n),a.d(n,{initializeReactI18n:()=>c,useTranslation:()=>t.useTranslation});var e=a(18799),t=a(47825);let s=!1;function c(i,n){(0,e.initializeI18n)(i,n),s||(s=!0,t.initReactI18next.init(e.i18n))}}}]);
+//# sourceMappingURL=8097.35291a18.js.map

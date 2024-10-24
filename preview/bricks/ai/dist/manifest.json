@@ -1,0 +1,257 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/ai",
+  "name": "ai",
+  "bricks": [
+    {
+      "name": "ai.chat-view",
+      "properties": [
+        {
+          "name": "sessionId",
+          "type": "string"
+        },
+        {
+          "name": "agentId",
+          "description": "智能体id",
+          "type": "string"
+        },
+        {
+          "name": "robotId",
+          "description": "机器人id",
+          "type": "string"
+        },
+        {
+          "name": "answerLanguage",
+          "description": "指定智能体回答代码时所使用的语言",
+          "type": "string"
+        },
+        {
+          "name": "debug",
+          "description": "是否为debug模式",
+          "type": "boolean"
+        },
+        {
+          "name": "showAvatar",
+          "description": "是否展示对话用户头像",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "showSessionList",
+          "description": "是否展示历史会话信息",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "readonly",
+          "description": "只读模式",
+          "type": "boolean"
+        },
+        {
+          "name": "showLike",
+          "description": "是否展示点赞能力",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "showShare",
+          "description": "是否展示分享能力",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "useSpiltWord",
+          "description": "是否开启前端分词",
+          "default": "false",
+          "type": "boolean"
+        },
+        {
+          "name": "enterInterval",
+          "description": "输入间隔，设置为 -1 使用新的方式对大段消息进行模拟打字效果节流输出",
+          "default": "50",
+          "type": "number"
+        },
+        {
+          "name": "quickAnswerConfig",
+          "description": "快速入口列表",
+          "attribute": false,
+          "type": "QuickAnswerConfig"
+        },
+        {
+          "name": "snippetList",
+          "description": "常用语列表",
+          "attribute": false,
+          "type": "snippet[]"
+        },
+        {
+          "name": "commandBricks",
+          "description": "自定义语言配置",
+          "attribute": false,
+          "type": "commandBrickConf"
+        },
+        {
+          "name": "inputToolbarBrick",
+          "description": "输入框工具栏 useBrick",
+          "attribute": false,
+          "type": "InputToolbarBrick"
+        },
+        {
+          "name": "showToolCalls",
+          "description": "是否显示工具调用过程",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "sessionId.change",
+          "detail": {
+            "type": "string | undefined"
+          }
+        },
+        {
+          "name": "robotId.change",
+          "detail": {
+            "type": "string | undefined"
+          }
+        },
+        {
+          "name": "qa.finish",
+          "detail": {
+            "type": "string | undefined"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "insertQuestion",
+          "params": [
+            {
+              "name": "args",
+              "type": "{ value: string }"
+            }
+          ],
+          "description": "",
+          "returns": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "sendMsg",
+          "params": [
+            {
+              "name": "msg",
+              "type": "string | ChatBody"
+            }
+          ],
+          "description": "",
+          "returns": {
+            "type": "void"
+          }
+        }
+      ],
+      "parts": [],
+      "description": "AI 对话终端"
+    },
+    {
+      "name": "ai.chat-agent",
+      "properties": [
+        {
+          "name": "agentId",
+          "type": "string"
+        },
+        {
+          "name": "robotId",
+          "type": "string"
+        },
+        {
+          "name": "conversationId",
+          "type": "string"
+        },
+        {
+          "name": "alwaysUseNewConversation",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "messages.update",
+          "detail": {
+            "type": "Message[]"
+          }
+        },
+        {
+          "name": "busy.change",
+          "detail": {
+            "type": "boolean"
+          }
+        },
+        {
+          "name": "conversationId.change",
+          "detail": {
+            "type": "string | null"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "postMessage",
+          "params": [
+            {
+              "name": "content",
+              "type": "string"
+            }
+          ],
+          "description": "发送消息到默认的聊天 API",
+          "returns": {}
+        },
+        {
+          "name": "sendRequest",
+          "params": [
+            {
+              "name": "leadingMessages",
+              "type": "string | BaseMessage[]"
+            },
+            {
+              "name": "url",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": "Options<MessageChunk>"
+            }
+          ],
+          "description": "发送聊天请求到指定的 URL",
+          "returns": {}
+        },
+        {
+          "name": "lowLevelSendRequest",
+          "params": [
+            {
+              "name": "leadingMessages",
+              "type": "string | BaseMessage[]"
+            },
+            {
+              "name": "url",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": "Options<MessageChunk>"
+            }
+          ],
+          "description": "发送底层聊天请求到指定的 URL。接口的请求和响应的数据结构和 OpenAI 聊天接口一致。",
+          "returns": {}
+        },
+        {
+          "name": "newConversation",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "用于与 AI 机器人进行对话的代理构件，处理通信并整合消息。"
+    }
+  ],
+  "providers": []
+}

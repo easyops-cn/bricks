@@ -1,0 +1,2449 @@
+{
+  "eo-micro-view": {
+    "properties": [
+      {
+        "name": "pageTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-category": {
+    "properties": [
+      {
+        "name": "categories",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "categoryProps"
+            }
+          }
+        }
+      },
+      {
+        "name": "contentStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "headerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "containerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "split",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "headerMask",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showIndex",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "categoryProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "title"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-modal": {
+    "properties": [
+      {
+        "name": "modalTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "width",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "keyword",
+              "value": "number"
+            }
+          ]
+        }
+      },
+      {
+        "name": "maskClosable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "fullscreen",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "closeWhenConfirm",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "confirmDisabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "visible",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "confirmText",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "cancelText",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "hideCancelButton",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "stackable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "open",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "close",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "confirm",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "cancel",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "open",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "close",
+        "params": [],
+        "returns": {}
+      }
+    ]
+  },
+  "eo-card": {
+    "properties": [
+      {
+        "name": "cardTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "headerIcon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      },
+      {
+        "name": "fillVertical",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "verticalCenter",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "hasExtraSlot",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "operationButtons",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "OperationButton"
+            }
+          }
+        }
+      },
+      {
+        "name": "headerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "bodyStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "background",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            {
+              "type": "keyword",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "outline",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CardOutline"
+          }
+        }
+      },
+      {
+        "name": "hideSplit",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "OperationButton",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "eventName"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "configProps"
+            },
+            "annotation": {
+              "type": "intersection",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ButtonProps"
+                  }
+                },
+                {
+                  "type": "typeLiteral",
+                  "members": [
+                    {
+                      "type": "propertySignature",
+                      "key": {
+                        "type": "identifier",
+                        "name": "icon"
+                      },
+                      "annotation": {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      "optional": true,
+                      "computed": false
+                    }
+                  ]
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tooltip"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "needData"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "CardOutline",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "border"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "shadow"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "background"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-drawer": {
+    "properties": [
+      {
+        "name": "customTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "width",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "height",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "closable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "mask",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "maskClosable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "visible",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "footerSlot",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "placement",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Placement"
+          }
+        }
+      },
+      {
+        "name": "scrollToTopWhenOpen",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "stackable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "open",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "close",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "open",
+        "params": [],
+        "returns": {}
+      },
+      {
+        "name": "close",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "Placement",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "top"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "bottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-grid-layout": {
+    "properties": [
+      {
+        "name": "columns",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "rows",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "rowSpan",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "columnSpan",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "templateColumns",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "alignItems",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "alignItems"
+          }
+        }
+      },
+      {
+        "name": "alignContent",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "alignContent"
+          }
+        }
+      },
+      {
+        "name": "justifyItems",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "justifyItems"
+          }
+        }
+      },
+      {
+        "name": "justifyContent",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "justifyContent"
+          }
+        }
+      },
+      {
+        "name": "autoFlow",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "gridAutoFlow"
+          }
+        }
+      },
+      {
+        "name": "responsive",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ResponsiveSettings"
+          }
+        }
+      },
+      {
+        "name": "gap",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "showGridBorder",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "gridBorderColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "interface",
+        "name": "ResponsiveSettings",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "large"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GridSettings"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "medium"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GridSettings"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "small"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GridSettings"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "xs"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GridSettings"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "GridSettings",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "columns"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "rows"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "templateColumns"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "columnSpan"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "rowSpan"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-flex-layout": {
+    "properties": [
+      {
+        "name": "flexDirection",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "flexDirection"
+          }
+        }
+      },
+      {
+        "name": "justifyContent",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "justifyContent"
+          }
+        }
+      },
+      {
+        "name": "alignItems",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "alignItems"
+          }
+        }
+      },
+      {
+        "name": "alignContent",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "alignContent"
+          }
+        }
+      },
+      {
+        "name": "flexWrap",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "flexWrap"
+          }
+        }
+      },
+      {
+        "name": "gap",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-easy-view": {
+    "properties": [
+      {
+        "name": "gridAreas",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "array",
+                "elementType": {
+                  "type": "parenthesizedType",
+                  "annotation": {
+                    "type": "union",
+                    "types": [
+                      {
+                        "type": "keyword",
+                        "value": "string"
+                      },
+                      {
+                        "type": "keyword",
+                        "value": "number"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "gridTemplateAreas",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "array",
+            "elementType": {
+              "type": "keyword",
+              "value": "string"
+            }
+          }
+        }
+      },
+      {
+        "name": "gridTemplateColumns",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "gridTemplateRows",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "string"
+            },
+            {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "string"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "containerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "styleByAreas",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-search-bar": {
+    "properties": [
+      {
+        "name": "marginBottom",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "wrap",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "align",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Align"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "Align",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "start"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "center"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "end"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-spin": {
+    "properties": [
+      {
+        "name": "size",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "large"
+            }
+          ]
+        }
+      },
+      {
+        "name": "tip",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "spinning",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  },
+  "eo-content-layout": {
+    "properties": [],
+    "events": [],
+    "methods": []
+  },
+  "eo-popup": {
+    "properties": [
+      {
+        "name": "popupId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "popupWidth",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "width"
+          }
+        }
+      },
+      {
+        "name": "popupHeight",
+        "annotation": {
+          "type": "indexedAccess",
+          "objectType": {
+            "type": "reference",
+            "typeName": {
+              "type": "qualifiedName",
+              "left": {
+                "type": "identifier",
+                "name": "React"
+              },
+              "right": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            }
+          },
+          "indexType": {
+            "type": "jsLiteral",
+            "value": "height"
+          }
+        }
+      },
+      {
+        "name": "popupTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "openDirection",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "OpenDirection"
+          }
+        }
+      },
+      {
+        "name": "visible",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "headerStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "wrapperStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "noPadding",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "resizable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [
+      {
+        "name": "open",
+        "params": [],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "close",
+        "params": [],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "types": [
+      {
+        "type": "enum",
+        "name": "OpenDirection",
+        "members": [
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "LeftTop"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "leftTop"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "LeftBottom"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "leftBottom"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "RightTop"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "rightTop"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "RightBottom"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "rightBottom"
+            }
+          },
+          {
+            "type": "enumMember",
+            "id": {
+              "type": "identifier",
+              "name": "Center"
+            },
+            "initializer": {
+              "type": "jsLiteral",
+              "value": "center"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "eo-resizable-box": {
+    "properties": [
+      {
+        "name": "resizeDirection",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ResizeDirection"
+          }
+        }
+      },
+      {
+        "name": "storageKey",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "defaultSize",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "minSize",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "minSpace",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "disabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "variant",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "dashboard"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      },
+      {
+        "name": "boxStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "boxStyleWhenNotResizing",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "syncSizeWithHost",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "ResizeDirection",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "left"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "top"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "bottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-tab-group": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TabType"
+          }
+        }
+      },
+      {
+        "name": "activePanel",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "contentStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "outline",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TabsOutline"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "tab.select",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "TabType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "panel"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "capsule"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "TabsOutline",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "shadow"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-narrow-view": {
+    "properties": [
+      {
+        "name": "size",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NarrowViewSize"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "NarrowViewSize",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "medium"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "large"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "full"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-tab-item": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TabType"
+          }
+        }
+      },
+      {
+        "name": "panel",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "icon",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "GeneralIconProps"
+          }
+        }
+      },
+      {
+        "name": "disabled",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "active",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "badgeConf",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "BadgeProps"
+          }
+        }
+      },
+      {
+        "name": "panelColor",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "TabType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "panel"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "capsule"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-page-view": {
+    "properties": [
+      {
+        "name": "narrow",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NarrowViewSize"
+          }
+        }
+      },
+      {
+        "name": "showFooter",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "fixedFooter",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "NarrowViewSize",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "medium"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "large"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "full"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-main-view": {
+    "properties": [
+      {
+        "name": "contentGap",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "MainViewGap"
+          }
+        }
+      },
+      {
+        "name": "narrow",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NarrowViewSize"
+          }
+        }
+      },
+      {
+        "name": "fillContainer",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "bannerAlone",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "bannerTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "bannerDescription",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "bannerImage",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "bannerSunk",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showBanner",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "noPadding",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showFooter",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "MainViewGap",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "medium"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NarrowViewSize",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "medium"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "large"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "full"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-banner": {
+    "properties": [
+      {
+        "name": "bannerTitle",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "bannerDescription",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "narrow",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NarrowViewSize"
+          }
+        }
+      }
+    ],
+    "events": [],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "NarrowViewSize",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "small"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "medium"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "large"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "full"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-tab-list": {
+    "properties": [
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TabType"
+          }
+        }
+      },
+      {
+        "name": "tabs",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Array"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "TabItemProps"
+                    }
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "activePanel",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "contentStyle",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "qualifiedName",
+            "left": {
+              "type": "identifier",
+              "name": "React"
+            },
+            "right": {
+              "type": "identifier",
+              "name": "CSSProperties"
+            }
+          }
+        }
+      },
+      {
+        "name": "outline",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "TabsOutline"
+          }
+        }
+      },
+      {
+        "name": "autoPlay",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "autoSpeed",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "tab.select",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "TabType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "panel"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "capsule"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "TabItemProps",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "TabType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "panel"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "icon"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "GeneralIconProps"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "disabled"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "hidden"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "active"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "badgeConf"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BadgeProps"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "panelColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "TabsOutline",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "shadow"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

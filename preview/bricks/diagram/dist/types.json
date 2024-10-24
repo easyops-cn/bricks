@@ -1,0 +1,7443 @@
+{
+  "diagram.experimental-node": {
+    "properties": [
+      {
+        "name": "usage",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ExperimentalUsage"
+          }
+        }
+      },
+      {
+        "name": "status",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NodeStatus"
+          }
+        }
+      },
+      {
+        "name": "decorator",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DecoratorType"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "drag.start",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "PositionTuple"
+            }
+          }
+        }
+      },
+      {
+        "name": "drag.move",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "PositionTuple"
+            }
+          }
+        }
+      },
+      {
+        "name": "drag.end",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "PositionTuple"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "ExperimentalUsage",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "library"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "dragging"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeStatus",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "highlighted"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "faded"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "DecoratorType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "area"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "container"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "PositionTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "x",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "y",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "diagram.editable-label": {
+    "properties": [
+      {
+        "name": "label",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "type",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LabelType"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "label.editing.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "boolean"
+          }
+        }
+      },
+      {
+        "name": "label.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "enableEditing",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "LabelType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "line"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "default"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "eo-draw-canvas": {
+    "properties": [
+      {
+        "name": "cells",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "InitialCell"
+            }
+          }
+        }
+      },
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LayoutType"
+          }
+        }
+      },
+      {
+        "name": "layoutOptions",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LayoutOptions"
+          }
+        }
+      },
+      {
+        "name": "defaultNodeSize",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SizeTuple"
+          }
+        }
+      },
+      {
+        "name": "defaultNodeBricks",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "NodeBrickConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "degradedThreshold",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "degradedNodeLabel",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "defaultEdgeLines",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "EdgeLineConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "activeTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTarget"
+              }
+            },
+            {
+              "type": "keyword",
+              "value": "null"
+            }
+          ]
+        }
+      },
+      {
+        "name": "fadeUnrelatedCells",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "zoomable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "scrollable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "pannable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "allowEdgeToArea",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "dragBehavior",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DragBehavior"
+          }
+        }
+      },
+      {
+        "name": "ctrlDragBehavior",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "CtrlDragBehavior"
+          }
+        }
+      },
+      {
+        "name": "scaleRange",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "RangeTuple"
+          }
+        }
+      },
+      {
+        "name": "lineSettings",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LineSettings"
+          }
+        }
+      },
+      {
+        "name": "lineConnector",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineConnecterConf"
+              }
+            },
+            {
+              "type": "keyword",
+              "value": "boolean"
+            }
+          ]
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "activeTarget.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ActiveTarget"
+                }
+              },
+              {
+                "type": "keyword",
+                "value": "null"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "node.move",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MoveCellPayload"
+            }
+          }
+        }
+      },
+      {
+        "name": "cell.move",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "MoveCellPayload"
+            }
+          }
+        }
+      },
+      {
+        "name": "cells.move",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MoveCellPayload"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "cell.resize",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ResizeCellPayload"
+            }
+          }
+        }
+      },
+      {
+        "name": "node.delete",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Cell"
+            }
+          }
+        }
+      },
+      {
+        "name": "cell.delete",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Cell"
+            }
+          }
+        }
+      },
+      {
+        "name": "cells.delete",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Cell"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "cell.contextmenu",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CellContextMenuDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "edge.add",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ConnectNodesDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "edge.view.change",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "EdgeViewChangePayload"
+            }
+          }
+        }
+      },
+      {
+        "name": "decorator.text.change",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DecoratorTextChangeDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "node.container.change",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "MoveCellPayload"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "scale.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "number"
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "dropNode",
+        "params": [
+          {
+            "name": "param_1",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DropNodeInfo"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "reference",
+                      "typeName": {
+                        "type": "identifier",
+                        "name": "NodeCell"
+                      }
+                    },
+                    {
+                      "type": "keyword",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "dropDecorator",
+        "params": [
+          {
+            "name": "param_1",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DropDecoratorInfo"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "reference",
+                      "typeName": {
+                        "type": "identifier",
+                        "name": "DecoratorCell"
+                      }
+                    },
+                    {
+                      "type": "keyword",
+                      "value": "null"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "addNodes",
+        "params": [
+          {
+            "name": "nodes",
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "AddNodeInfo"
+                }
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "NodeCell"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "addEdge",
+        "params": [
+          {
+            "name": "param_1",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "AddEdgeInfo"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "EdgeCell"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "manuallyConnectNodes",
+        "params": [
+          {
+            "name": "source",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ConnectNodesDetail"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "name": "updateCells",
+        "params": [
+          {
+            "name": "cells",
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "InitialCell"
+                }
+              }
+            }
+          },
+          {
+            "name": "ctx",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UpdateCellsContext"
+              }
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "Promise"
+            },
+            "typeParameters": {
+              "type": "typeParameterInstantiation",
+              "params": [
+                {
+                  "type": "typeLiteral",
+                  "members": [
+                    {
+                      "type": "propertySignature",
+                      "key": {
+                        "type": "identifier",
+                        "name": "updated"
+                      },
+                      "annotation": {
+                        "type": "array",
+                        "elementType": {
+                          "type": "reference",
+                          "typeName": {
+                            "type": "identifier",
+                            "name": "Cell"
+                          }
+                        }
+                      },
+                      "computed": false
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "InitialCell",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "InitialNodeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorCell"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "InitialNodeCell",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Omit"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "NodeCell"
+                    }
+                  },
+                  {
+                    "type": "jsLiteral",
+                    "value": "view"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "view"
+                  },
+                  "annotation": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "InitialNodeView"
+                    }
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeCell",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NodeBrickCell"
+          }
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeBrickCell",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BaseBrickCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BaseNodeCell"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "BaseBrickCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tag"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "brick"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "node"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "edge"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "decorator"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseNodeCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "containerId"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeView"
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "type": "interface",
+        "name": "NodeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "InitialNodeView"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "InitialNodeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "x"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "y"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "EdgeCell",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "BaseEdgeCell"
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "BaseEdgeCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "edge"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeView"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "EdgeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "exitPosition"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodePosition"
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "entryPosition"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodePosition"
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "vertices"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "NodePosition"
+                    }
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LineSettings"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineSettings",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "curveType"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CurveType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "straight"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "curve"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "polyline"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DecoratorCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "decorator"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "decorator"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorView"
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "DecoratorType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "area"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "container"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DecoratorView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "direction"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Direction"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeView"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Direction",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "top"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "bottom"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "left"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LayoutType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "manual"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "force"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "dagre"
+            },
+            {
+              "type": "keyword",
+              "value": "undefined"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LayoutOptions",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsManual"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsDagre"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsForce"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsManual",
+        "body": [],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LayoutSnapOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LayoutSnapOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "snap"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap options. Setting to true means enable all snap options"
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "grid"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapToGridOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap to grid"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "object"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapToObjectOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap to object"
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapToGridOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "size"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false,
+            "description": ""
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapToObjectOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "distance"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false,
+            "description": ""
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsDagre",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "rankdir"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "TB"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "BT"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "LR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "RL"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "ranksep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edgesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "align"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "UL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "UR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DR"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseLayoutOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodePadding"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "PartialRectTuple"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "alignOrigin"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "AlignOrigin"
+              }
+            },
+            "optional": true,
+            "computed": false,
+            "description": "根据节点什么位置进行对齐，支持关键字、百分比和比例值。\n第一个值为 x 轴，第二个值为 y 轴。\n使用数字时，表示相对于节点的宽高的比例。\n\n注意，节点宽高将包含 nodePadding 的值。"
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LayoutSnapOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "AlignOrigin",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "x",
+              "optional": false,
+              "elementType": {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "y",
+              "optional": false,
+              "elementType": {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsForce",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "collide"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ForceCollideOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ForceCollideOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "radiusDiff"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strength"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "iterations"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "SizeTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "width",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "height",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "NodeBrickConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "EdgeLineConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseEdgeLineConf"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseEdgeLineConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "curveType"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CurveType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dashed"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dotted"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "interactStrokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parallelGap"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "markers"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "LineMarkerConf"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "showStartArrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false,
+            "description": "已废弃，使用markers代替，配置了对应的箭头测则显示"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "showEndArrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false,
+            "description": "已废弃"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "animate"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineAnimate"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineAnimate",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useAnimate"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "duration"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "ActiveTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfSingular"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfMulti"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "ActiveTargetOfSingular",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfNode"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfEdge"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfDecorator"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfNode",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfEdge",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "edge"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfDecorator",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "decorator"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfMulti",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "multi"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "targets"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ActiveTargetOfSingular"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "DragBehavior",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "lasso"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "grab"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "CtrlDragBehavior",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "none"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "grab"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "RangeTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "min",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "max",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineConnecterConf",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Pick"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "BaseEdgeLineConf"
+                    }
+                  },
+                  {
+                    "type": "union",
+                    "types": [
+                      {
+                        "type": "jsLiteral",
+                        "value": "strokeWidth"
+                      },
+                      {
+                        "type": "jsLiteral",
+                        "value": "strokeColor"
+                      },
+                      {
+                        "type": "jsLiteral",
+                        "value": "showStartArrow"
+                      },
+                      {
+                        "type": "jsLiteral",
+                        "value": "showEndArrow"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "editingStrokeColor"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "MoveCellPayload",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "node"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "decorator"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "x"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "y"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "decorator"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "containerCell"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorCell"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "guideLines"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "LineTuple"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "start",
+              "optional": false,
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "PositionTuple"
+                }
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "end",
+              "optional": false,
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "PositionTuple"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "ResizeCellPayload",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "node"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "decorator"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Cell",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorCell"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "CellContextMenuDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "cell"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Cell"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clientX"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clientY"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConnectNodesDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeCell"
+                  }
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "DecoratorCell"
+                  }
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodeCell"
+                  }
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "DecoratorCell"
+                  }
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeView"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "EdgeViewChangePayload",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Pick"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "EdgeCell"
+                }
+              },
+              {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "jsLiteral",
+                    "value": "source"
+                  },
+                  {
+                    "type": "jsLiteral",
+                    "value": "target"
+                  },
+                  {
+                    "type": "jsLiteral",
+                    "value": "view"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DecoratorTextChangeDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorView"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "DropNodeInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "position"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "PositionTuple"
+              }
+            },
+            "computed": false,
+            "description": "[PointerEvent::clientX, PointerEvent::clientY]"
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "AddNodeInfo"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "AddNodeInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "size"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "SizeTuple"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "DropDecoratorInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "decorator"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "position"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "PositionTuple"
+              }
+            },
+            "computed": false,
+            "description": "[PointerEvent::clientX, PointerEvent::clientY]"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "direction"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Direction"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "AddEdgeInfo",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "UpdateCellsContext",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "reason"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "add-related-nodes"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parent"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-diagram": {
+    "properties": [
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "dagre"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "force"
+            }
+          ]
+        }
+      },
+      {
+        "name": "nodes",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DiagramNode"
+            }
+          }
+        }
+      },
+      {
+        "name": "edges",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DiagramEdge"
+            }
+          }
+        }
+      },
+      {
+        "name": "nodeBricks",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "NodeBrickConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "lines",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LineConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "layoutOptions",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LayoutOptions"
+          }
+        }
+      },
+      {
+        "name": "activeTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTarget"
+              }
+            },
+            {
+              "type": "keyword",
+              "value": "null"
+            }
+          ]
+        }
+      },
+      {
+        "name": "disableKeyboardAction",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "connectNodes",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "ConnectNodesOptions"
+          }
+        }
+      },
+      {
+        "name": "dragNodes",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "DragNodesOptions"
+          }
+        }
+      },
+      {
+        "name": "zoomable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "scrollable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "pannable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "scaleRange",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "RangeTuple"
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "activeTarget.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ActiveTarget"
+                }
+              },
+              {
+                "type": "keyword",
+                "value": "null"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "node.delete",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DiagramNode"
+            }
+          }
+        }
+      },
+      {
+        "name": "edge.delete",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "DiagramEdge"
+            }
+          }
+        }
+      },
+      {
+        "name": "line.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LineTarget"
+            }
+          }
+        }
+      },
+      {
+        "name": "line.dblclick",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "LineTarget"
+            }
+          }
+        }
+      },
+      {
+        "name": "nodes.connect",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "ConnectLineDetail"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "callOnLineLabel",
+        "params": [
+          {
+            "name": "id",
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            }
+          },
+          {
+            "name": "method",
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            }
+          },
+          {
+            "name": "param_3",
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "keyword",
+                "value": "unknown"
+              }
+            }
+          }
+        ],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "DiagramNode",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DiagramNodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "DiagramNodeId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DiagramEdge",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodeBrickConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodeType"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edgeType"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "draw"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "interactable"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "curveType"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CurveType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "arrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "TextOptions"
+                  }
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "TextOptions"
+                    }
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "label"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "LineLabelConf"
+                  }
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "LineLabelConf"
+                    }
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "cursor"
+            },
+            "annotation": {
+              "type": "indexedAccess",
+              "objectType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "qualifiedName",
+                  "left": {
+                    "type": "identifier",
+                    "name": "React"
+                  },
+                  "right": {
+                    "type": "identifier",
+                    "name": "CSSProperties"
+                  }
+                }
+              },
+              "indexType": {
+                "type": "jsLiteral",
+                "value": "cursor"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "overrides"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineConfOverrides"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "markers"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "LineMarkerConf"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LineConfOverridable"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "auto"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "curve"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "straight"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "polyline"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "CurveType",
+        "annotation": {
+          "type": "unsupported",
+          "source": "`curve${string}`"
+        }
+      },
+      {
+        "type": "interface",
+        "name": "TextOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "content"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "style"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CSSProperties"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "placement"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineLabelPlacement"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineLabelPlacement",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "center"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "start"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "end"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LineLabelConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "placement"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineLabelPlacement"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineConfOverrides",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "active"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineConfOverridable"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "activeRelated"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineConfOverridable"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineConfOverridable",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "interactStrokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineMarkerConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "placement"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineMarkerPlacement"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineMarkerType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineMarkerPlacement",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "start"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "end"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineMarkerType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "arrow"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "circle"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "0..1"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "0..N"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LayoutOptions",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsDagre"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsForce"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsDagre",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "rankdir"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "TB"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "BT"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "LR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "RL"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "ranksep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edgesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "align"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "UL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "UR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DR"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseLayoutOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodePadding"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "PartialRectTuple"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "PartialRectTuple",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "keyword",
+              "value": "number"
+            },
+            {
+              "type": "tuple",
+              "elementTypes": [
+                {
+                  "type": "namedTupleMember",
+                  "label": "all",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tuple",
+              "elementTypes": [
+                {
+                  "type": "namedTupleMember",
+                  "label": "vertical",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "horizontal",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tuple",
+              "elementTypes": [
+                {
+                  "type": "namedTupleMember",
+                  "label": "top",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "horizontal",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "bottom",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tuple",
+              "elementTypes": [
+                {
+                  "type": "namedTupleMember",
+                  "label": "top",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "right",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "bottom",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                },
+                {
+                  "type": "namedTupleMember",
+                  "label": "left",
+                  "optional": false,
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsForce",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dummyNodesOnEdges"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "collide"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ForceCollideOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ForceCollideOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dummyRadius"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "radiusDiff"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strength"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "iterations"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "ActiveTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfNode"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfEdge"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfNode",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodeId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfEdge",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "edge"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edge"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DiagramEdge"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConnectNodesOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "arrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodesFilterOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "NodesFilterOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "sourceType"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "keyword",
+                    "value": "string"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "DragNodesOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "save"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UserViewQuery"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodesFilterOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "UserViewQuery",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "namespace"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "RangeTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "min",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "max",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LineTarget",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edge"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DiagramEdge"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ConnectLineDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DiagramNode"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DiagramNode"
+              }
+            },
+            "computed": false
+          }
+        ]
+      }
+    ]
+  },
+  "eo-display-canvas": {
+    "properties": [
+      {
+        "name": "cells",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "InitialCell"
+            }
+          }
+        }
+      },
+      {
+        "name": "layout",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LayoutType"
+          }
+        }
+      },
+      {
+        "name": "layoutOptions",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "LayoutOptions"
+          }
+        }
+      },
+      {
+        "name": "defaultNodeSize",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "SizeTuple"
+          }
+        }
+      },
+      {
+        "name": "defaultNodeBricks",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "NodeBrickConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "degradedThreshold",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "degradedNodeLabel",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "defaultEdgeLines",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "EdgeLineConf"
+            }
+          }
+        }
+      },
+      {
+        "name": "activeTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTarget"
+              }
+            },
+            {
+              "type": "keyword",
+              "value": "null"
+            }
+          ]
+        }
+      },
+      {
+        "name": "fadeUnrelatedCells",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "zoomable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "scrollable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "pannable",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "scaleRange",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "RangeTuple"
+          }
+        }
+      },
+      {
+        "name": "hideZoomBar",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "autoCenterWhenCellsChange",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "activeTarget.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ActiveTarget"
+                }
+              },
+              {
+                "type": "keyword",
+                "value": "null"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "cell.contextmenu",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CellContextMenuDetail"
+            }
+          }
+        }
+      },
+      {
+        "name": "cell.click",
+        "detail": {
+          "annotation": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "CellContextMenuDetail"
+            }
+          }
+        }
+      }
+    ],
+    "methods": [],
+    "types": [
+      {
+        "type": "typeAlias",
+        "name": "InitialCell",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "InitialNodeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorCell"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "InitialNodeCell",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Omit"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "NodeCell"
+                    }
+                  },
+                  {
+                    "type": "jsLiteral",
+                    "value": "view"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "view"
+                  },
+                  "annotation": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "InitialNodeView"
+                    }
+                  },
+                  "optional": true,
+                  "computed": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeCell",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "NodeBrickCell"
+          }
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeBrickCell",
+        "annotation": {
+          "type": "intersection",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BaseBrickCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BaseNodeCell"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "BaseBrickCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tag"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "brick"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "node"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "edge"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "decorator"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "data"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "unknown"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseNodeCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "containerId"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeView"
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "NodeId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "type": "interface",
+        "name": "NodeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "InitialNodeView"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "InitialNodeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "x"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "y"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "width"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "height"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "EdgeCell",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "BaseEdgeCell"
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "BaseEdgeCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "edge"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeView"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "EdgeView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "exitPosition"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodePosition"
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "entryPosition"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "NodePosition"
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "vertices"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "NodePosition"
+                    }
+                  }
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LineSettings"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineSettings",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "curveType"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CurveType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "LineType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "straight"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "curve"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "polyline"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DecoratorCell",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "decorator"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "decorator"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorType"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "view"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorView"
+              }
+            },
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseCell"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "DecoratorType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "text"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "area"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "container"
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "DecoratorView",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "text"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "direction"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Direction"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "NodeView"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Direction",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "top"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "right"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "bottom"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "left"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LayoutType",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "jsLiteral",
+              "value": "manual"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "force"
+            },
+            {
+              "type": "jsLiteral",
+              "value": "dagre"
+            },
+            {
+              "type": "keyword",
+              "value": "undefined"
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "LayoutOptions",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsManual"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsDagre"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LayoutOptionsForce"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsManual",
+        "body": [],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LayoutSnapOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LayoutSnapOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "snap"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap options. Setting to true means enable all snap options"
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "grid"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapToGridOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap to grid"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "object"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "SnapToObjectOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false,
+            "description": "Snap to object"
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapToGridOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "size"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false,
+            "description": ""
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "SnapToObjectOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "distance"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false,
+            "description": ""
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsDagre",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "rankdir"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "TB"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "BT"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "LR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "RL"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "ranksep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "edgesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodesep"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "align"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "UL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "UR"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DL"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "DR"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseLayoutOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "nodePadding"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "PartialRectTuple"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "alignOrigin"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "AlignOrigin"
+              }
+            },
+            "optional": true,
+            "computed": false,
+            "description": "根据节点什么位置进行对齐，支持关键字、百分比和比例值。\n第一个值为 x 轴，第二个值为 y 轴。\n使用数字时，表示相对于节点的宽高的比例。\n\n注意，节点宽高将包含 nodePadding 的值。"
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "LayoutSnapOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "AlignOrigin",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "x",
+              "optional": false,
+              "elementType": {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "y",
+              "optional": false,
+              "elementType": {
+                "type": "union",
+                "types": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "number"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "LayoutOptionsForce",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "collide"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ForceCollideOptions"
+                  }
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseLayoutOptions"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ForceCollideOptions",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "radiusDiff"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strength"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "iterations"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "SizeTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "width",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "height",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "NodeBrickConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseSingleBrickConf"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "EdgeLineConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "if"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "keyword",
+                  "value": "boolean"
+                },
+                {
+                  "type": "keyword",
+                  "value": "null"
+                }
+              ]
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseEdgeLineConf"
+            }
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "BaseEdgeLineConf",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "curveType"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "CurveType"
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dashed"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "dotted"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "strokeColor"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "interactStrokeWidth"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "parallelGap"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "markers"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "LineMarkerConf"
+                }
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "showStartArrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false,
+            "description": "已废弃，使用markers代替，配置了对应的箭头测则显示"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "showEndArrow"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false,
+            "description": "已废弃"
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "animate"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "LineAnimate"
+              }
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "LineAnimate",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useAnimate"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "duration"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "ActiveTarget",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfSingular"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfMulti"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "typeAlias",
+        "name": "ActiveTargetOfSingular",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfNode"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfEdge"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "ActiveTargetOfDecorator"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfNode",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "node"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfEdge",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "edge"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "source"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "target"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfDecorator",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "decorator"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "id"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeId"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ActiveTargetOfMulti",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "type"
+            },
+            "annotation": {
+              "type": "jsLiteral",
+              "value": "multi"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "targets"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "ActiveTargetOfSingular"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "RangeTuple",
+        "annotation": {
+          "type": "tuple",
+          "elementTypes": [
+            {
+              "type": "namedTupleMember",
+              "label": "min",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            },
+            {
+              "type": "namedTupleMember",
+              "label": "max",
+              "optional": false,
+              "elementType": {
+                "type": "keyword",
+                "value": "number"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "interface",
+        "name": "CellContextMenuDetail",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "cell"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Cell"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clientX"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "clientY"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "Cell",
+        "annotation": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "NodeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "EdgeCell"
+              }
+            },
+            {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "DecoratorCell"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

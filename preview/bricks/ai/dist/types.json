@@ -1,0 +1,865 @@
+{
+  "ai.chat-agent": {
+    "properties": [
+      {
+        "name": "agentId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "robotId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "conversationId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "alwaysUseNewConversation",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "messages.update",
+        "detail": {
+          "annotation": {
+            "type": "array",
+            "elementType": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Message"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "busy.change",
+        "detail": {
+          "annotation": {
+            "type": "keyword",
+            "value": "boolean"
+          }
+        }
+      },
+      {
+        "name": "conversationId.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "null"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "postMessage",
+        "params": [
+          {
+            "name": "content",
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            }
+          }
+        ],
+        "returns": {}
+      },
+      {
+        "name": "sendRequest",
+        "params": [
+          {
+            "name": "leadingMessages",
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "BaseMessage"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "url",
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            }
+          },
+          {
+            "name": "options",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Options"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "MessageChunk"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "returns": {}
+      },
+      {
+        "name": "lowLevelSendRequest",
+        "params": [
+          {
+            "name": "leadingMessages",
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "BaseMessage"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "url",
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            }
+          },
+          {
+            "name": "options",
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Options"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "reference",
+                    "typeName": {
+                      "type": "identifier",
+                      "name": "MessageChunk"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "returns": {}
+      },
+      {
+        "name": "newConversation",
+        "params": [],
+        "returns": {}
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "BaseMessage",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "role"
+            },
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "jsLiteral",
+                  "value": "user"
+                },
+                {
+                  "type": "jsLiteral",
+                  "value": "assistant"
+                }
+              ]
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "content"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "MessageChunk",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "delta"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "BaseMessage"
+              }
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "conversationId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "partial"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "Message",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "number"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "partial"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "failed"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          }
+        ],
+        "extends": [
+          {
+            "type": "expressionWithTypeArguments",
+            "expression": {
+              "type": "identifier",
+              "name": "BaseMessage"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ai.chat-view": {
+    "properties": [
+      {
+        "name": "sessionId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "agentId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "robotId",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "answerLanguage",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "debug",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showAvatar",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showSessionList",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "readonly",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showLike",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "showShare",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "useSpiltWord",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      },
+      {
+        "name": "enterInterval",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "quickAnswerConfig",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "QuickAnswerConfig"
+          }
+        }
+      },
+      {
+        "name": "snippetList",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "reference",
+            "typeName": {
+              "type": "identifier",
+              "name": "snippet"
+            }
+          }
+        }
+      },
+      {
+        "name": "commandBricks",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "commandBrickConf"
+          }
+        }
+      },
+      {
+        "name": "inputToolbarBrick",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "InputToolbarBrick"
+          }
+        }
+      },
+      {
+        "name": "showToolCalls",
+        "annotation": {
+          "type": "keyword",
+          "value": "boolean"
+        }
+      }
+    ],
+    "events": [
+      {
+        "name": "sessionId.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "undefined"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "robotId.change",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "undefined"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "qa.finish",
+        "detail": {
+          "annotation": {
+            "type": "union",
+            "types": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "keyword",
+                "value": "undefined"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "methods": [
+      {
+        "name": "insertQuestion",
+        "params": [
+          {
+            "name": "args",
+            "annotation": {
+              "type": "typeLiteral",
+              "members": [
+                {
+                  "type": "propertySignature",
+                  "key": {
+                    "type": "identifier",
+                    "name": "value"
+                  },
+                  "annotation": {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  "computed": false
+                }
+              ]
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      },
+      {
+        "name": "sendMsg",
+        "params": [
+          {
+            "name": "msg",
+            "annotation": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "keyword",
+                  "value": "string"
+                },
+                {
+                  "type": "reference",
+                  "typeName": {
+                    "type": "identifier",
+                    "name": "ChatBody"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "returns": {
+          "annotation": {
+            "type": "keyword",
+            "value": "void"
+          }
+        }
+      }
+    ],
+    "types": [
+      {
+        "type": "interface",
+        "name": "QuickAnswerConfig",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "tip"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "list"
+            },
+            "annotation": {
+              "type": "array",
+              "elementType": {
+                "type": "reference",
+                "typeName": {
+                  "type": "identifier",
+                  "name": "AgentDetailItem"
+                }
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "snippet",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "content"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "typeAlias",
+        "name": "commandBrickConf",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "Record"
+          },
+          "typeParameters": {
+            "type": "typeParameterInstantiation",
+            "params": [
+              {
+                "type": "keyword",
+                "value": "string"
+              },
+              {
+                "type": "typeLiteral",
+                "members": [
+                  {
+                    "type": "propertySignature",
+                    "key": {
+                      "type": "identifier",
+                      "name": "useBrick"
+                    },
+                    "annotation": {
+                      "type": "reference",
+                      "typeName": {
+                        "type": "identifier",
+                        "name": "UseBrickConf"
+                      }
+                    },
+                    "computed": false
+                  },
+                  {
+                    "type": "propertySignature",
+                    "key": {
+                      "type": "identifier",
+                      "name": "showOriginData"
+                    },
+                    "annotation": {
+                      "type": "keyword",
+                      "value": "boolean"
+                    },
+                    "optional": true,
+                    "computed": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "interface",
+        "name": "InputToolbarBrick",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "useBrick"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "UseBrickConf"
+              }
+            },
+            "computed": false
+          }
+        ]
+      },
+      {
+        "type": "interface",
+        "name": "ChatBody",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "agentId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "conversationId"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "input"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "stream"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "boolean"
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "config"
+            },
+            "annotation": {
+              "type": "reference",
+              "typeName": {
+                "type": "identifier",
+                "name": "Record"
+              },
+              "typeParameters": {
+                "type": "typeParameterInstantiation",
+                "params": [
+                  {
+                    "type": "keyword",
+                    "value": "string"
+                  },
+                  {
+                    "type": "keyword",
+                    "value": "any"
+                  }
+                ]
+              }
+            },
+            "optional": true,
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "k",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
