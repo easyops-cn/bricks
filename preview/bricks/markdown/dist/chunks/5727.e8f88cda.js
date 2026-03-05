@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_markdown=globalThis.webpackChunk_next_bricks_markdown||[]).push([[5727],{45727:(r,s,a)=>{a.d(s,{diagram:()=>n});var e=a(63208),t=(a(97476),a(1627),a(95994),a(21535),a(54386),a(27057),a(84857),a(12880),a(97996),a(60347),a(65323),a(58084)),n={parser:e._$,get db(){return new e.NM},renderer:e.Lh,styles:e.tM,init:(0,t.K2)((r=>{r.class||(r.class={}),r.class.arrowMarkerAbsolute=r.arrowMarkerAbsolute}),"init")}}}]);
+//# sourceMappingURL=5727.e8f88cda.js.map

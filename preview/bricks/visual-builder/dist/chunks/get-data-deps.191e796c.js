@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_visual_builder=globalThis.webpackChunk_next_bricks_visual_builder||[]).push([[281],{9718:(e,s,t)=>{t.r(s),t.d(s,{getDataDependency:()=>r});var a=t(40410),l=t(95188);function r(e,s){const t=new Map;for(const a of e){const e=(0,l.collectMemberUsage)([a.if,a.value,a.resolve],s);t.set(a,e)}return t}customElements.define("visual-builder.get-data-deps",(0,a.createProviderClass)(r))}}]);
+//# sourceMappingURL=get-data-deps.191e796c.js.map

@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_ai_portal=globalThis.webpackChunk_next_bricks_ai_portal||[]).push([[5944],{93757:(t,a,e)=>{e.r(a),e.d(a,{getChatCommand:()=>i,setChatCommand:()=>s});var n=e(40410);let r=null;function s(t){r=t}function i(){return r}customElements.define("ai-portal.set-chat-command",(0,n.createProviderClass)(s))}}]);
+//# sourceMappingURL=set-chat-command.182747cc.js.map

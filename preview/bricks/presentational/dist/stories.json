@@ -1,0 +1,607 @@
+[
+  {
+    "storyId": "eo-alert",
+    "text": {
+      "en": "Alert",
+      "zh": "警告提示"
+    },
+    "description": {
+      "en": "alert content, configurable with color type, description and showIcon",
+      "zh": "警告提示，可配置颜色类型，描述和是否显示图标"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-alert.02683385378f7c3fae6a.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-alert[success-tips]",
+        "bricks": [
+          {
+            "brick": "eo-alert",
+            "properties": {
+              "type": "success",
+              "textContent": "tool executed successfully"
+            }
+          }
+        ],
+        "title": {
+          "en": "Success alert",
+          "zh": "成功提示"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-alert[success-tips].a52aaddac794ed2df91a.svg"
+      },
+      {
+        "snippetId": "eo-alert[info-tips-with-icon]",
+        "bricks": [
+          {
+            "brick": "eo-alert",
+            "properties": {
+              "type": "info",
+              "showIcon": true,
+              "textContent": "tool executed successfully"
+            }
+          }
+        ],
+        "title": {
+          "en": "Info alert with icon",
+          "zh": "带图标正常提示"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-alert[info-tips-with-icon].3a210c979febafb5c24f.svg"
+      },
+      {
+        "snippetId": "eo-alert[warn-tips-with-close]",
+        "message": {
+          "en": "",
+          "zh": "当 `closable` 为true，`localStorageKey` 不为空时，以页面 url 为命名空间，控制提示在当前路径关闭后不再显示。可通过设置 `stripLocalStorageUrlSuffix` 为true关闭url命名空间，使提示的关闭全局有效"
+        },
+        "bricks": [
+          {
+            "brick": "eo-alert",
+            "properties": {
+              "type": "warning",
+              "textContent": "Today is Tuesday",
+              "closable": true,
+              "showIcon": true,
+              "localStorageKey": ""
+            }
+          }
+        ],
+        "title": {
+          "en": "Warn Alert with close",
+          "zh": "警告提示带关闭按钮"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-alert[warn-tips-with-close].7747c1e8d98ff2061dab.svg"
+      },
+      {
+        "snippetId": "eo-alert[with-slot]",
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-alert[with-slot].3812fee6cf496c2ae326.svg",
+        "message": {
+          "en": "",
+          "zh": "本示例额外使用了通过target改变具体构件属性的知识点"
+        },
+        "title": {
+          "zh": "带插槽提示",
+          "en": "Alert with slots"
+        },
+        "bricks": [
+          {
+            "brick": "eo-alert",
+            "properties": {
+              "type": "info",
+              "showIcon": true,
+              "message": "Today is Tuesday"
+            },
+            "slots": {
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "slots": {
+                      "": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "strong",
+                            "properties": {
+                              "textContent": "Temperature: "
+                            }
+                          },
+                          {
+                            "brick": "span",
+                            "properties": {
+                              "textContent": "24°C"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "slots": {
+                      "": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "strong",
+                            "properties": {
+                              "textContent": "Weather: "
+                            }
+                          },
+                          {
+                            "brick": "span",
+                            "properties": {
+                              "textContent": "not bad"
+                            }
+                          },
+                          {
+                            "brick": "eo-button",
+                            "properties": {
+                              "style": {
+                                "margin": "12px"
+                              },
+                              "textContent": "hello-button",
+                              "icon": {
+                                "icon": "search",
+                                "lib": "antd"
+                              },
+                              "type": "primary"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-card-item",
+    "text": {
+      "en": "Information Display Card",
+      "zh": "信息展示卡片"
+    },
+    "description": {
+      "en": "General card item",
+      "zh": "通用卡片项"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-card-item.14cef77a449c10e33790.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-card-item[normal]",
+        "title": {
+          "zh": "通用卡片项",
+          "en": ""
+        },
+        "message": {
+          "zh": "可以配置 `expanded-area-1`,`expanded-area-2` 等操作区的插槽。适用场景：用户可凭借图标颜色来区分不同卡片，图标具有分类意义（区分类型／状态）而存在。",
+          "en": ""
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-card-item[normal].070e2c69590888ceb686.svg",
+        "bricks": [
+          {
+            "brick": "eo-card-item",
+            "properties": {
+              "cardTitle": "资源监控微应用",
+              "description": "资源监控微应用相关前后台",
+              "url": "/#1",
+              "avatar": {
+                "imgSrc": "bricks/presentational/dist/stories-assets/card-blue.b720359410357c004700.svg"
+              },
+              "hasHeader": true,
+              "auxiliaryText": "头部提示文本",
+              "actions": [
+                {
+                  "text": "编辑",
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "edit"
+                  },
+                  "isDropdown": false
+                },
+                {
+                  "text": "删除",
+                  "isDropdown": true,
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "delete"
+                  }
+                }
+              ]
+            },
+            "slots": {
+              "expanded-area-1": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-tag-list",
+                    "properties": {
+                      "list": [
+                        {
+                          "key": "1",
+                          "text": "IT资源管理"
+                        },
+                        {
+                          "key": "2",
+                          "text": "资源套餐"
+                        },
+                        {
+                          "key": "3",
+                          "text": "实例管理"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "expanded-area-2": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "textContent": "INS",
+                      "icon": {
+                        "lib": "easyops",
+                        "category": "default",
+                        "icon": "card-diff",
+                        "color": "rgb(157, 168, 184)"
+                      }
+                    }
+                  },
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "textContent": "TASK",
+                      "icon": {
+                        "lib": "easyops",
+                        "category": "default",
+                        "icon": "card-task-delivery",
+                        "color": "rgb(157, 168, 184)"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-code-display",
+    "text": {
+      "en": "Code Display",
+      "zh": "代码展示"
+    },
+    "description": {
+      "en": "suport Shell、Python、CSS、HTML highlight",
+      "zh": "支持Shell、Python、CSS、HTML等语法高亮"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-code-display.d3eed656cefe2e4f7b5b.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-code-display",
+            "properties": {
+              "showLineNumber": true,
+              "language": "js",
+              "value": "const a = 1;"
+            }
+          }
+        ],
+        "snippetId": "eo-code-display[js]",
+        "title": {
+          "en": "JS Code Display",
+          "zh": "JS代码展示"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-code-display[js].69aa084fd43383c2645e.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-code-display",
+            "properties": {
+              "language": "css",
+              "value": ".container{ \n  background: #ccc;\n  font-size: 16px;\n  line-height: 20px;\n  position: relative;\n}",
+              "minLines": 3,
+              "maxLines": 8
+            }
+          }
+        ],
+        "snippetId": "eo-code-display[css]",
+        "title": {
+          "en": "CSS Code Display",
+          "zh": "CSS代码展示"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-code-display[css].328987c856ec720741d9.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-descriptions",
+    "text": {
+      "en": "Descriptions",
+      "zh": "描述列表"
+    },
+    "description": {
+      "en": "",
+      "zh": "常用于概要信息的描述，2~3列"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-descriptions.965e13a5fc9f585c6f5b.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-descriptions[normal]",
+        "title": {
+          "zh": "描述列表",
+          "en": "Description list"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-descriptions[normal].491f209ddcb9d51a2609.svg",
+        "bricks": [
+          {
+            "brick": "eo-descriptions",
+            "properties": {
+              "list": [
+                {
+                  "text": "Lynette",
+                  "label": "UserName"
+                },
+                {
+                  "text": "18",
+                  "label": "Age"
+                },
+                {
+                  "label": "Tags",
+                  "useBrick": {
+                    "brick": "eo-tag-list",
+                    "properties": {
+                      "list": "<% DATA.tags %>",
+                      "configProps": {
+                        "color": "orange"
+                      },
+                      "showCard": false
+                    }
+                  }
+                }
+              ],
+              "descriptionTitle": "User Info",
+              "dataSource": {
+                "tags": [
+                  "user",
+                  "admin"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-divider",
+    "text": {
+      "en": "divider",
+      "zh": "分割线"
+    },
+    "description": {
+      "en": "divider",
+      "zh": "分割线"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-divider.271f77d94f33b6150548.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-divider[normal]",
+        "title": {
+          "zh": "Basic divider",
+          "en": "基础分割线"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-divider[normal].db6d6df633260b64a65a.svg",
+        "bricks": [
+          {
+            "brick": "eo-divider",
+            "properties": {
+              "textContent": "分割线",
+              "orientation": "center"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-humanize-time",
+    "text": {
+      "en": "humanize time",
+      "zh": "人性化时间展示"
+    },
+    "description": {
+      "en": "1h ago",
+      "zh": "如：3天前、过去2小时等。也可显示消耗时间，如1小时2分钟，也可显示为链接"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-humanize-time.56238da7262dabf6b5ff.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-humanize-time[full]",
+        "title": {
+          "en": "Humanize time(full)",
+          "zh": "人性化时间展示(完整)"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-humanize-time[full].2984b25c72dbf29328ea.svg",
+        "bricks": [
+          {
+            "brick": "eo-humanize-time",
+            "properties": {
+              "value": 1571017058,
+              "formatter": "full"
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-humanize-time[accurate]",
+        "title": {
+          "en": "Humanize time(accurate)",
+          "zh": "人性化时间展示(精确)"
+        },
+        "bricks": [
+          {
+            "brick": "eo-humanize-time",
+            "properties": {
+              "value": 1571017058,
+              "formatter": "accurate",
+              "isCostTime": true
+            }
+          }
+        ],
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-humanize-time[accurate].b5cf2308d9eddfbfab23.svg"
+      },
+      {
+        "snippetId": "eo-humanize-time[relative]",
+        "title": {
+          "en": "Humanize time(relative)",
+          "zh": "人性化时间展示(相对)"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-humanize-time[relative].578ba8d01cdb55c1d488.svg",
+        "bricks": [
+          {
+            "brick": "eo-humanize-time",
+            "properties": {
+              "value": 1571017058000,
+              "isMillisecond": true,
+              "formatter": "relative"
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-humanize-time[cost]",
+        "title": {
+          "en": "Humanize time(cost)",
+          "zh": "人性化时间展示(耗时)"
+        },
+        "bricks": [
+          {
+            "brick": "eo-humanize-time",
+            "properties": {
+              "value": 1000,
+              "formatter": "relative",
+              "isCostTime": true
+            }
+          }
+        ],
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-humanize-time[cost].76859afe51987e3204a4.svg"
+      },
+      {
+        "snippetId": "eo-humanize-time[format]",
+        "title": {
+          "en": "Humanize time(format)",
+          "zh": "人性化时间展示(格式化)"
+        },
+        "bricks": [
+          {
+            "brick": "eo-humanize-time",
+            "properties": {
+              "value": "2020-02-27 16:36",
+              "inputFormat": "YYYY-MM-DD",
+              "outputFormat": "YYYY-MM-DD"
+            }
+          }
+        ],
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-humanize-time[format].8c1180b88e67a51bee90.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-pagination",
+    "text": {
+      "en": "General pagination",
+      "zh": "分页"
+    },
+    "description": {
+      "en": "General pagination brick",
+      "zh": "通用分页构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/presentational/dist/stories-assets/eo-pagination.496479d51cfcd0fabc2b.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-pagination[normal]",
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-pagination[normal].af14b46786ad85369798.svg",
+        "title": {
+          "en": "Basic pagination",
+          "zh": "基础分页"
+        },
+        "bricks": [
+          {
+            "brick": "eo-pagination",
+            "properties": {
+              "page": 1,
+              "pageSize": 10,
+              "total": 100,
+              "dataset": {
+                "testid": "basic-usage-pagination-demo"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-statistics-card",
+    "text": {
+      "en": "Statistic Card",
+      "zh": "统计卡片"
+    },
+    "description": {
+      "en": "Card showing statistics, usually used on the homepage",
+      "zh": "展示统计数据的卡片，一般在首页使用"
+    },
+    "icon": {
+      "lib": "fa",
+      "icon": "info"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-statistics-card[normal]",
+        "title": {
+          "en": "Basic statistics card",
+          "zh": "基础统计卡片"
+        },
+        "thumbnail": "bricks/presentational/dist/stories-assets/eo-statistic-card[normal].a655def2da5d2b06522d.svg",
+        "bricks": [
+          {
+            "brick": "eo-statistics-card",
+            "properties": {
+              "cardTitle": "今日构建",
+              "value": 99,
+              "icon": {
+                "lib": "fa",
+                "icon": "clock"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

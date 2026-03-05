@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_basic=globalThis.webpackChunk_next_bricks_basic||[]).push([[439],{7787:(e,s,i)=>{i.r(s),i.d(s,{providerSetTimeout:()=>r});var t=i(9523);function r(e,s){return new Promise((i=>{setTimeout((()=>{i(s)}),e)}))}customElements.define("basic.set-timeout",(0,t.createProviderClass)(r))}}]);
+//# sourceMappingURL=set-timeout.e542ec8a.js.map

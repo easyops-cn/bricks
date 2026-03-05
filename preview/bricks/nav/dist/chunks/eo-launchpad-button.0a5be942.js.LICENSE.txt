@@ -1,0 +1,5 @@
+/**! @contract easyops.api.user_service.launchpad.CreateCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.DeleteCollection@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.ListCollection@1.0.0 */

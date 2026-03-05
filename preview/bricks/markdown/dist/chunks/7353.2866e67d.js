@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_markdown=globalThis.webpackChunk_next_bricks_markdown||[]).push([[7353],{17353:(e,a,k)=>{k.d(a,{createInfoServices:()=>r.v});var r=k(52017);k(75249)}}]);

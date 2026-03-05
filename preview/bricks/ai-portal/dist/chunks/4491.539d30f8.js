@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_ai_portal=globalThis.webpackChunk_next_bricks_ai_portal||[]).push([[4491],{94491:(a,e,r)=>{r.d(e,{createTreemapServices:()=>i.d});var i=r(56301);r(75249)}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_markdown=globalThis.webpackChunk_next_bricks_markdown||[]).push([[6029],{6029:(e,a,k)=>{k.d(a,{createPacketServices:()=>c.$});var c=k(63348);k(75249)}}]);

@@ -1,0 +1,19 @@
+/**! @contract easyops.api.llm.elevo.ListElevoConversations@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_object.ImportServiceObjectInstances@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_object.ListServiceObjectInstances@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_object.ListServiceObjects@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_object.UpdateServiceObjectInstance@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_space.CreateActivityLog@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_space.GetSpaceSchema@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_space.ImportSpaceSchema@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_space.ListActivityLogs@1.0.0 */
+
+/**! @contract easyops.api.llm.elevo_space.ListServiceFlow@1.0.0 */

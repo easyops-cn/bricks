@@ -1,0 +1,1820 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/ai-portal",
+  "name": "ai-portal",
+  "bricks": [
+    {
+      "name": "ai-portal.cruise-canvas",
+      "properties": [
+        {
+          "name": "conversationId",
+          "type": "string"
+        },
+        {
+          "name": "initialRequest",
+          "description": "初始请求数据。仅初始设置有效。",
+          "attribute": false,
+          "type": "RequestStore | null"
+        },
+        {
+          "name": "replay",
+          "description": "是否启用回放。仅初始设置有效。",
+          "type": "boolean"
+        },
+        {
+          "name": "replayDelay",
+          "description": "设置回放时消息之间的时间间隔，单位为秒。仅初始设置有效。",
+          "default": "2",
+          "type": "number"
+        },
+        {
+          "name": "supports",
+          "attribute": false,
+          "type": "Record<string, boolean>"
+        },
+        {
+          "name": "showHiddenJobs",
+          "type": "boolean"
+        },
+        {
+          "name": "showHumanActions",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedback",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedbackAfterFailed",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedbackOnView",
+          "type": "boolean"
+        },
+        {
+          "name": "showUiSwitch",
+          "type": "boolean"
+        },
+        {
+          "name": "hideMermaid",
+          "type": "boolean"
+        },
+        {
+          "name": "showJsxEditor",
+          "type": "boolean"
+        },
+        {
+          "name": "previewUrlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "showCases",
+          "attribute": false,
+          "type": "ShowCaseType[]"
+        },
+        {
+          "name": "exampleProjects",
+          "attribute": false,
+          "type": "ExampleProject[]"
+        },
+        {
+          "name": "tryItOutUrl",
+          "type": "string"
+        },
+        {
+          "name": "separateInstructions",
+          "type": "boolean"
+        },
+        {
+          "name": "aiEmployees",
+          "attribute": false,
+          "type": "AIEmployee[]"
+        },
+        {
+          "name": "commands",
+          "attribute": false,
+          "type": "Command[]"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        }
+      ],
+      "events": [
+        {
+          "name": "share",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "terminate",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "feedback.submit",
+          "detail": {
+            "type": "FeedbackDetail"
+          }
+        },
+        {
+          "name": "feedback.on.view",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "ui.switch",
+          "detail": {
+            "type": "\"chat\""
+          }
+        },
+        {
+          "name": "detail.change",
+          "detail": {
+            "type": "ConversationDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "resumed",
+          "params": []
+        },
+        {
+          "name": "feedbackSubmitDone",
+          "params": []
+        },
+        {
+          "name": "feedbackSubmitFailed",
+          "params": []
+        },
+        {
+          "name": "feedbackOnViewDone",
+          "params": [
+            {
+              "name": "viewId",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ai-portal.cruise-canvas`"
+    },
+    {
+      "name": "ai-portal.chat-box",
+      "properties": [
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "autoFocus",
+          "type": "boolean"
+        },
+        {
+          "name": "aiEmployees",
+          "attribute": false,
+          "type": "AIEmployee[]"
+        },
+        {
+          "name": "commands",
+          "attribute": false,
+          "type": "Command[]"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        }
+      ],
+      "events": [
+        {
+          "name": "message.submit",
+          "description": "",
+          "deprecated": "Use `chat.submit` event instead",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "chat.submit",
+          "detail": {
+            "type": "ChatPayload"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "setValue",
+          "params": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "getValue",
+          "params": []
+        },
+        {
+          "name": "focusOnInput",
+          "params": []
+        }
+      ],
+      "parts": [],
+      "description": "大型聊天输入框，用于首页"
+    },
+    {
+      "name": "ai-portal.home-container",
+      "properties": [
+        {
+          "name": "sticky",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.home-container`"
+    },
+    {
+      "name": "ai-portal.stat-with-mini-chart",
+      "properties": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "description": "",
+          "default": "\"medium\"",
+          "type": "\"medium\" | \"small\""
+        },
+        {
+          "name": "lineColor",
+          "description": "",
+          "default": "\"var(--color-brand)\"",
+          "type": "string"
+        },
+        {
+          "name": "showArea",
+          "type": "boolean"
+        },
+        {
+          "name": "min",
+          "description": "Specify the minimum value of the y-axis.\nIf not specified, the minimum value will be calculated from the data.",
+          "type": "number"
+        },
+        {
+          "name": "max",
+          "description": "Specify the maximum value of the y-axis.\nIf not specified, the maximum value will be calculated from the data.",
+          "type": "number"
+        },
+        {
+          "name": "xField",
+          "description": "",
+          "default": "\"0\"",
+          "type": "string"
+        },
+        {
+          "name": "yField",
+          "description": "",
+          "default": "\"1\"",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "attribute": false,
+          "type": "Record<string, number>[]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.stat-with-mini-chart`"
+    },
+    {
+      "name": "ai-portal.icon-button",
+      "properties": [
+        {
+          "name": "icon",
+          "attribute": false,
+          "type": "(GeneralIconProps & HTMLAttributes<GeneralIcon>)"
+        },
+        {
+          "name": "tooltip",
+          "type": "string"
+        },
+        {
+          "name": "tooltipHoist",
+          "type": "boolean"
+        },
+        {
+          "name": "active",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "variant",
+          "type": "IconButtonVariant"
+        },
+        {
+          "name": "reduceIconSize",
+          "description": "是否缩小图标尺寸（部分 easyops 图标过大）",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.icon-button`"
+    },
+    {
+      "name": "ai-portal.elevo-sidebar",
+      "properties": [
+        {
+          "name": "userInstanceId",
+          "type": "string"
+        },
+        {
+          "name": "behavior",
+          "type": "\"default\" | \"drawer\""
+        },
+        {
+          "name": "logoUrl",
+          "type": "string"
+        },
+        {
+          "name": "newChatUrl",
+          "type": "string"
+        },
+        {
+          "name": "newChatLinkWhenCollapsed",
+          "type": "boolean"
+        },
+        {
+          "name": "historyUrlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "historyActions",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "showProjects",
+          "type": "boolean"
+        },
+        {
+          "name": "projectUrlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "projectActions",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "personalActions",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "links",
+          "attribute": false,
+          "type": "SidebarLink[]"
+        },
+        {
+          "name": "canAddProject",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "myLinks",
+          "attribute": false,
+          "type": "SidebarLink[]"
+        },
+        {
+          "name": "scope",
+          "description": "",
+          "default": "\"default\"",
+          "type": "\"default\" | \"space\""
+        },
+        {
+          "name": "spaceNav",
+          "attribute": false,
+          "type": "SpaceNavProps"
+        }
+      ],
+      "events": [
+        {
+          "name": "logout",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "action.click",
+          "description": "点击对话历史操作按钮时触发",
+          "detail": {
+            "type": "ActionClickDetail"
+          }
+        },
+        {
+          "name": "project.action.click",
+          "description": "点击项目操作按钮时触发",
+          "detail": {
+            "type": "ProjectActionClickDetail"
+          }
+        },
+        {
+          "name": "add.project",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "add.serviceflow",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "personal.action.click",
+          "description": "点击个人操作按钮时触发",
+          "detail": {
+            "type": "PersonalActionClickDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "pullHistory",
+          "params": [
+            {
+              "name": "delay",
+              "description": "Delay in milliseconds before pulling the latest chat history.",
+              "type": "number"
+            }
+          ],
+          "description": "",
+          "returns": {}
+        },
+        {
+          "name": "open",
+          "params": []
+        },
+        {
+          "name": "close",
+          "params": []
+        },
+        {
+          "name": "removeProject",
+          "params": [
+            {
+              "name": "projectId",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "addProject",
+          "params": [
+            {
+              "name": "project",
+              "type": "Project"
+            }
+          ]
+        },
+        {
+          "name": "moveConversation",
+          "params": [
+            {
+              "name": "conversationId",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ai-portal.elevo-sidebar`"
+    },
+    {
+      "name": "ai-portal.show-cases",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "ShowCaseType[]"
+        },
+        {
+          "name": "limit",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.show-cases`"
+    },
+    {
+      "name": "ai-portal.mcp-tools",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "McpTool[]"
+        },
+        {
+          "name": "stickyTop",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.mcp-tools`"
+    },
+    {
+      "name": "ai-portal.chat-stream",
+      "properties": [
+        {
+          "name": "conversationId",
+          "type": "string"
+        },
+        {
+          "name": "initialRequest",
+          "description": "初始请求数据。仅初始设置有效。",
+          "attribute": false,
+          "type": "RequestStore | null"
+        },
+        {
+          "name": "replay",
+          "description": "是否启用回放。仅初始设置有效。",
+          "type": "boolean"
+        },
+        {
+          "name": "replayDelay",
+          "description": "设置回放时消息之间的时间间隔，单位为秒。仅初始设置有效。",
+          "default": "2",
+          "type": "number"
+        },
+        {
+          "name": "supports",
+          "attribute": false,
+          "type": "Record<string, boolean>"
+        },
+        {
+          "name": "showHumanActions",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedback",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedbackAfterFailed",
+          "type": "boolean"
+        },
+        {
+          "name": "showFeedbackOnView",
+          "type": "boolean"
+        },
+        {
+          "name": "showUiSwitch",
+          "type": "boolean"
+        },
+        {
+          "name": "hideMermaid",
+          "type": "boolean"
+        },
+        {
+          "name": "previewUrlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "showCases",
+          "attribute": false,
+          "type": "ShowCaseType[]"
+        },
+        {
+          "name": "exampleProjects",
+          "attribute": false,
+          "type": "ExampleProject[]"
+        },
+        {
+          "name": "tryItOutUrl",
+          "type": "string"
+        },
+        {
+          "name": "aiEmployees",
+          "attribute": false,
+          "type": "AIEmployee[]"
+        },
+        {
+          "name": "commands",
+          "attribute": false,
+          "type": "Command[]"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        }
+      ],
+      "events": [
+        {
+          "name": "share",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "terminate",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "feedback.submit",
+          "detail": {
+            "type": "FeedbackDetail"
+          }
+        },
+        {
+          "name": "feedback.on.view",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "ui.switch",
+          "detail": {
+            "type": "\"canvas\""
+          }
+        },
+        {
+          "name": "detail.change",
+          "detail": {
+            "type": "ConversationDetail"
+          }
+        },
+        {
+          "name": "split.change",
+          "detail": {
+            "type": "boolean"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "resumed",
+          "params": []
+        },
+        {
+          "name": "feedbackSubmitDone",
+          "params": []
+        },
+        {
+          "name": "feedbackSubmitFailed",
+          "params": []
+        },
+        {
+          "name": "feedbackOnViewDone",
+          "params": [
+            {
+              "name": "viewId",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ai-portal.chat-stream`"
+    },
+    {
+      "name": "ai-portal.ai-employees",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "Employee[]"
+        },
+        {
+          "name": "industries",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "urlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "stickyTop",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.ai-employees`"
+    },
+    {
+      "name": "ai-portal.ai-agents",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "Agent[]"
+        },
+        {
+          "name": "urlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "withContainer",
+          "description": "",
+          "deprecated": true,
+          "default": "true"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.ai-agents`"
+    },
+    {
+      "name": "ai-portal.page-container",
+      "properties": [
+        {
+          "name": "pageTitle",
+          "type": "string"
+        },
+        {
+          "name": "breadcrumbs",
+          "attribute": false,
+          "type": "Breadcrumb[]"
+        },
+        {
+          "name": "size",
+          "type": "\"medium\" | \"small\" | \"full\""
+        },
+        {
+          "name": "variant",
+          "type": "\"default\" | \"form\""
+        },
+        {
+          "name": "sticky",
+          "type": "boolean"
+        },
+        {
+          "name": "textContent",
+          "type": "string",
+          "description": "文本内容"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容"
+        },
+        {
+          "name": "toolbar",
+          "description": "工具栏"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.page-container`"
+    },
+    {
+      "name": "ai-portal.tab-list",
+      "properties": [
+        {
+          "name": "tabs",
+          "attribute": false,
+          "type": "Tab[]"
+        },
+        {
+          "name": "activeTab",
+          "attribute": false,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "tab.click",
+          "detail": {
+            "type": "Tab"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [
+        {
+          "name": "tabs",
+          "description": "The tab list container"
+        },
+        {
+          "name": "tab",
+          "description": "The individual tab"
+        }
+      ],
+      "description": "构件 `ai-portal.tab-list`"
+    },
+    {
+      "name": "ai-portal.dropdown-select",
+      "properties": [
+        {
+          "name": "value",
+          "type": "string"
+        },
+        {
+          "name": "options",
+          "attribute": false,
+          "type": "DropdownOptions[]"
+        },
+        {
+          "name": "labelMaxWidth",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "loading",
+          "type": "boolean"
+        },
+        {
+          "name": "searchPlaceholder",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "dropdownContentStyle",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "dropdownMaxWidth",
+          "description": "",
+          "default": "\"500px\"",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "showSearch",
+          "description": "是否展示搜索框",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "DropdownOptions"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.dropdown-select`"
+    },
+    {
+      "name": "ai-portal.preview-container",
+      "properties": [
+        {
+          "name": "source",
+          "attribute": false,
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.preview-container`"
+    },
+    {
+      "name": "ai-portal.action-buttons",
+      "properties": [
+        {
+          "name": "items",
+          "attribute": false,
+          "type": "ActionItem[]"
+        },
+        {
+          "name": "activeKey",
+          "type": "string | null"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "ActionItem | null"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.action-buttons`"
+    },
+    {
+      "name": "ai-portal.project-conversations",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "Conversation[]"
+        },
+        {
+          "name": "urlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "actions",
+          "attribute": false,
+          "type": "ActionType[]"
+        },
+        {
+          "name": "goals",
+          "attribute": false,
+          "type": "Goal[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "goal.click",
+          "detail": {
+            "type": "Conversation"
+          }
+        },
+        {
+          "name": "action.click",
+          "detail": {
+            "type": "ActionClickDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.project-conversations`"
+    },
+    {
+      "name": "ai-portal.project-knowledges",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "Knowledge[]"
+        },
+        {
+          "name": "urlTemplate",
+          "type": "string"
+        },
+        {
+          "name": "actions",
+          "attribute": false,
+          "type": "ActionType[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "action.click",
+          "detail": {
+            "type": "ActionClickDetail"
+          }
+        },
+        {
+          "name": "item.click",
+          "detail": {
+            "type": "Knowledge"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.project-knowledges`"
+    },
+    {
+      "name": "ai-portal.goal-card-list",
+      "properties": [
+        {
+          "name": "goalList",
+          "attribute": false,
+          "type": "GoalItem[]"
+        },
+        {
+          "name": "cardStyle",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "activeKey",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "item.click",
+          "detail": {
+            "type": "GoalItem"
+          }
+        },
+        {
+          "name": "item.status.change",
+          "detail": {
+            "type": "GoalItem"
+          }
+        },
+        {
+          "name": "item.title.change",
+          "detail": {
+            "type": "GoalItem"
+          }
+        },
+        {
+          "name": "item.new.chat",
+          "detail": {
+            "type": "GoalItem"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "appendChildDone",
+          "params": [
+            {
+              "name": "pendingId",
+              "type": "string"
+            },
+            {
+              "name": "newItem",
+              "type": "GoalItem"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ai-portal.goal-card-list`"
+    },
+    {
+      "name": "ai-portal.activity-timeline",
+      "properties": [
+        {
+          "name": "list",
+          "attribute": false,
+          "type": "Activity[]"
+        },
+        {
+          "name": "chatUrlTemplate",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.activity-timeline`"
+    },
+    {
+      "name": "ai-portal.chat-input",
+      "properties": [
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "autoFocus",
+          "type": "boolean"
+        },
+        {
+          "name": "submitDisabled",
+          "type": "boolean"
+        },
+        {
+          "name": "supportsTerminate",
+          "type": "boolean"
+        },
+        {
+          "name": "terminating",
+          "type": "boolean"
+        },
+        {
+          "name": "autoFade",
+          "type": "boolean"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        },
+        {
+          "name": "aiEmployees",
+          "attribute": false,
+          "type": "AIEmployee[]"
+        },
+        {
+          "name": "commands",
+          "attribute": false,
+          "type": "Command[]"
+        },
+        {
+          "name": "suggestionsPlacement",
+          "description": "",
+          "default": "\"bottom\"",
+          "type": "\"top\" | \"bottom\""
+        }
+      ],
+      "events": [
+        {
+          "name": "message.submit",
+          "description": "",
+          "deprecated": "Use `chat.submit` event instead",
+          "detail": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "chat.submit",
+          "detail": {
+            "type": "ChatPayload"
+          }
+        },
+        {
+          "name": "terminate",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "setValue",
+          "params": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "小型聊天输入框，用于对话等页面"
+    },
+    {
+      "name": "ai-portal.elevo-logo",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.elevo-logo`"
+    },
+    {
+      "name": "ai-portal.show-case",
+      "properties": [
+        {
+          "name": "caseTitle",
+          "type": "string"
+        },
+        {
+          "name": "summary",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.show-case`"
+    },
+    {
+      "name": "ai-portal.blank-state",
+      "properties": [
+        {
+          "name": "illustration",
+          "type": "BlankStateIllustration"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.blank-state`"
+    },
+    {
+      "name": "ai-portal.sticky-container",
+      "properties": [
+        {
+          "name": "variant",
+          "description": "",
+          "default": "\"default\"",
+          "type": "StickyContainerVariant"
+        },
+        {
+          "name": "textContent",
+          "type": "string",
+          "description": "文本内容"
+        }
+      ],
+      "events": [],
+      "slots": [
+        {
+          "name": null,
+          "description": "内容"
+        },
+        {
+          "name": "header",
+          "description": "头部"
+        },
+        {
+          "name": "toolbar",
+          "description": "工具栏"
+        }
+      ],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.sticky-container`"
+    },
+    {
+      "name": "ai-portal.elevo-card",
+      "properties": [
+        {
+          "name": "cardTitle",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "url",
+          "type": "string"
+        },
+        {
+          "name": "avatar",
+          "attribute": false,
+          "type": "string | GeneralIconProps"
+        },
+        {
+          "name": "avatarType",
+          "type": "\"icon\" | \"image\""
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.elevo-card`"
+    },
+    {
+      "name": "ai-portal.flow-tabs",
+      "properties": [
+        {
+          "name": "tabs",
+          "attribute": false,
+          "type": "Tab[]"
+        },
+        {
+          "name": "activeTab",
+          "attribute": false,
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "tab.click",
+          "detail": {
+            "type": "Tab"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.flow-tabs`"
+    },
+    {
+      "name": "ai-portal.stage-flow",
+      "properties": [
+        {
+          "name": "spec",
+          "attribute": false,
+          "type": "Stage[]"
+        },
+        {
+          "name": "aiEmployees",
+          "attribute": false,
+          "type": "AIEmployee[]"
+        },
+        {
+          "name": "readOnly",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "Stage[]"
+          }
+        },
+        {
+          "name": "add.activity",
+          "detail": {
+            "type": "{ stage: Stage }"
+          }
+        },
+        {
+          "name": "edit.activity",
+          "detail": {
+            "type": "EditActivityDetail"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [
+        {
+          "name": "addActivity",
+          "params": [
+            {
+              "name": "stage",
+              "type": "Stage"
+            },
+            {
+              "name": "activity",
+              "type": "FlowActivity"
+            }
+          ]
+        },
+        {
+          "name": "editActivity",
+          "params": [
+            {
+              "name": "stage",
+              "type": "Stage"
+            },
+            {
+              "name": "activity",
+              "type": "FlowActivity"
+            },
+            {
+              "name": "activityIndex",
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "name": "deleteActivity",
+          "params": [
+            {
+              "name": "stage",
+              "type": "Stage"
+            },
+            {
+              "name": "activityIndex",
+              "type": "number"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "构件 `ai-portal.stage-flow`"
+    },
+    {
+      "name": "ai-portal.running-flow",
+      "properties": [
+        {
+          "name": "spec",
+          "attribute": false,
+          "type": "FlowStage[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "activity.click",
+          "detail": {
+            "type": "string"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.running-flow`"
+    },
+    {
+      "name": "ai-portal.notice-dropdown",
+      "properties": [
+        {
+          "name": "dataSource",
+          "description": "消息数据列表",
+          "attribute": false,
+          "type": "NoticeItem[]"
+        },
+        {
+          "name": "popoverPlacement",
+          "description": "弹窗位置",
+          "type": "Placement"
+        },
+        {
+          "name": "emptyText",
+          "description": "空状态文案",
+          "type": "string"
+        },
+        {
+          "name": "notifyCenterUrl",
+          "description": "通知中心URL",
+          "type": "string"
+        },
+        {
+          "name": "urlTemplate",
+          "description": "详情链接",
+          "type": "string"
+        },
+        {
+          "name": "urlTarget",
+          "description": "详情链接目标",
+          "type": "Target"
+        },
+        {
+          "name": "dropdownMaxWidth",
+          "description": "下拉框最大宽度",
+          "type": "string | number"
+        },
+        {
+          "name": "dropdownContentStyle",
+          "description": "下拉框内容样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "hideNotifyCenterButton",
+          "description": "是否隐藏进入消息中心按钮",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "notice.click",
+          "description": "消息项点击事件",
+          "detail": {
+            "description": "消息 ID",
+            "type": "NoticeItem"
+          }
+        },
+        {
+          "name": "mark.all.read",
+          "description": "全部已读点击事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.notice-dropdown`\n\n消息通知下拉框构件，用于展示消息列表"
+    },
+    {
+      "name": "ai-portal.notice-list",
+      "properties": [
+        {
+          "name": "dataSource",
+          "description": "消息数据列表",
+          "attribute": false,
+          "type": "NoticeItem[]"
+        },
+        {
+          "name": "emptyText",
+          "description": "空状态文案",
+          "type": "string"
+        },
+        {
+          "name": "urlTemplate",
+          "description": "详情链接",
+          "type": "string"
+        },
+        {
+          "name": "urlTarget",
+          "description": "详情链接目标",
+          "type": "Target"
+        },
+        {
+          "name": "selectedIds",
+          "description": "选中的消息 ID 数组",
+          "attribute": false,
+          "type": "string[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "notice.click",
+          "description": "消息项点击事件",
+          "detail": {
+            "description": "消息项数据",
+            "type": "NoticeItem"
+          }
+        },
+        {
+          "name": "mark.items.read",
+          "description": "标记消息项已读事件",
+          "detail": {
+            "description": "选中的消息 ID 数组",
+            "type": "NoticeItem[]"
+          }
+        },
+        {
+          "name": "mark.all.read",
+          "description": "全部已读事件",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.notice-list`\n\n消息通知列表构件，用于展示消息列表，支持批量操作"
+    },
+    {
+      "name": "ai-portal.chat-panel",
+      "properties": [
+        {
+          "name": "panelTitle",
+          "type": "string"
+        },
+        {
+          "name": "aiEmployeeId",
+          "type": "string"
+        },
+        {
+          "name": "cmd",
+          "attribute": false,
+          "type": "CommandPayload"
+        },
+        {
+          "name": "width",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "height",
+          "attribute": false,
+          "type": "string | number"
+        },
+        {
+          "name": "placeholder",
+          "type": "string"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        },
+        {
+          "name": "help",
+          "description": "Show help messages when no conversation exists.",
+          "attribute": false,
+          "type": "{ useBrick: UseBrickConf }"
+        },
+        {
+          "name": "maskClosable",
+          "description": "Whether to close the panel when clicking the mask.",
+          "default": "false",
+          "type": "boolean"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [
+        {
+          "name": "open",
+          "params": []
+        },
+        {
+          "name": "close",
+          "params": []
+        },
+        {
+          "name": "setInputValue",
+          "params": [
+            {
+              "name": "content",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "send",
+          "params": [
+            {
+              "name": "payload",
+              "type": "ChatPayload"
+            }
+          ]
+        },
+        {
+          "name": "showFile",
+          "params": [
+            {
+              "name": "file",
+              "type": "FileInfo"
+            }
+          ]
+        }
+      ],
+      "parts": [],
+      "description": "弹出式对话面板。"
+    },
+    {
+      "name": "ai-portal.space-logo",
+      "properties": [
+        {
+          "name": "size",
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.space-logo`\n\n协作空间的 Logo 展示组件"
+    },
+    {
+      "name": "ai-portal.chat-panel-welcome",
+      "properties": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.chat-panel-welcome`"
+    },
+    {
+      "name": "ai-portal.space-chat-guide",
+      "properties": [
+        {
+          "name": "spaceDetail",
+          "attribute": false,
+          "type": "SpaceDetail"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.space-chat-guide`"
+    },
+    {
+      "name": "ai-portal.space-workbench",
+      "properties": [
+        {
+          "name": "notices",
+          "attribute": false,
+          "type": "NoticeItem[]"
+        },
+        {
+          "name": "knowledges",
+          "attribute": false,
+          "type": "KnowledgeItem[]"
+        },
+        {
+          "name": "spaceDetail",
+          "attribute": false,
+          "type": "SpaceDetail"
+        },
+        {
+          "name": "notifyCenterUrl",
+          "type": "string"
+        },
+        {
+          "name": "uploadOptions",
+          "attribute": false,
+          "type": "UploadOptions"
+        }
+      ],
+      "events": [
+        {
+          "name": "go.back",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "members.click",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "notice.click",
+          "detail": {
+            "type": "NoticeItem"
+          }
+        },
+        {
+          "name": "mark.all.read",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "space.edit",
+          "detail": {
+            "type": "void"
+          }
+        },
+        {
+          "name": "knowledge.click",
+          "detail": {
+            "type": "KnowledgeItem"
+          }
+        },
+        {
+          "name": "knowledge.add",
+          "detail": {
+            "type": "void"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `ai-portal.space-workbench`"
+    }
+  ],
+  "providers": [
+    {
+      "name": "ai-portal.call-tool"
+    },
+    {
+      "name": "ai-portal.save-request-store"
+    },
+    {
+      "name": "ai-portal.load-request-store"
+    },
+    {
+      "name": "ai-portal.clear-request-store"
+    },
+    {
+      "name": "ai-portal.set-chat-command"
+    },
+    {
+      "name": "ai-portal.set-chat-mentioned-employee"
+    }
+  ]
+}

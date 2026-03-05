@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_ai_portal=globalThis.webpackChunk_next_bricks_ai_portal||[]).push([[1731],{40036:(e,t,n)=>{n.r(t),n.d(t,{getChatMentionedEmployee:()=>o,setChatMentionedEmployee:()=>l});var a=n(40410);let i=null;function l(e){i=e}function o(){return i}customElements.define("ai-portal.set-chat-mentioned-employee",(0,a.createProviderClass)(l))}}]);
+//# sourceMappingURL=set-chat-mentioned-employee.69199eec.js.map

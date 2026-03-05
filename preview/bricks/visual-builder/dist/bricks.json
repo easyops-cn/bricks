@@ -1,0 +1,88 @@
+{
+  "id": "bricks/visual-builder",
+  "bricks": [
+    "visual-builder.workbench-pane",
+    "visual-builder.workbench-sidebar",
+    "visual-builder.workbench-action",
+    "visual-builder.workbench-action-list",
+    "visual-builder.workbench-tree",
+    "visual-builder.workbench-history-action",
+    "visual-builder.page-arch-node",
+    "visual-builder.contract-select",
+    "visual-builder.generate-snippets-context-menu",
+    "visual-builder.chat-conversation",
+    "visual-builder.chat-preview",
+    "visual-builder.batch-update-raw-data-generated-view",
+    "visual-builder.check-editor-by-name",
+    "visual-builder.get-config-by-data-for-ai",
+    "visual-builder.get-data-deps",
+    "visual-builder.get-dependency-tree",
+    "visual-builder.get-raw-data-system-prompts",
+    "visual-builder.get-usage-member-statistics",
+    "visual-builder.inject-chat-preview-agent",
+    "visual-builder.parse-path",
+    "visual-builder.pre-generated-preview",
+    "visual-builder.pre-generated-table-view",
+    "visual-builder.pre-generated-container",
+    "visual-builder.property-editor",
+    "visual-builder.raw-data-preview",
+    "visual-builder.pre-generated-config",
+    "visual-builder.pre-generated-config-preview",
+    "visual-builder.raw-metric-preview"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "visual-builder.workbench-pane": [
+      "eo-icon"
+    ],
+    "visual-builder.workbench-action": [
+      "eo-link",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.workbench-action-list": [
+      "visual-builder.workbench-action",
+      "eo-link",
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.workbench-tree": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "visual-builder.workbench-history-action": [
+      "eo-button",
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-popover"
+    ],
+    "visual-builder.page-arch-node": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "visual-builder.contract-select": [
+      "eo-form-item",
+      "eo-auto-complete",
+      "eo-icon",
+      "eo-input"
+    ],
+    "visual-builder.generate-snippets-context-menu": [
+      "eo-menu",
+      "eo-menu-item",
+      "eo-tooltip",
+      "basic.lock-body-scroll"
+    ],
+    "visual-builder.chat-conversation": [
+      "eo-avatar"
+    ],
+    "visual-builder.property-editor": [
+      "eo-icon-select",
+      "vs.code-editor",
+      "eo-tooltip"
+    ]
+  },
+  "filePath": "bricks/visual-builder/dist/index.d8866eaf.js"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bricks/illustrations",
+  "bricks": [
+    "illustrations.get-illustration",
+    "illustrations.translate-illustration-config",
+    "illustrations.get-illustrations-by-category",
+    "illustrations.loading-transition",
+    "illustrations.error-message"
+  ],
+  "elements": [
+    "eo-illustration-message"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-illustration-message": [
+      "illustrations.get-illustration",
+      "eo-icon"
+    ],
+    "illustrations.error-message": [
+      "illustrations.get-illustration",
+      "eo-icon"
+    ]
+  },
+  "filePath": "bricks/illustrations/dist/index.3786dd2f.js"
+}

@@ -1,0 +1,217 @@
+{
+  "recent-history.get-all-history": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "namespace",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "capacity",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "VisitHistoryData"
+          }
+        }
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "VisitHistoryData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "recent-history.push-history": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "namespace",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "capacity",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "data",
+        "annotation": {
+          "type": "reference",
+          "typeName": {
+            "type": "identifier",
+            "name": "VisitHistoryData"
+          }
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "keyword",
+        "value": "void"
+      }
+    },
+    "types": [
+      {
+        "type": "interface",
+        "name": "VisitHistoryData",
+        "body": [
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "key"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "propertySignature",
+            "key": {
+              "type": "identifier",
+              "name": "name"
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "string"
+            },
+            "computed": false
+          },
+          {
+            "type": "indexSignature",
+            "parameter": {
+              "type": "identifier",
+              "name": "key",
+              "annotation": {
+                "type": "keyword",
+                "value": "string"
+              }
+            },
+            "annotation": {
+              "type": "keyword",
+              "value": "any"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "recent-history.clear-history": {
+    "type": "provider",
+    "params": [
+      {
+        "name": "namespace",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "returns": {
+      "annotation": {
+        "type": "keyword",
+        "value": "void"
+      }
+    }
+  },
+  "recent-history.recent-visit": {
+    "properties": [
+      {
+        "name": "namespace",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      },
+      {
+        "name": "capacity",
+        "annotation": {
+          "type": "keyword",
+          "value": "number"
+        }
+      },
+      {
+        "name": "compareKeys",
+        "annotation": {
+          "type": "array",
+          "elementType": {
+            "type": "keyword",
+            "value": "string"
+          }
+        }
+      },
+      {
+        "name": "urlTemplate",
+        "annotation": {
+          "type": "keyword",
+          "value": "string"
+        }
+      }
+    ],
+    "events": [],
+    "methods": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/mini-chart",
+  "name": "mini-chart",
+  "bricks": [
+    {
+      "name": "eo-mini-line-chart",
+      "properties": [
+        {
+          "name": "width",
+          "description": "Set `auto` to make it fit the container width.",
+          "default": "\"155\"",
+          "type": "string"
+        },
+        {
+          "name": "height",
+          "description": "Set `auto` to make it fit the container height.",
+          "default": "\"40\"",
+          "type": "string"
+        },
+        {
+          "name": "smooth",
+          "description": "Use a smooth curve line or not.",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "lineColor",
+          "description": "",
+          "default": "\"var(--color-brand)\"",
+          "type": "string"
+        },
+        {
+          "name": "lineWidth",
+          "description": "",
+          "default": "2",
+          "type": "number"
+        },
+        {
+          "name": "showArea",
+          "type": "boolean"
+        },
+        {
+          "name": "min",
+          "description": "Specify the minimum value of the y-axis.\nIf not specified, the minimum value will be calculated from the data.",
+          "type": "number"
+        },
+        {
+          "name": "max",
+          "description": "Specify the maximum value of the y-axis.\nIf not specified, the maximum value will be calculated from the data.",
+          "type": "number"
+        },
+        {
+          "name": "xField",
+          "description": "",
+          "default": "\"0\"",
+          "type": "string"
+        },
+        {
+          "name": "yField",
+          "description": "",
+          "default": "\"1\"",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "attribute": false,
+          "type": "Record<string, number>[]"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `eo-mini-line-chart`"
+    }
+  ],
+  "providers": []
+}

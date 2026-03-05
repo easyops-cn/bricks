@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_markdown=globalThis.webpackChunk_next_bricks_markdown||[]).push([[5191],{15191:(e,r,c)=>{c.d(r,{createArchitectureServices:()=>a.S});var a=c(25790);c(75249)}}]);

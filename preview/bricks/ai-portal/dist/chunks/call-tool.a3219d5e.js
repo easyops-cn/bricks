@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_ai_portal=globalThis.webpackChunk_next_bricks_ai_portal||[]).push([[5234],{24963:(a,e,t)=>{t.r(e),t.d(e,{callTool:()=>s});var i=t(22919),o=t(40410);async function s(a,e){return(await i.http.post(`api/gateway/logic.llm.aiops_service/api/v1/elevo/conversation/${a.conversationId}/step/${a.stepId}/view`,{params:e})).data}customElements.define("ai-portal.call-tool",(0,o.createProviderClass)(s))}}]);
+//# sourceMappingURL=call-tool.a3219d5e.js.map

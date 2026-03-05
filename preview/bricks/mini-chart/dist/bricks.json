@@ -1,0 +1,11 @@
+{
+  "id": "bricks/mini-chart",
+  "bricks": [],
+  "elements": [
+    "eo-mini-line-chart"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {},
+  "filePath": "bricks/mini-chart/dist/index.9e709d6d.js"
+}

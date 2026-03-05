@@ -1,0 +1,21 @@
+{
+  "id": "bricks/form-platform",
+  "bricks": [],
+  "elements": [
+    "eo-user-or-user-group-select",
+    "eo-cmdb-instance-select"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-user-or-user-group-select": [
+      "eo-form-item",
+      "eo-button",
+      "eo-select"
+    ],
+    "eo-cmdb-instance-select": [
+      "eo-form-item"
+    ]
+  },
+  "filePath": "bricks/form-platform/dist/index.d4f23f12.js"
+}

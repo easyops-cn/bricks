@@ -1,0 +1,1443 @@
+[
+  {
+    "storyId": "eo-checkbox",
+    "text": {
+      "en": "Checkbox",
+      "zh": "多选框"
+    },
+    "description": {
+      "en": "General Checkbox",
+      "zh": "通用多选框"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-checkbox.027e9f4040ca8b31cecf.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "fruits",
+              "label": "水果",
+              "options": [
+                "Apple",
+                "Orange",
+                "Pear"
+              ],
+              "value": [
+                "Apple"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[basic]",
+        "title": {
+          "en": "Basic General Checkbox",
+          "zh": "基础多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[basic].2bbd230a86978b7731ee.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "user",
+              "label": "用户",
+              "options": [
+                {
+                  "label": "管理员",
+                  "value": "Administrator"
+                },
+                {
+                  "label": "测试",
+                  "value": "tester"
+                },
+                {
+                  "label": "开发",
+                  "value": "developer",
+                  "disabled": true
+                }
+              ],
+              "value": [
+                "tester",
+                "developer"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[disabled]",
+        "title": {
+          "en": "General Checkbox with Disabled Item",
+          "zh": "带禁用项的多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[disabled].d82ca70b7359d2ed501e.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "user",
+              "label": "用户",
+              "options": [
+                {
+                  "label": "管理员",
+                  "value": "Administrator",
+                  "checkboxColor": "teal"
+                },
+                {
+                  "label": "测试",
+                  "value": "tester",
+                  "checkboxColor": "orange"
+                },
+                {
+                  "label": "开发",
+                  "value": "developer",
+                  "checkboxColor": "pink"
+                },
+                {
+                  "label": "PM",
+                  "value": "pm",
+                  "checkboxColor": "amber"
+                }
+              ],
+              "value": [
+                "tester",
+                "developer",
+                "Administrator",
+                "pm"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[item-color]",
+        "title": {
+          "en": "General Checkbox with Color Item",
+          "zh": "选项带颜色的多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[item-color].c7c1be159c57ce445793.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "label": "用户列表",
+              "name": "user",
+              "options": [
+                {
+                  "label": "管理员",
+                  "value": "Administrator",
+                  "icon": {
+                    "imgSrc": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                    "imgStyle": {
+                      "objectFit": "cover",
+                      "borderRadius": "50%"
+                    }
+                  }
+                },
+                {
+                  "label": "目标用户",
+                  "value": "tester",
+                  "icon": {
+                    "icon": "aim",
+                    "lib": "antd",
+                    "theme": "outlined",
+                    "color": {
+                      "startColor": "var(--palette-red-6)",
+                      "endColor": "var(--palette-blue-6)"
+                    }
+                  }
+                },
+                {
+                  "label": "其他用户",
+                  "value": "developer",
+                  "icon": {
+                    "icon": "bar-chart",
+                    "lib": "antd",
+                    "theme": "outlined"
+                  }
+                }
+              ],
+              "value": [
+                "tester",
+                "developer"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[with-icon]",
+        "title": {
+          "en": "General Checkbox with Icon",
+          "zh": "带图标选项的多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[with-icon].c08a24b1aeee9b08f6c4.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "goods",
+              "label": "商品",
+              "isGroup": true,
+              "optionGroups": [
+                {
+                  "name": "水果",
+                  "key": "fruits",
+                  "options": [
+                    {
+                      "label": "苹果",
+                      "value": "apple"
+                    },
+                    {
+                      "label": "香蕉",
+                      "value": "banana"
+                    }
+                  ]
+                },
+                {
+                  "name": "蔬菜",
+                  "key": "vegetables",
+                  "options": [
+                    {
+                      "label": "土豆",
+                      "value": "potato"
+                    }
+                  ]
+                }
+              ],
+              "value": [
+                "banana",
+                "potato"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[group]",
+        "title": {
+          "en": "Group General Checkbox",
+          "zh": "分组多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[group].734638c747f0c79e72f2.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "icon",
+              "label": "图标",
+              "type": "icon",
+              "options": [
+                {
+                  "icon": {
+                    "imgSrc": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+                  },
+                  "label": "area-chart",
+                  "value": "area-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "bar-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "bar-chart",
+                  "value": "bar-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "pie-chart",
+                    "theme": "outlined"
+                  },
+                  "disabled": true,
+                  "label": "pie-chart",
+                  "value": "pie-chart"
+                }
+              ],
+              "value": [
+                "area-chart",
+                "pie-chart"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[icon]",
+        "title": {
+          "en": "Icon General Checkbox",
+          "zh": "图标类型多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[icon].8b68fbd3e3ceb58e356a.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-checkbox",
+            "properties": {
+              "name": "icon",
+              "label": "图标",
+              "type": "icon",
+              "isCustom": true,
+              "options": [
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "area-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "area-chart",
+                  "value": "area-chart-1"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "bar-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "bar-chart",
+                  "value": "bar-chart-1"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "pie-chart",
+                    "theme": "outlined"
+                  },
+                  "disabled": true,
+                  "label": "pie-chart",
+                  "value": "pie-chart-1"
+                }
+              ],
+              "value": [
+                "area-chart-1",
+                "pie-chart-1"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-checkbox[custom-icon]",
+        "title": {
+          "en": "Custom Icon General Checkbox",
+          "zh": "自定义图标类型多选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-checkbox[custom-icon].f460e2b8d744365b7f4d.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-date-picker",
+    "text": {
+      "en": "Date Picker",
+      "zh": "日期选择框"
+    },
+    "description": {
+      "en": "",
+      "zh": ""
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-date-picker.a03268275a197bd79e42.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-date-picker",
+            "properties": {
+              "name": "date",
+              "label": "hello",
+              "placeholder": "when",
+              "value": "2019-10-01",
+              "inputStyle": {
+                "width": 300
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-date-picker[basic]",
+        "title": {
+          "en": "Basic General Date Picker",
+          "zh": "基础日期选择框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-date-picker[basic].84147087c7f71bac2e52.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-dynamic-form-item",
+    "text": {
+      "en": "Dynamic Form Item",
+      "zh": "动态表单项"
+    },
+    "description": {
+      "en": "Multi-column display, dynamically add or delete each row of form items, currently supports input , select, and other related types",
+      "zh": "多列显示可以动态增加或删除的表单项，目前支持 input 和 select 等多种类型"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-dynamic-form-item.8300cda0c0ae2b97814e.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-dynamic-form-item",
+            "properties": {
+              "useBrick": [
+                {
+                  "brick": "eo-input",
+                  "properties": {
+                    "name": "input"
+                  }
+                },
+                {
+                  "brick": "eo-select",
+                  "properties": {
+                    "name": "select",
+                    "options": [
+                      "Beijing",
+                      "Shanghai",
+                      "Guangzhou",
+                      "Shenzhen"
+                    ]
+                  }
+                }
+              ],
+              "label": "动态表单项",
+              "name": "dynamic",
+              "required": true
+            }
+          }
+        ],
+        "snippetId": "eo-dynamic-form-item[basic]",
+        "title": {
+          "en": "Basic Dynamic Form Item",
+          "zh": "基础动态表单项"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-dynamic-form-item[basic].63dbd4318b013a8df6dd.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-form",
+    "text": {
+      "en": "General Form",
+      "zh": "普通表单"
+    },
+    "description": {
+      "en": "",
+      "zh": "通用表单容器"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-form-item.313c448f2f3423981e46.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-form",
+            "properties": {
+              "name": "basic-form",
+              "layout": "vertical",
+              "values": {
+                "nickname": "lucy",
+                "username": "easyops"
+              }
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "eo-input",
+                    "properties": {
+                      "label": "用户名",
+                      "labelTooltip": "一些帮助信息",
+                      "name": "username",
+                      "placeholder": "请输入用户名",
+                      "required": true
+                    }
+                  },
+                  {
+                    "brick": "eo-select",
+                    "properties": {
+                      "helpBrick": "这里是一些说明信息",
+                      "inputStyle": {
+                        "width": "100%"
+                      },
+                      "label": "昵称",
+                      "name": "nickname",
+                      "options": [
+                        "jack",
+                        "lucy"
+                      ],
+                      "placeholder": "请输入密码"
+                    }
+                  },
+                  {
+                    "brick": "eo-submit-buttoms",
+                    "properties": {
+                      "cancelText": "取消",
+                      "submitText": "提交"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-form[basic]",
+        "title": {
+          "en": "Basic General Form",
+          "zh": "基础表单"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-form[basic].ae8af9ef7b682f073aa5.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-form",
+            "properties": {
+              "name": "hello",
+              "layout": "vertical",
+              "values": {
+                "change": "descriptionA",
+                "username": "easyops"
+              }
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "eo-input",
+                    "properties": {
+                      "label": "用户名",
+                      "message": {
+                        "pattern": "只能包含小写字母、数字和-，且要以字母开头，不能超过64个字符",
+                        "required": "用户名为必填项"
+                      },
+                      "name": "username",
+                      "pattern": "^[a-z][-a-z0-9]{0,63}$",
+                      "placeholder": "请输入用户名",
+                      "required": true
+                    }
+                  },
+                  {
+                    "brick": "eo-radio",
+                    "properties": {
+                      "label": "动态切换",
+                      "name": "change",
+                      "options": [
+                        "descriptionA",
+                        "descriptionB"
+                      ]
+                    },
+                    "events": {
+                      "change": [
+                        {
+                          "args": [
+                            "<% EVENT.detail.value !== 'descriptionA' %>"
+                          ],
+                          "method": "setNotRender",
+                          "target": "#descriptionA"
+                        },
+                        {
+                          "args": [
+                            "<% EVENT.detail.value !== 'descriptionB' %>"
+                          ],
+                          "method": "setNotRender",
+                          "target": "#descriptionB"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "brick": "eo-textarea",
+                    "properties": {
+                      "id": "descriptionA",
+                      "label": "描述A",
+                      "max": 10,
+                      "message": {
+                        "max": "最长长度限制，10",
+                        "required": "请输入内容"
+                      },
+                      "name": "descriptionA",
+                      "placeholder": "请填写描述",
+                      "required": true,
+                      "value": "This is a long description"
+                    }
+                  },
+                  {
+                    "brick": "eo-select",
+                    "properties": {
+                      "hidden": true,
+                      "id": "descriptionB",
+                      "inputStyle": {
+                        "width": "100%"
+                      },
+                      "label": "描述B",
+                      "name": "descriptionB",
+                      "notRender": true,
+                      "options": [
+                        {
+                          "label": "男",
+                          "value": "male"
+                        },
+                        {
+                          "label": "女",
+                          "value": "female"
+                        }
+                      ],
+                      "placeholder": "请填写描述",
+                      "required": true
+                    }
+                  },
+                  {
+                    "brick": "eo-submit-buttons",
+                    "properties": {
+                      "cancelText": "取消",
+                      "submitText": "提交"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-form[dynamic]",
+        "title": {
+          "en": "Dynamic General Form",
+          "zh": "动态表单"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-form[dynamic].d907da7e523fc716f0c0.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-icon-select",
+    "text": {
+      "en": "Icon Select",
+      "zh": "图标选择器"
+    },
+    "description": {
+      "en": "support for selecting icon and output data in specific format",
+      "zh": "支持选择图标并且输出特定格式的数据"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-icon-select.40b77d33772f579559ce.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-icon-select",
+            "properties": {
+              "value": {
+                "icon": "car",
+                "lib": "antd",
+                "theme": "outlined",
+                "color": "cyan"
+              },
+              "dataset": {
+                "testid": "basic-usage-demo"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-icon-select[basic]",
+        "title": {
+          "en": "Basic Icon Select",
+          "zh": "基础图标选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-icon-select[basic].5cab54ec0533eee8e924.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-input",
+    "text": {
+      "en": "Input",
+      "zh": "输入框"
+    },
+    "description": {
+      "en": "",
+      "zh": ""
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-input.923ffec9dffa88c5c52a.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-input",
+            "properties": {
+              "name": "username",
+              "type": "text",
+              "label": "用户名",
+              "value": "test",
+              "placeholder": "请输入用户名"
+            }
+          }
+        ],
+        "snippetId": "eo-input[basic]",
+        "title": {
+          "en": "Basic General Input",
+          "zh": "基础输入框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-input[basic].3705851faf207a8ecab3.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-input",
+            "properties": {
+              "name": "password",
+              "type": "password",
+              "label": "密码",
+              "value": "123456",
+              "placeholder": "请输入密码"
+            }
+          }
+        ],
+        "snippetId": "eo-input[password]",
+        "title": {
+          "en": "Password General Input",
+          "zh": "密码输入框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-input[password].fadd405ae4fbd4715f36.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-input",
+            "properties": {
+              "placeholder": "addon slot"
+            },
+            "slots": {
+              "addonBefore": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "span",
+                    "properties": {
+                      "textContent": "https://"
+                    }
+                  }
+                ]
+              },
+              "addonAfter": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "span",
+                    "properties": {
+                      "textContent": ".com"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-input[with-addon]",
+        "title": {
+          "en": "General Input with Addon",
+          "zh": "带前后缀的输入框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-input[with-addon].e4ee2e945ece4456e95b.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-radio",
+    "text": {
+      "en": "Radio",
+      "zh": "单选框"
+    },
+    "description": {
+      "en": "general Radio",
+      "zh": "通用的单选框"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-radio.f42b9e963c8987427cd9.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-radio",
+            "properties": {
+              "dataset": {
+                "testid": "basic-usage-demo"
+              },
+              "name": "city",
+              "label": "城市",
+              "value": "Shanghai",
+              "options": [
+                "Shanghai",
+                "Beijing",
+                "Chengdu"
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-radio[basic]",
+        "title": {
+          "en": "Basic General Radio",
+          "zh": "基础单选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-radio[basic].59a556b92cbb2cfb32f1.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-radio",
+            "properties": {
+              "name": "city",
+              "label": "城市",
+              "value": "Shanghai",
+              "type": "button",
+              "options": [
+                {
+                  "label": "上海",
+                  "value": "Shanghai"
+                },
+                {
+                  "label": "北京",
+                  "value": "Beijing"
+                },
+                {
+                  "label": "成都",
+                  "value": "Chengdu"
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-radio[button]",
+        "title": {
+          "en": "Button General Radio",
+          "zh": "按钮单选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-radio[button].996b2806fe2189ac0b8c.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-radio",
+            "properties": {
+              "label": "城市",
+              "name": "city",
+              "options": [
+                {
+                  "label": "上海",
+                  "value": "Shanghai",
+                  "icon": {
+                    "icon": "bar-chart",
+                    "lib": "antd",
+                    "theme": "outlined",
+                    "iconStyle": {
+                      "color": "blue",
+                      "fontSize": "18px"
+                    }
+                  }
+                },
+                {
+                  "icon": {
+                    "imgSrc": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+                    "imgStyle": {
+                      "objectFit": "cover",
+                      "borderRadius": "50%"
+                    }
+                  },
+                  "label": "北京",
+                  "value": "Beijing"
+                },
+                {
+                  "label": "成都",
+                  "value": "Chengdu",
+                  "icon": {
+                    "color": {
+                      "endColor": "var(--palette-blue-6)",
+                      "startColor": "var(--palette-red-6)"
+                    },
+                    "icon": "aim",
+                    "lib": "antd",
+                    "theme": "outlined"
+                  }
+                }
+              ],
+              "value": "Beijing"
+            }
+          }
+        ],
+        "snippetId": "eo-radio[with-icon]",
+        "title": {
+          "en": "General Radio with Icon",
+          "zh": "带图标选项的单选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-radio[with-icon].72e7f529ec97ebb0a24d.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-radio",
+            "events": {
+              "general.radio.change": {
+                "action": "console.log",
+                "args": [
+                  "<% EVENT.detail %>"
+                ]
+              }
+            },
+            "properties": {
+              "label": "图表",
+              "name": "chart",
+              "options": [
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "area-chart",
+                    "theme": "outlined"
+                  },
+                  "value": "area-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "bar-chart",
+                    "theme": "outlined"
+                  },
+                  "value": "bar-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "pie-chart",
+                    "theme": "outlined"
+                  },
+                  "value": "pie-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "radar-chart",
+                    "theme": "outlined"
+                  },
+                  "value": "radar-chart"
+                }
+              ],
+              "type": "button",
+              "value": "Shanghai"
+            }
+          }
+        ],
+        "snippetId": "eo-radio[icon-button]",
+        "title": {
+          "en": "Icon Button General Radio",
+          "zh": "图标按钮单选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-radio[icon-button].7b24f97dbf5d206b6102.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-radio",
+            "properties": {
+              "label": "图标",
+              "name": "icon",
+              "options": [
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "area-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "area-chart",
+                  "value": "area-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "bar-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "bar-chart",
+                  "value": "bar-chart"
+                },
+                {
+                  "icon": {
+                    "lib": "antd",
+                    "icon": "pie-chart",
+                    "theme": "outlined"
+                  },
+                  "label": "pie-chart",
+                  "value": "pie-chart"
+                }
+              ],
+              "type": "icon",
+              "value": "area-chart"
+            }
+          }
+        ],
+        "snippetId": "eo-radio[icon]",
+        "title": {
+          "en": "Icon General Radio",
+          "zh": "图标单选框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-radio[icon].423895fc58b38cf1c265.svg"
+      }
+    ],
+    "previewColumns": 2
+  },
+  {
+    "storyId": "eo-select",
+    "text": {
+      "en": "Select",
+      "zh": "下拉选择器"
+    },
+    "description": {
+      "en": "",
+      "zh": ""
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-select.4298d21b2786c930cf7c.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-select",
+            "properties": {
+              "dataset": {
+                "testid": "basic-usage-demo"
+              },
+              "name": "gender",
+              "label": "性别",
+              "value": "female",
+              "placeholder": "请选择性别",
+              "emptyOption": {
+                "label": "不分性别",
+                "value": ""
+              },
+              "options": [
+                {
+                  "label": "男",
+                  "value": "male"
+                },
+                {
+                  "label": "女",
+                  "value": "female"
+                }
+              ],
+              "inputStyle": {
+                "width": 120
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-select[basic]",
+        "title": {
+          "en": "Basic General Select",
+          "zh": "基础下拉选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-select[basic].be14874bf05171f726fd.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-select",
+            "properties": {
+              "dataset": {
+                "testid": "multiple-demo"
+              },
+              "mode": "multiple",
+              "name": "city",
+              "label": "城市(多选)",
+              "value": [
+                "Japan",
+                "China"
+              ],
+              "options": [
+                {
+                  "label": "中国",
+                  "value": "China"
+                },
+                {
+                  "label": "日本",
+                  "value": "Japan"
+                },
+                {
+                  "label": "韩国",
+                  "value": "Korea"
+                },
+                {
+                  "label": "美国",
+                  "value": "USA"
+                }
+              ],
+              "inputStyle": {
+                "width": 250
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-select[multi]",
+        "title": {
+          "en": "Multi General Select",
+          "zh": "多选下拉选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-select[multi].ba65bc72b361663fe64a.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-select",
+            "properties": {
+              "dataset": {
+                "testid": "group-by-demo"
+              },
+              "inputStyle": {
+                "width": 250
+              },
+              "name": "city",
+              "label": "城市(分组显示)",
+              "groupBy": "location",
+              "options": [
+                {
+                  "label": "中国",
+                  "value": "China",
+                  "location": "亚洲"
+                },
+                {
+                  "label": "韩国",
+                  "value": "Korea",
+                  "location": "亚洲"
+                },
+                {
+                  "label": "日本",
+                  "value": "Japan",
+                  "location": "亚洲"
+                },
+                {
+                  "label": "美国",
+                  "value": "USA",
+                  "location": "北美洲"
+                },
+                {
+                  "label": "加拿大",
+                  "value": "Canada",
+                  "location": "北美洲"
+                },
+                {
+                  "label": "英国",
+                  "value": "UK",
+                  "location": "欧洲"
+                }
+              ]
+            }
+          }
+        ],
+        "snippetId": "eo-select[group]",
+        "title": {
+          "en": "Group General Select",
+          "zh": "分组下拉选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-select.4298d21b2786c930cf7c.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-checkbox",
+    "text": {
+      "en": "General buttons",
+      "zh": "表单提交按钮"
+    },
+    "description": {
+      "en": "can be used in general-forms,support to set submit button and cancel button",
+      "zh": "用于general-forms的通用按钮，可以配置submit按钮和cancel按钮"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-submit-buttons.bd5d1baf8d8d1e418569.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-submit-buttons",
+            "properties": {
+              "submitText": "提交",
+              "cancelText": "取消",
+              "dataset": {
+                "testid": "basic-usage-demo"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-submit-buttons[basic]",
+        "thumbnail": "bricks/form/dist/stories-assets/eo-submit-buttons[basic].22f9432af1089ee62e36.svg",
+        "title": {
+          "en": "Basic General Buttons",
+          "zh": "基础表单提交按钮"
+        }
+      }
+    ]
+  },
+  {
+    "storyId": "eo-switch",
+    "text": {
+      "en": "Switch",
+      "zh": "开关"
+    },
+    "description": {
+      "en": "general switch",
+      "zh": "通用的开关"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-switch.dacd876f74a586f97923.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-switch",
+            "properties": {
+              "label": "开关",
+              "name": "enabled"
+            }
+          }
+        ],
+        "snippetId": "eo-switch[basic]",
+        "title": {
+          "en": "Basic General Switch",
+          "zh": "基础开关"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-switch[basic].c35a00e0a42b8dbbc698.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-textarea",
+    "text": {
+      "en": "Text Area",
+      "zh": "多行文本输入框"
+    },
+    "description": {
+      "en": "autoSize, value and placeholder configurable",
+      "zh": "可支持配置 autoSize, value 和 placeholder"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-textarea.4f2feadec04ceb3c433d.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-textarea",
+            "properties": {
+              "autoSize": {
+                "maxRows": 8,
+                "minRows": 3
+              },
+              "label": "描述",
+              "max": 10,
+              "message": {
+                "max": "最长长度限制，10",
+                "required": "请输入内容"
+              },
+              "name": "description",
+              "placeholder": "请填写描述",
+              "required": true,
+              "value": "This is a long description"
+            }
+          }
+        ],
+        "snippetId": "eo-textarea[basic]",
+        "title": {
+          "en": "Basic General TextArea",
+          "zh": "基础多行文本输入框"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-textarea[basic].a94739b505bb6632a017.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-time-picker",
+    "text": {
+      "en": "Time Picker",
+      "zh": "时间选择器"
+    },
+    "description": {
+      "en": "",
+      "zh": ""
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-time-picker.235f41986c771d2921b5.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-time-picker",
+            "properties": {
+              "configProps": {
+                "format": "HH:mm",
+                "minuteStep": 5
+              },
+              "name": "time",
+              "label": "hello",
+              "placeholder": "when",
+              "value": "09:14:30"
+            },
+            "events": {
+              "general.time.change": {
+                "action": "console.log",
+                "args": [
+                  "time",
+                  "${EVENT.detail}"
+                ]
+              },
+              "general.time.close": {
+                "action": "console.log"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-time-picker[basic]",
+        "title": {
+          "en": "Basic General Time Picker",
+          "zh": "基础时间选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-time-picker[basic].a12da6e9cd12ee9dd787.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-time-range-picker",
+    "text": {
+      "en": "Time Range Picker",
+      "zh": "时间段选择器"
+    },
+    "description": {
+      "en": "combined by two time pickers",
+      "zh": "由两个时间选择器组成"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-time-range-picker.efe0b4c059e54f79f248.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-time-range-picker",
+            "properties": {
+              "label": "hello",
+              "name": "time",
+              "rangeType": "time",
+              "required": true
+            }
+          }
+        ],
+        "snippetId": "eo-time-range-picker[basic]",
+        "title": {
+          "en": "Basic Time Range Picker",
+          "zh": "基础时间段选择器"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-time-range-picker[basic].4bc27c8d17100e965983.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-upload-file",
+    "text": {
+      "en": "Custom storage uploads files",
+      "zh": "自定义存储上传文件"
+    },
+    "description": {
+      "en": "upload files by specific API",
+      "zh": "上传文件，适用于表单项中对接provider"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-upload-files.e2f8aa6d4fc184159871.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-upload-file",
+            "properties": {
+              "maxCount": 2
+            }
+          }
+        ],
+        "snippetId": "eo-upload-file[basic]",
+        "title": {
+          "en": "Basic Upload Files",
+          "zh": "基础自定义存储上传文件"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-upload-files.e2f8aa6d4fc184159871.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-upload-file",
+            "properties": {
+              "style": {
+                "width": "300px"
+              },
+              "uploadDraggable": true,
+              "maxCount": 2,
+              "multiple": true,
+              "accept": "image/*",
+              "draggableUploadTip": "支持上传图片"
+            }
+          }
+        ],
+        "snippetId": "eo-upload-file[draggable]",
+        "title": {
+          "en": "Draggable Upload Files",
+          "zh": "可拖拽自定义存储上传文件"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-upload-files[basic].4998a72b73c930e0b105.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-upload-image",
+    "text": {
+      "en": "upload img",
+      "zh": "上传图片"
+    },
+    "description": {
+      "en": "upload image",
+      "zh": "对接平台对象存储，提供上传图片功能的构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/form/dist/stories-assets/eo-upload-img.dc97bbdb0941135c7354.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-upload-image",
+            "properties": {
+              "label": "图片上传",
+              "maxNumber": 1,
+              "bucketName": "test"
+            }
+          }
+        ],
+        "snippetId": "eo-upload-image[basic]",
+        "title": {
+          "en": "Basic Upload Img",
+          "zh": "基础上传图片"
+        },
+        "thumbnail": "bricks/form/dist/stories-assets/eo-upload-img[basic].06aea44831bc8d20d027.svg"
+      }
+    ]
+  }
+]

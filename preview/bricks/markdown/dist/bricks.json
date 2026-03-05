@@ -1,0 +1,26 @@
+{
+  "id": "bricks/markdown",
+  "bricks": [
+    "markdown.markdown-editor"
+  ],
+  "elements": [
+    "eo-markdown-editor",
+    "eo-markdown-display"
+  ],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "eo-markdown-editor": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "markdown.markdown-editor": [
+      "eo-form-item",
+      "eo-icon"
+    ],
+    "eo-markdown-display": [
+      "presentational.code-wrapper"
+    ]
+  },
+  "filePath": "bricks/markdown/dist/index.217627f4.js"
+}

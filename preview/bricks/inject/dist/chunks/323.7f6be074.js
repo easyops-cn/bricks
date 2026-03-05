@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_inject=globalThis.webpackChunk_next_bricks_inject||[]).push([[323],{6323:(e,i,n)=>{var s=n(410),t=n(1905);customElements.define("inject.visual-builder-preview-agent",(0,s.createProviderClass)((async function(e,i){return(0,t.A)(e,i)})))}}]);
+//# sourceMappingURL=323.7f6be074.js.map

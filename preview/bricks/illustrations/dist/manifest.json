@@ -1,0 +1,65 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/illustrations",
+  "name": "illustrations",
+  "bricks": [
+    {
+      "name": "illustrations.loading-transition",
+      "properties": [],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "构件 `illustrations.loading-transition`"
+    },
+    {
+      "name": "eo-illustration-message",
+      "alias": [
+        "illustrations.error-message"
+      ],
+      "properties": [
+        {
+          "name": "heading",
+          "type": "string"
+        },
+        {
+          "name": "errorTitle",
+          "description": "",
+          "deprecated": "Use `heading` instead",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "description": "",
+          "default": "\"unknown-error\"",
+          "type": "MessageVariant"
+        },
+        {
+          "name": "customizeImage",
+          "attribute": false,
+          "type": "CustomizeImage"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "插画消息构件"
+    }
+  ],
+  "providers": [
+    {
+      "name": "illustrations.get-illustrations-by-category"
+    },
+    {
+      "name": "illustrations.get-illustration"
+    },
+    {
+      "name": "illustrations.translate-illustration-config"
+    }
+  ]
+}

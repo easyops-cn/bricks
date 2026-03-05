@@ -1,0 +1,1 @@
+/**! @contract easyops.api.llm.elevo_space.GenerateSpaceCapabilities@1.0.0 */

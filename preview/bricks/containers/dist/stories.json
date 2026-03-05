@@ -1,0 +1,1556 @@
+[
+  {
+    "storyId": "eo-card",
+    "text": {
+      "en": "Card",
+      "zh": "通用卡片"
+    },
+    "description": {
+      "en": "card",
+      "zh": "常见于为多个构件提供统一的卡片容器，比如将搜索框与表格放在一起"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-card.8ed9df4244d7d5f78953.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-card",
+            "properties": {
+              "cardTitle": "卡片标题",
+              "hasExtraSlot": true
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "内容"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "extra": {
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "icon": {
+                        "lib": "antd",
+                        "icon": "plus"
+                      },
+                      "shape": "circle",
+                      "type": "icon"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-card[extra]",
+        "title": {
+          "en": "Eo Card with Extra Slot",
+          "zh": "带extra插槽的通用卡片"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-card[extra].7d7d7c519c8bc28c4c06.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-card",
+            "properties": {
+              "cardTitle": "标题"
+            },
+            "slots": {
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "内容"
+                    }
+                  }
+                ]
+              },
+              "titleSuffix": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-tooltip",
+                    "properties": {
+                      "dataset": {
+                        "testid": "basic-usage-demo"
+                      },
+                      "icon": {
+                        "lib": "fa",
+                        "icon": "info-circle"
+                      },
+                      "content": "这是一个 tooltips",
+                      "trigger": "hover"
+                    },
+                    "children": [
+                      {
+                        "brick": "eo-icon",
+                        "properties": {
+                          "icon": "info",
+                          "lib": "antd"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-card[title-suffix]",
+        "title": {
+          "en": "Eo Card with Title Suffix Slot",
+          "zh": "带titleSuffix插槽的通用卡片"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-card[title-suffix].48fc1a9995b176b90330.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-category",
+    "text": {
+      "en": "information-category-container",
+      "zh": "信息分类容器"
+    },
+    "description": {
+      "en": "Grouping of complex information",
+      "zh": "对复杂信息进行分组"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-category.e0d667ae0896a6c61c4a.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-category[normal]",
+        "title": {
+          "en": "Basic information category container",
+          "zh": "基本信息分类"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-category[normal].d0d0f299f8fef4a3419b.svg",
+        "bricks": [
+          {
+            "brick": "eo-category",
+            "properties": {
+              "categories": [
+                {
+                  "title": "分类一",
+                  "key": "category1"
+                },
+                {
+                  "title": "分类二",
+                  "key": "category2"
+                }
+              ]
+            },
+            "slots": {
+              "category1": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "content1"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "category2": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "content1"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-drawer",
+    "text": {
+      "en": "General Drawer",
+      "zh": "Drawer抽屉"
+    },
+    "description": {
+      "en": "provide slot to hold other custom elements",
+      "zh": "提供插槽以展示其他构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-drawer.0eadb11ca424b8bae8e6.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-drawer",
+            "properties": {
+              "customTitle": "预览",
+              "id": "title-demo2",
+              "maskClosable": true,
+              "width": 1000
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "eo-descriptions",
+                    "properties": {
+                      "column": 2,
+                      "descriptionTitle": "基本信息",
+                      "list": [
+                        {
+                          "label": "名称",
+                          "text": "easyops"
+                        },
+                        {
+                          "label": "环境类型",
+                          "text": "无"
+                        },
+                        {
+                          "label": "授权模式",
+                          "text": "clientCert"
+                        },
+                        {
+                          "label": "服务供应商"
+                        }
+                      ],
+                      "showCard": false
+                    }
+                  },
+                  {
+                    "brick": "eo-descriptions",
+                    "properties": {
+                      "column": 2,
+                      "descriptionTitle": "集群规格",
+                      "list": [
+                        {
+                          "label": "集群来源",
+                          "text": "导入"
+                        },
+                        {
+                          "label": "Manter节点数量",
+                          "text": "3个"
+                        },
+                        {
+                          "label": "可分配CPU",
+                          "text": "12 Cores"
+                        },
+                        {
+                          "label": "可分配内存",
+                          "text": "44.8GIB"
+                        }
+                      ],
+                      "showCard": false,
+                      "style": {
+                        "marginTop": "20px"
+                      }
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "extra": {
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "type": "icon",
+                      "icon": {
+                        "color": "#167be0",
+                        "icon": "share-alt",
+                        "lib": "fa",
+                        "prefix": "fas"
+                      },
+                      "isDropdown": false,
+                      "tooltip": "分享",
+                      "tooltipPlacement": "bottom"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-drawer[basic]",
+        "title": {
+          "en": "Basic General Drawer",
+          "zh": "基础抽屉"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-drawer[basic].cd366cf16a561b68e006.svg",
+        "actions": [
+          {
+            "text": "Open Drawer",
+            "method": "open"
+          }
+        ]
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-drawer",
+            "properties": {
+              "customTitle": "预览",
+              "id": "title-demo3",
+              "maskClosable": true,
+              "hasFooter": true,
+              "closable": true,
+              "placement": "bottom"
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "内容区域"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "footer": {
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "type": "primary",
+                      "textContent": "保存"
+                    },
+                    "events": {
+                      "click": {
+                        "target": "#title-demo3",
+                        "method": "close"
+                      }
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-drawer[footer]",
+        "title": {
+          "en": "Buttom Drawer",
+          "zh": "底部抽屉"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-drawer[basic].cd366cf16a561b68e006.svg",
+        "actions": [
+          {
+            "text": "Open Drawer From Buttom",
+            "method": "open"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-main-view",
+    "text": {
+      "en": "Eo Main View",
+      "zh": "通用页面视图容器"
+    },
+    "description": {
+      "en": "Support slots: `breadcrumb`, `pageTitle`, `toolbar`, `banner` (Also be used directly through the snippet of easy-view)",
+      "zh": "提供了 breadcrumb, pageTitle、toolbar、banner 插槽(也可通过 easy-view 的 snippet 直接使用)"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-main-view.a305d27921c1cc953cbd.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-main-view",
+            "slots": {
+              "pageTitle": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-page-title",
+                    "properties": {
+                      "pageTitle": "Page Title"
+                    }
+                  }
+                ]
+              },
+              "toolbar": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "textContent": "Create New One"
+                    }
+                  },
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "textContent": "Edit Existed One"
+                    }
+                  }
+                ]
+              },
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "hello",
+                      "style": {
+                        "border": "3px solid orange",
+                        "height": "60px",
+                        "color": "#000",
+                        "background": "#fff"
+                      }
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "world",
+                      "style": {
+                        "border": "3px solid orange",
+                        "height": "100px",
+                        "color": "#000",
+                        "background": "#fff"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-main-view[basic]",
+        "title": {
+          "en": "Basic Micro View",
+          "zh": "基础通用页面视图容器"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-main-view[basic].77c35ebaab8a570fc431.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-main-view",
+            "properties": {
+              "bannerAlone": true,
+              "bannerTitle": "Hello World",
+              "bannerImage": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E\")",
+              "bannerDescription": "这是一个描述"
+            },
+            "slots": {
+              "banner": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-flex-layout",
+                    "properties": {
+                      "gap": "8px"
+                    },
+                    "children": [
+                      {
+                        "brick": "eo-button",
+                        "properties": {
+                          "textContent": "开始使用",
+                          "type": "primary"
+                        }
+                      },
+                      {
+                        "brick": "eo-button",
+                        "properties": {
+                          "textContent": "帮助文档"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "content",
+                      "style": {
+                        "border": "3px solid orange",
+                        "height": "60px",
+                        "color": "#000",
+                        "background": "#fff"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-main-view[with-banner]",
+        "title": {
+          "en": "Eo Main View with Banner Slot",
+          "zh": "带Banner插槽的通用页面视图容器"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-main-view[with-banner].ae54f102e6d3b091a7a1.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-modal",
+    "text": {
+      "en": "General Modal",
+      "zh": "模态框"
+    },
+    "description": {
+      "en": "provide slot to hold other custom elements, different from forms.general-modal",
+      "zh": "提供插槽以展示其他构件，注意与表单通用模态框 (forms.general-modal) 的不同"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-modal.79b498e2a791656c5e82.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-modal",
+            "properties": {
+              "id": "origin",
+              "modalTitle": "Modal Title",
+              "confirmText": "Save"
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "h3",
+                    "properties": {
+                      "textContent": "modal content"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-modal[basic]",
+        "title": {
+          "en": "Basic General Modal",
+          "zh": "基础模态框"
+        },
+        "actions": [
+          {
+            "text": "Open Modal",
+            "method": "open"
+          }
+        ],
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-modal[basic].442c5b5932ede8190928.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-modal",
+            "properties": {
+              "fullscreen": true,
+              "id": "fullscreen-mode",
+              "modalTitle": "Modal Title",
+              "confirmText": "Save"
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "h3",
+                    "properties": {
+                      "textContent": "modal content"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-modal[full-screen]",
+        "title": {
+          "en": "Full Screen General Modal",
+          "zh": "全屏模态框"
+        },
+        "actions": [
+          {
+            "text": "Open Modal",
+            "method": "open"
+          }
+        ],
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-modal[full-screen].a2d103d4fcf590c4ea1e.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-tab-list",
+    "text": {
+      "en": "Tabs Container",
+      "zh": "tab容器构件"
+    },
+    "description": {
+      "en": "tabs container",
+      "zh": "提供平级的区域将大块内容进行收纳和展现，保持界面整洁"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-tab-list.81d83c0c83e8716f676e.svg"
+    },
+    "conf": [
+      {
+        "snippetId": "eo-tab-list[normal]",
+        "title": {
+          "en": "Basic tab container",
+          "zh": "基本tab容器构件"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-tab-list[normal].3a660518e229ef76dcd6.svg",
+        "message": {
+          "en": "",
+          "zh": "设置了3个不同的Tab，每个Tab的内容可以通过content插槽来设置。还有一个额外的插槽extraContent，位于容器的右上角。"
+        },
+        "bricks": [
+          {
+            "brick": "eo-tab-list",
+            "properties": {
+              "dataset": {
+                "testid": "basic-usage-demo"
+              },
+              "tabs": [
+                {
+                  "text": "Tab1",
+                  "panel": "Tab1"
+                },
+                {
+                  "text": "Tab2",
+                  "panel": "Tab2",
+                  "panelColor": "var(--palette-green-6)"
+                },
+                {
+                  "text": "Tab3",
+                  "panel": "Tab3",
+                  "panelColor": "var(--palette-red-6)"
+                }
+              ]
+            },
+            "slots": {
+              "Tab1": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-form",
+                    "properties": {
+                      "values": {
+                        "username": "easyops"
+                      }
+                    },
+                    "slots": {
+                      "items": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "eo-input",
+                            "properties": {
+                              "name": "username",
+                              "label": "用户名",
+                              "required": false,
+                              "placeholder": "请输入用户名"
+                            }
+                          },
+                          {
+                            "brick": "eo-input",
+                            "properties": {
+                              "name": "password",
+                              "type": "password",
+                              "label": "密码",
+                              "required": false,
+                              "placeholder": "请输入密码"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "Tab2": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Panel 2"
+                    }
+                  }
+                ]
+              },
+              "Tab3": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Panel 3"
+                    }
+                  }
+                ]
+              },
+              "extra": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "icon": {
+                        "lib": "antd",
+                        "icon": "plus"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "snippetId": "eo-tab-list[panel]",
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-tab-list[panel].86fd31d141eec2922583.svg",
+        "title": {
+          "en": "Custom panel tabs",
+          "zh": "自定义panel tab容器"
+        },
+        "message": {
+          "en": "",
+          "zh": "提供了 Panel 样式给用户使用"
+        },
+        "bricks": [
+          {
+            "brick": "eo-tab-list",
+            "properties": {
+              "dataset": {
+                "testid": "panel-style-demo"
+              },
+              "type": "panel",
+              "tabs": [
+                {
+                  "text": "详情",
+                  "badgeConf": {
+                    "count": 100,
+                    "color": "red"
+                  },
+                  "panel": "0"
+                },
+                {
+                  "text": "统计",
+                  "badgeConf": {
+                    "count": 9,
+                    "color": "green"
+                  },
+                  "panel": "1"
+                },
+                {
+                  "text": "示例",
+                  "badgeConf": {
+                    "count": 30,
+                    "color": "blue"
+                  },
+                  "disabled": true,
+                  "panel": "2"
+                }
+              ],
+              "activePanel": 1
+            },
+            "slots": {
+              "0": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Panel 1"
+                    }
+                  }
+                ]
+              },
+              "1": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Panel 2"
+                    }
+                  }
+                ]
+              },
+              "2": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Panel 3"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-search-bar",
+    "text": {
+      "en": "Search Bar Container",
+      "zh": "搜索框容器"
+    },
+    "description": {
+      "en": "A box which can hold search-like element",
+      "zh": "常用来包裹内容上方的搜索类构件"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-search-bar.628943835884e133c538.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-search-bar",
+            "slots": {
+              "start": {
+                "bricks": [
+                  {
+                    "brick": "eo-search",
+                    "properties": {
+                      "placeholder": "text here to search"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-search-bar[basic]",
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-search-bar[basic].9c1f9d78a6d92f556598.svg",
+        "title": {
+          "en": "Basic Search Bar",
+          "zh": "基础搜索框容器"
+        }
+      },
+      {
+        "snippetId": "eo-search-bar[with-end-slot]",
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-search-bar[with-end-slot].59ced3f259f33b1ff843.svg",
+        "title": {
+          "en": "Search Bar with End Slot",
+          "zh": "带end插槽的搜索框容器"
+        },
+        "bricks": [
+          {
+            "brick": "eo-search-bar",
+            "slots": {
+              "start": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-search",
+                    "properties": {
+                      "placeholder": "text here to search"
+                    }
+                  },
+                  {
+                    "brick": "eo-select",
+                    "properties": {
+                      "options": [
+                        "general-drawer",
+                        "general-input",
+                        "general-select"
+                      ],
+                      "placeholder": "please select a brick",
+                      "inputStyle": {
+                        "width": 300
+                      }
+                    }
+                  },
+                  {
+                    "brick": "eo-checkbox",
+                    "properties": {
+                      "style": {
+                        "marginLeft": "12px"
+                      },
+                      "options": [
+                        "与我相关"
+                      ]
+                    }
+                  }
+                ]
+              },
+              "end": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "type": "primary",
+                      "icon": {
+                        "lib": "antd",
+                        "icon": "reload"
+                      }
+                    }
+                  },
+                  {
+                    "brick": "eo-button",
+                    "properties": {
+                      "icon": {
+                        "lib": "antd",
+                        "icon": "fullscreen"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "storyId": "eo-easy-view",
+    "text": {
+      "en": "Grid Layout Container - Supports Grid Area",
+      "zh": "网格布局容器-支持grid-area"
+    },
+    "description": {
+      "en": "A grid layout container, which can generate slots by grid-area automatically",
+      "zh": "基于网格的简易布局容器，可以根据 grid-area 名称自动生成对应的插槽"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-easy-view.6807c45f0deee7344321.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-easy-view",
+            "properties": {
+              "gridTemplateAreas": [
+                [
+                  "header",
+                  "header"
+                ],
+                [
+                  "sidebar",
+                  "content"
+                ],
+                [
+                  "footer",
+                  "footer"
+                ]
+              ],
+              "gridTemplateColumns": "200px 1fr",
+              "containerStyle": {
+                "gap": "var(--page-card-gap)"
+              }
+            },
+            "slots": {
+              "header": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Header",
+                      "style": {
+                        "background": "green"
+                      }
+                    }
+                  }
+                ]
+              },
+              "sidebar": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Sidebar",
+                      "style": {
+                        "background": "orange"
+                      }
+                    }
+                  }
+                ]
+              },
+              "content": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-easy-view",
+                    "properties": {
+                      "gridAreas": {
+                        "a": [
+                          1,
+                          1,
+                          2,
+                          13
+                        ],
+                        "b": [
+                          2,
+                          1,
+                          3,
+                          5
+                        ],
+                        "c": [
+                          2,
+                          5,
+                          3,
+                          13
+                        ]
+                      },
+                      "gridTemplateColumns": "repeat(12, 1fr)",
+                      "containerStyle": {
+                        "gap": "var(--card-content-gap)"
+                      }
+                    },
+                    "slots": {
+                      "a": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "textContent": "A",
+                              "style": {
+                                "background": "aquamarine"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "b": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "textContent": "B",
+                              "style": {
+                                "background": "aquamarine"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "c": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "textContent": "C",
+                              "style": {
+                                "background": "aquamarine"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "footer": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "Footer",
+                      "style": {
+                        "background": "gray"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-easy-view[basic]",
+        "title": {
+          "en": "Easy-view basic usage",
+          "zh": "Easy-view 基础用"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-easy-view.6807c45f0deee7344321.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-easy-view",
+            "properties": {
+              "containerStyle": {
+                "gap": "var(--card-content-gap)"
+              },
+              "gridAreas": {
+                "a": [
+                  1,
+                  1,
+                  2,
+                  13
+                ],
+                "b": [
+                  2,
+                  1,
+                  3,
+                  5
+                ],
+                "c": [
+                  2,
+                  5,
+                  3,
+                  13
+                ]
+              },
+              "gridTemplateColumns": "repeat(12, 1fr)"
+            },
+            "slots": {
+              "a": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "aquamarine"
+                      },
+                      "textContent": "A"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "b": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "aquamarine"
+                      },
+                      "textContent": "B"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "c": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "aquamarine"
+                      },
+                      "textContent": "C"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-easy-view[grid-areas]",
+        "title": {
+          "en": "Easy-view dividing by grid areas",
+          "zh": "由 grid areas 划分区域的 easy-view"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-easy-view[grid-areas].06966e0fc95a13595ed6.svg"
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-easy-view",
+            "properties": {
+              "containerStyle": {
+                "gap": "var(--page-card-gap)"
+              },
+              "gridTemplateAreas": [
+                [
+                  "header",
+                  "header"
+                ],
+                [
+                  "sidebar",
+                  "content"
+                ],
+                [
+                  "footer",
+                  "footer"
+                ]
+              ],
+              "gridTemplateColumns": "200px 1fr"
+            },
+            "slots": {
+              "content": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "aquamarine"
+                      },
+                      "textContent": "Content"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "footer": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "gray"
+                      },
+                      "textContent": "Footer"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "header": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "green"
+                      },
+                      "textContent": "Header"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              },
+              "sidebar": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "orange"
+                      },
+                      "textContent": "Sidebar"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-easy-view[grid-template-areas]",
+        "title": {
+          "en": "Easy-view dividing by grid template areas",
+          "zh": "由 grid template areas 划分区域的 easy-view"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-easy-view[grid-template-areas].ccfdf0593325aa000996.svg"
+      }
+    ]
+  },
+  {
+    "storyId": "eo-flex-layout",
+    "category": "container-layout",
+    "author": "kehua",
+    "text": {
+      "en": "Flex Layout Container",
+      "zh": "Flex布局容器"
+    },
+    "description": {
+      "en": "A Flex layout container",
+      "zh": "基于Flex的布局容器"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-flex-layout.4f722a6430cc93c66846.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-flex-layout",
+            "properties": {
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "style": {
+                "border": "1px solid black",
+                "background": "pink",
+                "height": "200px",
+                "width": "200px"
+              }
+            },
+            "slots": {
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "『第一个div』",
+                      "style": {
+                        "background": "yellow"
+                      }
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "textContent": "『第二个div』",
+                      "style": {
+                        "background": "orange"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-flex-layout[basic]",
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-flex-layout[basic].a33821af26629f82b226.svg",
+        "title": {
+          "en": "Basic Flex Layout",
+          "zh": "基础flex布局"
+        }
+      },
+      {
+        "bricks": [
+          {
+            "brick": "eo-flex-layout",
+            "properties": {
+              "gap": "20px",
+              "flexWrap": "wrap",
+              "style": {
+                "background": "AliceBlue",
+                "border": "1px solid black",
+                "width": "142px"
+              }
+            },
+            "slots": {
+              "": {
+                "bricks": [
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "yellow"
+                      },
+                      "textContent": "NO.1"
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "orange"
+                      },
+                      "textContent": "NO.2"
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "DeepSkyBlue"
+                      },
+                      "textContent": "NO.3"
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "Aquamarine"
+                      },
+                      "textContent": "NO.4"
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "Chartreuse"
+                      },
+                      "textContent": "NO.5"
+                    }
+                  },
+                  {
+                    "brick": "div",
+                    "properties": {
+                      "style": {
+                        "background": "YellowGreen"
+                      },
+                      "textContent": "NO.6"
+                    }
+                  }
+                ],
+                "type": "bricks"
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-flex-layout[gap]",
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-flex-layout[gap].53a25dd66e5553dc1c6e.svg",
+        "title": {
+          "en": "Flex Layout with gap",
+          "zh": "使用gap的flex布局"
+        },
+        "message": {
+          "en": "Use attribute gap to change element gap",
+          "zh": "使用gap改变元素间隙"
+        }
+      }
+    ]
+  },
+  {
+    "storyId": "eo-grid-layout",
+    "category": "container-layout",
+    "author": "steve",
+    "text": {
+      "en": "Grid Layout",
+      "zh": "网格布局"
+    },
+    "description": {
+      "en": "Provide responsive layout by grid",
+      "zh": "提供多行多列的响应式网格布局"
+    },
+    "icon": {
+      "imgSrc": "bricks/containers/dist/stories-assets/eo-grid-layout.9897ca7f7e3892f3af84.svg"
+    },
+    "conf": [
+      {
+        "bricks": [
+          {
+            "brick": "eo-grid-layout",
+            "properties": {
+              "columns": 2,
+              "responsive": {
+                "medium": {
+                  "columns": 1
+                }
+              }
+            },
+            "slots": {
+              "": {
+                "type": "bricks",
+                "bricks": [
+                  {
+                    "brick": "eo-grid-layout",
+                    "properties": {
+                      "columns": 2
+                    },
+                    "slots": {
+                      "": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "style": {
+                                "gridColumn": "span 2",
+                                "height": "200px",
+                                "backgroundColor": "orange"
+                              }
+                            }
+                          },
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "style": {
+                                "height": "100px",
+                                "backgroundColor": "aquamarine "
+                              }
+                            }
+                          },
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "style": {
+                                "height": "100px",
+                                "backgroundColor": "aquamarine "
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "brick": "eo-grid-layout",
+                    "slots": {
+                      "": {
+                        "type": "bricks",
+                        "bricks": [
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "style": {
+                                "height": "100px",
+                                "backgroundColor": "green"
+                              }
+                            }
+                          },
+                          {
+                            "brick": "div",
+                            "properties": {
+                              "style": {
+                                "height": "300px",
+                                "backgroundColor": "green"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "snippetId": "eo-grid-layout[basic]",
+        "title": {
+          "en": "Basic Grid Layout",
+          "zh": "基础网格布局"
+        },
+        "thumbnail": "bricks/containers/dist/stories-assets/eo-grid-layout[basic].58434cc1e61ae5441161.svg"
+      }
+    ]
+  }
+]

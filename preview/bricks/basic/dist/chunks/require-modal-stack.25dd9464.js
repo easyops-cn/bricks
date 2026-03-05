@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_basic=globalThis.webpackChunk_next_bricks_basic||[]).push([[2287],{5719:(e,s,c)=>{c.r(s),c.d(s,{requireModalStack:()=>a});var t=c(9523);const i=[];let n=1;function a(){const e=n++,s=()=>{const s=i.indexOf(e);s>-1&&i.splice(s,1)};return{push:()=>{s(),i.push(e)},pull:s,isTop:()=>i.length>0&&i[i.length-1]===e}}customElements.define("basic.require-modal-stack",(0,t.createProviderClass)(a))}}]);
+//# sourceMappingURL=require-modal-stack.25dd9464.js.map

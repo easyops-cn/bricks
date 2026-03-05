@@ -1,0 +1,307 @@
+{
+  "manifest_version": 1,
+  "package": "@next-bricks/form-platform",
+  "name": "form-platform",
+  "bricks": [
+    {
+      "name": "eo-user-or-user-group-select",
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "description": "字段placeholder",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "objectList",
+          "description": "模型列表（按需传递 USER/USER_GROUP 的模型定义，用于显示对应实例名称）\n\n注：get object ref 被滥用，这里先暂不支持自动拉取。",
+          "attribute": false,
+          "type": "Partial<CmdbModels.ModelCmdbObject>[]"
+        },
+        {
+          "name": "query",
+          "description": "用户和用户组`search`接口的`query`，此参数比较适用于，两者接口需要参数相同的情况\nadvanced",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "userQuery",
+          "description": "针对`USER/instance/_search`接口的`query`，此参数比较适用于，可能只需要针对用户做筛选的情况",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "userGroupQuery",
+          "description": "针对`USER_GROUP/instance/_search`接口的`query`，此参数比较适用于，可能只需要针对用户组做筛选的情况",
+          "attribute": false,
+          "type": "Record<string, any>"
+        },
+        {
+          "name": "userKey",
+          "description": "用户对象的唯一标识字段，即：value 使用的字段名",
+          "default": "\"name\"",
+          "type": "\"name\" | \"instanceId\""
+        },
+        {
+          "name": "optionsMode",
+          "description": "支持选择用户、用户组或者两者\n{\n  \"optionType\": \"button\",\n  \"options\": [\n    {\n      \"label\": \"All\",\n      \"value\": \"all\"\n    },\n    {\n      \"label\": \"User\",\n      \"value\": \"user\",\n      \"icon\": {\n        \"lib\": \"antd\",\n        \"icon\": \"user\",\n        \"theme\": \"outlined\"\n      }\n    },\n    {\n      \"label\": \"Group\",\n      \"value\": \"group\",\n      \"icon\": {\n        \"lib\": \"antd\",\n        \"icon\": \"usergroup-add\",\n        \"theme\": \"outlined\"\n      }\n    }\n  ]\n}",
+          "default": "\"all\"",
+          "type": "\"user\" | \"group\" | \"all\""
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "isMultiple",
+          "description": "是否多选，默认为多选",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "staticList",
+          "description": "固定白名单列表，该列表中的值用户不能取消。",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "hideAddMeQuickly",
+          "description": "快速选择我",
+          "default": "true",
+          "type": "boolean"
+        },
+        {
+          "name": "themeVariant",
+          "description": "主题变体",
+          "type": "\"default\" | \"elevo\""
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "string[]"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "用户(组)选择器",
+      "category": "form-input-business",
+      "insider": true
+    },
+    {
+      "name": "eo-cmdb-instance-select",
+      "properties": [
+        {
+          "name": "name",
+          "description": "字段名称",
+          "type": "string"
+        },
+        {
+          "name": "label",
+          "description": "字段说明",
+          "type": "string"
+        },
+        {
+          "name": "required",
+          "description": "是否必填",
+          "type": "boolean"
+        },
+        {
+          "name": "placeholder",
+          "description": "字段placeholder",
+          "type": "string"
+        },
+        {
+          "name": "value",
+          "description": "值",
+          "attribute": false,
+          "type": "string | string[]"
+        },
+        {
+          "name": "objectId",
+          "description": "模型 id",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "description": "是否禁用",
+          "type": "boolean"
+        },
+        {
+          "name": "allowClear",
+          "description": "支持清除选项",
+          "type": "boolean"
+        },
+        {
+          "name": "mode",
+          "description": "多选模式",
+          "type": "string"
+        },
+        {
+          "name": "pageSize",
+          "description": "配置搜索接口的pageSize",
+          "type": "number"
+        },
+        {
+          "name": "instanceQuery",
+          "description": "下拉框选项的过滤条件",
+          "attribute": false,
+          "type": "any"
+        },
+        {
+          "name": "fields",
+          "description": "自定义 select 下拉选项的 label 和 value 字段",
+          "attribute": false,
+          "type": "Partial<ComplexOption<string>>"
+        },
+        {
+          "name": "minimumInputLength",
+          "description": "输入多少个字符才触发搜索动作",
+          "type": "number"
+        },
+        {
+          "name": "extraSearchKey",
+          "description": "配置额外的字段进行搜索",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "extraFields",
+          "description": "配置接口需要返回的额外字段",
+          "attribute": false,
+          "type": "string[]"
+        },
+        {
+          "name": "popoverPositionType",
+          "description": "下拉选项的渲染方式",
+          "type": "\"default\" | \"parent\""
+        },
+        {
+          "name": "isMultiLabel",
+          "description": "控制下拉框中的label显示一个或者多个",
+          "type": "boolean"
+        },
+        {
+          "name": "showSearchTip",
+          "description": "下拉列表的最后一行是否显示提示",
+          "type": "boolean"
+        },
+        {
+          "name": "labelTemplate",
+          "description": "可自定义label显示的模板",
+          "type": "string"
+        },
+        {
+          "name": "inputBoxStyle",
+          "description": "输入框样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "permission",
+          "description": "按照权限过滤实例",
+          "attribute": false,
+          "type": "Array<\"read\" | \"update\" | \"operate\">"
+        },
+        {
+          "name": "showTooltip",
+          "description": "下拉框中是否启用tooltip显示label全称",
+          "type": "boolean"
+        },
+        {
+          "name": "ignoreMissingFieldError",
+          "description": "是否忽略不存在字段",
+          "type": "boolean"
+        },
+        {
+          "name": "showKeyField",
+          "description": "实例通过showKey自定义展示",
+          "type": "boolean"
+        },
+        {
+          "name": "dropdownMatchSelectWidth",
+          "description": "下拉菜单和选择器同宽",
+          "type": "boolean"
+        },
+        {
+          "name": "dropdownStyle",
+          "description": "设置下拉框容器的样式",
+          "attribute": false,
+          "type": "React.CSSProperties"
+        },
+        {
+          "name": "blurAfterValueChanged",
+          "description": "是否在选完值后取消聚焦",
+          "type": "boolean"
+        },
+        {
+          "name": "sort",
+          "description": "配置接口返回数据的排序规则",
+          "attribute": false,
+          "type": "Array<Record<string, number | string>>"
+        },
+        {
+          "name": "useExternalCmdbApi",
+          "description": "使用外部数据源",
+          "type": "boolean"
+        },
+        {
+          "name": "externalSourceId",
+          "description": "外部数据源id",
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "name": "change",
+          "detail": {
+            "type": "string | string[]"
+          }
+        },
+        {
+          "name": "change.v2",
+          "detail": {
+            "type": "ComplexOption"
+          }
+        },
+        {
+          "name": "options.change",
+          "detail": {
+            "type": "{\n    options: ComplexOption[];\n    name: string;\n  }"
+          }
+        }
+      ],
+      "slots": [],
+      "methods": [],
+      "parts": [],
+      "description": "CMDB 实例选择器",
+      "category": "form-input-business",
+      "insider": true
+    }
+  ],
+  "providers": []
+}

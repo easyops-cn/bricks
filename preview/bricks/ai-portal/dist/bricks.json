@@ -1,0 +1,262 @@
+{
+  "id": "bricks/ai-portal",
+  "bricks": [
+    "ai-portal.cruise-canvas",
+    "ai-portal.chat-box",
+    "ai-portal.home-container",
+    "ai-portal.stat-with-mini-chart",
+    "ai-portal.icon-button",
+    "ai-portal.elevo-sidebar",
+    "ai-portal.show-cases",
+    "ai-portal.mcp-tools",
+    "ai-portal.chat-stream",
+    "ai-portal.ai-employees",
+    "ai-portal.ai-agents",
+    "ai-portal.call-tool",
+    "ai-portal.save-request-store",
+    "ai-portal.load-request-store",
+    "ai-portal.clear-request-store",
+    "ai-portal.set-chat-command",
+    "ai-portal.set-chat-mentioned-employee",
+    "ai-portal.page-container",
+    "ai-portal.tab-list",
+    "ai-portal.dropdown-select",
+    "ai-portal.preview-container",
+    "ai-portal.action-buttons",
+    "ai-portal.project-conversations",
+    "ai-portal.project-knowledges",
+    "ai-portal.goal-card-list",
+    "ai-portal.activity-timeline",
+    "ai-portal.chat-input",
+    "ai-portal.elevo-logo",
+    "ai-portal.show-case",
+    "ai-portal.blank-state",
+    "ai-portal.sticky-container",
+    "ai-portal.elevo-card",
+    "ai-portal.flow-tabs",
+    "ai-portal.stage-flow",
+    "ai-portal.running-flow",
+    "ai-portal.notice-dropdown",
+    "ai-portal.notice-list",
+    "ai-portal.chat-panel",
+    "ai-portal.space-logo",
+    "ai-portal.chat-panel-welcome",
+    "ai-portal.space-chat-guide",
+    "ai-portal.space-workbench"
+  ],
+  "elements": [],
+  "processors": [],
+  "editors": [],
+  "dependencies": {
+    "ai-portal.cruise-canvas": [
+      "eo-icon",
+      "eo-button",
+      "eo-link",
+      "eo-tooltip",
+      "eo-drawer",
+      "ai-portal.icon-button",
+      "ai-portal.chat-input",
+      "ai-portal.show-case",
+      "eo-code-block",
+      "ai-portal.running-flow",
+      "basic.show-dialog",
+      "basic.copy-to-clipboard",
+      "eo-easyops-avatar",
+      "presentational.code-wrapper",
+      "eo-avatar",
+      "eo-actions"
+    ],
+    "ai-portal.chat-box": [
+      "eo-icon",
+      "eo-actions",
+      "ai-portal.icon-button"
+    ],
+    "ai-portal.stat-with-mini-chart": [
+      "eo-mini-line-chart"
+    ],
+    "ai-portal.icon-button": [
+      "eo-icon",
+      "eo-tooltip"
+    ],
+    "ai-portal.elevo-sidebar": [
+      "ai-portal.elevo-logo",
+      "eo-icon",
+      "eo-link",
+      "eo-dropdown-actions",
+      "eo-easyops-avatar",
+      "eo-mini-actions",
+      "ai-portal.icon-button"
+    ],
+    "ai-portal.show-cases": [
+      "ai-portal.show-case",
+      "ai-portal.tab-list"
+    ],
+    "ai-portal.mcp-tools": [
+      "eo-icon",
+      "ai-portal.tab-list",
+      "ai-portal.sticky-container"
+    ],
+    "ai-portal.chat-stream": [
+      "eo-icon",
+      "eo-button",
+      "eo-link",
+      "eo-tooltip",
+      "eo-drawer",
+      "ai-portal.icon-button",
+      "ai-portal.chat-input",
+      "ai-portal.show-case",
+      "eo-code-block",
+      "ai-portal.running-flow",
+      "basic.show-dialog",
+      "basic.copy-to-clipboard",
+      "presentational.code-wrapper",
+      "eo-actions"
+    ],
+    "ai-portal.ai-employees": [
+      "eo-link",
+      "eo-icon",
+      "ai-portal.tab-list",
+      "ai-portal.sticky-container"
+    ],
+    "ai-portal.ai-agents": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "ai-portal.page-container": [
+      "eo-link",
+      "ai-portal.sticky-container"
+    ],
+    "ai-portal.dropdown-select": [
+      "eo-popover",
+      "eo-icon",
+      "eo-loading-container",
+      "eo-menu",
+      "eo-menu-item",
+      "eo-input"
+    ],
+    "ai-portal.preview-container": [
+      "eo-icon",
+      "eo-page-title",
+      "eo-main-view",
+      "eo-narrow-view"
+    ],
+    "ai-portal.action-buttons": [
+      "eo-icon",
+      "eo-button"
+    ],
+    "ai-portal.project-conversations": [
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-mini-actions"
+    ],
+    "ai-portal.project-knowledges": [
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar",
+      "eo-mini-actions"
+    ],
+    "ai-portal.goal-card-list": [
+      "eo-icon",
+      "eo-dropdown-actions",
+      "eo-easyops-avatar",
+      "eo-button"
+    ],
+    "ai-portal.activity-timeline": [
+      "eo-link",
+      "eo-icon",
+      "eo-easyops-avatar"
+    ],
+    "ai-portal.chat-input": [
+      "eo-icon",
+      "ai-portal.icon-button",
+      "eo-actions"
+    ],
+    "ai-portal.show-case": [
+      "eo-icon",
+      "eo-link"
+    ],
+    "ai-portal.elevo-card": [
+      "eo-link",
+      "eo-icon"
+    ],
+    "ai-portal.stage-flow": [
+      "eo-icon",
+      "eo-popover",
+      "eo-input",
+      "basic.show-dialog"
+    ],
+    "ai-portal.running-flow": [
+      "eo-icon"
+    ],
+    "ai-portal.notice-dropdown": [
+      "eo-popover",
+      "eo-icon",
+      "eo-link",
+      "eo-button",
+      "eo-counter-badge",
+      "ai-portal.icon-button",
+      "eo-tooltip"
+    ],
+    "ai-portal.notice-list": [
+      "eo-button",
+      "eo-icon",
+      "eo-link",
+      "eo-checkbox",
+      "eo-popover",
+      "eo-counter-badge",
+      "ai-portal.icon-button",
+      "eo-tooltip"
+    ],
+    "ai-portal.chat-panel": [
+      "eo-modal",
+      "eo-icon",
+      "eo-button",
+      "eo-link",
+      "eo-tooltip",
+      "eo-drawer",
+      "ai-portal.icon-button",
+      "ai-portal.chat-input",
+      "ai-portal.show-case",
+      "eo-code-block",
+      "ai-portal.running-flow",
+      "basic.show-dialog",
+      "basic.copy-to-clipboard",
+      "presentational.code-wrapper"
+    ],
+    "ai-portal.chat-panel-welcome": [
+      "eo-icon"
+    ],
+    "ai-portal.space-chat-guide": [
+      "ai-portal.space-logo"
+    ],
+    "ai-portal.space-workbench": [
+      "eo-icon",
+      "eo-button",
+      "eo-link",
+      "eo-tooltip",
+      "eo-drawer",
+      "ai-portal.icon-button",
+      "ai-portal.chat-input",
+      "ai-portal.show-case",
+      "eo-code-block",
+      "ai-portal.running-flow",
+      "basic.show-dialog",
+      "basic.copy-to-clipboard",
+      "presentational.code-wrapper",
+      "eo-tag",
+      "eo-input",
+      "eo-textarea",
+      "eo-modal",
+      "eo-markdown-display",
+      "eo-user-or-user-group-select",
+      "eo-select",
+      "eo-easyops-avatar",
+      "ai-portal.notice-dropdown",
+      "ai-portal.space-logo",
+      "eo-popover",
+      "eo-counter-badge"
+    ]
+  },
+  "filePath": "bricks/ai-portal/dist/index.98387b78.js"
+}

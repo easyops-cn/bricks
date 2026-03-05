@@ -1,0 +1,9 @@
+/**! @contract easyops.api.cmdb.instance.PostSearchV3@1.1.0 */
+
+/**! @contract easyops.api.micro_app_standalone.launchpad.GetLaunchpadInfo@1.1.0 */
+
+/**! @contract easyops.api.user_service.launchpad.CreateCollectionV2@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.DeleteCollectionV2@1.0.0 */
+
+/**! @contract easyops.api.user_service.launchpad.ListCollectionV2@1.0.0 */

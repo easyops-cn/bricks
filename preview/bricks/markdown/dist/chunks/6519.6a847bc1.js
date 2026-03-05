@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_next_bricks_markdown=globalThis.webpackChunk_next_bricks_markdown||[]).push([[6519],{76519:(e,n,r)=>{r.r(n),r.d(n,{pipes:()=>i.pipes,processPipes:()=>t,utils:()=>i.utils});var i=r(58377);const s=new Map(Array.from(Object.entries(i.pipes)));function t(e,n){if(0===n.length)return e;let r=e;for(const e of n){const n=s.get(e.identifier);if(!n)return void console.warn(`Unknown pipe: ${e.identifier}`);r=n(r,...e.parameters)}return r}}}]);
+//# sourceMappingURL=6519.6a847bc1.js.map

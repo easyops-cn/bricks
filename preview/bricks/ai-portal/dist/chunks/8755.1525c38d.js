@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_next_bricks_ai_portal=globalThis.webpackChunk_next_bricks_ai_portal||[]).push([[8755],{8755:(a,e,r)=>{r.d(e,{createRadarServices:()=>i.f});var i=r(85807);r(75249)}}]);
